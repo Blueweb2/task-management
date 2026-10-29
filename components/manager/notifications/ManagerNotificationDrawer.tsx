@@ -14,6 +14,9 @@ import {
   Trash2,
   Sparkles,
   RefreshCw,
+  CheckSquare,
+  Wrench,
+  Users,
 } from "lucide-react";
 import {
   ManagerNotification,
@@ -64,10 +67,16 @@ export default function ManagerNotificationDrawer({
 
   const getCategoryIcon = (category: NotificationCategory) => {
     switch (category) {
-      case "EVENT":
-        return <Calendar size={16} className="text-[#9A6C37]" />;
+      case "TASK":
+        return <CheckSquare size={16} className="text-[#9A6C37]" />;
+      case "EQUIPMENT":
+        return <Wrench size={16} className="text-amber-600" />;
       case "FINANCE":
         return <CreditCard size={16} className="text-emerald-600" />;
+      case "STAFF":
+        return <Users size={16} className="text-purple-600" />;
+      case "EVENT":
+        return <Calendar size={16} className="text-[#9A6C37]" />;
       case "ESTIMATE":
         return <FileText size={16} className="text-blue-600" />;
       default:
@@ -184,14 +193,26 @@ export default function ManagerNotificationDrawer({
 
               <button
                 type="button"
-                onClick={() => setActiveFilter("EVENT")}
+                onClick={() => setActiveFilter("TASK")}
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
-                  activeFilter === "EVENT"
+                  activeFilter === "TASK"
                     ? "bg-[#9A6C37] text-white shadow-sm"
                     : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
                 }`}
               >
-                Events
+                Tasks
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveFilter("EQUIPMENT")}
+                className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
+                  activeFilter === "EQUIPMENT"
+                    ? "bg-amber-600 text-white shadow-sm"
+                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                }`}
+              >
+                Equipment
               </button>
 
               <button
@@ -208,14 +229,14 @@ export default function ManagerNotificationDrawer({
 
               <button
                 type="button"
-                onClick={() => setActiveFilter("ESTIMATE")}
+                onClick={() => setActiveFilter("STAFF")}
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
-                  activeFilter === "ESTIMATE"
-                    ? "bg-blue-600 text-white shadow-sm"
+                  activeFilter === "STAFF"
+                    ? "bg-purple-600 text-white shadow-sm"
                     : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
                 }`}
               >
-                Estimates
+                Staff
               </button>
             </div>
           </div>

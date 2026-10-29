@@ -32,16 +32,12 @@ interface LoginResponse {
  */
 function getSafeRedirectUrl(
   userRole: string,
-  userDepartment: string = "",
+  _userDepartment: string = "",
 ): string {
   const role = (userRole || "").toLowerCase();
-  const dept = (userDepartment || "").toLowerCase();
-  const isOperationsManager = dept.includes("operation") && role !== "superadmin" && role !== "admin";
 
-  if (role === "superadmin") {
-    return "/manager";
-  } else if (role === "admin" || role === "manager") {
-    return isOperationsManager ? "/manager/events" : "/manager";
+  if (role === "superadmin" || role === "admin" || role === "manager") {
+    return "/manager/tasks";
   } else {
     return "/staff";
   }
@@ -64,13 +60,13 @@ export default function LoginForm() {
   useEffect(() => {
     const roleParam = searchParams?.get("role")?.toLowerCase();
     if (roleParam === "superadmin") {
-      setEmail("superadmin@eventmanagement.com");
+      setEmail("superadmin@taskmanagement.com");
       setPassword("superadmin123");
     } else if (roleParam === "manager" || roleParam === "admin") {
-      setEmail("admin@eventmanagement.com");
-      setPassword("admin123");
+      setEmail("manager@taskmanagement.com");
+      setPassword("manager123");
     } else if (roleParam === "staff") {
-      setEmail("staff@eventmanagement.com");
+      setEmail("staff@taskmanagement.com");
       setPassword("staff123");
     }
   }, [searchParams]);
@@ -219,34 +215,34 @@ export default function LoginForm() {
                 <button
                   type="button"
                   onClick={() => { 
-                    setEmail("superadmin@eventmanagement.com");
+                    setEmail("superadmin@taskmanagement.com");
                     setPassword("superadmin123"); 
                   }}
                   className="rounded-lg bg-[#D2B47A]/20 border border-[#D2B47A]/40 px-2.5 py-1 text-xs font-semibold text-[#D2B47A] transition hover:bg-[#D2B47A]/30"
                 >
-                  Superadmin: superadmin@eventmanagement.com
+                  Superadmin: superadmin@taskmanagement.com
                 </button>
 
                 <button
                   type="button"
                   onClick={() => { 
-                    setEmail("admin@eventmanagement.com");
-                    setPassword("admin123"); 
+                    setEmail("manager@taskmanagement.com");
+                    setPassword("manager123"); 
                   }}
                   className="rounded-lg bg-[#D2B47A]/10 px-2.5 py-1 text-xs font-medium text-[#D2B47A] transition hover:bg-[#D2B47A]/20"
                 >
-                  Manager: admin@eventmanagement.com
+                  Manager: manager@taskmanagement.com
                 </button>
                   
                 <button
                   type="button"
                   onClick={() => { 
-                    setEmail("staff@eventmanagement.com");
+                    setEmail("staff@taskmanagement.com");
                     setPassword("staff123");
                   }}
                   className="rounded-lg bg-[#D2B47A]/10 px-2.5 py-1 text-xs font-medium text-[#D2B47A] transition hover:bg-[#D2B47A]/20" 
                 >
-                  Staff: staff@eventmanagement.com
+                  Staff: staff@taskmanagement.com
                 </button>
               </div>
             </div>

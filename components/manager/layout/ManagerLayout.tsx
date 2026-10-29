@@ -153,11 +153,11 @@ export default function ManagerLayout({
                 </p>
                 <div className="mt-6">
                   <Link
-                    href={scope.departmentType === "operations" ? "/manager/events" : "/manager"}
+                    href="/manager/tasks"
                     className="inline-flex items-center gap-2 rounded-xl bg-[#252525] px-4 py-2.5 text-xs font-semibold text-white shadow-xs transition hover:bg-[#1a1a1a] active:scale-95"
                   >
                     <LayoutDashboard size={14} />
-                    <span>Return to {scope.departmentType === "operations" ? "Events" : `${scope.roleTitle} Dashboard`}</span>
+                    <span>Return to To Do</span>
                   </Link>
                 </div>
               </div>

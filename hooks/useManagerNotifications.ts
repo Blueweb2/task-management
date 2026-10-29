@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { getEvents } from "@/lib/event.api";
 import { getExpenses } from "@/lib/expense.api";
-import { getEstimates } from "@/lib/estimates.api";
 import { getAssignments } from "@/lib/assignment.api";
+import { getTasks } from "@/lib/task.api";
+import { getEquipmentRequests } from "@/lib/equipmentRequest.api";
 import { useAuth } from "@/hooks/useAuth";
 import { formatTime24to12 } from "@/lib/time-utils";
 
-export type NotificationCategory = "ACTION" | "EVENT" | "FINANCE" | "ESTIMATE" | "STAFF";
+export type NotificationCategory = "ACTION" | "EVENT" | "FINANCE" | "ESTIMATE" | "STAFF" | "TASK" | "EQUIPMENT";
 
 export interface ManagerNotification {
   id: string;
@@ -55,91 +55,60 @@ export function useManagerNotifications() {
     try {
       setLoading(true);
 
-      const [eventsRes, expensesRes, estimatesRes, assignmentsRes] = await Promise.allSettled([
-        getEvents({ status: "Upcoming", limit: 10 }, token),
+      const [tasksRes, equipRes, expensesRes, assignmentsRes] = await Promise.allSettled([
+        getTasks(token, { limit: 20 }),
+        getEquipmentRequests(token, { status: "PENDING" }),
         getExpenses(),
-        getEstimates({ limit: 10 }),
         getAssignments(token, { limit: 50 }),
       ]);
 
       const items: ManagerNotification[] = [];
       const now = new Date();
 
-      // 0. Staff Shift Rejections (Urgent Alert for Reassignment) & Pending Responses
-      if (assignmentsRes.status === "fulfilled" && assignmentsRes.value?.data) {
-        assignmentsRes.value.data.forEach((duty) => {
-          const staffName = typeof duty.staff === "object" ? duty.staff.name : "Staff member";
-          const staffId = typeof duty.staff === "object" && duty.staff !== null ? (duty.staff.id || (duty.staff as any)._id) : (typeof duty.staff === "string" ? duty.staff : "");
-          const eventName = typeof duty.event === "object" ? duty.event.eventName : "Event";
+      // 1. Pending Equipment Requests needing manager approval/issuance
+      if (equipRes.status === "fulfilled" && equipRes.value?.data) {
+        equipRes.value.data.forEach((req) => {
+          const staffName = req.requestedBy && typeof req.requestedBy === "object" ? req.requestedBy.name : "Staff member";
+          const itemName = req.stockItem && typeof req.stockItem === "object" ? req.stockItem.name : "Equipment";
+          const taskTitle = req.task && typeof req.task === "object" ? req.task.title : "Assigned Task";
 
-          if (duty.status === "REJECTED") {
-            items.push({
-              id: `duty-rejected-${duty._id}`,
-              category: "STAFF",
-              title: `🚨 Shift Declined: ${staffName}`,
-              message: `${staffName} declined "${duty.dutyTitle}" for ${eventName}. Reason: "${duty.rejectionReason || "Unavailable"}". Click to reassign.`,
-              timestamp: duty.respondedAt || duty.updatedAt || duty.dutyDate,
-              timeAgo: "Action Required",
-              link: staffId ? `/manager/staff/${staffId}?tab=schedule` : "/manager/staff",
-              read: false,
-              priority: "HIGH",
-            });
-          } else if (duty.status === "ASSIGNED") {
-            items.push({
-              id: `duty-pending-${duty._id}`,
-              category: "STAFF",
-              title: `⏳ Pending Confirmation: ${staffName}`,
-              message: `Awaiting shift confirmation from ${staffName} for "${duty.dutyTitle}" (${eventName}).`,
-              timestamp: duty.createdAt || duty.dutyDate,
-              timeAgo: "Pending Response",
-              link: staffId ? `/manager/staff/${staffId}?tab=schedule` : "/manager/staff",
-              read: false,
-              priority: "MEDIUM",
-            });
-          } else if (duty.status === "ACCEPTED") {
-            items.push({
-              id: `duty-accepted-${duty._id}`,
-              category: "STAFF",
-              title: `✅ Shift Confirmed: ${staffName}`,
-              message: `${staffName} accepted duty "${duty.dutyTitle}" for ${eventName}. Ready for event duty!`,
-              timestamp: duty.respondedAt || duty.updatedAt || duty.dutyDate,
-              timeAgo: "Confirmed on duty",
-              link: staffId ? `/manager/staff/${staffId}?tab=schedule` : "/manager/duties",
-              read: false,
-              priority: "MEDIUM",
-            });
+          items.push({
+            id: `equip-req-${req._id}`,
+            category: "EQUIPMENT",
+            title: `🛠️ Equipment Request: ${req.requestedQuantity}x ${itemName}`,
+            message: `${staffName} requested ${req.requestedQuantity} units of ${itemName} for "${taskTitle}".`,
+            timestamp: req.createdAt,
+            timeAgo: "Action Needed",
+            link: `/manager/tasks?tab=equipment-requests`,
+            read: false,
+            priority: "HIGH",
+          });
+        });
+      }
+
+      // 2. High Priority or Urgent Tasks
+      if (tasksRes.status === "fulfilled" && tasksRes.value?.data) {
+        tasksRes.value.data.forEach((t) => {
+          if (t.priority === "URGENT" || t.priority === "HIGH") {
+            const isCompleted = t.status === "COMPLETED" || t.status === "CANCELLED";
+            if (!isCompleted) {
+              items.push({
+                id: `task-alert-${t._id}`,
+                category: "TASK",
+                title: `${t.priority === "URGENT" ? "🔥 Urgent Task" : "⚡ High Priority Task"}: ${t.title}`,
+                message: `Status: ${t.status.replace("_", " ")} | Due: ${t.dueDate ? new Date(t.dueDate).toLocaleDateString() : "No deadline"}`,
+                timestamp: t.updatedAt || t.createdAt,
+                timeAgo: t.priority,
+                link: `/manager/tasks`,
+                read: false,
+                priority: t.priority === "URGENT" ? "HIGH" : "MEDIUM",
+              });
+            }
           }
         });
       }
 
-      // 1. Upcoming Events (events occurring within 72 hours)
-      if (eventsRes.status === "fulfilled" && eventsRes.value?.data) {
-        eventsRes.value.data.forEach((evt) => {
-          const eventDate = new Date(evt.eventDate);
-          const diffHours = (eventDate.getTime() - now.getTime()) / (1000 * 60 * 60);
-
-          if (diffHours >= -12 && diffHours <= 72) {
-            const isToday = eventDate.toDateString() === now.toDateString();
-            const timingText = isToday
-              ? `Today at ${formatTime24to12(evt.eventTime) || "scheduled time"}`
-              : `in ${Math.max(1, Math.round(diffHours / 24))} days`;
-
-            items.push({
-              id: `evt-upcoming-${evt._id}`,
-              category: "EVENT",
-              title: isToday ? `⚡ Event Happening Today: ${evt.eventName}` : `Upcoming Event: ${evt.eventName}`,
-              message: `${evt.eventName} with ${evt.guests} guests is scheduled ${timingText} at ${evt.location}.`,
-              timestamp: evt.eventDate,
-              timeAgo: isToday ? "Today" : "Coming up",
-              link: `/manager/events/${evt._id}`,
-              read: false,
-              priority: isToday ? "HIGH" : "MEDIUM",
-            });
-          }
-        });
-      }
-
-      // 2. Pending Expenses needing manager attention
+      // 3. Pending Expenses needing manager attention
       if (expensesRes.status === "fulfilled" && Array.isArray(expensesRes.value)) {
         const pendingExpenses = expensesRes.value.filter((exp) => exp.status === "Pending");
         pendingExpenses.slice(0, 5).forEach((exp) => {
@@ -147,7 +116,7 @@ export function useManagerNotifications() {
             id: `exp-pending-${exp.id}`,
             category: "FINANCE",
             title: `Pending Expense: ₹${exp.amount.toLocaleString("en-IN")}`,
-            message: `Expense "${exp.title}" (${exp.category}) for ${exp.event} is awaiting settlement.`,
+            message: `Expense "${exp.title}" (${exp.category}) is awaiting settlement.`,
             timestamp: exp.date,
             timeAgo: "Awaiting Action",
             link: `/manager/expenses`,
@@ -157,33 +126,25 @@ export function useManagerNotifications() {
         });
       }
 
-      // 3. New Estimates in DRAFT or SENT stage (excluding date-over proposals)
-      if (estimatesRes.status === "fulfilled" && estimatesRes.value?.data) {
-        const todayStart = new Date();
-        todayStart.setHours(0, 0, 0, 0);
+      // 4. Staff Shift Rejections & Responses
+      if (assignmentsRes.status === "fulfilled" && assignmentsRes.value?.data) {
+        assignmentsRes.value.data.forEach((duty) => {
+          const staffName = typeof duty.staff === "object" ? duty.staff.name : "Staff member";
+          const staffId = typeof duty.staff === "object" && duty.staff !== null ? (duty.staff.id || (duty.staff as any)._id) : (typeof duty.staff === "string" ? duty.staff : "");
 
-        const activeEstimates = estimatesRes.value.data.filter((est) => {
-          if (est.status !== "DRAFT" && est.status !== "SENT") return false;
-          if (est.convertedToEvent) return false;
-          if (!est.eventDate) return false;
-          const d = new Date(est.eventDate);
-          if (isNaN(d.getTime())) return false;
-          const end = new Date(d);
-          end.setHours(23, 59, 59, 999);
-          return end.getTime() >= todayStart.getTime();
-        });
-        activeEstimates.slice(0, 5).forEach((est) => {
-          items.push({
-            id: `est-review-${est._id}`,
-            category: "ESTIMATE",
-            title: `Review Estimate: ${est.estimateNumber}`,
-            message: `Estimate for "${est.eventName}" (₹${est.total.toLocaleString("en-IN")}) is in ${est.status} status.`,
-            timestamp: est.createdAt,
-            timeAgo: "Active Proposal",
-            link: `/manager/events?tab=estimates`,
-            read: false,
-            priority: "LOW",
-          });
+          if (duty.status === "REJECTED") {
+            items.push({
+              id: `duty-rejected-${duty._id}`,
+              category: "STAFF",
+              title: `🚨 Shift Declined: ${staffName}`,
+              message: `${staffName} declined "${duty.dutyTitle}". Reason: "${duty.rejectionReason || "Unavailable"}". Click to reassign.`,
+              timestamp: duty.respondedAt || duty.updatedAt || duty.dutyDate,
+              timeAgo: "Action Required",
+              link: staffId ? `/manager/staff/${staffId}?tab=schedule` : "/manager/staff",
+              read: false,
+              priority: "HIGH",
+            });
+          }
         });
       }
 

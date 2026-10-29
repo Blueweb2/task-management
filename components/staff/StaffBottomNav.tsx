@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  LayoutDashboard,
-  ClipboardList,
+  ListTodo,
+  Package,
   Clock3,
   User,
   Menu,
@@ -18,8 +18,8 @@ export default function StaffBottomNav({ onMore }: StaffBottomNavProps) {
   const pathname = usePathname();
 
   const navItems = [
-    { label: "Home", href: "/staff", icon: LayoutDashboard },
-    { label: "Shifts", href: "/staff/duties", icon: ClipboardList },
+    { label: "Tasks", href: "/staff", icon: ListTodo },
+    { label: "Stock", href: "/staff/stock", icon: Package },
     { label: "Attendance", href: "/staff/attendance", icon: Clock3 },
     { label: "Profile", href: "/staff/profile", icon: User },
   ];

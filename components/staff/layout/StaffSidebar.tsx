@@ -7,6 +7,7 @@ import {
   Menu,
   LayoutDashboard,
   ClipboardList,
+  ListTodo,
   Clock3,
   Package,
   CalendarDays,
@@ -111,9 +112,9 @@ export default function StaffSidebar({
       group: "WORKSPACE",
       items: [
         {
-          label: "Dashboard",
+          label: "My Assigned Tasks",
           href: "/staff",
-          icon: LayoutDashboard,
+          icon: ListTodo,
           badge: null,
           exact: true,
         },

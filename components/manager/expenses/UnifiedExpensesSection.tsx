@@ -36,6 +36,8 @@ import {
   type EventProfitabilityData,
 } from "@/lib/expense.api";
 import { getEvents } from "@/lib/event.api";
+import { getTasks } from "@/lib/task.api";
+import { useAuth } from "@/hooks/useAuth";
 
 export interface UnifiedExpensesSectionRef {
   fetchExpenses: () => Promise<void>;
@@ -73,6 +75,7 @@ const UnifiedExpensesSection = forwardRef<
   },
   ref
 ) {
+  const { token } = useAuth();
   const [expenseList, setExpenseList] = useState<Expense[]>([]);
   const [eventOptions, setEventOptions] = useState<{ id: string; name: string }[]>([]);
   const [creators, setCreators] = useState<ExpenseCreator[]>([]);
@@ -112,22 +115,28 @@ const UnifiedExpensesSection = forwardRef<
         }
       } else {
         // Global manager expenses
-        const [expenses, eventsRes, creatorsRes] = await Promise.all([
+        const [expenses, tasksRes, eventsRes, creatorsRes] = await Promise.all([
           getExpenses(),
+          token ? getTasks(token, { limit: 100 }).catch(() => ({ data: [] })) : Promise.resolve({ data: [] }),
           getEvents({ limit: 100 }).catch(() => ({ data: [] })),
           getExpenseCreators().catch(() => []),
         ]);
 
         setExpenseList(expenses);
 
-        if (eventsRes && Array.isArray(eventsRes.data)) {
-          setEventOptions(
-            eventsRes.data.map((evt) => ({
+        const taskOpts = ((tasksRes as any)?.data || []).map((t: any) => ({
+          id: t._id,
+          name: `Task: ${t.title}`,
+        }));
+
+        const eventOpts = eventsRes && Array.isArray(eventsRes.data)
+          ? eventsRes.data.map((evt: any) => ({
               id: evt._id,
               name: evt.eventName,
             }))
-          );
-        }
+          : [];
+
+        setEventOptions([...taskOpts, ...eventOpts]);
 
         if (Array.isArray(creatorsRes)) {
           setCreators(creatorsRes);

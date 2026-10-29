@@ -37,6 +37,8 @@ export interface Expense {
   amount: number;
   event: string;
   eventId?: string;
+  task?: string;
+  taskId?: string;
   date: string;
   paymentMethod: PaymentMethod;
   status: ExpenseStatus;

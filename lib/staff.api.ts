@@ -310,3 +310,5 @@ export async function uploadGeneralStaffAvatar(file: File, token?: string): Prom
 
   return result.data.avatarUrl;
 }
+
+export const getStaffMembers = getStaff;

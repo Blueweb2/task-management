@@ -49,7 +49,7 @@ export default function ManagerMenu({
 
   const scope = getManagerScope(user);
   const menuItems = getAuthorizedMenuItems(user);
-  const homeHref = scope.departmentType === "operations" ? "/manager/events" : "/manager";
+  const homeHref = "/manager/tasks";
 
   return (
     <>
@@ -153,9 +153,7 @@ export default function ManagerMenu({
                     strokeWidth={2}
                     className={`shrink-0 ${
                       isActive
-                        ? scope.isChefManager
-                          ? "text-amber-400"
-                          : "text-[#9A7B4F]"
+                        ? "text-[#9A7B4F]"
                         : "text-gray-500"
                     }`}
                   />

@@ -1,201 +1,207 @@
 // ==========================================
-// TASK STATUS
+// TASK STATUS & PRIORITY
 // ==========================================
 
 export type TaskStatus =
-  | "PENDING"
+  | "TODO"
+  | "ASSIGNED"
   | "IN_PROGRESS"
   | "COMPLETED"
   | "CANCELLED";
 
-// ==========================================
-// TASK PRIORITY
-// ==========================================
-
 export type TaskPriority =
   | "LOW"
   | "MEDIUM"
-  | "HIGH";
+  | "HIGH"
+  | "URGENT";
 
 // ==========================================
-// TASK STAFF
+// TASK SUB-ENTITIES
 // ==========================================
 
-export type TaskStaff = {
+export interface TaskStaffMember {
   _id: string;
   name: string;
   username: string;
-  employeeId: string;
   email?: string;
-};
-
-// ==========================================
-// TASK EVENT
-// ==========================================
-
-export type TaskEvent = {
-  _id: string;
-  eventName: string;
-  eventType?: string;
-  eventDate: string;
-  location: string;
-};
-
-// ==========================================
-// TASK DUTY
-// ==========================================
-
-export type TaskDuty = {
-  _id: string;
-
-  staff: string | TaskStaff;
-
-  event: string | TaskEvent;
-
-  dutyTitle?: string;
+  employeeId?: string;
+  avatar?: string;
+  department?: string;
   role?: string;
+  phone?: string;
+}
 
-  dutyDate?: string;
-  startTime?: string;
-  endTime?: string;
-
-  status?: string;
-};
-
-// ==========================================
-// TASK
-// ==========================================
-
-export type Task = {
+export interface TaskService {
   _id: string;
+  name: string;
+  category: string;
+  basePrice?: number;
+  unitLabel?: string;
+  description?: string;
+}
 
-  duty: string | TaskDuty;
+export interface TaskStockItem {
+  _id: string;
+  name: string;
+  category: string;
+  totalQuantity: number;
+  availableQuantity: number;
+  unit?: string;
+  location?: string;
+  imageUrl?: string;
+}
 
+export interface TaskRequiredEquipment {
+  _id?: string;
+  item: string | TaskStockItem;
+  quantity: number;
+  notes?: string;
+}
+
+export interface TaskVoiceRecording {
+  url: string;
+  duration?: number;
+  format?: string;
+  transcribedText?: string;
+}
+
+export interface TaskAttachment {
+  _id?: string;
+  name: string;
+  url: string;
+  fileType?: string;
+  size?: number;
+}
+
+export interface TaskStatusHistoryItem {
+  _id?: string;
+  status: string;
+  changedBy?: {
+    _id: string;
+    name: string;
+    username: string;
+    role?: string;
+  } | null;
+  changedAt: string;
+  notes?: string;
+}
+
+// ==========================================
+// TASK ROOT MODEL
+// ==========================================
+
+export interface Task {
+  _id: string;
   title: string;
-
   description: string;
-
+  taskDate: string;
   dueDate: string;
-
   dueTime: string;
-
   priority: TaskPriority;
-
   status: TaskStatus;
-
+  service?: string | TaskService | null;
+  assignedStaff: TaskStaffMember[];
+  requiredEquipment: TaskRequiredEquipment[];
+  voiceRecording?: TaskVoiceRecording;
+  attachments: TaskAttachment[];
+  estimatedExpenses: number;
+  location: string;
   notes: string;
-
-  createdBy?: string | null;
-
+  createdBy?: {
+    _id: string;
+    name: string;
+    username: string;
+    role?: string;
+    email?: string;
+  } | null;
   completedAt?: string | null;
-
+  statusHistory?: TaskStatusHistoryItem[];
   createdAt: string;
-
   updatedAt: string;
-};
+}
 
 // ==========================================
-// CREATE TASK PAYLOAD
+// PAYLOADS & RESPONSES
 // ==========================================
 
-export type CreateTaskPayload = {
-  duty: string;
-
+export interface CreateTaskPayload {
   title: string;
-
   description?: string;
-
+  taskDate?: string;
   dueDate: string;
-
   dueTime?: string;
-
   priority?: TaskPriority;
-
+  service?: string | null;
+  assignedStaff?: string[];
+  requiredEquipment?: Array<{
+    item: string;
+    quantity: number;
+    notes?: string;
+  }>;
+  voiceRecording?: TaskVoiceRecording;
+  attachments?: TaskAttachment[];
+  estimatedExpenses?: number;
+  location?: string;
   notes?: string;
-};
+}
 
-// ==========================================
-// UPDATE TASK PAYLOAD
-// ==========================================
-
-export type UpdateTaskPayload = {
+export interface UpdateTaskPayload {
   title?: string;
-
   description?: string;
-
+  taskDate?: string;
   dueDate?: string;
-
   dueTime?: string;
-
   priority?: TaskPriority;
-
   status?: TaskStatus;
-
+  service?: string | null;
+  assignedStaff?: string[];
+  requiredEquipment?: Array<{
+    item: string;
+    quantity: number;
+    notes?: string;
+  }>;
+  voiceRecording?: TaskVoiceRecording;
+  attachments?: TaskAttachment[];
+  estimatedExpenses?: number;
+  location?: string;
   notes?: string;
-};
+  statusNotes?: string;
+}
 
-// ==========================================
-// TASK FILTERS
-// ==========================================
-
-export type TaskFilters = {
-  duty?: string;
-
-  status?: TaskStatus;
-
-  priority?: TaskPriority;
-
+export interface TaskFilters {
+  status?: string;
+  priority?: string;
+  service?: string;
+  assignedStaff?: string;
+  search?: string;
+  startDate?: string;
+  endDate?: string;
   page?: number;
-
   limit?: number;
-};
+}
 
-// ==========================================
-// PAGINATION
-// ==========================================
-
-export type TaskPagination = {
+export interface TaskPagination {
   page: number;
-
   limit: number;
-
   total: number;
-
   totalPages: number;
-};
+}
 
-// ==========================================
-// TASK LIST RESPONSE
-// ==========================================
-
-export type TaskListResponse = {
+export interface TaskListResponse {
   success: boolean;
-
   data: Task[];
-
   pagination: TaskPagination;
-};
+}
 
-// ==========================================
-// SINGLE TASK RESPONSE
-// ==========================================
-
-export type TaskResponse = {
+export interface TaskResponse {
   success: boolean;
-
   message?: string;
-
   data: {
     task: Task;
   };
-};
+}
 
-// ==========================================
-// DELETE TASK RESPONSE
-// ==========================================
-
-export type DeleteTaskResponse = {
+export interface DeleteTaskResponse {
   success: boolean;
-
   message?: string;
-};
+}

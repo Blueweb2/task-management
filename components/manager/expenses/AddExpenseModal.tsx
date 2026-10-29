@@ -185,16 +185,16 @@ export default function AddExpenseModal({
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const targetEventName = (fixedEvent?.name || form.event).trim();
+    const rawTarget = (fixedEvent?.name || form.event || form.task || "").trim();
+    const targetEventName = rawTarget || "General";
     const targetEventId = fixedEvent?.id || form.eventId;
 
     if (
       !form.title.trim() ||
-      !targetEventName ||
       !form.date ||
       Number(form.amount) <= 0
     ) {
-      setError("Please complete the title, valid amount, event, and date.");
+      setError("Please complete the title, valid amount, and date.");
       return;
     }
 
@@ -359,7 +359,7 @@ export default function AddExpenseModal({
 
             <div>
               <label className="mb-1 block text-xs font-bold text-[#403a34]">
-                Associated Event *
+                Associated Task / Reference (Optional)
               </label>
               {fixedEvent ? (
                 <div className="flex h-10 w-full items-center justify-between rounded-xl border border-[#ded5cb] bg-[#f7f4ee]/70 px-3 text-xs font-semibold text-[#29241f]">
@@ -375,7 +375,13 @@ export default function AddExpenseModal({
                     value={form.eventId || (form.event ? "custom" : "")}
                     onChange={(e) => {
                       const selectedId = e.target.value;
-                      if (selectedId === "custom") {
+                      if (!selectedId) {
+                        setForm((curr) => ({
+                          ...curr,
+                          eventId: "",
+                          event: "General",
+                        }));
+                      } else if (selectedId === "custom") {
                         updateField("eventId", "");
                       } else {
                         const matched = events.find((ev) => ev.id === selectedId);
@@ -392,13 +398,13 @@ export default function AddExpenseModal({
                     }}
                     className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-medium text-[#403a34] outline-none focus:border-[#b8894b]"
                   >
-                    <option value="">Select an active event</option>
+                    <option value="">General (No Task / Event)</option>
                     {events.map((evt) => (
                       <option key={evt.id} value={evt.id}>
                         {evt.name}
                       </option>
                     ))}
-                    <option value="custom">Other / Custom Event Name</option>
+                    <option value="custom">Other / Custom Name</option>
                   </select>
 
                   {(!form.eventId || form.eventId === "custom") && (
@@ -408,9 +414,8 @@ export default function AddExpenseModal({
                       onChange={(event) =>
                         updateField("event", event.target.value)
                       }
-                      placeholder="Enter custom event name"
+                      placeholder="e.g. General Operations, Task, or Project"
                       className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs outline-none focus:border-[#b8894b]"
-                      required
                     />
                   )}
                 </div>
@@ -419,9 +424,8 @@ export default function AddExpenseModal({
                   type="text"
                   value={form.event}
                   onChange={(event) => updateField("event", event.target.value)}
-                  placeholder="e.g. Wedding Reception"
+                  placeholder="e.g. General Operations or Task Title"
                   className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs outline-none focus:border-[#b8894b]"
-                  required
                 />
               )}
             </div>

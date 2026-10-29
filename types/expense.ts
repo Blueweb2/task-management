@@ -7,6 +7,8 @@ export interface Expense {
   date: string;
   status: string;
   notes?: string;
+  task?: string;
+  taskId?: string;
   createdAt?: string;
   updatedAt?: string;
 }
