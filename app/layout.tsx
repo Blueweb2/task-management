@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ToastProvider } from "@/components/common/Toast";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${inter.variable} bg-[#f7f4ec] text-[#29241f] antialiased`}
       >
         <ToastProvider>{children}</ToastProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
