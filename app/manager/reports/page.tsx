@@ -395,7 +395,7 @@ export default function ReportsPage() {
               type="button"
               onClick={() => void refreshAll()}
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl border border-[#ded5cb] bg-white px-4 py-2.5 text-sm font-semibold text-[#403a34] hover:bg-[#f8f4ee] disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#dbeafe] bg-white px-4 py-2.5 text-sm font-semibold text-[#1e293b] hover:bg-[#eff6ff] disabled:opacity-50"
             >
               <RefreshCw size={16} className={loading ? "animate-spin" : ""} />
               Refresh
@@ -404,7 +404,7 @@ export default function ReportsPage() {
               type="button"
               onClick={() => exportReport("all")}
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#6B5B95] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#57487e] disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#2563eb] px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#2563eb] disabled:opacity-50"
               title="Export comprehensive report including events, clients, estimates, and expenses"
             >
               <Download size={16} />
@@ -414,7 +414,7 @@ export default function ReportsPage() {
               type="button"
               onClick={() => exportReport("clients")}
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl border border-[#6B5B95] bg-[#F1EDF8] px-4 py-2.5 text-sm font-semibold text-[#6B5B95] hover:bg-[#e4dcf1] disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#2563eb] bg-[#eff6ff] px-4 py-2.5 text-sm font-semibold text-[#2563eb] hover:bg-[#e4dcf1] disabled:opacity-50"
               title="Export dedicated Client Directory with full contact info and booking revenue"
             >
               <Users size={16} />
@@ -425,7 +425,7 @@ export default function ReportsPage() {
       />
 
       {/* Date filters and View Tabs */}
-      <section className="flex flex-col gap-4 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm md:flex-row md:items-end md:justify-between">
+      <section className="flex flex-col gap-4 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm md:flex-row md:items-end md:justify-between">
         <div className="flex flex-wrap items-end gap-3">
           <div>
             <label className="block text-xs font-semibold text-gray-600">From date</label>
@@ -433,7 +433,7 @@ export default function ReportsPage() {
               type="date"
               value={fromDate}
               onChange={(e) => setFromDate(e.target.value)}
-              className="mt-1 h-10 rounded-xl border border-gray-200 px-3 text-sm focus:border-[#6B5B95] focus:outline-none"
+              className="mt-1 h-10 rounded-xl border border-gray-200 px-3 text-sm focus:border-[#2563eb] focus:outline-none"
             />
           </div>
           <div>
@@ -442,7 +442,7 @@ export default function ReportsPage() {
               type="date"
               value={toDate}
               onChange={(e) => setToDate(e.target.value)}
-              className="mt-1 h-10 rounded-xl border border-gray-200 px-3 text-sm focus:border-[#6B5B95] focus:outline-none"
+              className="mt-1 h-10 rounded-xl border border-gray-200 px-3 text-sm focus:border-[#2563eb] focus:outline-none"
             />
           </div>
           {(fromDate || toDate) && (
@@ -452,7 +452,7 @@ export default function ReportsPage() {
                 setFromDate("");
                 setToDate("");
               }}
-              className="h-10 px-2 text-xs font-semibold text-[#6B5B95] hover:underline"
+              className="h-10 px-2 text-xs font-semibold text-[#2563eb] hover:underline"
             >
               Clear dates
             </button>
@@ -466,7 +466,7 @@ export default function ReportsPage() {
             onClick={() => setActiveTab("overview")}
             className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors ${
               activeTab === "overview"
-                ? "bg-white text-[#6B5B95] shadow-sm"
+                ? "bg-white text-[#2563eb] shadow-sm"
                 : "text-gray-500 hover:text-gray-800"
             }`}
           >
@@ -477,7 +477,7 @@ export default function ReportsPage() {
             onClick={() => setActiveTab("clients")}
             className={`flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-colors ${
               activeTab === "clients"
-                ? "bg-white text-[#6B5B95] shadow-sm"
+                ? "bg-white text-[#2563eb] shadow-sm"
                 : "text-gray-500 hover:text-gray-800"
             }`}
           >
@@ -497,8 +497,8 @@ export default function ReportsPage() {
       )}
 
       {loading ? (
-        <div className="flex min-h-64 items-center justify-center rounded-2xl border border-[#e8e1d8] bg-white">
-          <Loader2 className="animate-spin text-[#6B5B95]" />
+        <div className="flex min-h-64 items-center justify-center rounded-2xl border border-[#dbeafe] bg-white">
+          <Loader2 className="animate-spin text-[#2563eb]" />
         </div>
       ) : (
         <>
@@ -551,7 +551,7 @@ export default function ReportsPage() {
                       label: item.status,
                       value: item.count,
                     }))}
-                    color="bg-[#6B5B95]"
+                    color="bg-[#2563eb]"
                   />
                 </ReportPanel>
                 <ReportPanel title="Estimate pipeline" icon={<FileText size={18} />}>
@@ -560,28 +560,28 @@ export default function ReportsPage() {
                       label: item.status,
                       value: item.count,
                     }))}
-                    color="bg-[#b8894b]"
+                    color="bg-[#3b82f6]"
                   />
                 </ReportPanel>
               </section>
 
               {/* Recent Activity with Client Details */}
-              <section className="rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6">
+              <section className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-lg font-semibold text-[#29241f]">
+                    <h2 className="text-lg font-semibold text-[#0f172a]">
                       Recent activity & Clients
                     </h2>
-                    <p className="mt-1 text-xs text-[#9b938a]">
+                    <p className="mt-1 text-xs text-[#64748b]">
                       Events, client contacts, and expenses in the selected period.
                     </p>
                   </div>
-                  <span className="text-xs font-medium text-[#9b938a]">
+                  <span className="text-xs font-medium text-[#64748b]">
                     {filteredEvents.length + filteredExpenses.length} records
                   </span>
                 </div>
 
-                <div className="mt-4 divide-y divide-[#eee8e1]">
+                <div className="mt-4 divide-y divide-[#eff6ff]">
                   {[
                     ...filteredEvents.map((event) => {
                       const client = extractEventClientDetails(event);
@@ -622,21 +622,21 @@ export default function ReportsPage() {
                             <span
                               className={`inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
                                 item.type === "Expense"
-                                  ? "bg-[#F4EBDD] text-[#9A7B4F]"
-                                  : "bg-[#F1EDF8] text-[#6B5B95]"
+                                  ? "bg-[#eff6ff] text-[#2563eb]"
+                                  : "bg-[#eff6ff] text-[#2563eb]"
                               }`}
                             >
                               {item.type}
                             </span>
-                            <p className="truncate text-sm font-semibold text-[#403a34]">
+                            <p className="truncate text-sm font-semibold text-[#1e293b]">
                               {item.name}
                             </p>
                           </div>
-                          <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#9b938a]">
+                          <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#64748b]">
                             <span>{formatDate(item.date)}</span>
                             {item.clientName && item.clientName !== "N/A" && (
-                              <span className="flex items-center gap-1 font-medium text-[#403a34]">
-                                <UserCheck size={13} className="text-[#6B5B95]" />
+                              <span className="flex items-center gap-1 font-medium text-[#1e293b]">
+                                <UserCheck size={13} className="text-[#2563eb]" />
                                 Client: {item.clientName}
                                 {item.clientPhone && item.clientPhone !== "N/A" && (
                                   <span className="text-[#7d756d]">({item.clientPhone})</span>
@@ -649,7 +649,7 @@ export default function ReportsPage() {
                         <div className="flex items-center justify-between gap-4 sm:flex-col sm:items-end sm:justify-center">
                           <p
                             className={`text-sm font-bold ${
-                              item.type === "Expense" ? "text-[#a7773f]" : "text-[#557555]"
+                              item.type === "Expense" ? "text-[#1d4ed8]" : "text-[#557555]"
                             }`}
                           >
                             {item.type === "Expense" ? "-" : ""}
@@ -666,13 +666,13 @@ export default function ReportsPage() {
             </>
           ) : (
             /* Dedicated Client Directory & Booking Details Table */
-            <section className="space-y-4 rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6">
+            <section className="space-y-4 rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <h2 className="text-lg font-semibold text-[#29241f]">
+                  <h2 className="text-lg font-semibold text-[#0f172a]">
                     Client Directory & Booking Reports
                   </h2>
-                  <p className="mt-0.5 text-xs text-[#9b938a]">
+                  <p className="mt-0.5 text-xs text-[#64748b]">
                     Showing client contact info, address, event details, and payment status.
                   </p>
                 </div>
@@ -686,14 +686,14 @@ export default function ReportsPage() {
                     value={clientSearch}
                     onChange={(e) => setClientSearch(e.target.value)}
                     placeholder="Search client, phone, event..."
-                    className="h-9 w-full rounded-xl border border-gray-200 pl-9 pr-3 text-xs focus:border-[#6B5B95] focus:outline-none"
+                    className="h-9 w-full rounded-xl border border-gray-200 pl-9 pr-3 text-xs focus:border-[#2563eb] focus:outline-none"
                   />
                 </div>
               </div>
 
-              <div className="overflow-x-auto rounded-xl border border-[#eee8e1]">
+              <div className="overflow-x-auto rounded-xl border border-[#eff6ff]">
                 <table className="w-full text-left text-xs">
-                  <thead className="border-b border-[#eee8e1] bg-gray-50/75 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+                  <thead className="border-b border-[#eff6ff] bg-gray-50/75 text-[11px] font-semibold uppercase tracking-wider text-gray-500">
                     <tr>
                       <th className="px-4 py-3">Client Details</th>
                       <th className="px-4 py-3">Event & Date</th>
@@ -705,7 +705,7 @@ export default function ReportsPage() {
                       <th className="px-4 py-3">Status</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#eee8e1]">
+                  <tbody className="divide-y divide-[#eff6ff]">
                     {clientEventsList.length === 0 ? (
                       <tr>
                         <td colSpan={8} className="py-8 text-center text-gray-400">
@@ -716,20 +716,20 @@ export default function ReportsPage() {
                       clientEventsList.map(({ event, client, total, paid, paymentStatus }) => (
                         <tr
                           key={event._id}
-                          className="hover:bg-[#faf8f5] transition-colors"
+                          className="hover:bg-[#f8fbff] transition-colors"
                         >
                           <td className="px-4 py-3">
-                            <p className="font-semibold text-[#29241f]">{client.name}</p>
+                            <p className="font-semibold text-[#0f172a]">{client.name}</p>
                             <div className="mt-1 flex flex-col gap-0.5 text-[11px] text-gray-500">
                               {client.phone && client.phone !== "N/A" && (
                                 <span className="flex items-center gap-1">
-                                  <Phone size={10} className="text-[#6B5B95]" />
+                                  <Phone size={10} className="text-[#2563eb]" />
                                   {client.phone}
                                 </span>
                               )}
                               {client.email && client.email !== "N/A" && (
                                 <span className="flex items-center gap-1">
-                                  <Mail size={10} className="text-[#6B5B95]" />
+                                  <Mail size={10} className="text-[#2563eb]" />
                                   {client.email}
                                 </span>
                               )}
@@ -742,7 +742,7 @@ export default function ReportsPage() {
                             </div>
                           </td>
                           <td className="px-4 py-3">
-                            <p className="font-medium text-[#403a34]">{event.eventName}</p>
+                            <p className="font-medium text-[#1e293b]">{event.eventName}</p>
                             <p className="mt-0.5 text-[11px] text-gray-500">
                               {formatDate(event.eventDate)}
                             </p>
@@ -803,21 +803,21 @@ function Metric({
   tone?: "purple" | "gold" | "green" | "red" | "blue";
 }) {
   const styles = {
-    purple: "bg-[#F1EDF8] text-[#6B5B95]",
-    gold: "bg-[#F4EBDD] text-[#9A7B4F]",
+    purple: "bg-[#eff6ff] text-[#2563eb]",
+    gold: "bg-[#eff6ff] text-[#2563eb]",
     green: "bg-green-50 text-green-700",
     red: "bg-red-50 text-red-700",
     blue: "bg-blue-50 text-blue-700",
   };
   return (
-    <article className="rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm">
+    <article className="rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm">
       <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${styles[tone]}`}>
         {icon}
       </div>
       <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-gray-400">
         {label}
       </p>
-      <p className="mt-1 text-xl font-bold text-[#29241f]">{value}</p>
+      <p className="mt-1 text-xl font-bold text-[#0f172a]">{value}</p>
     </article>
   );
 }
@@ -832,10 +832,10 @@ function ReportPanel({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6">
-      <div className="flex items-center gap-2 text-[#6B5B95]">
+    <section className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6">
+      <div className="flex items-center gap-2 text-[#2563eb]">
         <span>{icon}</span>
-        <h2 className="text-lg font-semibold text-[#29241f]">{title}</h2>
+        <h2 className="text-lg font-semibold text-[#0f172a]">{title}</h2>
       </div>
       <div className="mt-5">{children}</div>
     </section>

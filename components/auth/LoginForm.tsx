@@ -145,7 +145,7 @@ export default function LoginForm() {
       </div>
 
       {/* Card */} 
-      <div className="rounded-2xl border border-[#2A2A2A] bg-[#171717] p-6 shadow-2xl shadow-black/30 sm:p-8">
+      <div className="rounded-2xl border border-[#2A2A2A] bg-[#0f172a] p-6 shadow-2xl shadow-black/30 sm:p-8">
       
         {/* Session expired notification */}
         {isExpired && !error && (
@@ -172,7 +172,7 @@ export default function LoginForm() {
             placeholder="Enter your email"
             value={email}
             onChange={(event) => setEmail(event.target.value) }
-            leftIcon={ <Mail size={18} className="text-[#D2B47A]" /> }
+            leftIcon={ <Mail size={18} className="text-[#93c5fd]" /> }
             variant="dark"
             required
             autoComplete="email" 
@@ -185,18 +185,18 @@ export default function LoginForm() {
             label="Password"
             placeholder="Enter your password"
             value={password} onChange={(event) => setPassword(event.target.value) }
-            leftIcon={ <LockKeyhole size={18} className="text-[#D2B47A]" /> }
+            leftIcon={ <LockKeyhole size={18} className="text-[#93c5fd]" /> }
             variant="dark"
             rightIcon={ <button type="button" onClick={() => setShowPassword((previous) => !previous) }
             aria-label={ showPassword ? "Hide password" : "Show password" }
-            className="pointer-events-auto rounded-md p-1 text-gray-500 transition hover:text-[#D2B47A]" >{showPassword ? ( <EyeOff size={18} /> ) : ( <Eye size={18} /> )} </button> }
+            className="pointer-events-auto rounded-md p-1 text-gray-500 transition hover:text-[#93c5fd]" >{showPassword ? ( <EyeOff size={18} /> ) : ( <Eye size={18} /> )} </button> }
             required
             autoComplete="current-password" 
           />
           
           <Button
             type="submit"
-            className="w-full bg-[#D2B47A] text-[#171717] hover:bg-[#C2A366]"
+            className="w-full bg-[#93c5fd] text-[#0f172a] hover:bg-[#C2A366]"
             disabled={loading} >
             {loading ? ( "Signing in..." ) : ( <> Sign In <ArrowRight size={17} /> </> )}
           </Button>
@@ -205,7 +205,7 @@ export default function LoginForm() {
         {/* System Role Quick Access & Auto-fetch */}
         <div className="mt-6 rounded-xl border border-[#3A3327] bg-[#201D18] p-4">
           <div className="flex items-start gap-3">
-            <ShieldCheck size={19} className="mt-0.5 shrink-0 text-[#D2B47A]"/>
+            <ShieldCheck size={19} className="mt-0.5 shrink-0 text-[#93c5fd]"/>
             
             <div className="w-full">
               <p className="text-sm font-semibold text-gray-200"> Quick Access & Auto-Fill </p>
@@ -218,7 +218,7 @@ export default function LoginForm() {
                     setEmail("superadmin@taskmanagement.com");
                     setPassword("superadmin123"); 
                   }}
-                  className="rounded-lg bg-[#D2B47A]/20 border border-[#D2B47A]/40 px-2.5 py-1 text-xs font-semibold text-[#D2B47A] transition hover:bg-[#D2B47A]/30"
+                  className="rounded-lg bg-[#93c5fd]/20 border border-[#93c5fd]/40 px-2.5 py-1 text-xs font-semibold text-[#93c5fd] transition hover:bg-[#93c5fd]/30"
                 >
                   Superadmin: superadmin@taskmanagement.com
                 </button>
@@ -229,18 +229,18 @@ export default function LoginForm() {
                     setEmail("manager@taskmanagement.com");
                     setPassword("manager123"); 
                   }}
-                  className="rounded-lg bg-[#D2B47A]/10 px-2.5 py-1 text-xs font-medium text-[#D2B47A] transition hover:bg-[#D2B47A]/20"
+                  className="rounded-lg bg-[#93c5fd]/10 px-2.5 py-1 text-xs font-medium text-[#93c5fd] transition hover:bg-[#93c5fd]/20"
                 >
                   Manager: manager@taskmanagement.com
                 </button>
                   
                 <button
                   type="button"
-                  onClick={() => { 
+                  onClick={() => {
                     setEmail("staff@taskmanagement.com");
                     setPassword("staff123");
                   }}
-                  className="rounded-lg bg-[#D2B47A]/10 px-2.5 py-1 text-xs font-medium text-[#D2B47A] transition hover:bg-[#D2B47A]/20" 
+                  className="rounded-lg bg-[#93c5fd]/10 px-2.5 py-1 text-xs font-medium text-[#93c5fd] transition hover:bg-[#93c5fd]/20"
                 >
                   Staff: staff@taskmanagement.com
                 </button>
@@ -252,7 +252,7 @@ export default function LoginForm() {
 
       {/* Back to website */}
       <div className="mt-6 text-center">
-        <Link href="/" className="text-sm text-gray-500 transition hover:text-[#D2B47A]" >
+        <Link href="/" className="text-sm text-gray-500 transition hover:text-[#93c5fd]" >
           ← Back to website
         </Link>
       </div>

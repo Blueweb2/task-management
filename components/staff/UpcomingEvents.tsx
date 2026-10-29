@@ -79,26 +79,26 @@ export default function StaffUpcomingEvents({
   );
 
   return (
-    <section className="rounded-2xl sm:rounded-3xl border border-[#e8e1d8] bg-white p-4 sm:p-5 shadow-sm space-y-4">
+    <section className="rounded-2xl sm:rounded-3xl border border-[#dbeafe] bg-white p-4 sm:p-5 shadow-sm space-y-4">
       <div className="flex items-center justify-between pb-3 border-b border-gray-100">
         <div>
-          <h2 className="text-sm sm:text-base font-bold text-[#29241f]">
+          <h2 className="text-sm sm:text-base font-bold text-[#0f172a]">
             Assigned Events
           </h2>
-          <p className="text-xs text-[#756d64]">
+          <p className="text-xs text-[#475569]">
             Events linked to your scheduled shifts
           </p>
         </div>
         <Link
           href="/staff/events"
-          className="text-xs font-semibold text-[#9a6c37] hover:underline"
+          className="text-xs font-semibold text-[#1d4ed8] hover:underline"
         >
           View All
         </Link>
       </div>
 
       {distinctEvents.length === 0 ? (
-        <p className="rounded-2xl bg-[#fdfcfb] p-4 text-xs sm:text-sm text-gray-500 text-center">
+        <p className="rounded-2xl bg-[#ffffff] p-4 text-xs sm:text-sm text-gray-500 text-center">
           No assigned events yet.
         </p>
       ) : (
@@ -125,7 +125,7 @@ export default function StaffUpcomingEvents({
                     <CalendarDays size={18} />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="truncate text-xs sm:text-sm font-bold text-[#29241f]">
+                    <h3 className="truncate text-xs sm:text-sm font-bold text-[#0f172a]">
                       {event?.eventName || "Assigned event"}
                     </h3>
                     <p className="mt-0.5 text-xs text-gray-500">
@@ -134,7 +134,7 @@ export default function StaffUpcomingEvents({
                         : "Today"}
                     </p>
                     <div className="mt-1 flex items-center gap-1 text-[11px] text-gray-500">
-                      <MapPin size={11} className="shrink-0 text-[#9a6c37]" />
+                      <MapPin size={11} className="shrink-0 text-[#1d4ed8]" />
                       <span className="truncate">{event?.location || "Location pending"}</span>
                     </div>
                   </div>
@@ -149,13 +149,13 @@ export default function StaffUpcomingEvents({
             return (
               <div
                 key={item._id}
-                className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-[#fdfcfb] p-3 sm:p-3.5"
+                className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-[#ffffff] p-3 sm:p-3.5"
               >
-                <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-[#f5ede3] text-[#9a6c37]">
+                <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
                   <CalendarDays size={18} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h3 className="truncate text-xs sm:text-sm font-bold text-[#29241f]">
+                  <h3 className="truncate text-xs sm:text-sm font-bold text-[#0f172a]">
                     {event?.eventName || "Assigned event"}
                   </h3>
                   <p className="mt-0.5 text-xs text-gray-500">
@@ -166,7 +166,7 @@ export default function StaffUpcomingEvents({
                       : "Date pending"}
                   </p>
                   <div className="mt-1 flex items-center gap-1 text-[11px] text-gray-400">
-                    <MapPin size={11} className="shrink-0 text-[#9a6c37]" />
+                    <MapPin size={11} className="shrink-0 text-[#1d4ed8]" />
                     <span className="truncate">{event?.location || "Location pending"}</span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function StaffUpcomingEvents({
                   <div
                     key={item._id}
                     onClick={() => toggleExpand(item._id)}
-                    className="cursor-pointer rounded-2xl border border-gray-200/70 bg-[#faf8f5] p-3 text-xs transition hover:border-[#9a6c37]/40 hover:bg-white"
+                    className="cursor-pointer rounded-2xl border border-gray-200/70 bg-[#f8fbff] p-3 text-xs transition hover:border-[#1d4ed8]/40 hover:bg-white"
                   >
                     <div className="flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2 min-w-0">

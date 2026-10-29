@@ -134,7 +134,7 @@ export default function EquipmentRequestsTab({ token }: EquipmentRequestsTabProp
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by equipment, staff, or task..."
-            className="w-full rounded-2xl border border-gray-200 bg-white pl-9 pr-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+            className="w-full rounded-2xl border border-gray-200 bg-white pl-9 pr-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
           />
         </div>
 
@@ -171,7 +171,7 @@ export default function EquipmentRequestsTab({ token }: EquipmentRequestsTabProp
 
       {loading ? (
         <div className="flex min-h-48 items-center justify-center rounded-2xl border border-gray-200 bg-white">
-          <Loader2 size={24} className="animate-spin text-[#9A7B4F]" />
+          <Loader2 size={24} className="animate-spin text-[#2563eb]" />
         </div>
       ) : filteredRequests.length === 0 ? (
         <div className="flex min-h-48 flex-col items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-white p-6 text-center">

@@ -200,7 +200,7 @@ export default function StaffProfile({
                 className="h-24 w-24 rounded-3xl border-4 border-white shadow-md object-cover"
               />
             ) : (
-              <div className="flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-white shadow-md bg-[#F4EBDD] text-2xl font-bold text-[#9A7B4F]">
+              <div className="flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-white shadow-md bg-[#eff6ff] text-2xl font-bold text-[#2563eb]">
                 {initials}
               </div>
             )}
@@ -217,14 +217,14 @@ export default function StaffProfile({
               disabled={uploadingAvatar}
               title="Upload / change staff photo"
               aria-label="Upload staff photo"
-              className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#29241f] text-white shadow-md border-2 border-white transition hover:bg-[#b8894b] active:scale-90"
+              className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#0f172a] text-white shadow-md border-2 border-white transition hover:bg-[#3b82f6] active:scale-90"
             >
               <Camera size={14} />
             </button>
           </div>
 
           {/* Name */}
-          <h1 className="mt-4 text-xl font-semibold tracking-tight text-[#1F1F1F]">
+          <h1 className="mt-4 text-xl font-semibold tracking-tight text-[#0f172a]">
             {staff.name}
           </h1>
 
@@ -277,26 +277,26 @@ export default function StaffProfile({
         {/* Quick Stats */}
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-gray-100 pt-5">
           {/* Events */}
-          <div className="rounded-xl bg-[#F8F7F3] p-3 text-center">
+          <div className="rounded-xl bg-[#f8fbff] p-3 text-center">
             <CalendarDays
               size={17}
-              className="mx-auto text-[#9A7B4F]"
+              className="mx-auto text-[#2563eb]"
               strokeWidth={1.8}
             />
-            <p className="mt-1.5 text-lg font-semibold text-[#1F1F1F]">
+            <p className="mt-1.5 text-lg font-semibold text-[#0f172a]">
               {staff.eventsAssigned ?? duties.length}
             </p>
             <p className="text-[10px] text-gray-500">Shifts Logged</p>
           </div>
 
           {/* Working Hours */}
-          <div className="rounded-xl bg-[#F8F7F3] p-3 text-center">
+          <div className="rounded-xl bg-[#f8fbff] p-3 text-center">
             <Clock
               size={17}
               className="mx-auto text-amber-700"
               strokeWidth={1.8}
             />
-            <p className="mt-1.5 text-lg font-semibold text-[#1F1F1F]">
+            <p className="mt-1.5 text-lg font-semibold text-[#0f172a]">
               {totalHours.toFixed(1)} <span className="text-xs font-normal">hrs</span>
             </p>
             <p className="text-[10px] text-gray-500">Total Hours</p>
@@ -304,13 +304,13 @@ export default function StaffProfile({
 
           {/* Total Earnings OR Department Scope */}
           {isChefManager ? (
-            <div className="rounded-xl bg-[#F8F7F3] p-3 text-center">
+            <div className="rounded-xl bg-[#f8fbff] p-3 text-center">
               <Building2
                 size={17}
                 className="mx-auto text-amber-700"
                 strokeWidth={1.8}
               />
-              <p className="mt-1.5 text-lg font-semibold text-[#1F1F1F]">
+              <p className="mt-1.5 text-lg font-semibold text-[#0f172a]">
                 {staff.department || "Kitchen"}
               </p>
               <p className="text-[10px] text-gray-500">Department</p>
@@ -330,7 +330,7 @@ export default function StaffProfile({
           )}
 
           {/* Current Status */}
-          <div className="rounded-xl bg-[#F8F7F3] p-3 text-center">
+          <div className="rounded-xl bg-[#f8fbff] p-3 text-center">
             <div className="mx-auto flex h-[17px] items-center justify-center">
               <span
                 className={`h-2.5 w-2.5 rounded-full ${
@@ -340,7 +340,7 @@ export default function StaffProfile({
                 }`}
               />
             </div>
-            <p className="mt-1.5 text-lg font-semibold text-[#1F1F1F]">
+            <p className="mt-1.5 text-lg font-semibold text-[#0f172a]">
               {staff.isActive ? "Active" : "Off"}
             </p>
             <p className="text-[10px] text-gray-500">Account Status</p>
@@ -355,11 +355,11 @@ export default function StaffProfile({
           onClick={() => setActiveTab("schedule")}
           className={`flex-1 min-w-[170px] rounded-xl py-2.5 px-3 text-xs font-bold transition flex items-center justify-center gap-1.5 ${
             activeTab === "schedule"
-              ? "bg-[#29241f] text-white shadow-xs"
+              ? "bg-[#0f172a] text-white shadow-xs"
               : "text-gray-600 hover:text-gray-900"
           }`}
         >
-          <CalendarDays size={14} className={activeTab === "schedule" ? "text-[#9A7B4F]" : "text-gray-400"} />
+          <CalendarDays size={14} className={activeTab === "schedule" ? "text-[#2563eb]" : "text-gray-400"} />
           <span>Assignments & Schedule ({duties.length})</span>
         </button>
 
@@ -418,7 +418,7 @@ export default function StaffProfile({
         <section className="space-y-4">
           {loadingDuties ? (
             <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8">
-              <Loader2 className="h-6 w-6 animate-spin text-[#9A7B4F]" />
+              <Loader2 className="h-6 w-6 animate-spin text-[#2563eb]" />
               <p className="mt-2 text-xs text-gray-500">Loading duty history and timesheets...</p>
             </div>
           ) : duties.length === 0 ? (
@@ -431,7 +431,7 @@ export default function StaffProfile({
             <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="border-b border-gray-100 bg-[#faf8f5] text-[11px] font-bold text-gray-600">
+                  <thead className="border-b border-gray-100 bg-[#f8fbff] text-[11px] font-bold text-gray-600">
                     <tr>
                       <th className="px-4 py-3">Date</th>
                       <th className="px-4 py-3">Event & Venue</th>
@@ -467,7 +467,7 @@ export default function StaffProfile({
                           <td className="px-4 py-3">
                             <p className="font-semibold text-gray-800">{duty.dutyTitle}</p>
                             {duty.department && (
-                              <span className="text-[10px] text-[#9A7B4F]">{duty.department}</span>
+                              <span className="text-[10px] text-[#2563eb]">{duty.department}</span>
                             )}
                           </td>
                           <td className="px-4 py-3 font-bold text-gray-900 whitespace-nowrap">

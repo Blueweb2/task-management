@@ -141,7 +141,7 @@ export default function EditEventModal({
         {/* Header */}
         <div className="shrink-0 flex items-center justify-between border-b border-gray-100 p-5 sm:p-6 bg-white">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f5ede4] text-[#9A7B4F]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f5ede4] text-[#2563eb]">
               <Sparkles size={20} />
             </div>
             <div>
@@ -185,7 +185,7 @@ export default function EditEventModal({
                     value={eventName}
                     onChange={(e) => setEventName(e.target.value)}
                     placeholder="e.g. Grand Wedding Reception"
-                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -198,7 +198,7 @@ export default function EditEventModal({
                   <select
                     value={eventType}
                     onChange={(e) => setEventType(e.target.value)}
-                    className="w-full rounded-xl border border-gray-300 bg-white px-3.5 py-2.5 text-xs text-gray-900 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="w-full rounded-xl border border-gray-300 bg-white px-3.5 py-2.5 text-xs text-gray-900 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   >
                     <option value="Wedding">Wedding</option>
                     <option value="Reception">Reception</option>
@@ -228,7 +228,7 @@ export default function EditEventModal({
                     required
                     value={eventDate}
                     onChange={(e) => setEventDate(e.target.value)}
-                    className="block w-full min-w-0 max-w-full box-border appearance-none rounded-xl border border-gray-300 bg-white px-3 py-3 text-base text-gray-900 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="block w-full min-w-0 max-w-full box-border appearance-none rounded-xl border border-gray-300 bg-white px-3 py-3 text-base text-gray-900 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                     style={{
                       width: "100%",
                       minWidth: 0,
@@ -252,7 +252,7 @@ export default function EditEventModal({
                     value={eventTime}
                     onChange={(e) => setEventTime(e.target.value)}
                     placeholder="e.g. 6:00 PM"
-                    className="block w-full min-w-0 max-w-full box-border rounded-xl border border-gray-300 bg-white px-3 py-3 text-base text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="block w-full min-w-0 max-w-full box-border rounded-xl border border-gray-300 bg-white px-3 py-3 text-base text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                     style={{
                       width: "100%",
                       minWidth: 0,
@@ -277,7 +277,7 @@ export default function EditEventModal({
                     value={guests}
                     onChange={(e) => setGuests(Number(e.target.value) || 0)}
                     placeholder="e.g. 250"
-                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function EditEventModal({
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     placeholder="e.g. Royal Palace Ballroom, Mumbai"
-                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -307,7 +307,7 @@ export default function EditEventModal({
                 <select
                   value={status}
                   onChange={(e) => setStatus(e.target.value as EventStatus)}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-3.5 py-2.5 text-xs font-semibold text-gray-900 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                  className="w-full rounded-xl border border-gray-300 bg-white px-3.5 py-2.5 text-xs font-semibold text-gray-900 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                 >
                   <option value="Upcoming">Upcoming (Scheduled)</option>
                   <option value="Ongoing">Ongoing (In Progress)</option>
@@ -333,7 +333,7 @@ export default function EditEventModal({
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Event program details or special requirements..."
-                className="mt-1.5 w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                className="mt-1.5 w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
               />
             </div>
 
@@ -347,7 +347,7 @@ export default function EditEventModal({
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Internal reminders, logistics notes, vendor remarks..."
-                className="mt-1.5 w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                className="mt-1.5 w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
               />
             </div>
 
@@ -367,7 +367,7 @@ export default function EditEventModal({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#29241f] px-6 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-60"
+              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#0f172a] px-6 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-60"
             >
               {loading && <Loader2 size={14} className="animate-spin" />}
               <span>{loading ? "Saving..." : "Save Changes"}</span>

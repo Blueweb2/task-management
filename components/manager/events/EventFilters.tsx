@@ -67,7 +67,7 @@ export default function EventFilters({
               className={[
                 "inline-flex items-center gap-1.5 sm:gap-2 min-h-9 sm:min-h-10 rounded-full px-3 sm:px-4 text-xs sm:text-sm font-medium transition cursor-pointer shrink-0 whitespace-nowrap",
                 active
-                  ? "bg-[#252525] text-white shadow-xs"
+                  ? "bg-[#1e3a8a] text-white shadow-xs"
                   : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50",
               ].join(" ")}
             >

@@ -91,7 +91,7 @@ export default function ManagerClientsPage() {
       <PageHeader
         title="Clients & Financial Accounts"
         description="Manage customer profiles, event history, advance payments, and outstanding balances."
-        action={<button type="button" onClick={openCreate} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#6B5B95] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#57487e]"><Plus size={17} />Add client</button>}
+        action={<button type="button" onClick={openCreate} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#2563eb] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#2563eb]"><Plus size={17} />Add client</button>}
       />
 
       <div className="grid gap-3 sm:grid-cols-3">
@@ -132,6 +132,6 @@ export default function ManagerClientsPage() {
 }
 
 function SummaryCard({ label, value, icon, tone = "purple" }: { label: string; value: number; icon?: React.ReactNode; tone?: "purple" | "green" | "gold" }) {
-  const styles = { purple: "bg-[#F1EDF8] text-[#6B5B95]", green: "bg-green-50 text-green-700", gold: "bg-[#F4EBDD] text-[#9A7B4F]" };
-  return <div className="flex items-center gap-3 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm"><div className={`flex h-9 w-9 items-center justify-center rounded-xl ${styles[tone]}`}>{icon || <span className="text-sm font-bold">#</span>}</div><div><p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{label}</p><p className="mt-0.5 text-xl font-bold text-gray-900">{value}</p></div></div>;
+  const styles = { purple: "bg-[#eff6ff] text-[#2563eb]", green: "bg-green-50 text-green-700", gold: "bg-[#eff6ff] text-[#2563eb]" };
+  return <div className="flex items-center gap-3 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm"><div className={`flex h-9 w-9 items-center justify-center rounded-xl ${styles[tone]}`}>{icon || <span className="text-sm font-bold">#</span>}</div><div><p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{label}</p><p className="mt-0.5 text-xl font-bold text-gray-900">{value}</p></div></div>;
 }

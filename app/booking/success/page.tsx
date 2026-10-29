@@ -37,15 +37,15 @@ function DetailPill({
   value,
 }: SuccessDetail) {
   return (
-    <div className="flex items-start gap-3 rounded-2xl border border-[#e5e0d5] bg-white/70 px-4 py-3 backdrop-blur-sm">
-      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#e8ebe1] text-[#4f5745]">
+    <div className="flex items-start gap-3 rounded-2xl border border-[#dbeafe] bg-white/70 px-4 py-3 backdrop-blur-sm">
+      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1e3a8a]">
         <Icon size={15} strokeWidth={2} />
       </div>
       <div className="min-w-0">
-        <p className="text-[11px] font-semibold uppercase tracking-wider text-[#a9a397]">
+        <p className="text-[11px] font-semibold uppercase tracking-wider text-[#64748b]">
           {label}
         </p>
-        <p className="mt-0.5 truncate text-sm font-semibold text-[#363833]">
+        <p className="mt-0.5 truncate text-sm font-semibold text-[#0f172a]">
           {value}
         </p>
       </div>
@@ -68,14 +68,14 @@ function StepBadge({
 }) {
   return (
     <div className="flex items-start gap-4">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#4f5745] text-xs font-bold text-white">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1e3a8a] text-xs font-bold text-white">
         {step}
       </div>
       <div>
-        <p className="text-sm font-semibold text-[#363833]">
+        <p className="text-sm font-semibold text-[#0f172a]">
           {title}
         </p>
-        <p className="mt-0.5 text-sm text-[#a9a397]">
+        <p className="mt-0.5 text-sm text-[#64748b]">
           {description}
         </p>
       </div>
@@ -164,7 +164,7 @@ function SuccessContent() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#f7f4ec]">
+    <main className="min-h-screen bg-[#f8fbff]">
       <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-20">
 
         {/* ======================================
@@ -174,7 +174,7 @@ function SuccessContent() {
         <div className="mb-8">
           <Link
             href="/booking"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#7b846b] transition hover:text-[#4f5745]"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-[#2563eb] transition hover:text-[#1e3a8a]"
           >
             <ArrowLeft size={13} />
             Back to Booking
@@ -188,12 +188,12 @@ function SuccessContent() {
         <div className="text-center">
           {/* Animated checkmark ring */}
           <div className="relative mx-auto mb-6 flex h-24 w-24 items-center justify-center">
-            <div className="absolute inset-0 animate-ping rounded-full bg-[#e8ebe1] opacity-60" />
-            <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-[#e8ebe1]">
+            <div className="absolute inset-0 animate-ping rounded-full bg-[#eff6ff] opacity-60" />
+            <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-[#eff6ff]">
               <CheckCircle2
                 size={48}
                 strokeWidth={1.5}
-                className="text-[#4f5745]"
+                className="text-[#1e3a8a]"
               />
             </div>
           </div>
@@ -201,24 +201,24 @@ function SuccessContent() {
           <div className="mb-2 flex items-center justify-center gap-2">
             <Sparkles
               size={16}
-              className="text-[#b6a274]"
+              className="text-[#3b82f6]"
             />
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#7b846b]">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#2563eb]">
               Estimate Submitted
             </span>
             <Sparkles
               size={16}
-              className="text-[#b6a274]"
+              className="text-[#3b82f6]"
             />
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-[#363833] sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl">
             You&apos;re all set!
           </h1>
 
-          <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#a9a397]">
+          <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#64748b]">
             Your estimate request for{" "}
-            <span className="font-semibold text-[#363833]">
+            <span className="font-semibold text-[#0f172a]">
               {eventName}
             </span>{" "}
             has been submitted successfully. Our team will review it and get back to you shortly.
@@ -226,15 +226,15 @@ function SuccessContent() {
 
           {/* Reference number */}
           {estimateNumber && (
-            <div className="mx-auto mt-5 inline-flex items-center gap-2 rounded-full border border-[#e5e0d5] bg-white px-4 py-2 shadow-sm">
+            <div className="mx-auto mt-5 inline-flex items-center gap-2 rounded-full border border-[#dbeafe] bg-white px-4 py-2 shadow-sm">
               <FileText
                 size={14}
-                className="text-[#7b846b]"
+                className="text-[#2563eb]"
               />
-              <span className="text-xs font-medium text-[#a9a397]">
+              <span className="text-xs font-medium text-[#64748b]">
                 Reference:
               </span>
-              <span className="font-mono text-sm font-bold text-[#363833]">
+              <span className="font-mono text-sm font-bold text-[#0f172a]">
                 {estimateNumber}
               </span>
             </div>
@@ -242,11 +242,11 @@ function SuccessContent() {
 
           {/* Estimated total */}
           {formattedTotal && (
-            <div className="mx-auto mt-3 inline-flex items-center gap-2 rounded-full border border-[#d9b8ae] bg-[#fcfaf5] px-4 py-2">
-              <span className="text-xs font-medium text-[#a9a397]">
+            <div className="mx-auto mt-3 inline-flex items-center gap-2 rounded-full border border-[#bfdbfe] bg-[#ffffff] px-4 py-2">
+              <span className="text-xs font-medium text-[#64748b]">
                 Estimate Total:
               </span>
-              <span className="text-sm font-bold text-[#363833]">
+              <span className="text-sm font-bold text-[#0f172a]">
                 {formattedTotal}
               </span>
             </div>
@@ -258,8 +258,8 @@ function SuccessContent() {
         ====================================== */}
 
         {eventDetails.length > 0 && (
-          <div className="mt-10 rounded-3xl border border-[#e5e0d5] bg-[#fcfaf5] p-6">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#a9a397]">
+          <div className="mt-10 rounded-3xl border border-[#dbeafe] bg-[#ffffff] p-6">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#64748b]">
               Event Summary
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -280,8 +280,8 @@ function SuccessContent() {
         ====================================== */}
 
         {contactDetails.length > 0 && (
-          <div className="mt-4 rounded-3xl border border-[#e5e0d5] bg-[#fcfaf5] p-6">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#a9a397]">
+          <div className="mt-4 rounded-3xl border border-[#dbeafe] bg-[#ffffff] p-6">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#64748b]">
               Your Contact Info
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -301,8 +301,8 @@ function SuccessContent() {
             What Happens Next
         ====================================== */}
 
-        <div className="mt-6 rounded-3xl border border-[#e5e0d5] bg-[#fcfaf5] p-6">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-wider text-[#a9a397]">
+        <div className="mt-6 rounded-3xl border border-[#dbeafe] bg-[#ffffff] p-6">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-wider text-[#64748b]">
             What happens next
           </p>
 
@@ -312,13 +312,13 @@ function SuccessContent() {
               title="Estimate Review"
               description="Our team will review your estimate request within 24–48 hours."
             />
-            <div className="ml-4 h-px bg-[#e5e0d5]" />
+            <div className="ml-4 h-px bg-[#dbeafe]" />
             <StepBadge
               step={2}
               title="We'll Reach Out"
               description="A team member will contact you on the phone or email you provided to discuss details."
             />
-            <div className="ml-4 h-px bg-[#e5e0d5]" />
+            <div className="ml-4 h-px bg-[#dbeafe]" />
             <StepBadge
               step={3}
               title="Finalise & Confirm"
@@ -334,21 +334,21 @@ function SuccessContent() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             href="/manager/events?tab=estimates"
-            className="flex min-h-12 items-center justify-center rounded-2xl bg-[#4f5745] px-8 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#363d2e] hover:shadow-lg active:scale-[0.99]"
+            className="flex min-h-12 items-center justify-center rounded-2xl bg-[#1e3a8a] px-8 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#363d2e] hover:shadow-lg active:scale-[0.99]"
           >
             View Proposals & Estimates
           </Link>
 
           <Link
             href="/manager/booking"
-            className="flex min-h-12 items-center justify-center rounded-2xl border border-[#e5e0d5] bg-white px-8 text-sm font-semibold text-[#363833] transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+            className="flex min-h-12 items-center justify-center rounded-2xl border border-[#dbeafe] bg-white px-8 text-sm font-semibold text-[#0f172a] transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
           >
             Create Another Booking
           </Link>
 
           <Link
             href="/manager"
-            className="flex min-h-12 items-center justify-center rounded-2xl border border-[#e5e0d5] bg-[#faf8f5] px-6 text-sm font-semibold text-[#756d64] transition hover:-translate-y-0.5 hover:bg-white active:scale-[0.99]"
+            className="flex min-h-12 items-center justify-center rounded-2xl border border-[#dbeafe] bg-[#f8fbff] px-6 text-sm font-semibold text-[#475569] transition hover:-translate-y-0.5 hover:bg-white active:scale-[0.99]"
           >
             Manager Portal
           </Link>
@@ -358,7 +358,7 @@ function SuccessContent() {
             Footer note
         ====================================== */}
 
-        <p className="mt-8 text-center text-xs text-[#a9a397]">
+        <p className="mt-8 text-center text-xs text-[#64748b]">
           Keep your reference number safe. You&apos;ll need it if you contact us about this estimate.
         </p>
       </div>
@@ -374,8 +374,8 @@ export default function BookingSuccessPage() {
   return (
     <Suspense
       fallback={
-        <main className="flex min-h-screen items-center justify-center bg-[#f7f4ec]">
-          <div className="text-sm text-[#a9a397]">
+        <main className="flex min-h-screen items-center justify-center bg-[#f8fbff]">
+          <div className="text-sm text-[#64748b]">
             Loading...
           </div>
         </main>

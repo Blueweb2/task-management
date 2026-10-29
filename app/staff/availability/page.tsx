@@ -114,14 +114,14 @@ export default function StaffAvailabilityPage() {
   return (
     <main className="space-y-6 py-5 sm:space-y-8 sm:py-6">
       {/* Header */}
-      <header className="border-b border-[#e8e1d8] pb-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a6c37]">
+      <header className="border-b border-[#dbeafe] pb-6">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#1d4ed8]">
           Staff Portal
         </p>
-        <h1 className="mt-1 text-2xl font-bold text-[#29241f] sm:text-3xl">
+        <h1 className="mt-1 text-2xl font-bold text-[#0f172a] sm:text-3xl">
           My Work Availability & Leave
         </h1>
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#756d64]">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#475569]">
           Submit your available working hours or request leave dates so managers can dispatch shifts accurately.
         </p>
       </header>
@@ -146,16 +146,16 @@ export default function StaffAvailabilityPage() {
       {/* Main Grid: Submission Form & History Feed */}
       <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
         {/* Availability Form */}
-        <section className="rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6">
-          <div className="flex items-center gap-3 border-b border-[#eee8e1] pb-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+        <section className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6">
+          <div className="flex items-center gap-3 border-b border-[#eff6ff] pb-4">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
               <Calendar size={20} />
             </div>
             <div>
-              <h2 className="text-base font-bold text-[#29241f]">
+              <h2 className="text-base font-bold text-[#0f172a]">
                 Set Date Availability / Leave
               </h2>
-              <p className="text-xs text-[#8d847b]">
+              <p className="text-xs text-[#64748b]">
                 Save work status for a specific date
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function StaffAvailabilityPage() {
 
           <form onSubmit={handleSubmit} className="mt-5 space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-[#403a34]">
+              <label className="block text-xs font-semibold text-[#1e293b]">
                 Target Date
               </label>
               <input
@@ -171,12 +171,12 @@ export default function StaffAvailabilityPage() {
                 required
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="mt-1.5 h-11 w-full rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+                className="mt-1.5 h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-[#403a34]">
+              <label className="block text-xs font-semibold text-[#1e293b]">
                 Availability Status
               </label>
               <div className="mt-1.5 grid grid-cols-3 gap-2">
@@ -193,7 +193,7 @@ export default function StaffAvailabilityPage() {
                             : st === "ON_LEAVE"
                             ? "bg-amber-600 text-white border-amber-600"
                             : "bg-rose-600 text-white border-rose-600"
-                          : "bg-[#fdfbf8] text-[#756d64] border-[#e3dbd2] hover:bg-[#f8f4ee]"
+                          : "bg-[#ffffff] text-[#475569] border-[#dbeafe] hover:bg-[#eff6ff]"
                       }`}
                     >
                       {st === "AVAILABLE"
@@ -210,10 +210,10 @@ export default function StaffAvailabilityPage() {
             {status === "AVAILABLE" && (
               <div className="grid grid-cols-2 gap-3 pt-1">
                 <div>
-                  <label className="block text-xs font-semibold text-[#403a34]">
+                  <label className="block text-xs font-semibold text-[#1e293b]">
                     Start Time
                     {startTime && (
-                      <span className="ml-2 font-normal text-[#a7773f]">
+                      <span className="ml-2 font-normal text-[#1d4ed8]">
                         ({formatTime24to12(startTime)})
                       </span>
                     )}
@@ -222,14 +222,14 @@ export default function StaffAvailabilityPage() {
                     type="time"
                     value={startTime}
                     onChange={(e) => setStartTime(e.target.value)}
-                    className="mt-1.5 h-10 w-full rounded-xl border border-[#e3dbd2] bg-white px-3 text-xs outline-none focus:border-[#b8894b]"
+                    className="mt-1.5 h-10 w-full rounded-xl border border-[#dbeafe] bg-white px-3 text-xs outline-none focus:border-[#3b82f6]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#403a34]">
+                  <label className="block text-xs font-semibold text-[#1e293b]">
                     End Time
                     {endTime && (
-                      <span className="ml-2 font-normal text-[#a7773f]">
+                      <span className="ml-2 font-normal text-[#1d4ed8]">
                         ({formatTime24to12(endTime)})
                       </span>
                     )}
@@ -238,14 +238,14 @@ export default function StaffAvailabilityPage() {
                     type="time"
                     value={endTime}
                     onChange={(e) => setEndTime(e.target.value)}
-                    className="mt-1.5 h-10 w-full rounded-xl border border-[#e3dbd2] bg-white px-3 text-xs outline-none focus:border-[#b8894b]"
+                    className="mt-1.5 h-10 w-full rounded-xl border border-[#dbeafe] bg-white px-3 text-xs outline-none focus:border-[#3b82f6]"
                   />
                 </div>
               </div>
             )}
 
             <div>
-              <label className="block text-xs font-semibold text-[#403a34]">
+              <label className="block text-xs font-semibold text-[#1e293b]">
                 Notes / Leave Reason
               </label>
               <textarea
@@ -257,14 +257,14 @@ export default function StaffAvailabilityPage() {
                     ? "Specify leave reason (e.g. Personal leave / Doctor appointment)..."
                     : "Add optional shift preference notes..."
                 }
-                className="mt-1.5 w-full rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] p-3 text-xs outline-none focus:border-[#b8894b]"
+                className="mt-1.5 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] p-3 text-xs outline-none focus:border-[#3b82f6]"
               />
             </div>
 
             <button
               type="submit"
               disabled={submitting}
-              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#b8894b] px-5 text-xs font-bold text-white shadow-sm transition hover:bg-[#a7773f] disabled:opacity-50"
+              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#3b82f6] px-5 text-xs font-bold text-white shadow-sm transition hover:bg-[#1d4ed8] disabled:opacity-50"
             >
               {submitting ? (
                 "Saving..."
@@ -279,27 +279,27 @@ export default function StaffAvailabilityPage() {
         </section>
 
         {/* My Saved Availability History */}
-        <section className="rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6 flex flex-col justify-between">
+        <section className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between border-b border-[#eee8e1] pb-4">
+            <div className="flex items-center justify-between border-b border-[#eff6ff] pb-4">
               <div>
-                <h2 className="text-base font-bold text-[#29241f]">
+                <h2 className="text-base font-bold text-[#0f172a]">
                   My Saved Availability & Leave
                 </h2>
-                <p className="text-xs text-[#8d847b]">
+                <p className="text-xs text-[#64748b]">
                   {records.length} record{records.length === 1 ? "" : "s"} submitted
                 </p>
               </div>
-              <UserCheck size={19} className="text-[#a7773f]" />
+              <UserCheck size={19} className="text-[#1d4ed8]" />
             </div>
 
             <div className="mt-4 space-y-3">
               {loading ? (
                 <div className="flex justify-center p-8">
-                  <Loader2 size={24} className="animate-spin text-[#9a6c37]" />
+                  <Loader2 size={24} className="animate-spin text-[#1d4ed8]" />
                 </div>
               ) : records.length === 0 ? (
-                <div className="rounded-2xl border border-dashed border-[#e3dbd2] p-8 text-center">
+                <div className="rounded-2xl border border-dashed border-[#dbeafe] p-8 text-center">
                   <CalendarDays className="mx-auto h-8 w-8 text-gray-300" />
                   <p className="mt-2 text-xs font-medium text-gray-600">
                     No availability records saved yet.
@@ -325,12 +325,12 @@ export default function StaffAvailabilityPage() {
                   return (
                     <article
                       key={item._id}
-                      className="rounded-2xl border border-[#eee8e1] bg-[#fdfcfb] p-4 transition hover:border-[#e3dbd2]"
+                      className="rounded-2xl border border-[#eff6ff] bg-[#ffffff] p-4 transition hover:border-[#dbeafe]"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="text-xs font-bold text-[#29241f]">
+                            <span className="text-xs font-bold text-[#0f172a]">
                               {dateStr}
                             </span>
                             <span
@@ -348,7 +348,7 @@ export default function StaffAvailabilityPage() {
 
                           {item.startTime && item.endTime && (
                             <div className="mt-1.5 flex items-center gap-1.5 text-xs text-gray-600">
-                              <Clock3 size={13} className="text-[#a7773f]" />
+                              <Clock3 size={13} className="text-[#1d4ed8]" />
                               <span>
                                 {formatTime24to12(item.startTime)} - {formatTime24to12(item.endTime)}
                               </span>
@@ -357,7 +357,7 @@ export default function StaffAvailabilityPage() {
 
                           {item.notes && (
                             <div className="mt-2 flex items-start gap-1 text-[11px] text-gray-500 italic">
-                              <FileText size={12} className="mt-0.5 shrink-0 text-[#a7773f]" />
+                              <FileText size={12} className="mt-0.5 shrink-0 text-[#1d4ed8]" />
                               <span>&ldquo;{item.notes}&rdquo;</span>
                             </div>
                           )}

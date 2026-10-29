@@ -32,11 +32,11 @@ export default function Pagination({
             items-center
             justify-between
             border-t
-            border-[#EEEAE2]
+            border-[#eff6ff]
             px-5
             py-4
             text-sm
-            text-[#77746D]
+            text-[#64748b]
             sm:px-6
             ${className}
           `}
@@ -126,7 +126,7 @@ export default function Pagination({
         flex-col
         gap-4
         border-t
-        border-[#EEEAE2]
+        border-[#eff6ff]
         px-5
         py-4
         sm:flex-row
@@ -138,17 +138,17 @@ export default function Pagination({
     >
       {/* Total */}
       {showTotal && total !== undefined ? (
-        <p className="text-sm text-[#77746D]">
+        <p className="text-sm text-[#64748b]">
           Showing page{" "}
-          <span className="font-medium text-[#3F4044]">
+          <span className="font-medium text-[#334155]">
             {page}
           </span>{" "}
           of{" "}
-          <span className="font-medium text-[#3F4044]">
+          <span className="font-medium text-[#334155]">
             {totalPages}
           </span>{" "}
           ·{" "}
-          <span className="font-medium text-[#3F4044]">
+          <span className="font-medium text-[#334155]">
             {total}
           </span>{" "}
           {total === 1 ? "result" : "results"}
@@ -184,7 +184,7 @@ export default function Pagination({
                     items-center
                     justify-center
                     text-sm
-                    text-[#77746D]
+                    text-[#64748b]
                   "
                 >
                   …
@@ -214,7 +214,7 @@ export default function Pagination({
         </div>
 
         {/* Mobile page indicator */}
-        <span className="px-2 text-sm text-[#77746D] sm:hidden">
+        <span className="px-2 text-sm text-[#64748b] sm:hidden">
           {page} / {totalPages}
         </span>
 
@@ -277,8 +277,8 @@ function PaginationButton({
 
         ${
           active
-            ? "bg-[#1F2023] text-white"
-            : "text-[#5F5D57] hover:bg-[#F3F1EC] hover:text-[#1F2023]"
+            ? "bg-[#0f172a] text-white"
+            : "text-[#5F5D57] hover:bg-[#eff6ff] hover:text-[#0f172a]"
         }
 
         disabled:cursor-not-allowed
@@ -286,7 +286,7 @@ function PaginationButton({
 
         focus:outline-none
         focus:ring-2
-        focus:ring-[#B49A6A]/30
+        focus:ring-[#60a5fa]/30
       `}
       {...props}
     >

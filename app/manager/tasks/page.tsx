@@ -145,22 +145,25 @@ export default function ManagerTasksPage() {
   return (
     <div className="space-y-6 py-4">
       {/* Top Banner / Heading */}
-      <section className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-7 shadow-xs overflow-hidden">
-        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#9A7B4F]/10 to-transparent" />
+      <section className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-7 shadow-xs overflow-hidden">
+        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#2563eb]/10 to-transparent" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-[#9A7B4F] border border-amber-200">
-              <Sparkles size={12} />
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-blue-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
               Operations Center
             </span>
-            <span className="text-xs text-gray-400 font-medium hidden sm:inline">• Task Management</span>
+
+            <span className="hidden text-xs font-medium text-slate-400 sm:inline">
+              • Task Management
+            </span>
           </div>
 
-          <h1 className="mt-2 text-xl font-black tracking-tight text-[#29241f] sm:text-2xl lg:text-3xl">
+          <h1 className="mt-2 text-xl font-black tracking-tight text-[#0f172a] sm:text-2xl lg:text-3xl">
             To Do & Task Management
           </h1>
-          <p className="mt-1 text-xs sm:text-sm leading-relaxed text-[#756d64]">
+          <p className="mt-1 text-xs sm:text-sm leading-relaxed text-[#475569]">
             Create tasks, record voice messages, assign staff, and track progress end-to-end.
           </p>
         </div>
@@ -170,11 +173,10 @@ export default function ManagerTasksPage() {
           <button
             type="button"
             onClick={() => setActiveTab("tasks")}
-            className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${
-              activeTab === "tasks"
-                ? "bg-[#29241f] text-white shadow-xs"
+            className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${activeTab === "tasks"
+                ? "bg-[#0f172a] text-white shadow-xs"
                 : "text-gray-600 hover:text-gray-900"
-            }`}
+              }`}
           >
             <ListTodo size={15} />
             <span>Tasks ({tasks.length})</span>
@@ -183,11 +185,10 @@ export default function ManagerTasksPage() {
           <button
             type="button"
             onClick={() => setActiveTab("equipment")}
-            className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${
-              activeTab === "equipment"
-                ? "bg-[#29241f] text-white shadow-xs"
+            className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${activeTab === "equipment"
+                ? "bg-[#0f172a] text-white shadow-xs"
                 : "text-gray-600 hover:text-gray-900"
-            }`}
+              }`}
           >
             <Package size={15} />
             <span>Equipment Requests</span>
@@ -225,11 +226,10 @@ export default function ManagerTasksPage() {
                   <button
                     type="button"
                     onClick={() => setViewMode("grid")}
-                    className={`rounded-lg p-1.5 transition ${
-                      viewMode === "grid"
-                        ? "bg-[#29241f] text-white shadow-2xs"
+                    className={`rounded-lg p-1.5 transition ${viewMode === "grid"
+                        ? "bg-[#0f172a] text-white shadow-2xs"
                         : "text-gray-400 hover:text-gray-700"
-                    }`}
+                      }`}
                     title="Grid View"
                   >
                     <LayoutGrid size={15} />
@@ -237,11 +237,10 @@ export default function ManagerTasksPage() {
                   <button
                     type="button"
                     onClick={() => setViewMode("list")}
-                    className={`rounded-lg p-1.5 transition ${
-                      viewMode === "list"
-                        ? "bg-[#29241f] text-white shadow-2xs"
+                    className={`rounded-lg p-1.5 transition ${viewMode === "list"
+                        ? "bg-[#0f172a] text-white shadow-2xs"
                         : "text-gray-400 hover:text-gray-700"
-                    }`}
+                      }`}
                     title="List View"
                   >
                     <List size={15} />
@@ -269,13 +268,13 @@ export default function ManagerTasksPage() {
           {/* Loading Indicator */}
           {loading ? (
             <div className="flex min-h-64 flex-col items-center justify-center rounded-3xl border border-gray-200 bg-white p-8">
-              <Loader2 size={28} className="animate-spin text-[#9A7B4F]" />
+              <Loader2 size={28} className="animate-spin text-[#2563eb]" />
               <p className="mt-3 text-xs font-medium text-gray-500">Loading tasks...</p>
             </div>
           ) : tasks.length === 0 ? (
             /* Empty State */
             <div className="flex min-h-64 flex-col items-center justify-center rounded-3xl border border-dashed border-gray-300 bg-white p-8 text-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-[#9A7B4F] mb-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-[#2563eb] mb-3">
                 <ListTodo size={28} />
               </div>
               <h3 className="text-sm font-bold text-gray-900">No tasks found</h3>
@@ -287,7 +286,7 @@ export default function ManagerTasksPage() {
               <button
                 type="button"
                 onClick={() => setIsCreateOpen(true)}
-                className="mt-4 inline-flex items-center gap-1.5 rounded-2xl bg-[#29241f] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
+                className="mt-4 inline-flex items-center gap-1.5 rounded-2xl bg-[#0f172a] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
               >
                 <Plus size={15} />
                 <span>Create New Task</span>

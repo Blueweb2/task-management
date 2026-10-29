@@ -153,7 +153,7 @@ export default function ManagerMenu({
                     strokeWidth={2}
                     className={`shrink-0 ${
                       isActive
-                        ? "text-[#9A7B4F]"
+                        ? "text-[#2563eb]"
                         : "text-gray-500"
                     }`}
                   />
@@ -192,7 +192,7 @@ export default function ManagerMenu({
 
         <div className="shrink-0 border-t border-gray-200 p-3 space-y-1.5">
           <div className="flex items-center gap-3 rounded-xl bg-stone-50 p-2">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#29241f] text-xs font-bold text-white shadow-xs">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0f172a] text-xs font-bold text-white shadow-xs">
               {user?.name ? user.name.charAt(0).toUpperCase() : "M"}
             </div>
             <div className="min-w-0 flex-1">

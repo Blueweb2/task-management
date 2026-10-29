@@ -62,7 +62,7 @@ export default function QuantitySelector({
         </span>
       )}
 
-      <div className="inline-flex items-center rounded-xl border border-[#d8cfc4] bg-white p-0.5 shadow-xs transition-colors hover:border-[#a7773f]">
+      <div className="inline-flex items-center rounded-xl border border-[#dbeafe] bg-white p-0.5 shadow-xs transition-colors hover:border-[#1d4ed8]">
         <button
           type="button"
           disabled={disabled || currentVal <= min}
@@ -70,7 +70,7 @@ export default function QuantitySelector({
           aria-label="Decrease quantity"
           className={`${
             isSmall ? "h-6 w-6" : "h-8 w-8"
-          } flex items-center justify-center rounded-lg text-gray-600 transition hover:bg-[#faf8f5] hover:text-[#29241f] active:scale-95 disabled:cursor-not-allowed disabled:opacity-30`}
+          } flex items-center justify-center rounded-lg text-gray-600 transition hover:bg-[#f8fbff] hover:text-[#0f172a] active:scale-95 disabled:cursor-not-allowed disabled:opacity-30`}
         >
           <Minus size={isSmall ? 12 : 14} strokeWidth={2.5} />
         </button>
@@ -85,7 +85,7 @@ export default function QuantitySelector({
           aria-label="Quantity"
           className={`${
             isSmall ? "w-10 text-xs" : "w-14 text-sm"
-          } bg-transparent text-center font-bold text-[#29241f] outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`}
+          } bg-transparent text-center font-bold text-[#0f172a] outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`}
         />
 
         <button
@@ -95,7 +95,7 @@ export default function QuantitySelector({
           aria-label="Increase quantity"
           className={`${
             isSmall ? "h-6 w-6" : "h-8 w-8"
-          } flex items-center justify-center rounded-lg text-gray-600 transition hover:bg-[#faf8f5] hover:text-[#29241f] active:scale-95 disabled:cursor-not-allowed disabled:opacity-30`}
+          } flex items-center justify-center rounded-lg text-gray-600 transition hover:bg-[#f8fbff] hover:text-[#0f172a] active:scale-95 disabled:cursor-not-allowed disabled:opacity-30`}
         >
           <Plus size={isSmall ? 12 : 14} strokeWidth={2.5} />
         </button>

@@ -64,7 +64,7 @@ export default function TodaySchedule() {
         <div>
           <h2
             id="today-schedule-heading"
-            className="text-base font-semibold text-[#1F1F1F]"
+            className="text-base font-semibold text-[#0f172a]"
           >
             Today&apos;s Schedule
           </h2>
@@ -76,7 +76,7 @@ export default function TodaySchedule() {
 
         <Link
           href="/manager/events"
-          className="text-xs font-medium text-[#9A7B4F] transition hover:text-[#7D623E]"
+          className="text-xs font-medium text-[#2563eb] transition hover:text-[#1d4ed8]"
         >
           View All
         </Link>
@@ -97,7 +97,7 @@ export default function TodaySchedule() {
             >
               {/* Timeline */}
               <div className="flex w-16 shrink-0 flex-col items-center">
-                <span className="text-xs font-semibold text-[#1F1F1F]">
+                <span className="text-xs font-semibold text-[#0f172a]">
                   {formatTime24to12(item.time)}
                 </span>
 
@@ -122,7 +122,7 @@ export default function TodaySchedule() {
               <div className="min-w-0 flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <h3 className="truncate text-sm font-semibold text-[#1F1F1F]">
+                    <h3 className="truncate text-sm font-semibold text-[#0f172a]">
                       {item.title}
                     </h3>
 

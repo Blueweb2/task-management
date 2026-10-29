@@ -298,10 +298,10 @@ export default function ManagerStockPage() {
       {/* Top Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-black tracking-tight text-[#29241f]">
+          <h1 className="text-2xl font-black tracking-tight text-[#0f172a]">
             {isAuthorizedKitchen ? "Inventory & Stock Management" : "Equipment & Asset Inventory"}
           </h1>
-          <p className="mt-1 text-xs text-[#756d64]">
+          <p className="mt-1 text-xs text-[#475569]">
             {isAuthorizedKitchen
               ? "Separated inventory modules for internal kitchen ingredients and client-rentable event equipment."
               : "Department equipment, reusable event supplies, and rentable assets."}
@@ -312,16 +312,16 @@ export default function ManagerStockPage() {
           <button
             type="button"
             onClick={handleOpenAuditModal}
-            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#e8e1d8] bg-white px-3.5 text-xs font-extrabold text-[#29241f] shadow-2xs hover:bg-[#faf7f2] transition active:scale-95 cursor-pointer"
+            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[#dbeafe] bg-white px-3.5 text-xs font-extrabold text-[#0f172a] shadow-2xs hover:bg-[#eff6ff] transition active:scale-95 cursor-pointer"
           >
-            <History size={16} className="text-[#9a6c37]" />
+            <History size={16} className="text-[#1d4ed8]" />
             <span>Restock Audit History</span>
           </button>
 
           <button
             type="button"
             onClick={handleOpenCreateModal}
-            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#29241f] px-4 text-xs font-extrabold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
+            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-xs font-extrabold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
           >
             <PackagePlus size={16} />
             <span>
@@ -333,14 +333,14 @@ export default function ManagerStockPage() {
 
       {/* Module Navigation Tabs */}
       {isAuthorizedKitchen ? (
-        <div className="flex border-b border-[#e8e1d8] bg-white p-1.5 rounded-2xl shadow-2xs gap-1">
+        <div className="flex border-b border-[#dbeafe] bg-white p-1.5 rounded-2xl shadow-2xs gap-1">
           <button
             type="button"
             onClick={() => handleTabChange("kitchen")}
             className={`flex flex-1 items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-extrabold transition cursor-pointer ${
               activeTab === "kitchen"
-                ? "bg-[#29241f] text-white shadow-sm"
-                : "text-[#756d64] hover:bg-[#faf7f2] hover:text-[#29241f]"
+                ? "bg-[#0f172a] text-white shadow-sm"
+                : "text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a]"
             }`}
           >
             <UtensilsCrossed size={16} />
@@ -361,8 +361,8 @@ export default function ManagerStockPage() {
             onClick={() => handleTabChange("rentable")}
             className={`flex flex-1 items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-extrabold transition cursor-pointer ${
               activeTab === "rentable"
-                ? "bg-[#29241f] text-white shadow-sm"
-                : "text-[#756d64] hover:bg-[#faf7f2] hover:text-[#29241f]"
+                ? "bg-[#0f172a] text-white shadow-sm"
+                : "text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a]"
             }`}
           >
             <Boxes size={16} />
@@ -379,15 +379,15 @@ export default function ManagerStockPage() {
           </button>
         </div>
       ) : (
-        <div className="flex items-center justify-between border border-[#e8e1d8] bg-white p-3 rounded-2xl shadow-2xs">
-          <div className="flex items-center gap-2 text-xs font-extrabold text-[#29241f]">
-            <Boxes size={18} className="text-[#9a6c37]" />
+        <div className="flex items-center justify-between border border-[#dbeafe] bg-white p-3 rounded-2xl shadow-2xs">
+          <div className="flex items-center gap-2 text-xs font-extrabold text-[#0f172a]">
+            <Boxes size={18} className="text-[#1d4ed8]" />
             <span>Department Equipment & Event Supplies</span>
             <span className="rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-bold">
               {scope.roleTitle}
             </span>
           </div>
-          <span className="text-[11px] text-[#756d64]">
+          <span className="text-[11px] text-[#475569]">
             Showing operational equipment & hire stock
           </span>
         </div>
@@ -440,20 +440,20 @@ export default function ManagerStockPage() {
           {/* Kitchen Purchase Requests Shortcut */}
           <Link
             href="/manager/kitchen"
-            className="rounded-2xl border border-stone-200 bg-white p-4 shadow-xs hover:border-[#b8894b] transition group flex flex-col justify-between"
+            className="rounded-2xl border border-stone-200 bg-white p-4 shadow-xs hover:border-[#3b82f6] transition group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
                   Kitchen Portal
                 </p>
-                <FileText size={14} className="text-[#b8894b]" />
+                <FileText size={14} className="text-[#3b82f6]" />
               </div>
-              <p className="mt-1 text-sm font-black text-stone-900 group-hover:text-[#b8894b] transition">
+              <p className="mt-1 text-sm font-black text-stone-900 group-hover:text-[#3b82f6] transition">
                 Purchase Requests
               </p>
             </div>
-            <div className="mt-2 flex items-center gap-1 text-[11px] font-bold text-[#b8894b]">
+            <div className="mt-2 flex items-center gap-1 text-[11px] font-bold text-[#3b82f6]">
               <span>Manage shortages</span>
               <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
             </div>
@@ -526,7 +526,7 @@ export default function ManagerStockPage() {
             }
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="h-10 w-full rounded-xl border border-gray-200 bg-[#fdfcfb] pl-9 pr-4 text-xs font-medium outline-none focus:border-[#9a6c37]"
+            className="h-10 w-full rounded-xl border border-gray-200 bg-[#ffffff] pl-9 pr-4 text-xs font-medium outline-none focus:border-[#1d4ed8]"
           />
         </div>
 
@@ -535,7 +535,7 @@ export default function ManagerStockPage() {
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
-            className="h-10 rounded-xl border border-gray-200 bg-white px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#9a6c37]"
+            className="h-10 rounded-xl border border-gray-200 bg-white px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#1d4ed8]"
           >
             <option value="ALL">
               {activeTab === "kitchen" ? "All Kitchen Categories" : "All Equipment Categories"}
@@ -563,7 +563,7 @@ export default function ManagerStockPage() {
       {/* Inventory Display: Mobile Cards + Desktop Table */}
       {loading ? (
         <div className="flex h-48 items-center justify-center rounded-2xl border border-gray-200 bg-white">
-          <Loader2 size={24} className="animate-spin text-[#9a6c37]" />
+          <Loader2 size={24} className="animate-spin text-[#1d4ed8]" />
         </div>
       ) : items.length === 0 ? (
         <div className="rounded-2xl border border-gray-200 bg-white p-12 text-center text-gray-500">
@@ -593,14 +593,14 @@ export default function ManagerStockPage() {
               return (
                 <div
                   key={`mobile-${item._id}`}
-                  className="rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs space-y-3 transition hover:border-[#9a6c37]/40"
+                  className="rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs space-y-3 transition hover:border-[#1d4ed8]/40"
                 >
                   {/* Top Header Row */}
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0 flex-1">
                       <Link
                         href={`/manager/stock/${item._id}`}
-                        className="font-extrabold text-[#29241f] text-sm sm:text-base leading-snug hover:text-[#9a6c37] transition-colors block"
+                        className="font-extrabold text-[#0f172a] text-sm sm:text-base leading-snug hover:text-[#1d4ed8] transition-colors block"
                       >
                         {item.name}
                       </Link>
@@ -637,7 +637,7 @@ export default function ManagerStockPage() {
                   </div>
 
                   {/* Quantities & Inventory Grid */}
-                  <div className="grid grid-cols-3 gap-2 rounded-xl bg-[#faf8f5] p-2.5 text-xs">
+                  <div className="grid grid-cols-3 gap-2 rounded-xl bg-[#f8fbff] p-2.5 text-xs">
                     <div className="rounded-lg bg-white p-2 border border-gray-100 shadow-2xs">
                       <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Available</p>
                       <p className="mt-0.5 font-black text-gray-900 text-sm">
@@ -680,7 +680,7 @@ export default function ManagerStockPage() {
 
                     <Link
                       href={`/manager/stock/${item._id}`}
-                      className="text-xs font-bold text-[#9a6c37] hover:underline flex items-center gap-1"
+                      className="text-xs font-bold text-[#1d4ed8] hover:underline flex items-center gap-1"
                     >
                       <span>Manage</span>
                       <ArrowRight size={12} />
@@ -697,7 +697,7 @@ export default function ManagerStockPage() {
           <div className="hidden md:block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xs">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-gray-200 bg-[#faf8f5] text-[11px] font-bold uppercase tracking-wider text-gray-500">
+                <tr className="border-b border-gray-200 bg-[#f8fbff] text-[11px] font-bold uppercase tracking-wider text-gray-500">
                   <th className="py-3.5 px-4">Item Details</th>
                   <th className="py-3.5 px-4">Category</th>
                   <th className="py-3.5 px-4 text-center">Available Stock</th>
@@ -722,13 +722,13 @@ export default function ManagerStockPage() {
                   return (
                     <tr
                       key={`desktop-${item._id}`}
-                      className="hover:bg-[#fdfcfb] transition-colors"
+                      className="hover:bg-[#ffffff] transition-colors"
                     >
                       {/* Name & Location */}
                       <td className="py-3.5 px-4">
                         <Link
                           href={`/manager/stock/${item._id}`}
-                          className="font-extrabold text-[#29241f] text-sm hover:text-[#9a6c37] transition-colors"
+                          className="font-extrabold text-[#0f172a] text-sm hover:text-[#1d4ed8] transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -817,7 +817,7 @@ export default function ManagerStockPage() {
                       <td className="py-3.5 px-4 text-right">
                         <Link
                           href={`/manager/stock/${item._id}`}
-                          className="inline-flex items-center gap-1 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-bold text-gray-700 hover:border-[#9a6c37] hover:bg-[#faf8f5] transition shadow-2xs"
+                          className="inline-flex items-center gap-1 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-bold text-gray-700 hover:border-[#1d4ed8] hover:bg-[#f8fbff] transition shadow-2xs"
                         >
                           <span>Manage</span>
                           <ArrowRight size={12} />
@@ -837,10 +837,10 @@ export default function ManagerStockPage() {
       {/* ========================================================================= */}
       {createModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-in fade-in">
-          <div className="w-full max-w-lg rounded-3xl border border-[#e8e1d8] bg-white p-6 shadow-2xl space-y-4">
+          <div className="w-full max-w-lg rounded-3xl border border-[#dbeafe] bg-white p-6 shadow-2xl space-y-4">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <div>
-                <h3 className="text-base font-black text-[#29241f]">
+                <h3 className="text-base font-black text-[#0f172a]">
                   {activeTab === "kitchen"
                     ? "Add Kitchen Stock / Ingredient"
                     : "Add Reusable Rental Equipment"}
@@ -873,7 +873,7 @@ export default function ManagerStockPage() {
                   }
                   value={newItem.name}
                   onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
-                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -894,7 +894,7 @@ export default function ManagerStockPage() {
                         rentalPrice: isKitchenCat ? 0 : newItem.rentalPrice,
                       });
                     }}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#1d4ed8]"
                   >
                     {tabCategories.map((c) => (
                       <option key={c} value={c}>
@@ -911,7 +911,7 @@ export default function ManagerStockPage() {
                     placeholder={activeTab === "kitchen" ? "kg, liters, packets" : "pcs, sets"}
                     value={newItem.unit}
                     onChange={(e) => setNewItem({ ...newItem, unit: e.target.value })}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
               </div>
@@ -927,7 +927,7 @@ export default function ManagerStockPage() {
                     onChange={(e) =>
                       setNewItem({ ...newItem, totalQuantity: Number(e.target.value) })
                     }
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -940,7 +940,7 @@ export default function ManagerStockPage() {
                     onChange={(e) =>
                       setNewItem({ ...newItem, minStockLevel: Number(e.target.value) })
                     }
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -953,7 +953,7 @@ export default function ManagerStockPage() {
                     onChange={(e) =>
                       setNewItem({ ...newItem, unitPrice: Number(e.target.value) })
                     }
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
               </div>
@@ -1020,7 +1020,7 @@ export default function ManagerStockPage() {
                   }
                   value={newItem.location}
                   onChange={(e) => setNewItem({ ...newItem, location: e.target.value })}
-                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -1035,7 +1035,7 @@ export default function ManagerStockPage() {
                   }
                   value={newItem.description}
                   onChange={(e) => setNewItem({ ...newItem, description: e.target.value })}
-                  className="mt-1 w-full rounded-xl border border-gray-200 p-2.5 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                  className="mt-1 w-full rounded-xl border border-gray-200 p-2.5 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -1051,7 +1051,7 @@ export default function ManagerStockPage() {
                 <button
                   type="submit"
                   disabled={createSubmitting}
-                  className="rounded-xl bg-[#29241f] px-5 py-2 text-xs font-extrabold text-white hover:bg-black cursor-pointer flex items-center gap-2"
+                  className="rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-extrabold text-white hover:bg-black cursor-pointer flex items-center gap-2"
                 >
                   {createSubmitting ? <Loader2 size={14} className="animate-spin" /> : null}
                   <span>
@@ -1076,7 +1076,7 @@ export default function ManagerStockPage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="text-base font-black text-[#29241f]">
+                    <h3 className="text-base font-black text-[#0f172a]">
                       Stock Transaction Audit History
                     </h3>
                     <span className="rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 text-[10px] font-extrabold">
@@ -1098,7 +1098,7 @@ export default function ManagerStockPage() {
             </div>
 
             {/* Filter and Search Bar */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-[#faf8f5] border-b border-gray-200/80 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-[#f8fbff] border-b border-gray-200/80 shrink-0">
               <div className="flex items-center gap-2">
                 <button
                   type="button"
@@ -1117,7 +1117,7 @@ export default function ManagerStockPage() {
                   onClick={() => handleAuditFilterChange("ALL")}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
                     auditFilter === "ALL"
-                      ? "bg-[#29241f] text-white shadow-xs"
+                      ? "bg-[#0f172a] text-white shadow-xs"
                       : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
                   }`}
                 >
@@ -1133,7 +1133,7 @@ export default function ManagerStockPage() {
                     placeholder="Search by item, user, notes..."
                     value={auditSearch}
                     onChange={(e) => setAuditSearch(e.target.value)}
-                    className="w-full pl-8 pr-3 py-1.5 rounded-xl border border-gray-200 bg-white text-xs focus:outline-hidden focus:border-[#9a6c37]"
+                    className="w-full pl-8 pr-3 py-1.5 rounded-xl border border-gray-200 bg-white text-xs focus:outline-hidden focus:border-[#1d4ed8]"
                   />
                 </div>
                 <button
@@ -1143,7 +1143,7 @@ export default function ManagerStockPage() {
                   className="rounded-xl border border-gray-200 bg-white p-2 text-gray-600 hover:bg-gray-50 cursor-pointer transition"
                   title="Refresh"
                 >
-                  <RefreshCw size={14} className={auditLoading ? "animate-spin text-[#9a6c37]" : ""} />
+                  <RefreshCw size={14} className={auditLoading ? "animate-spin text-[#1d4ed8]" : ""} />
                 </button>
               </div>
             </div>
@@ -1152,7 +1152,7 @@ export default function ManagerStockPage() {
             <div className="flex-1 overflow-y-auto p-4">
               {auditLoading ? (
                 <div className="py-16 text-center text-gray-400">
-                  <Loader2 size={32} className="mx-auto animate-spin text-[#9a6c37]" />
+                  <Loader2 size={32} className="mx-auto animate-spin text-[#1d4ed8]" />
                   <p className="mt-2 text-xs font-bold text-gray-600">Loading audit history...</p>
                 </div>
               ) : filteredAuditTransactions.length === 0 ? (
@@ -1168,7 +1168,7 @@ export default function ManagerStockPage() {
               ) : (
                 <div className="overflow-x-auto rounded-xl border border-gray-200">
                   <table className="w-full text-left text-xs">
-                    <thead className="border-b border-gray-200 bg-[#faf8f5] text-[11px] font-bold text-gray-600">
+                    <thead className="border-b border-gray-200 bg-[#f8fbff] text-[11px] font-bold text-gray-600">
                       <tr>
                         <th className="px-3.5 py-3">Timestamp</th>
                         <th className="px-3.5 py-3">Item Restocked / Inventory Item</th>
@@ -1224,7 +1224,7 @@ export default function ManagerStockPage() {
                                       Inventory Item
                                     </span>
                                   )}
-                                  <span className="font-extrabold text-[#29241f] text-xs">
+                                  <span className="font-extrabold text-[#0f172a] text-xs">
                                     {itemName}
                                   </span>
                                 </div>
@@ -1307,7 +1307,7 @@ export default function ManagerStockPage() {
 
                             {/* Restocked By */}
                             <td className="px-3.5 py-3 text-gray-600 whitespace-nowrap">
-                              <div className="font-semibold text-[#29241f]">
+                              <div className="font-semibold text-[#0f172a]">
                                 {tx.performedBy?.name || "System"}
                               </div>
                               {tx.performedBy?.role && (
@@ -1335,7 +1335,7 @@ export default function ManagerStockPage() {
                               {itemId ? (
                                 <Link
                                   href={`/manager/stock/${itemId}`}
-                                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#9a6c37] hover:underline"
+                                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#1d4ed8] hover:underline"
                                 >
                                   <span>View Item</span>
                                   <ExternalLink size={12} />
@@ -1354,14 +1354,14 @@ export default function ManagerStockPage() {
             </div>
 
             {/* Modal Footer */}
-            <div className="flex items-center justify-between border-t border-gray-100 px-5 py-3 bg-[#faf8f5] shrink-0 text-xs text-gray-500">
+            <div className="flex items-center justify-between border-t border-gray-100 px-5 py-3 bg-[#f8fbff] shrink-0 text-xs text-gray-500">
               <span>
                 Showing <b>{filteredAuditTransactions.length}</b> transaction entries
               </span>
               <button
                 type="button"
                 onClick={() => setAuditModalOpen(false)}
-                className="rounded-xl bg-[#29241f] px-4 py-2 font-bold text-white hover:bg-black transition cursor-pointer"
+                className="rounded-xl bg-[#0f172a] px-4 py-2 font-bold text-white hover:bg-black transition cursor-pointer"
               >
                 Close Audit History
               </button>

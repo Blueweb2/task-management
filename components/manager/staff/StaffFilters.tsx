@@ -67,7 +67,7 @@ export default function StaffFilters({
                 aria-pressed={isActive}
                 className={`min-h-9 shrink-0 rounded-xl px-3.5 text-xs font-semibold transition active:scale-95 ${
                   isActive
-                    ? "bg-[#1F1F1F] text-white shadow-xs"
+                    ? "bg-[#0f172a] text-white shadow-xs"
                     : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -81,7 +81,7 @@ export default function StaffFilters({
         {isSuperAdmin && onRoleChange && (
           <div className="flex items-center gap-1 rounded-xl border border-gray-200 bg-white p-1 shadow-2xs">
             <span className="flex items-center gap-1 px-2 text-[11px] font-bold uppercase tracking-wider text-gray-400">
-              <Shield size={12} className="text-[#9A7B4F]" />
+              <Shield size={12} className="text-[#2563eb]" />
               Role
             </span>
             <button
@@ -89,7 +89,7 @@ export default function StaffFilters({
               onClick={() => onRoleChange("all")}
               className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition ${
                 selectedRole === "all"
-                  ? "bg-[#9A7B4F] text-white shadow-xs"
+                  ? "bg-[#2563eb] text-white shadow-xs"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -100,7 +100,7 @@ export default function StaffFilters({
               onClick={() => onRoleChange("manager")}
               className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition ${
                 selectedRole === "manager"
-                  ? "bg-[#9A7B4F] text-white shadow-xs"
+                  ? "bg-[#2563eb] text-white shadow-xs"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -111,7 +111,7 @@ export default function StaffFilters({
               onClick={() => onRoleChange("staff")}
               className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition ${
                 selectedRole === "staff"
-                  ? "bg-[#9A7B4F] text-white shadow-xs"
+                  ? "bg-[#2563eb] text-white shadow-xs"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >

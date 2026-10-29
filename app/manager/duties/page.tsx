@@ -315,14 +315,14 @@ function OperationsHubContent() {
       <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between border-b border-gray-200 pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#9A7B4F]/15 text-[#9A7B4F]">
+            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#2563eb]/15 text-[#2563eb]">
               <Sparkles size={13} />
             </span>
-            <p className="text-xs font-bold uppercase tracking-wider text-[#9A7B4F]">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#2563eb]">
               Operations Hub
             </p>
           </div>
-          <h1 className="mt-1 text-xl sm:text-2xl font-bold tracking-tight text-[#1F1F1F]">
+          <h1 className="mt-1 text-xl sm:text-2xl font-bold tracking-tight text-[#0f172a]">
             Duties, Schedule & Tasks
           </h1>
           <p className="mt-1 text-xs text-gray-500">
@@ -331,15 +331,15 @@ function OperationsHubContent() {
         </div>
 
         {/* View Switcher Tabs - Responsive scrollable & elevated */}
-        <div className="flex w-full overflow-x-auto rounded-2xl border border-[#e8e1d8] bg-white p-1.5 shadow-sm xl:w-auto">
+        <div className="flex w-full overflow-x-auto rounded-2xl border border-[#dbeafe] bg-white p-1.5 shadow-sm xl:w-auto">
           <div className="flex items-center gap-1 min-w-max">
             <button
               type="button"
               onClick={() => switchTab("list")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "list"
-                  ? "bg-[#29241f] text-white shadow-sm"
-                  : "text-gray-600 hover:bg-[#faf7f2] hover:text-gray-900"
+                  ? "bg-[#0f172a] text-white shadow-sm"
+                  : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >
               <ClipboardList size={15} className="shrink-0" />
@@ -351,8 +351,8 @@ function OperationsHubContent() {
               onClick={() => switchTab("calendar")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "calendar"
-                  ? "bg-[#29241f] text-white shadow-sm"
-                  : "text-gray-600 hover:bg-[#faf7f2] hover:text-gray-900"
+                  ? "bg-[#0f172a] text-white shadow-sm"
+                  : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >
               <CalendarDays size={15} className="shrink-0" />
@@ -364,8 +364,8 @@ function OperationsHubContent() {
               onClick={() => switchTab("departments")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "departments"
-                  ? "bg-[#29241f] text-white shadow-sm"
-                  : "text-gray-600 hover:bg-[#faf7f2] hover:text-gray-900"
+                  ? "bg-[#0f172a] text-white shadow-sm"
+                  : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >
               <Building2 size={15} className="shrink-0" />
@@ -377,8 +377,8 @@ function OperationsHubContent() {
               onClick={() => switchTab("payroll")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3.5 sm:px-4 py-2 text-xs font-bold transition-all ${
                 activeTab === "payroll"
-                  ? "bg-[#9A7B4F] text-white shadow-sm ring-2 ring-[#9A7B4F]/30"
-                  : "bg-amber-50 text-[#9A7B4F] border border-amber-200/80 hover:bg-amber-100"
+                  ? "bg-[#2563eb] text-white shadow-sm ring-2 ring-[#2563eb]/30"
+                  : "bg-amber-50 text-[#2563eb] border border-amber-200/80 hover:bg-amber-100"
               }`}
             >
               <IndianRupee size={15} className="shrink-0 text-amber-700" />
@@ -387,7 +387,7 @@ function OperationsHubContent() {
                 <span
                   className={`ml-1 rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
                     activeTab === "payroll"
-                      ? "bg-white text-[#9A7B4F]"
+                      ? "bg-white text-[#2563eb]"
                       : "bg-amber-200 text-amber-950"
                   }`}
                 >
@@ -532,7 +532,7 @@ export default function DutiesPage() {
     <Suspense
       fallback={
         <div className="flex min-h-[50vh] flex-col items-center justify-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#9A7B4F]/10 text-[#9A7B4F]">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2563eb]/10 text-[#2563eb]">
             <Loader2 className="h-6 w-6 animate-spin" />
           </div>
           <p className="text-xs font-medium text-gray-500">Loading Operations Hub...</p>

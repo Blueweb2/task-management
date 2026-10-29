@@ -46,7 +46,7 @@ export default function EventActivityTimelineCard({
     if (descLower.includes("task")) {
       return <CheckSquare className="w-4 h-4 text-purple-500" />;
     }
-    return <Activity className="w-4 h-4 text-[#9a6c37]" />;
+    return <Activity className="w-4 h-4 text-[#1d4ed8]" />;
   };
 
   const formatDateTime = (dateStr: string) => {
@@ -60,11 +60,11 @@ export default function EventActivityTimelineCard({
   };
 
   return (
-    <div className="rounded-2xl border border-[#9a6c37]/20 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-[#1d4ed8]/20 bg-white p-6 shadow-sm">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
         <div>
-          <h3 className="text-lg font-bold text-[#29241f] flex items-center gap-2">
-            <Activity className="w-5 h-5 text-[#9a6c37]" />
+          <h3 className="text-lg font-bold text-[#0f172a] flex items-center gap-2">
+            <Activity className="w-5 h-5 text-[#1d4ed8]" />
             Operational Audit Log & Activity Timeline
           </h3>
           <p className="text-xs text-slate-500 mt-1">
@@ -76,7 +76,7 @@ export default function EventActivityTimelineCard({
           <button
             onClick={onRefresh}
             disabled={loading}
-            className="p-1.5 text-slate-400 hover:text-[#9a6c37] transition-colors rounded-lg hover:bg-slate-100 self-start sm:self-auto"
+            className="p-1.5 text-slate-400 hover:text-[#1d4ed8] transition-colors rounded-lg hover:bg-slate-100 self-start sm:self-auto"
             title="Refresh activity log"
           >
             <Clock className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
@@ -92,7 +92,7 @@ export default function EventActivityTimelineCard({
         <div className="relative border-l-2 border-slate-100 ml-4 space-y-6 py-2">
           {activities.map((act, index) => (
             <div key={act._id || index} className="relative pl-7 group">
-              <div className="absolute -left-[17px] top-0.5 p-1 rounded-full bg-white border border-slate-200 shadow-xs group-hover:border-[#9a6c37] transition-colors">
+              <div className="absolute -left-[17px] top-0.5 p-1 rounded-full bg-white border border-slate-200 shadow-xs group-hover:border-[#1d4ed8] transition-colors">
                 {getActivityIcon(act.description)}
               </div>
 

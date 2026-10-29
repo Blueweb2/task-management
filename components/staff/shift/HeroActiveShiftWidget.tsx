@@ -297,7 +297,7 @@ export default function HeroActiveShiftWidget({
 
   if (!todayShift) {
     return (
-      <div className="rounded-3xl border border-[#e8e1d8] bg-gradient-to-br from-[#29241f] to-[#1a1714] p-6 text-white shadow-lg">
+      <div className="rounded-3xl border border-[#dbeafe] bg-gradient-to-br from-[#0f172a] to-[#1a1714] p-6 text-white shadow-lg">
         <div className="flex items-center gap-3 text-amber-400">
           <Calendar size={20} />
           <span className="text-xs font-bold uppercase tracking-widest">Shift Status</span>
@@ -309,15 +309,15 @@ export default function HeroActiveShiftWidget({
   }
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-[#e8e1d8] bg-[#f7f2eb] shadow-sm">
+    <div className="relative overflow-hidden rounded-3xl border border-[#dbeafe] bg-[#eff6ff] shadow-sm">
       {/* Decorative Background */}
-      <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#b8894b]/10" />
-      <div className="pointer-events-none absolute -bottom-20 left-1/3 h-40 w-40 rounded-full bg-[#9a6c37]/5" />
+      <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#3b82f6]/10" />
+      <div className="pointer-events-none absolute -bottom-20 left-1/3 h-40 w-40 rounded-full bg-[#1d4ed8]/5" />
 
       <div className="relative p-4 sm:p-6 lg:p-7">
         {/* Header Badge */}
         <div className="flex flex-wrap items-center justify-between gap-2.5">
-          <div className="flex items-center gap-2 rounded-full bg-[#29241f] px-3 py-1 text-[11px] font-semibold">
+          <div className="flex items-center gap-2 rounded-full bg-[#0f172a] px-3 py-1 text-[11px] font-semibold">
             <span className={`h-2 w-2 rounded-full ${isPaused ? "bg-amber-400 animate-ping" : "bg-emerald-400 animate-pulse"}`} />
             <span className="tracking-wide text-amber-200 uppercase">Today's Shift</span>
           </div>
@@ -345,11 +345,11 @@ export default function HeroActiveShiftWidget({
         <div className="mt-5 grid gap-4 sm:gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
           {/* Shift Information */}
           <div className="min-w-0">
-            <h2 className="break-words text-lg font-black tracking-tight text-[#29241f] sm:text-2xl">
+            <h2 className="break-words text-lg font-black tracking-tight text-[#0f172a] sm:text-2xl">
               {todayShift.dutyTitle}
             </h2>
 
-            <p className="mt-1 text-xs font-semibold text-[#9a6c37] sm:text-sm">
+            <p className="mt-1 text-xs font-semibold text-[#1d4ed8] sm:text-sm">
               {event?.eventName || "Assigned Event"}{" "}
               <span className="text-[#b6a28c]">·</span>{" "}
               <span className="capitalize">
@@ -359,18 +359,18 @@ export default function HeroActiveShiftWidget({
 
             <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-gray-600 sm:mt-4 sm:gap-4">
               <div className="flex items-center gap-1.5">
-                <Clock size={14} className="text-[#9a6c37] shrink-0" />
+                <Clock size={14} className="text-[#1d4ed8] shrink-0" />
                 <span>{formatTime24to12(todayShift.startTime)} - {formatTime24to12(todayShift.endTime)}</span>
               </div>
               <div className="flex items-center gap-1.5 min-w-0">
-                <MapPin size={14} className="text-[#9a6c37] shrink-0" />
+                <MapPin size={14} className="text-[#1d4ed8] shrink-0" />
                 <span className="truncate">{event?.location || "Venue location pending"}</span>
               </div>
             </div>
           </div>
 
           {/* Live Active Work Time / Paused Timer Widget */}
-          <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-3.5 sm:p-4 border border-[#e8e1d8] shadow-xs sm:items-end w-full lg:w-auto">
+          <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-3.5 sm:p-4 border border-[#dbeafe] shadow-xs sm:items-end w-full lg:w-auto">
             <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-500 text-center sm:text-right">
               {isPaused ? "DUTY PAUSED" : "ACTIVE WORK TIME"}
             </p>
@@ -416,7 +416,7 @@ export default function HeroActiveShiftWidget({
               value={shiftNotes}
               onChange={(e) => setShiftNotes(e.target.value)}
               placeholder="Add optional shift note or break remarks..."
-              className="h-10 w-full rounded-xl border border-[#e3d9cd] bg-white px-3.5 text-xs text-[#403a34] placeholder-[#aaa097] outline-none transition focus:border-[#b8894b] focus:ring-1 focus:ring-[#b8894b]/10"
+              className="h-10 w-full rounded-xl border border-[#e3d9cd] bg-white px-3.5 text-xs text-[#1e293b] placeholder-[#aaa097] outline-none transition focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6]/10"
             />
           </div>
         )}

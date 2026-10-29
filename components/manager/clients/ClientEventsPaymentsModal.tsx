@@ -265,7 +265,7 @@ export default function ClientEventsPaymentsModal({
       aria-modal="true"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs animate-in fade-in"
     >
-      <div className="relative flex max-h-[92vh] w-full max-w-4xl flex-col rounded-3xl border border-[#e8e1d8] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
+      <div className="relative flex max-h-[92vh] w-full max-w-4xl flex-col rounded-3xl border border-[#dbeafe] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
         {/* Toast */}
         {successToast && (
           <div className="absolute top-4 right-14 z-20 flex items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-xs font-bold text-emerald-800 shadow-md">
@@ -275,15 +275,15 @@ export default function ClientEventsPaymentsModal({
         )}
 
         {/* Modal Header */}
-        <div className="flex flex-col gap-3 border-b border-[#eee7dc] bg-[#faf8f5] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-b border-[#eff6ff] bg-[#f8fbff] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#29241f] text-lg font-black text-amber-300 shadow-sm">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0f172a] text-lg font-black text-amber-300 shadow-sm">
               {client.name.charAt(0).toUpperCase()}
             </div>
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#9a6c37]">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#1d4ed8]">
                   Client Financial & Event Details (INR ₹)
                 </span>
                 <span
@@ -296,17 +296,17 @@ export default function ClientEventsPaymentsModal({
                   {client.status}
                 </span>
               </div>
-              <h2 className="text-xl font-black text-[#29241f]">
+              <h2 className="text-xl font-black text-[#0f172a]">
                 {client.name}
               </h2>
-              <p className="text-xs text-[#8d847b] flex items-center gap-3 mt-1">
+              <p className="text-xs text-[#64748b] flex items-center gap-3 mt-1">
                 <span className="inline-flex items-center gap-1">
-                  <Phone size={13} className="text-[#b8894b]" />
+                  <Phone size={13} className="text-[#3b82f6]" />
                   {client.phone}
                 </span>
                 <span>·</span>
                 <span className="inline-flex items-center gap-1">
-                  <Mail size={13} className="text-[#b8894b]" />
+                  <Mail size={13} className="text-[#3b82f6]" />
                   {client.email}
                 </span>
               </p>
@@ -317,7 +317,7 @@ export default function ClientEventsPaymentsModal({
             <button
               type="button"
               onClick={handleTogglePaymentForm}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-[#b8894b] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#a3773e] active:scale-95"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-[#3b82f6] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#a3773e] active:scale-95"
             >
               <Plus size={15} />
               <span>Record Payment / Advance (₹)</span>
@@ -335,7 +335,7 @@ export default function ClientEventsPaymentsModal({
 
         {/* Financial Summary Banner */}
         {financialSummary && (
-          <div className="bg-gradient-to-r from-[#29241f] via-[#383129] to-[#1c1916] p-5 text-white border-b border-[#eee7dc]">
+          <div className="bg-gradient-to-r from-[#0f172a] via-[#383129] to-[#1c1916] p-5 text-white border-b border-[#eff6ff]">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-wider text-amber-300/80">
@@ -441,15 +441,15 @@ export default function ClientEventsPaymentsModal({
           {showPaymentForm && (
             <div
               ref={paymentFormRef}
-              className="rounded-3xl border-2 border-[#b8894b] bg-gradient-to-br from-[#faf6f0] to-[#f5ede0] p-5 sm:p-6 shadow-xl animate-in slide-in-from-top-3 ring-4 ring-[#b8894b]/10"
+              className="rounded-3xl border-2 border-[#3b82f6] bg-gradient-to-br from-[#f8fbff] to-[#eff6ff] p-5 sm:p-6 shadow-xl animate-in slide-in-from-top-3 ring-4 ring-[#3b82f6]/10"
             >
-              <div className="flex items-center justify-between border-b border-[#eee7dc] pb-3">
+              <div className="flex items-center justify-between border-b border-[#eff6ff] pb-3">
                 <div className="flex items-center gap-2.5">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#b8894b] text-white shadow-xs">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#3b82f6] text-white shadow-xs">
                     <CreditCard size={18} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-black text-[#29241f]">
+                    <h3 className="text-sm font-black text-[#0f172a]">
                       Record Advance Payment / Deposit (₹ INR)
                     </h3>
                     <p className="text-[11px] font-medium text-gray-500">
@@ -488,7 +488,7 @@ export default function ClientEventsPaymentsModal({
                         setSelectedBookingId(e.target.value);
                         setPaymentAmount("");
                       }}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="">-- Choose Event --</option>
                       {events.map((ev) => {
@@ -514,7 +514,7 @@ export default function ClientEventsPaymentsModal({
                     <select
                       value={paymentType}
                       onChange={(e) => setPaymentType(e.target.value as any)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="ADVANCE">Deposit / Advance Payment</option>
                       <option value="INSTALLMENT">Progress / Installment Payment</option>
@@ -568,7 +568,7 @@ export default function ClientEventsPaymentsModal({
                     </div>
 
                     <div className="relative mt-1.5">
-                      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-[#9a6c37]">
+                      <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-[#1d4ed8]">
                         ₹
                       </span>
                       <input
@@ -580,13 +580,13 @@ export default function ClientEventsPaymentsModal({
                         placeholder="e.g. 50000"
                         value={paymentAmount}
                         onChange={(e) => setPaymentAmount(e.target.value)}
-                        className="h-11 w-full rounded-xl border border-gray-200 bg-white pl-8 pr-3 text-sm font-bold text-gray-900 outline-none focus:border-[#9a6c37]"
+                        className="h-11 w-full rounded-xl border border-gray-200 bg-white pl-8 pr-3 text-sm font-bold text-gray-900 outline-none focus:border-[#1d4ed8]"
                       />
                     </div>
 
                     {/* Dynamic calculation preview */}
                     {Number(paymentAmount) > 0 && selectedEventTotal > 0 && (
-                      <div className="mt-2 flex items-center justify-between rounded-xl bg-white p-2.5 text-xs border border-[#eee7dc]">
+                      <div className="mt-2 flex items-center justify-between rounded-xl bg-white p-2.5 text-xs border border-[#eff6ff]">
                         <span className="text-gray-500 font-medium">
                           New Balance After Payment:
                         </span>
@@ -613,7 +613,7 @@ export default function ClientEventsPaymentsModal({
                     <select
                       value={paymentMethod}
                       onChange={(e) => setPaymentMethod(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="UPI / GPay">UPI / GPay / PhonePe / Paytm</option>
                       <option value="Bank Transfer">Bank Transfer / NEFT / IMPS / RTGS</option>
@@ -634,7 +634,7 @@ export default function ClientEventsPaymentsModal({
                       placeholder="e.g. UPI-30492810 / Cheque #000123"
                       value={transactionId}
                       onChange={(e) => setTransactionId(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -648,7 +648,7 @@ export default function ClientEventsPaymentsModal({
                       required
                       value={paymentDate}
                       onChange={(e) => setPaymentDate(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
                 </div>
@@ -663,7 +663,7 @@ export default function ClientEventsPaymentsModal({
                     placeholder="e.g. Advance paid via UPI upon estimate confirmation..."
                     value={paymentNotes}
                     onChange={(e) => setPaymentNotes(e.target.value)}
-                    className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white p-3 text-xs outline-none focus:border-[#9a6c37]"
+                    className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white p-3 text-xs outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -679,7 +679,7 @@ export default function ClientEventsPaymentsModal({
                   <button
                     type="submit"
                     disabled={submittingPayment}
-                    className="flex h-10 items-center justify-center gap-2 rounded-xl bg-[#29241f] px-5 text-xs font-bold text-white hover:bg-black disabled:opacity-50"
+                    className="flex h-10 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-5 text-xs font-bold text-white hover:bg-black disabled:opacity-50"
                   >
                     {submittingPayment ? (
                       <Loader2 size={14} className="animate-spin" />
@@ -695,8 +695,8 @@ export default function ClientEventsPaymentsModal({
 
           {/* Loading state */}
           {loading ? (
-            <div className="flex min-h-[220px] flex-col items-center justify-center rounded-2xl border border-[#e8e1d8] bg-white p-6">
-              <Loader2 className="h-7 w-7 animate-spin text-[#9a6c37]" />
+            <div className="flex min-h-[220px] flex-col items-center justify-center rounded-2xl border border-[#dbeafe] bg-white p-6">
+              <Loader2 className="h-7 w-7 animate-spin text-[#1d4ed8]" />
               <p className="mt-2 text-xs font-bold text-gray-500">
                 Fetching client events & financial records...
               </p>
@@ -717,7 +717,7 @@ export default function ClientEventsPaymentsModal({
             </div>
           ) : (
             <div className="space-y-6">
-              <h3 className="text-xs font-black uppercase tracking-wider text-[#9a6c37]">
+              <h3 className="text-xs font-black uppercase tracking-wider text-[#1d4ed8]">
                 Client Events & Payment Breakdown ({events.length})
               </h3>
 
@@ -734,17 +734,17 @@ export default function ClientEventsPaymentsModal({
                 return (
                   <article
                     key={event._id}
-                    className="overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white shadow-sm transition hover:shadow-md"
+                    className="overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-sm transition hover:shadow-md"
                   >
                     {/* Event Header */}
-                    <div className="border-b border-[#eee7dc] bg-[#faf8f5] p-5">
+                    <div className="border-b border-[#eff6ff] bg-[#f8fbff] p-5">
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div>
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className="inline-flex items-center gap-1 rounded-md bg-[#29241f] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-amber-300">
+                            <span className="inline-flex items-center gap-1 rounded-md bg-[#0f172a] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-amber-300">
                               {event.eventType}
                             </span>
-                            <span className="rounded-md bg-white border border-[#e8e1d8] px-2 py-0.5 text-[10px] font-bold text-gray-700">
+                            <span className="rounded-md bg-white border border-[#dbeafe] px-2 py-0.5 text-[10px] font-bold text-gray-700">
                               Status: {event.status}
                             </span>
                             <span
@@ -760,12 +760,12 @@ export default function ClientEventsPaymentsModal({
                             </span>
                           </div>
 
-                          <h4 className="mt-2 text-base font-black text-[#29241f]">
+                          <h4 className="mt-2 text-base font-black text-[#0f172a]">
                             {event.eventName}
                           </h4>
                           <div className="mt-1 flex flex-wrap items-center gap-3 text-xs text-gray-500">
                             <span className="flex items-center gap-1">
-                              <Calendar size={13} className="text-[#a7773f]" />
+                              <Calendar size={13} className="text-[#1d4ed8]" />
                               {new Date(event.eventDate).toLocaleDateString("en-IN", {
                                 weekday: "short",
                                 month: "short",
@@ -774,15 +774,15 @@ export default function ClientEventsPaymentsModal({
                               })}
                             </span>
                             <span className="flex items-center gap-1">
-                              <Clock size={13} className="text-[#a7773f]" />
+                              <Clock size={13} className="text-[#1d4ed8]" />
                               {formatTime24to12(event.eventTime)}
                             </span>
                             <span className="flex items-center gap-1">
-                              <MapPin size={13} className="text-[#a7773f]" />
+                              <MapPin size={13} className="text-[#1d4ed8]" />
                               {event.location}
                             </span>
                             <span className="flex items-center gap-1">
-                              <Users size={13} className="text-[#a7773f]" />
+                              <Users size={13} className="text-[#1d4ed8]" />
                               {event.guests} Guests
                             </span>
                           </div>
@@ -811,23 +811,23 @@ export default function ClientEventsPaymentsModal({
                       </div>
 
                       {/* Event Financial Summary Pills */}
-                      <div className="mt-4 grid grid-cols-2 gap-2 border-t border-[#eee7dc] pt-3 text-xs sm:grid-cols-4">
-                        <div className="rounded-xl bg-white border border-[#eee7dc] p-2.5">
+                      <div className="mt-4 grid grid-cols-2 gap-2 border-t border-[#eff6ff] pt-3 text-xs sm:grid-cols-4">
+                        <div className="rounded-xl bg-white border border-[#eff6ff] p-2.5">
                           <span className="text-[10px] font-bold text-gray-400 uppercase">Event Total</span>
                           <p className="mt-0.5 font-black text-gray-900">{formatINR(eventTotal)}</p>
                         </div>
 
-                        <div className="rounded-xl bg-white border border-[#eee7dc] p-2.5">
+                        <div className="rounded-xl bg-white border border-[#eff6ff] p-2.5">
                           <span className="text-[10px] font-bold text-gray-400 uppercase">Advance Paid</span>
                           <p className="mt-0.5 font-black text-amber-700">{formatINR(advancePayment)}</p>
                         </div>
 
-                        <div className="rounded-xl bg-white border border-[#eee7dc] p-2.5">
+                        <div className="rounded-xl bg-white border border-[#eff6ff] p-2.5">
                           <span className="text-[10px] font-bold text-gray-400 uppercase">Total Collected</span>
                           <p className="mt-0.5 font-black text-emerald-700">{formatINR(paidAmount)}</p>
                         </div>
 
-                        <div className="rounded-xl bg-white border border-[#eee7dc] p-2.5">
+                        <div className="rounded-xl bg-white border border-[#eff6ff] p-2.5">
                           <span className="text-[10px] font-bold text-gray-400 uppercase">Balance Outstanding</span>
                           <p className={`mt-0.5 font-black ${balanceDue > 0 ? "text-rose-600" : "text-emerald-600"}`}>
                             {formatINR(balanceDue)}
@@ -851,7 +851,7 @@ export default function ClientEventsPaymentsModal({
                     {/* Payment History Log Table */}
                     <div className="p-5">
                       <div className="flex items-center justify-between border-b border-gray-100 pb-2">
-                        <p className="text-xs font-bold text-[#29241f]">
+                        <p className="text-xs font-bold text-[#0f172a]">
                           Payment Transaction History ({history.length}):
                         </p>
                       </div>

@@ -93,15 +93,15 @@ export default function EventCard({
         onClick={() => router.push(`/manager/events/${event._id}`)}
         className="group w-full max-w-full min-w-0 cursor-pointer text-left transition"
       >
-        <article className="relative flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-gray-200/90 bg-white p-3 sm:px-4 sm:py-3 shadow-xs transition hover:border-[#9A7B4F]/50 hover:bg-[#FAF8F5]/80 hover:shadow-sm active:scale-[0.995] w-full max-w-full min-w-0 overflow-hidden">
+        <article className="relative flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between rounded-2xl border border-gray-200/90 bg-white p-3 sm:px-4 sm:py-3 shadow-xs transition hover:border-[#2563eb]/50 hover:bg-[#f8fbff]/80 hover:shadow-sm active:scale-[0.995] w-full max-w-full min-w-0 overflow-hidden">
           {/* Main Info */}
           <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-gray-500 group-hover:bg-[#F4EBDD] group-hover:text-[#9A7B4F] transition">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-gray-500 group-hover:bg-[#eff6ff] group-hover:text-[#2563eb] transition">
               <CalendarIcon />
             </span>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
-                <h4 className="truncate text-xs sm:text-sm font-bold text-gray-800 group-hover:text-[#9A7B4F] max-w-full" title={event.eventName}>
+                <h4 className="truncate text-xs sm:text-sm font-bold text-gray-800 group-hover:text-[#2563eb] max-w-full" title={event.eventName}>
                   {event.eventName}
                 </h4>
                 <span className="shrink-0 text-[11px] font-semibold text-gray-400">
@@ -158,10 +158,10 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-[#29241F] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
-                  <Sparkles size={11} className="text-[#D4AF37]" />
+                  <Sparkles size={11} className="text-[#3b82f6]" />
                   <span>View Bill</span>
                 </button>
               )}
@@ -172,7 +172,7 @@ export default function EventCard({
                   e.stopPropagation();
                   setIsExpanded(true);
                 }}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-gray-50 px-2 py-1 text-[11px] font-bold text-[#9A7B4F] hover:bg-[#F4EBDD] transition shrink-0"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-gray-50 px-2 py-1 text-[11px] font-bold text-[#2563eb] hover:bg-[#eff6ff] transition shrink-0"
                 title="See more details"
               >
                 <span>View Details</span>
@@ -193,20 +193,20 @@ export default function EventCard({
       <article
         className={`relative rounded-2xl transition border active:scale-[0.995] w-full max-w-full min-w-0 overflow-hidden ${
           isOngoing
-            ? "border-[#9A7B4F] bg-gradient-to-br from-white via-[#faf7f2] to-[#f5ede3]/40 p-4 sm:p-6 shadow-md ring-1 ring-[#9A7B4F]/20"
+            ? "border-[#2563eb] bg-gradient-to-br from-white via-[#eff6ff] to-[#eff6ff]/40 p-4 sm:p-6 shadow-md ring-1 ring-[#2563eb]/20"
             : compact && isExpanded
-            ? "border-[#9A7B4F]/40 bg-white p-4 sm:p-5 shadow-md"
+            ? "border-[#2563eb]/40 bg-white p-4 sm:p-5 shadow-md"
             : "border-transparent bg-white p-4 sm:p-5 shadow-sm hover:border-gray-300 hover:shadow-md"
         }`}
       >
         {/* In-Progress Live Badge Header */}
         {isOngoing && (
           <div className="mb-3.5 flex flex-wrap items-center justify-between gap-2 border-b border-[#ebdccb] pb-2.5 w-full max-w-full min-w-0">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#29241f] px-3 py-1 text-[10px] font-extrabold tracking-wider text-amber-200 uppercase shrink-0">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0f172a] px-3 py-1 text-[10px] font-extrabold tracking-wider text-amber-200 uppercase shrink-0">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               Event Running Now
             </span>
-            <span className="text-[11px] font-bold text-[#9A7B4F] flex items-center gap-1 shrink-0">
+            <span className="text-[11px] font-bold text-[#2563eb] flex items-center gap-1 shrink-0">
               <Activity size={13} /> Happening Today
             </span>
           </div>
@@ -215,12 +215,12 @@ export default function EventCard({
         {/* Top Row */}
         <div className="flex items-start justify-between gap-3 w-full max-w-full min-w-0">
           <div className="min-w-0 flex-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#8C7A55]">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#64748b]">
               {event.eventType}
             </p>
 
             <h3
-              className={`mt-1 truncate font-bold text-[#252525] group-hover:text-[#9A7B4F] transition-colors max-w-full ${
+              className={`mt-1 truncate font-bold text-[#1e3a8a] group-hover:text-[#2563eb] transition-colors max-w-full ${
                 isOngoing ? "text-base sm:text-xl font-black" : "text-sm sm:text-base"
               }`}
               title={event.eventName}
@@ -275,9 +275,9 @@ export default function EventCard({
 
         {/* Payment & Financial Ledger Strip (Super Admin Only) */}
         {showPayments ? (
-          <div className="mt-4 rounded-xl border border-gray-100 bg-[#faf8f5] p-2.5 sm:p-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 sm:gap-2 w-full max-w-full min-w-0">
+          <div className="mt-4 rounded-xl border border-gray-100 bg-[#f8fbff] p-2.5 sm:p-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 sm:gap-2 w-full max-w-full min-w-0">
             <div className="flex items-center gap-2 min-w-0">
-              <CreditCard size={15} className="text-[#9a6c37] shrink-0" />
+              <CreditCard size={15} className="text-[#1d4ed8] shrink-0" />
               <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Payment Status</p>
                 <p className="text-xs font-black text-gray-900 truncate">
@@ -347,10 +347,10 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="inline-flex items-center gap-1 rounded-lg bg-[#29241F] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
-                  <Sparkles size={11} className="text-[#D4AF37]" />
+                  <Sparkles size={11} className="text-[#3b82f6]" />
                   <span>View Bill</span>
                 </button>
               )}
@@ -361,10 +361,10 @@ export default function EventCard({
                   e.stopPropagation();
                   router.push(`/manager/events/${event._id}#payments`);
                 }}
-                className="inline-flex items-center gap-1 rounded-lg bg-white border border-[#e8e1d8] px-2.5 py-1 text-[11px] font-bold text-[#29241f] shadow-2xs hover:bg-[#29241f] hover:text-white transition active:scale-95 shrink-0"
+                className="inline-flex items-center gap-1 rounded-lg bg-white border border-[#dbeafe] px-2.5 py-1 text-[11px] font-bold text-[#0f172a] shadow-2xs hover:bg-[#0f172a] hover:text-white transition active:scale-95 shrink-0"
                 title="Add payment for this event"
               >
-                <Plus size={11} className="text-[#9a6c37]" />
+                <Plus size={11} className="text-[#1d4ed8]" />
                 <span>Add Payment</span>
               </button>
             </div>
@@ -412,10 +412,10 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="inline-flex items-center gap-1 rounded-lg bg-[#29241F] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
-                  <Sparkles size={11} className="text-[#D4AF37]" />
+                  <Sparkles size={11} className="text-[#3b82f6]" />
                   <span>View Bill</span>
                 </button>
               )}
@@ -429,12 +429,12 @@ export default function EventCard({
             <p className="text-[10px] uppercase tracking-wider font-semibold text-gray-400">
               Client
             </p>
-            <p className="mt-0.5 text-xs sm:text-sm font-bold text-[#252525] truncate" title={clientName}>
+            <p className="mt-0.5 text-xs sm:text-sm font-bold text-[#1e3a8a] truncate" title={clientName}>
               {clientName}
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-1 text-xs font-bold text-[#9A7B4F] group-hover:translate-x-0.5 transition shrink-0">
+          <div className="inline-flex items-center gap-1 text-xs font-bold text-[#2563eb] group-hover:translate-x-0.5 transition shrink-0">
             <span>View Details</span>
             <ArrowRight size={13} />
           </div>
@@ -459,7 +459,7 @@ function InfoRow({
 }: InfoRowProps) {
   return (
     <div className="flex items-center gap-3 min-w-0 w-full">
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F8F7F3] text-[#8C7A55]">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#f8fbff] text-[#64748b]">
         {icon}
       </span>
 

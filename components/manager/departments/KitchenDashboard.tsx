@@ -421,9 +421,9 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
   if (loading) {
     return (
-      <div className="flex h-72 items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white">
+      <div className="flex h-72 items-center justify-center rounded-3xl border border-[#dbeafe] bg-white">
         <div className="flex items-center gap-3 text-sm font-semibold text-stone-600">
-          <Loader2 size={22} className="animate-spin text-[#9a6c37]" />
+          <Loader2 size={22} className="animate-spin text-[#1d4ed8]" />
           <span>Opening Kitchen Dashboard...</span>
         </div>
       </div>
@@ -435,10 +435,10 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
       {/* ========================================================================= */}
       {/* 1. FRIENDLY CHEF HEADER & SUMMARY CARDS */}
       {/* ========================================================================= */}
-      <section className="rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-6 shadow-xs">
+      <section className="rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-6 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 border border-amber-200 text-[#9a6c37] shadow-2xs shrink-0">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 border border-amber-200 text-[#1d4ed8] shadow-2xs shrink-0">
               <ChefHat size={28} />
             </div>
             <div>
@@ -449,7 +449,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 <span className="text-xs text-gray-400">·</span>
                 <span className="text-xs text-gray-500 font-medium">Chef Console</span>
               </div>
-              <h1 className="text-xl sm:text-2xl font-black text-[#29241f] mt-0.5">
+              <h1 className="text-xl sm:text-2xl font-black text-[#0f172a] mt-0.5">
                 Chef Manager Dashboard
               </h1>
               <p className="text-xs text-gray-500 mt-0.5">
@@ -463,9 +463,9 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             <button
               type="button"
               onClick={() => setPortionModalOpen(true)}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-stone-200 bg-[#faf8f5] px-3 py-2 text-xs font-bold text-stone-800 hover:bg-stone-100 transition active:scale-95 cursor-pointer shadow-2xs"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-stone-200 bg-[#f8fbff] px-3 py-2 text-xs font-bold text-stone-800 hover:bg-stone-100 transition active:scale-95 cursor-pointer shadow-2xs"
             >
-              <Calculator size={14} className="text-[#9a6c37]" />
+              <Calculator size={14} className="text-[#1d4ed8]" />
               <span>Portion Helper</span>
             </button>
 
@@ -477,7 +477,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 }
                 setGroceryModalOpen(true);
               }}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-[#9a6c37] px-3.5 py-2 text-xs font-bold text-white hover:bg-[#7f582c] transition active:scale-95 cursor-pointer shadow-2xs"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-3.5 py-2 text-xs font-bold text-white hover:bg-[#1d4ed8] transition active:scale-95 cursor-pointer shadow-2xs"
             >
               <ShoppingCart size={14} />
               <span>Order Groceries</span>
@@ -496,26 +496,26 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
         </div>
 
         {/* 4 Simple Snapshot Cards */}
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 pt-4 border-t border-[#f0ece6]">
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+        <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 pt-4 border-t border-[#eff6ff]">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Events to Cook
             </p>
-            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#29241f]">
+            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#0f172a]">
               {events.length}
             </p>
           </div>
 
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Dishes on Menu
             </p>
-            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#9a6c37]">
+            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#1d4ed8]">
               {totalDishesCount}
             </p>
           </div>
 
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Prep Tasks Left
             </p>
@@ -524,7 +524,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             </p>
           </div>
 
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Grocery Orders
             </p>
@@ -541,16 +541,16 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <Link
           href="/manager/food"
-          className="group flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-[#9a6c37] hover:shadow-sm"
+          className="group flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-[#1d4ed8] hover:shadow-sm"
         >
           <div className="flex items-center justify-between">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-amber-800 group-hover:bg-[#9a6c37] group-hover:text-white transition">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-amber-800 group-hover:bg-[#1d4ed8] group-hover:text-white transition">
               <Utensils size={18} />
             </div>
-            <ArrowRight size={14} className="text-gray-300 group-hover:text-[#9a6c37] transition" />
+            <ArrowRight size={14} className="text-gray-300 group-hover:text-[#1d4ed8] transition" />
           </div>
           <div className="mt-3">
-            <p className="text-xs font-black text-[#29241f] group-hover:text-[#9a6c37] transition">
+            <p className="text-xs font-black text-[#0f172a] group-hover:text-[#1d4ed8] transition">
               Food Menu & Dishes
             </p>
             <p className="text-[11px] text-gray-500">View recipes & pricing</p>
@@ -559,16 +559,16 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
         <Link
           href="/manager/stock"
-          className="group flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-[#9a6c37] hover:shadow-sm"
+          className="group flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-[#1d4ed8] hover:shadow-sm"
         >
           <div className="flex items-center justify-between">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stone-100 text-stone-800 group-hover:bg-[#29241f] group-hover:text-white transition">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stone-100 text-stone-800 group-hover:bg-[#0f172a] group-hover:text-white transition">
               <Package size={18} />
             </div>
-            <ArrowRight size={14} className="text-gray-300 group-hover:text-[#29241f] transition" />
+            <ArrowRight size={14} className="text-gray-300 group-hover:text-[#0f172a] transition" />
           </div>
           <div className="mt-3">
-            <p className="text-xs font-black text-[#29241f] group-hover:text-[#9a6c37] transition">
+            <p className="text-xs font-black text-[#0f172a] group-hover:text-[#1d4ed8] transition">
               Kitchen Stock
             </p>
             <p className="text-[11px] text-gray-500">Vessels, gas & utensils</p>
@@ -577,7 +577,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
         <Link
           href="/manager/staff"
-          className="group flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-[#9a6c37] hover:shadow-sm"
+          className="group flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-[#1d4ed8] hover:shadow-sm"
         >
           <div className="flex items-center justify-between">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-800 group-hover:bg-blue-600 group-hover:text-white transition">
@@ -586,7 +586,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             <ArrowRight size={14} className="text-gray-300 group-hover:text-blue-600 transition" />
           </div>
           <div className="mt-3">
-            <p className="text-xs font-black text-[#29241f] group-hover:text-[#9a6c37] transition">
+            <p className="text-xs font-black text-[#0f172a] group-hover:text-[#1d4ed8] transition">
               Kitchen Staff
             </p>
             <p className="text-[11px] text-gray-500">Cooks, helpers & duties</p>
@@ -595,7 +595,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
         <Link
           href="/manager/events"
-          className="group flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-[#9a6c37] hover:shadow-sm"
+          className="group flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-[#1d4ed8] hover:shadow-sm"
         >
           <div className="flex items-center justify-between">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-800 group-hover:bg-emerald-700 group-hover:text-white transition">
@@ -604,7 +604,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             <ArrowRight size={14} className="text-gray-300 group-hover:text-emerald-700 transition" />
           </div>
           <div className="mt-3">
-            <p className="text-xs font-black text-[#29241f] group-hover:text-[#9a6c37] transition">
+            <p className="text-xs font-black text-[#0f172a] group-hover:text-[#1d4ed8] transition">
               All Events
             </p>
             <p className="text-[11px] text-gray-500">Calendar & schedule</p>
@@ -615,14 +615,14 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
       {/* ========================================================================= */}
       {/* 3. CHEF'S DAILY WHITEBOARD / STICKY NOTES */}
       {/* ========================================================================= */}
-      <section className="rounded-3xl border border-[#e8e1d8] bg-gradient-to-br from-[#faf8f5] to-amber-50/30 p-5 shadow-xs">
+      <section className="rounded-3xl border border-[#dbeafe] bg-gradient-to-br from-[#f8fbff] to-amber-50/30 p-5 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3.5">
           <div className="flex items-center gap-2.5">
             <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-100 text-amber-900">
               <StickyNote size={17} />
             </div>
             <div>
-              <h2 className="text-sm sm:text-base font-black text-[#29241f]">
+              <h2 className="text-sm sm:text-base font-black text-[#0f172a]">
                 Chef&apos;s Daily Kitchen Notes
               </h2>
               <p className="text-[11px] text-gray-500">
@@ -643,12 +643,12 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             placeholder="Write a quick note for the kitchen (e.g. VIP guest has peanut allergy)..."
             value={newNoteText}
             onChange={(e) => setNewNoteText(e.target.value)}
-            className="h-9 flex-1 rounded-xl border border-stone-300 bg-white px-3 text-xs outline-none focus:border-[#9a6c37] focus:ring-1 focus:ring-[#9a6c37]"
+            className="h-9 flex-1 rounded-xl border border-stone-300 bg-white px-3 text-xs outline-none focus:border-[#1d4ed8] focus:ring-1 focus:ring-[#1d4ed8]"
           />
           <button
             type="submit"
             disabled={!newNoteText.trim()}
-            className="inline-flex h-9 items-center justify-center gap-1 rounded-xl bg-[#29241f] px-3.5 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+            className="inline-flex h-9 items-center justify-center gap-1 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
           >
             <Plus size={14} />
             <span>Add Note</span>
@@ -716,7 +716,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
         <div className="lg:col-span-2 space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div>
-              <h2 className="text-base font-black text-[#29241f]">
+              <h2 className="text-base font-black text-[#0f172a]">
                 Cooking Orders & Food Menus
               </h2>
               <p className="text-xs text-gray-500">
@@ -731,7 +731,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 onClick={() => setTimeFilter("ALL")}
                 className={`rounded-lg px-2.5 py-1 transition cursor-pointer ${
                   timeFilter === "ALL"
-                    ? "bg-white text-[#29241f] shadow-2xs"
+                    ? "bg-white text-[#0f172a] shadow-2xs"
                     : "text-stone-500 hover:text-stone-900"
                 }`}
               >
@@ -753,7 +753,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 onClick={() => setTimeFilter("TOMORROW")}
                 className={`rounded-lg px-2.5 py-1 transition cursor-pointer ${
                   timeFilter === "TOMORROW"
-                    ? "bg-[#29241f] text-white shadow-2xs"
+                    ? "bg-[#0f172a] text-white shadow-2xs"
                     : "text-stone-500 hover:text-stone-900"
                 }`}
               >
@@ -764,7 +764,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 onClick={() => setTimeFilter("THIS_WEEK")}
                 className={`rounded-lg px-2.5 py-1 transition cursor-pointer ${
                   timeFilter === "THIS_WEEK"
-                    ? "bg-white text-[#29241f] shadow-2xs"
+                    ? "bg-white text-[#0f172a] shadow-2xs"
                     : "text-stone-500 hover:text-stone-900"
                 }`}
               >
@@ -782,7 +782,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 placeholder="Search events by name or location..."
                 value={eventSearch}
                 onChange={(e) => setEventSearch(e.target.value)}
-                className="h-9 w-full rounded-xl border border-gray-200 bg-white pl-9 pr-3 text-xs outline-none focus:border-[#9a6c37]"
+                className="h-9 w-full rounded-xl border border-gray-200 bg-white pl-9 pr-3 text-xs outline-none focus:border-[#1d4ed8]"
               />
             </div>
           )}
@@ -809,17 +809,17 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 return (
                   <div
                     key={ev.eventId}
-                    className={`rounded-2xl border bg-white p-4 sm:p-5 shadow-xs transition hover:border-[#9a6c37]/50 space-y-3.5 ${
+                    className={`rounded-2xl border bg-white p-4 sm:p-5 shadow-xs transition hover:border-[#1d4ed8]/50 space-y-3.5 ${
                       isToday
                         ? "border-amber-300 ring-2 ring-amber-100"
-                        : "border-[#e8e1d8]"
+                        : "border-[#dbeafe]"
                     }`}
                   >
                     {/* Top Row: Event Name, Status & Highlights */}
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 pb-3 border-b border-gray-100">
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="text-sm sm:text-base font-black text-[#29241f]">
+                          <h3 className="text-sm sm:text-base font-black text-[#0f172a]">
                             {ev.eventName}
                           </h3>
 
@@ -843,7 +843,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         </div>
 
                         <div className="flex flex-wrap items-center gap-3 mt-1 text-xs text-gray-500">
-                          <span className="flex items-center gap-1 text-[#9a6c37] font-semibold">
+                          <span className="flex items-center gap-1 text-[#1d4ed8] font-semibold">
                             <Calendar size={13} />
                             {ev.eventDate ? new Date(ev.eventDate).toLocaleDateString() : "Date TBD"}
                           </span>
@@ -864,7 +864,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
                       {/* Guest Count Pill */}
                       <div className="inline-flex items-center gap-1.5 rounded-xl bg-amber-50 border border-amber-200 px-3 py-1.5 text-xs font-black text-amber-900 shrink-0">
-                        <Users size={14} className="text-[#9a6c37]" />
+                        <Users size={14} className="text-[#1d4ed8]" />
                         <span>{guests} Guests</span>
                       </div>
                     </div>
@@ -896,7 +896,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                           {menuItems.map((dish, idx) => (
                             <span
                               key={`${dish.name}-${idx}`}
-                              className="inline-flex items-center gap-1 rounded-lg bg-[#faf8f5] border border-stone-200 px-2.5 py-1 text-xs font-medium text-stone-800"
+                              className="inline-flex items-center gap-1 rounded-lg bg-[#f8fbff] border border-stone-200 px-2.5 py-1 text-xs font-medium text-stone-800"
                             >
                               <span
                                 className={`h-1.5 w-1.5 rounded-full ${
@@ -916,7 +916,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         <button
                           type="button"
                           onClick={() => setKitchenSlipEvent(ev)}
-                          className="inline-flex items-center gap-1 rounded-lg bg-stone-100 hover:bg-[#29241f] hover:text-white px-2.5 py-1 text-xs font-bold text-stone-800 transition cursor-pointer"
+                          className="inline-flex items-center gap-1 rounded-lg bg-stone-100 hover:bg-[#0f172a] hover:text-white px-2.5 py-1 text-xs font-bold text-stone-800 transition cursor-pointer"
                         >
                           <FileText size={13} />
                           <span>Kitchen Prep Slip</span>
@@ -925,7 +925,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         <button
                           type="button"
                           onClick={() => void handleOpenCalcModal(ev)}
-                          className="inline-flex items-center gap-1 text-xs font-bold text-[#9a6c37] hover:text-[#7f582c] transition cursor-pointer"
+                          className="inline-flex items-center gap-1 text-xs font-bold text-[#1d4ed8] hover:text-[#1d4ed8] transition cursor-pointer"
                         >
                           <FileSpreadsheet size={13} />
                           <span>Check Raw Ingredients</span>
@@ -952,7 +952,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
           {/* A. TODAY'S KITCHEN PREP CHECKLIST */}
           <div className="space-y-3">
             <div>
-              <h2 className="text-base font-black text-[#29241f]">
+              <h2 className="text-base font-black text-[#0f172a]">
                 Kitchen Prep Checklist
               </h2>
               <p className="text-xs text-gray-500">
@@ -960,7 +960,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#e8e1d8] bg-white p-4 sm:p-5 shadow-xs space-y-3.5">
+            <div className="rounded-2xl border border-[#dbeafe] bg-white p-4 sm:p-5 shadow-xs space-y-3.5">
               {/* Quick Add Task Input */}
               <form onSubmit={handleCreateTask} className="space-y-2">
                 <div className="flex items-center gap-1.5">
@@ -969,12 +969,12 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                     placeholder="e.g. Marinate chicken, chop salad..."
                     value={newTaskTitle}
                     onChange={(e) => setNewTaskTitle(e.target.value)}
-                    className="h-9 flex-1 rounded-xl border border-gray-200 px-3 text-xs outline-none focus:border-[#9a6c37]"
+                    className="h-9 flex-1 rounded-xl border border-gray-200 px-3 text-xs outline-none focus:border-[#1d4ed8]"
                   />
                   <button
                     type="submit"
                     disabled={taskCreating || !newTaskTitle.trim()}
-                    className="inline-flex h-9 items-center justify-center rounded-xl bg-[#29241f] px-3 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-9 items-center justify-center rounded-xl bg-[#0f172a] px-3 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <Plus size={14} />
                     <span>Add</span>
@@ -1016,7 +1016,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         className={`flex items-start gap-2.5 rounded-xl p-2.5 transition cursor-pointer border ${
                           isDone
                             ? "bg-gray-50 border-gray-200 opacity-60"
-                            : "bg-[#faf8f5] border-stone-200 hover:border-[#9a6c37]"
+                            : "bg-[#f8fbff] border-stone-200 hover:border-[#1d4ed8]"
                         }`}
                       >
                         <button
@@ -1033,7 +1033,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         <div className="min-w-0 flex-1">
                           <p
                             className={`text-xs font-bold ${
-                              isDone ? "line-through text-gray-500" : "text-[#29241f]"
+                              isDone ? "line-through text-gray-500" : "text-[#0f172a]"
                             }`}
                           >
                             {t.title}
@@ -1065,7 +1065,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-sm font-black text-[#29241f]">
+                <h2 className="text-sm font-black text-[#0f172a]">
                   Recent Grocery Orders
                 </h2>
                 <p className="text-[11px] text-gray-500">
@@ -1075,13 +1075,13 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
               <button
                 type="button"
                 onClick={() => setGroceryModalOpen(true)}
-                className="text-xs font-bold text-[#9a6c37] hover:underline cursor-pointer"
+                className="text-xs font-bold text-[#1d4ed8] hover:underline cursor-pointer"
               >
                 + New Order
               </button>
             </div>
 
-            <div className="rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs space-y-2.5 max-h-60 overflow-y-auto">
+            <div className="rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs space-y-2.5 max-h-60 overflow-y-auto">
               {purchaseRequests.length === 0 ? (
                 <p className="text-xs text-gray-400 py-3 text-center italic">
                   No grocery orders placed recently.
@@ -1090,10 +1090,10 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 purchaseRequests.slice(0, 5).map((req) => (
                   <div
                     key={req._id}
-                    className="flex items-center justify-between gap-2 p-2 rounded-xl bg-[#faf8f5] border border-stone-100 text-xs"
+                    className="flex items-center justify-between gap-2 p-2 rounded-xl bg-[#f8fbff] border border-stone-100 text-xs"
                   >
                     <div className="min-w-0 flex-1">
-                      <p className="font-bold text-[#29241f] truncate">
+                      <p className="font-bold text-[#0f172a] truncate">
                         {req.items.map((i) => `${i.itemName} (${i.shortageQuantity} ${i.unit})`).join(", ")}
                       </p>
                       <p className="text-[10px] text-gray-400">
@@ -1140,7 +1140,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <Printer size={16} />
                 </div>
                 <div>
-                  <h3 className="text-base font-black text-[#29241f]">
+                  <h3 className="text-base font-black text-[#0f172a]">
                     Kitchen Cooking Slip / KOT
                   </h3>
                   <p className="text-xs text-gray-500">
@@ -1153,7 +1153,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 <button
                   type="button"
                   onClick={() => window.print()}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-black transition cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-black transition cursor-pointer"
                 >
                   <Printer size={13} />
                   <span>Print Slip</span>
@@ -1195,7 +1195,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
               </div>
 
               {/* Event Timing & Venue */}
-              <div className="grid grid-cols-3 gap-2 bg-[#faf8f5] p-3 rounded-xl border border-stone-200 text-xs">
+              <div className="grid grid-cols-3 gap-2 bg-[#f8fbff] p-3 rounded-xl border border-stone-200 text-xs">
                 <div>
                   <span className="text-[10px] font-bold text-gray-400 uppercase">Event Date</span>
                   <p className="font-bold text-gray-900">
@@ -1293,7 +1293,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <ShoppingCart size={16} />
                 </div>
                 <div>
-                  <h3 className="text-base font-black text-[#29241f]">
+                  <h3 className="text-base font-black text-[#0f172a]">
                     Order Extra Groceries
                   </h3>
                   <p className="text-xs text-gray-500">
@@ -1328,7 +1328,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                     <select
                       value={groceryEventId}
                       onChange={(e) => setGroceryEventId(e.target.value)}
-                      className="w-full rounded-xl border border-gray-200 bg-white p-2.5 text-xs font-semibold text-gray-800 outline-none focus:border-[#9a6c37]"
+                      className="w-full rounded-xl border border-gray-200 bg-white p-2.5 text-xs font-semibold text-gray-800 outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="">General Kitchen Stock (No specific event)</option>
                       {events.map((ev) => (
@@ -1351,7 +1351,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                     placeholder="e.g. Basmati Rice, Cooking Oil, Paneer..."
                     value={groceryItemName}
                     onChange={(e) => setGroceryItemName(e.target.value)}
-                    className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#9a6c37]"
+                    className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -1369,7 +1369,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                       placeholder="e.g. 15"
                       value={groceryQuantity}
                       onChange={(e) => setGroceryQuantity(e.target.value)}
-                      className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -1378,7 +1378,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                     <select
                       value={groceryUnit}
                       onChange={(e) => setGroceryUnit(e.target.value)}
-                      className="w-full rounded-xl border border-gray-200 bg-white p-2.5 text-xs font-semibold outline-none focus:border-[#9a6c37]"
+                      className="w-full rounded-xl border border-gray-200 bg-white p-2.5 text-xs font-semibold outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="kg">kg (Kilograms)</option>
                       <option value="grams">grams</option>
@@ -1402,7 +1402,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                       onClick={() => setGroceryUrgency("NORMAL")}
                       className={`rounded-xl border p-2 text-center font-bold transition cursor-pointer ${
                         groceryUrgency === "NORMAL"
-                          ? "border-[#9a6c37] bg-amber-50/50 text-[#9a6c37]"
+                          ? "border-[#1d4ed8] bg-amber-50/50 text-[#1d4ed8]"
                           : "border-gray-200 text-gray-600 hover:bg-gray-50"
                       }`}
                     >
@@ -1432,7 +1432,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                     placeholder="e.g. For dinner banquet biryani prep"
                     value={groceryNote}
                     onChange={(e) => setGroceryNote(e.target.value)}
-                    className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#9a6c37]"
+                    className="w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -1448,7 +1448,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <button
                     type="submit"
                     disabled={grocerySubmitting || !groceryItemName.trim() || !groceryQuantity}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     {grocerySubmitting && <Loader2 size={13} className="animate-spin" />}
                     <span>Submit Request</span>
@@ -1472,7 +1472,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <Calculator size={16} />
                 </div>
                 <div>
-                  <h3 className="text-base font-black text-[#29241f]">
+                  <h3 className="text-base font-black text-[#0f172a]">
                     Kitchen Portion Helper
                   </h3>
                   <p className="text-xs text-gray-500">
@@ -1490,12 +1490,12 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
             </div>
 
             {/* Guest Slider / Input */}
-            <div className="rounded-2xl bg-[#faf8f5] p-3.5 border border-stone-200">
+            <div className="rounded-2xl bg-[#f8fbff] p-3.5 border border-stone-200">
               <div className="flex items-center justify-between mb-2">
                 <label className="text-xs font-bold text-stone-700">
                   Calculate for Guest Count:
                 </label>
-                <span className="text-base font-black text-[#9a6c37]">
+                <span className="text-base font-black text-[#1d4ed8]">
                   {portionGuests} Guests
                 </span>
               </div>
@@ -1506,7 +1506,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 step="10"
                 value={portionGuests}
                 onChange={(e) => setPortionGuests(Number(e.target.value))}
-                className="w-full accent-[#9a6c37] cursor-pointer"
+                className="w-full accent-[#1d4ed8] cursor-pointer"
               />
               <div className="flex items-center justify-between text-[10px] text-gray-400 mt-1">
                 <span>10 guests</span>
@@ -1577,7 +1577,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
               <button
                 type="button"
                 onClick={() => setPortionModalOpen(false)}
-                className="rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
+                className="rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
               >
                 Close Helper
               </button>
@@ -1594,7 +1594,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
           <div className="w-full max-w-lg rounded-3xl bg-white p-5 sm:p-6 shadow-2xl space-y-4 max-h-[85vh] overflow-y-auto animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <div>
-                <h3 className="text-base font-black text-[#29241f]">
+                <h3 className="text-base font-black text-[#0f172a]">
                   Raw Ingredient Check
                 </h3>
                 <p className="text-xs text-gray-500">
@@ -1615,7 +1615,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
             {calcLoading ? (
               <div className="flex h-36 items-center justify-center">
-                <Loader2 size={24} className="animate-spin text-[#9a6c37]" />
+                <Loader2 size={24} className="animate-spin text-[#1d4ed8]" />
               </div>
             ) : !calcResult || calcResult.aggregatedIngredients.length === 0 ? (
               <div className="py-8 text-center text-gray-400">
@@ -1639,7 +1639,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
 
                 <div className="overflow-x-auto rounded-xl border border-gray-200">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#faf8f5] text-[11px] font-bold text-gray-500 border-b border-gray-200">
+                    <thead className="bg-[#f8fbff] text-[11px] font-bold text-gray-500 border-b border-gray-200">
                       <tr>
                         <th className="px-3 py-2">Ingredient</th>
                         <th className="px-3 py-2 text-right">Required</th>
@@ -1651,7 +1651,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                       {calcResult.aggregatedIngredients.map((item, idx) => (
                         <tr key={idx} className="hover:bg-gray-50/60">
                           <td className="px-3 py-2 font-bold text-gray-900">{item.name}</td>
-                          <td className="px-3 py-2 text-right font-black text-[#9a6c37]">
+                          <td className="px-3 py-2 text-right font-black text-[#1d4ed8]">
                             {item.requiredQuantity} {item.unit}
                           </td>
                           <td className="px-3 py-2 text-right text-gray-500">
@@ -1704,7 +1704,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   setCalcModalEvent(null);
                   setCalcResult(null);
                 }}
-                className="rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
+                className="rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
               >
                 Close
               </button>

@@ -22,12 +22,12 @@ export default function ManagerStatCard({
       className={`rounded-2xl border border-gray-200 bg-white p-4 shadow-xs transition hover:shadow-sm ${className}`}
     >
       {/* Icon */}
-      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A7B4F]">
+      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#eff6ff] text-[#2563eb]">
         <Icon size={18} strokeWidth={2} />
       </div>
 
       {/* Value */}
-      <p className="text-2xl font-semibold tracking-tight text-[#1F1F1F] truncate">
+      <p className="text-2xl font-semibold tracking-tight text-[#0f172a] truncate">
         {value}
       </p>
 

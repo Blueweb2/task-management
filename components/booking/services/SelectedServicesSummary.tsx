@@ -70,18 +70,18 @@ export default function SelectedServicesSummary({
         )}
 
         {/* Mobile Drawer Sheet */}
-        <div className="relative z-20 mx-3 border border-[#e8e1d8] bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <div className="relative z-20 mx-3 border border-[#dbeafe] bg-white shadow-2xl rounded-2xl overflow-hidden">
           {/* Drawer Handle Header */}
           <div
             onClick={() => setIsMobileExpanded(!isMobileExpanded)}
-            className="flex items-center justify-between px-4 py-2.5 bg-[#faf8f5] cursor-pointer"
+            className="flex items-center justify-between px-4 py-2.5 bg-[#f8fbff] cursor-pointer"
           >
             <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-[#29241f] text-white">
-                <ShoppingBag size={13} className="text-[#d8a86c]" />
+              <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-[#0f172a] text-white">
+                <ShoppingBag size={13} className="text-[#60a5fa]" />
               </span>
               <div>
-                <p className="text-xs font-bold text-[#29241f]">
+                <p className="text-xs font-bold text-[#0f172a]">
                   {selectedItems.length} {selectedItems.length === 1 ? "Service" : "Services"} Selected
                 </p>
                 <p className="text-[10px] text-gray-500">Tap to {isMobileExpanded ? "collapse" : "view list"}</p>
@@ -89,7 +89,7 @@ export default function SelectedServicesSummary({
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-xs font-black text-[#29241f]">
+              <span className="text-xs font-black text-[#0f172a]">
                 {formatCurrency(calculatedTotal)}
               </span>
               <button
@@ -103,14 +103,14 @@ export default function SelectedServicesSummary({
 
           {/* Expanded Item List on Mobile */}
           {isMobileExpanded && (
-            <div className="max-h-60 overflow-y-auto p-3 space-y-2 bg-white border-t border-[#eee7dc]">
+            <div className="max-h-60 overflow-y-auto p-3 space-y-2 bg-white border-t border-[#eff6ff]">
               {selectedItems.map((item) => {
                 const lineTotal = Number(item.unitPrice || 0) * (Number(item.quantity) || 1);
 
                 return (
                   <div
                     key={item.id}
-                    className="flex items-center justify-between gap-2.5 rounded-xl border border-gray-200 bg-[#faf8f5] p-2.5"
+                    className="flex items-center justify-between gap-2.5 rounded-xl border border-gray-200 bg-[#f8fbff] p-2.5"
                   >
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1.5">
@@ -147,18 +147,18 @@ export default function SelectedServicesSummary({
 
   // Desktop Sticky Panel
   return (
-    <div className="sticky top-6 rounded-3xl border border-[#e8e1d8] bg-white shadow-xl shadow-black/5 overflow-hidden transition-all duration-200">
+    <div className="sticky top-6 rounded-3xl border border-[#dbeafe] bg-white shadow-xl shadow-black/5 overflow-hidden transition-all duration-200">
       {/* Panel Header */}
-      <div className="flex items-center justify-between border-b border-[#eee7dc] bg-[#faf8f5] px-5 py-4">
+      <div className="flex items-center justify-between border-b border-[#eff6ff] bg-[#f8fbff] px-5 py-4">
         <div className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#29241f] text-white">
-            <ShoppingBag size={15} className="text-[#d8a86c]" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#0f172a] text-white">
+            <ShoppingBag size={15} className="text-[#60a5fa]" />
           </span>
           <div>
-            <h3 className="text-sm font-black uppercase tracking-wider text-[#29241f]">
+            <h3 className="text-sm font-black uppercase tracking-wider text-[#0f172a]">
               Selected Services &amp; Equipment
             </h3>
-            <p className="text-[11px] text-[#8d847b]">
+            <p className="text-[11px] text-[#64748b]">
               {selectedItems.length} {selectedItems.length === 1 ? "service" : "services"} included
             </p>
           </div>
@@ -179,8 +179,8 @@ export default function SelectedServicesSummary({
       <div className="max-h-[55vh] overflow-y-auto p-5 space-y-4 divide-y divide-gray-100">
         {selectedItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-10 text-center">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#faf8f5] text-gray-300">
-              <Sparkles size={22} className="text-[#d8a86c]/70" />
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8fbff] text-gray-300">
+              <Sparkles size={22} className="text-[#60a5fa]/70" />
             </span>
             <p className="mt-3 text-xs font-bold text-gray-700">No services selected yet</p>
             <p className="mt-1 max-w-[200px] text-[11px] leading-relaxed text-gray-400">
@@ -195,7 +195,7 @@ export default function SelectedServicesSummary({
             return (
               <div key={catKey} className="pt-3 first:pt-0">
                 {/* Category Subheader */}
-                <div className="mb-2.5 flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider text-[#9A7B4F]">
+                <div className="mb-2.5 flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb]">
                   <IconComponent size={12} />
                   <span>{catKey}</span>
                 </div>
@@ -208,7 +208,7 @@ export default function SelectedServicesSummary({
                     return (
                       <div
                         key={item.id}
-                        className="group relative rounded-2xl border border-[#eee7dc] bg-[#faf8f5]/60 p-3 transition-all hover:bg-white hover:border-[#9A7B4F]/40 hover:shadow-xs"
+                        className="group relative rounded-2xl border border-[#eff6ff] bg-[#f8fbff]/60 p-3 transition-all hover:bg-white hover:border-[#2563eb]/40 hover:shadow-xs"
                       >
                         <div className="flex items-start justify-between gap-2">
                           <div className="min-w-0 flex-1">
@@ -277,10 +277,10 @@ export default function SelectedServicesSummary({
       </div>
 
       {/* Panel Footer & Total Cost */}
-      <div className="border-t border-[#eee7dc] bg-[#faf8f5] p-5">
+      <div className="border-t border-[#eff6ff] bg-[#f8fbff] p-5">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-wider text-[#8d847b]">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-[#64748b]">
               Estimated Services Total
             </p>
             <p className="mt-0.5 text-xs text-gray-500 flex items-center gap-1">
@@ -290,7 +290,7 @@ export default function SelectedServicesSummary({
           </div>
 
           <div className="text-right">
-            <p className="text-xl font-black text-[#29241f]">
+            <p className="text-xl font-black text-[#0f172a]">
               {formatCurrency(calculatedTotal)}
             </p>
           </div>
@@ -300,7 +300,7 @@ export default function SelectedServicesSummary({
           <button
             type="button"
             onClick={onContinue}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#29241f] py-3.5 text-xs font-black text-white shadow-md transition-all hover:bg-black hover:scale-[1.02] active:scale-95 cursor-pointer"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f172a] py-3.5 text-xs font-black text-white shadow-md transition-all hover:bg-black hover:scale-[1.02] active:scale-95 cursor-pointer"
           >
             <span>Proceed with Selection</span>
             <ArrowRight size={14} />

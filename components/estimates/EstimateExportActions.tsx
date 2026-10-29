@@ -103,9 +103,9 @@ export default function EstimateExportActions({
         <button
           type="button"
           onClick={() => setModalOpen(true)}
-          className="inline-flex items-center gap-2 rounded-xl bg-[#29241F] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-black transition active:scale-[0.98]"
+          className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-black transition active:scale-[0.98]"
         >
-          <Sparkles size={14} className="text-[#D4AF37]" />
+          <Sparkles size={14} className="text-[#3b82f6]" />
           <span>Export Studio (PDF / Invoice)</span>
         </button>
 

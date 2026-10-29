@@ -17,7 +17,7 @@ export default function EmptyEvents({
           Icon
       ====================================== */}
 
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F8F7F3] text-[#8C7A55]">
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f8fbff] text-[#64748b]">
         <CalendarIcon />
       </div>
 
@@ -25,7 +25,7 @@ export default function EmptyEvents({
           Text
       ====================================== */}
 
-      <h3 className="mt-4 text-base font-bold text-[#252525]">
+      <h3 className="mt-4 text-base font-bold text-[#1e3a8a]">
         {title}
       </h3>
 

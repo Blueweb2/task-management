@@ -48,7 +48,7 @@ export default function Input({
         <label
           htmlFor={inputId}
           className={`mb-1.5 block text-sm font-semibold ${
-            isDark ? "text-gray-200" : "text-[#29241f]"
+            isDark ? "text-gray-200" : "text-[#0f172a]"
           }`}
         >
           {label}
@@ -56,7 +56,7 @@ export default function Input({
           {required && (
             <span
               className={`ml-1 ${
-                isDark ? "text-[#D2B47A]" : "text-[#b49a6a]"
+                isDark ? "text-[#93c5fd]" : "text-[#60a5fa]"
               }`}
             >
               *
@@ -69,7 +69,7 @@ export default function Input({
         {leftIcon && (
           <div
             className={`pointer-events-none absolute left-3.5 top-1/2 flex -translate-y-1/2 items-center justify-center ${
-              isDark ? "text-[#D2B47A]" : "text-[#8d847b]"
+              isDark ? "text-[#93c5fd]" : "text-[#64748b]"
             }`}
           >
             {leftIcon}
@@ -97,26 +97,26 @@ export default function Input({
                   bg-[#111111]
                   text-gray-100
                   placeholder:text-gray-600
-                  disabled:bg-[#1A1A1A]
+                  disabled:bg-[#0f172a]
                   disabled:text-gray-600
                   ${
                     error
                       ? "border-red-600 focus:border-red-500 focus:ring-2 focus:ring-red-500/10"
-                      : "focus:border-[#D2B47A] focus:ring-2 focus:ring-[#D2B47A]/15"
+                      : "focus:border-[#93c5fd] focus:ring-2 focus:ring-[#93c5fd]/15"
                   }
                 `
                 : `
-                  border-[#d8cfc4]
+                  border-[#dbeafe]
                   bg-white
-                  text-[#29241f]
+                  text-[#0f172a]
                   placeholder:text-gray-400
                   shadow-2xs
-                  disabled:bg-[#fbf9f6]
+                  disabled:bg-[#ffffff]
                   disabled:text-gray-400
                   ${
                     error
                       ? "border-rose-400 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/15"
-                      : "focus:border-[#b49a6a] focus:ring-2 focus:ring-[#b49a6a]/20"
+                      : "focus:border-[#60a5fa] focus:ring-2 focus:ring-[#60a5fa]/20"
                   }
                 `
             }
@@ -148,7 +148,7 @@ export default function Input({
       ) : helperText ? (
         <p
           className={`mt-1.5 text-xs ${
-            isDark ? "text-gray-500" : "text-[#756d64]"
+            isDark ? "text-gray-500" : "text-[#475569]"
           }`}
         >
           {helperText}

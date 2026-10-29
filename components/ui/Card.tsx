@@ -57,7 +57,7 @@ export default function Card({
       className={`
         rounded-2xl
         border
-        border-[#E5E1D8]
+        border-[#dbeafe]
         bg-white
         shadow-[0_2px_10px_rgba(31,32,35,0.03)]
         ${paddingStyles[padding]}
@@ -71,10 +71,10 @@ export default function Card({
       {...props}
     >
       {title && (
-        <div className="border-b border-[#E5E1D8] px-5 py-4 sm:px-6">
-          <h3 className="text-base font-semibold text-[#1F2023]">{title}</h3>
+        <div className="border-b border-[#dbeafe] px-5 py-4 sm:px-6">
+          <h3 className="text-base font-semibold text-[#0f172a]">{title}</h3>
           {description && (
-            <p className="mt-1 text-xs text-[#77746D]">{description}</p>
+            <p className="mt-1 text-xs text-[#64748b]">{description}</p>
           )}
         </div>
       )}
@@ -97,7 +97,7 @@ export function CardHeader({
         justify-between
         gap-4
         border-b
-        border-[#EEEAE2]
+        border-[#eff6ff]
         px-5
         py-4
         sm:px-6
@@ -105,12 +105,12 @@ export function CardHeader({
       `}
     >
       <div className="min-w-0">
-        <h3 className="text-base font-semibold text-[#1F2023]">
+        <h3 className="text-base font-semibold text-[#0f172a]">
           {title}
         </h3>
 
         {description && (
-          <p className="mt-1 text-sm leading-5 text-[#77746D]">
+          <p className="mt-1 text-sm leading-5 text-[#64748b]">
             {description}
           </p>
         )}
@@ -149,8 +149,8 @@ export function CardFooter({
     <div
       className={`
         border-t
-        border-[#EEEAE2]
-        bg-[#FCFBF8]
+        border-[#eff6ff]
+        bg-[#ffffff]
         px-5
         py-4
         sm:px-6

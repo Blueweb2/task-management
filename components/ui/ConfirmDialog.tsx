@@ -51,7 +51,7 @@ export default function ConfirmDialog({
       "bg-[#FFF4D9] text-[#946A12]",
 
     default:
-      "bg-[#F3EBDD] text-[#80683D]",
+      "bg-[#eff6ff] text-[#1d4ed8]",
   };
 
   const buttonVariant =
@@ -88,12 +88,12 @@ export default function ConfirmDialog({
         </div>
 
         {/* Content */}
-        <h2 className="mt-4 text-lg font-semibold text-[#1F2023]">
+        <h2 className="mt-4 text-lg font-semibold text-[#0f172a]">
           {title}
         </h2>
 
         {description && (
-          <p className="mx-auto mt-2 max-w-sm text-sm leading-5 text-[#77746D]">
+          <p className="mx-auto mt-2 max-w-sm text-sm leading-5 text-[#64748b]">
             {description}
           </p>
         )}

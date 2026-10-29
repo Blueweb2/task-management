@@ -34,17 +34,17 @@ export default function StaffHeader({ assignments = [] }: StaffHeaderProps) {
 
   return (
     <>
-      <header className="flex items-center justify-between rounded-2xl border border-[#e8e1d8] bg-white px-3.5 py-3 sm:px-5 sm:py-3.5 shadow-sm">
+      <header className="flex items-center justify-between rounded-2xl border border-[#dbeafe] bg-white px-3.5 py-3 sm:px-5 sm:py-3.5 shadow-sm">
         <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
-          <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-[#9a6c37] text-white shadow-xs">
+          <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-[#1d4ed8] text-white shadow-xs">
             <CalendarDays size={18} className="sm:hidden" />
             <CalendarDays size={20} className="hidden sm:block" />
           </div>
           <div className="min-w-0">
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#9a6c37]">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#1d4ed8]">
               Staff Portal
             </span>
-            <h1 className="truncate text-sm sm:text-base font-bold text-[#29241f] max-w-[130px] xs:max-w-[180px] sm:max-w-none">
+            <h1 className="truncate text-sm sm:text-base font-bold text-[#0f172a] max-w-[130px] xs:max-w-[180px] sm:max-w-none">
               {user?.name || "Staff Member"}
             </h1>
           </div>

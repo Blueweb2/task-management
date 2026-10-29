@@ -158,7 +158,7 @@ export default function StaffActions({
           <div>
             <h2
               id="staff-actions-heading"
-              className="text-sm font-semibold text-[#1F1F1F]"
+              className="text-sm font-semibold text-[#0f172a]"
             >
               Staff Management
             </h2>
@@ -206,7 +206,7 @@ export default function StaffActions({
             type="button"
             onClick={handleEdit}
             disabled={isStatusUpdating}
-            className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#1F1F1F] px-4 text-xs font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-xs font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
           >
             <Edit3
               size={16}
@@ -227,7 +227,7 @@ export default function StaffActions({
             className={`flex min-h-12 items-center justify-center gap-2 rounded-xl border px-4 text-xs font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 ${
               isActive
                 ? "border-red-200 bg-white text-red-600 hover:bg-red-50"
-                : "border-[#D8C29D] bg-[#F4EBDD] text-[#8A6A3F] hover:bg-[#EEDFC7]"
+                : "border-[#D8C29D] bg-[#eff6ff] text-[#8A6A3F] hover:bg-[#EEDFC7]"
             }`}
           >
             {isStatusUpdating ? (
@@ -265,7 +265,7 @@ export default function StaffActions({
               onClick={handleResetPassword}
               className="flex min-h-12 w-full items-center gap-3 px-4 text-left text-xs font-medium text-gray-700 transition hover:bg-gray-50 active:bg-gray-100"
             >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F4EBDD] text-[#9A7B4F]">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#eff6ff] text-[#2563eb]">
                 <KeyRound
                   size={15}
                   strokeWidth={1.8}
@@ -273,7 +273,7 @@ export default function StaffActions({
               </div>
 
               <div className="min-w-0">
-                <p className="font-semibold text-[#1F1F1F]">
+                <p className="font-semibold text-[#0f172a]">
                   Reset Password
                 </p>
 

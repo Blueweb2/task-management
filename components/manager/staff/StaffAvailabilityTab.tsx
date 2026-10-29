@@ -294,7 +294,7 @@ export default function StaffAvailabilityTab({
       {/* Top Action Bar */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-[#1F1F1F] sm:text-xl">
+          <h2 className="text-lg font-bold tracking-tight text-[#0f172a] sm:text-xl">
             Staff Availability & Leave Hub
           </h2>
           <p className="text-xs text-gray-500">
@@ -308,14 +308,14 @@ export default function StaffAvailabilityTab({
             onClick={exportAvailabilityCSV}
             className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3.5 text-xs font-semibold text-gray-700 shadow-xs transition hover:bg-gray-50 active:scale-95"
           >
-            <Download size={14} className="text-[#9A7B4F]" />
+            <Download size={14} className="text-[#2563eb]" />
             <span>Export Roster</span>
           </button>
 
           <button
             type="button"
             onClick={() => setModalOpen(true)}
-            className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#9A7B4F] px-4 text-xs font-semibold text-white shadow-xs transition hover:bg-[#80653e] active:scale-95"
+            className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#2563eb] px-4 text-xs font-semibold text-white shadow-xs transition hover:bg-[#1d4ed8] active:scale-95"
           >
             <Plus size={15} />
             <span>Set Availability / Leave</span>
@@ -340,7 +340,7 @@ export default function StaffAvailabilityTab({
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="h-9 rounded-xl border border-gray-200 px-3 text-xs font-semibold text-gray-900 focus:border-[#9A7B4F] focus:outline-none"
+            className="h-9 rounded-xl border border-gray-200 px-3 text-xs font-semibold text-gray-900 focus:border-[#2563eb] focus:outline-none"
           />
 
           <button
@@ -372,7 +372,7 @@ export default function StaffAvailabilityTab({
             placeholder="Search staff or department..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full rounded-xl border border-gray-200 bg-gray-50/50 py-1.5 pl-8 pr-3 text-xs text-gray-800 placeholder-gray-400 focus:border-[#9A7B4F] focus:bg-white focus:outline-none"
+            className="w-full rounded-xl border border-gray-200 bg-gray-50/50 py-1.5 pl-8 pr-3 text-xs text-gray-800 placeholder-gray-400 focus:border-[#2563eb] focus:bg-white focus:outline-none"
           />
         </div>
 
@@ -424,7 +424,7 @@ export default function StaffAvailabilityTab({
                 onClick={() => setStatusFilter(st)}
                 className={`rounded-xl px-2.5 py-1.5 text-[10px] font-bold transition whitespace-nowrap ${
                   statusFilter === st
-                    ? "bg-[#9A7B4F] text-white"
+                    ? "bg-[#2563eb] text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -446,7 +446,7 @@ export default function StaffAvailabilityTab({
       {/* Content */}
       {loading ? (
         <div className="flex min-h-64 items-center justify-center rounded-2xl border border-gray-200 bg-white">
-          <Loader2 size={26} className="animate-spin text-[#9A7B4F]" />
+          <Loader2 size={26} className="animate-spin text-[#2563eb]" />
         </div>
       ) : error ? (
         <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-center text-xs text-red-600">
@@ -490,7 +490,7 @@ export default function StaffAvailabilityTab({
                     <div className="min-w-0">
                       <Link
                         href={`/manager/staff/${staffId}`}
-                        className="text-sm font-bold text-gray-900 hover:text-[#9A7B4F] hover:underline truncate block"
+                        className="text-sm font-bold text-gray-900 hover:text-[#2563eb] hover:underline truncate block"
                       >
                         {staffName}
                       </Link>
@@ -542,7 +542,7 @@ export default function StaffAvailabilityTab({
                   {/* Active Duty Indicator */}
                   {!hasConflict && assignedDuties.length > 0 && (
                     <div className="mt-2 flex items-center gap-1.5 rounded-xl bg-amber-50/70 border border-amber-200/60 p-1.5 text-[10px] font-medium text-amber-900">
-                      <Briefcase size={12} className="text-[#9A7B4F] shrink-0" />
+                      <Briefcase size={12} className="text-[#2563eb] shrink-0" />
                       <span className="truncate">
                         Assigned: {assignedDuties[0].dutyTitle}
                         {assignedDuties.length > 1 && ` (+${assignedDuties.length - 1} more)`}
@@ -552,7 +552,7 @@ export default function StaffAvailabilityTab({
 
                   {item.startTime && item.endTime && (
                     <div className="mt-3 flex items-center gap-1.5 text-xs text-gray-600 font-medium">
-                      <Clock3 size={13} className="text-[#9A7B4F]" />
+                      <Clock3 size={13} className="text-[#2563eb]" />
                       <span>
                         {formatTime24to12(item.startTime)} - {formatTime24to12(item.endTime)}
                       </span>
@@ -561,7 +561,7 @@ export default function StaffAvailabilityTab({
 
                   {item.notes && (
                     <div className="mt-2 flex items-start gap-1 rounded-xl bg-gray-50 p-2 text-[11px] text-gray-600 italic">
-                      <FileText size={12} className="mt-0.5 shrink-0 text-[#9A7B4F]" />
+                      <FileText size={12} className="mt-0.5 shrink-0 text-[#2563eb]" />
                       <span>&ldquo;{item.notes}&rdquo;</span>
                     </div>
                   )}
@@ -769,7 +769,7 @@ function AddAvailabilityModal({
               required
               value={staffId}
               onChange={(e) => setStaffId(e.target.value)}
-              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-900 focus:border-[#9A7B4F] focus:outline-none"
+              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-900 focus:border-[#2563eb] focus:outline-none"
             >
               <option value="">Select staff member</option>
               {staffList.map((s) => (
@@ -802,7 +802,7 @@ function AddAvailabilityModal({
               required
               value={targetDate}
               onChange={(e) => setTargetDate(e.target.value)}
-              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#9A7B4F] focus:outline-none"
+              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#2563eb] focus:outline-none"
             />
           </div>
 
@@ -813,7 +813,7 @@ function AddAvailabilityModal({
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value as AvailabilityStatus)}
-              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-900 focus:border-[#9A7B4F] focus:outline-none"
+              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-900 focus:border-[#2563eb] focus:outline-none"
             >
               <option value="AVAILABLE">AVAILABLE 🟢</option>
               <option value="ON_LEAVE">ON LEAVE (Leave Request) 🟡</option>
@@ -827,7 +827,7 @@ function AddAvailabilityModal({
                 <label className="block text-xs font-semibold text-gray-700">
                   Start Time
                   {startTime && (
-                    <span className="ml-1.5 font-normal text-[#9A7B4F]">
+                    <span className="ml-1.5 font-normal text-[#2563eb]">
                       ({formatTime24to12(startTime)})
                     </span>
                   )}
@@ -836,7 +836,7 @@ function AddAvailabilityModal({
                   type="time"
                   value={startTime}
                   onChange={(e) => setStartTime(e.target.value)}
-                  className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#9A7B4F] focus:outline-none"
+                  className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#2563eb] focus:outline-none"
                 />
               </div>
 
@@ -844,7 +844,7 @@ function AddAvailabilityModal({
                 <label className="block text-xs font-semibold text-gray-700">
                   End Time
                   {endTime && (
-                    <span className="ml-1.5 font-normal text-[#9A7B4F]">
+                    <span className="ml-1.5 font-normal text-[#2563eb]">
                       ({formatTime24to12(endTime)})
                     </span>
                   )}
@@ -853,7 +853,7 @@ function AddAvailabilityModal({
                   type="time"
                   value={endTime}
                   onChange={(e) => setEndTime(e.target.value)}
-                  className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#9A7B4F] focus:outline-none"
+                  className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#2563eb] focus:outline-none"
                 />
               </div>
             </div>
@@ -868,7 +868,7 @@ function AddAvailabilityModal({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder={status === "ON_LEAVE" ? "Reason for leave request or manager approval notes..." : "Add availability or shift notes..."}
-              className="mt-1 w-full rounded-xl border border-gray-200 p-2 text-xs outline-none focus:border-[#9A7B4F]"
+              className="mt-1 w-full rounded-xl border border-gray-200 p-2 text-xs outline-none focus:border-[#2563eb]"
             />
           </div>
 
@@ -884,7 +884,7 @@ function AddAvailabilityModal({
             <button
               type="submit"
               disabled={loading}
-              className="h-9.5 rounded-xl bg-[#9A7B4F] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#80653e] disabled:opacity-50 active:scale-95"
+              className="h-9.5 rounded-xl bg-[#2563eb] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#1d4ed8] disabled:opacity-50 active:scale-95"
             >
               {loading ? "Saving..." : "Save Record"}
             </button>

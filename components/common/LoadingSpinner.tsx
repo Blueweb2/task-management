@@ -23,7 +23,7 @@ export default function LoadingSpinner({
       aria-label="Loading"
       className={[
         "animate-spin rounded-full",
-        "border-gray-200 border-t-[#8C7A55]",
+        "border-gray-200 border-t-[#64748b]",
         sizeClasses[size],
         className,
       ].join(" ")}

@@ -44,7 +44,7 @@ export default function ManagerBottomNav() {
                 <Icon
                   size={20}
                   strokeWidth={isActive ? 2.3 : 2}
-                  className={isActive ? "text-[#9A7B4F]" : "text-gray-500"}
+                  className={isActive ? "text-[#2563eb]" : "text-gray-500"}
                 />
               </span>
 

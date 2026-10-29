@@ -111,7 +111,7 @@ export default function ScheduleCalendar({
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F7F3] pb-24">
+    <div className="min-h-screen bg-[#f8fbff] pb-24">
       {/* Header */}
       <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-gray-100 bg-white px-4">
         <button
@@ -123,7 +123,7 @@ export default function ScheduleCalendar({
           <ChevronLeft size={22} />
         </button>
 
-        <h1 className="text-base font-semibold text-[#1F1F1F]">
+        <h1 className="text-base font-semibold text-[#0f172a]">
           Staff Schedule
         </h1>
 
@@ -134,7 +134,7 @@ export default function ScheduleCalendar({
       <div className="bg-white px-4 py-4">
         <button
           type="button"
-          className="flex items-center gap-1.5 text-sm font-medium text-[#1F1F1F]"
+          className="flex items-center gap-1.5 text-sm font-medium text-[#0f172a]"
         >
           {formatMonth(selectedDate)}
 
@@ -181,7 +181,7 @@ export default function ScheduleCalendar({
                   className={`flex min-h-[50px] sm:min-h-[58px] p-0.5 sm:p-1 flex-col items-center justify-center rounded-xl transition ${
                     selected
                       ? "bg-[#A88A5A] text-white shadow-sm"
-                      : "bg-white text-[#1F1F1F] hover:bg-gray-50"
+                      : "bg-white text-[#0f172a] hover:bg-gray-50"
                   }`}
                 >
                   <span
@@ -205,7 +205,7 @@ export default function ScheduleCalendar({
 
                   {isToday &&
                     !selected && (
-                      <span className="mt-0.5 h-1 w-1 rounded-full bg-[#B89563]" />
+                      <span className="mt-0.5 h-1 w-1 rounded-full bg-[#3b82f6]" />
                     )}
                 </button>
               );
@@ -241,7 +241,7 @@ export default function ScheduleCalendar({
           <button
             type="button"
             onClick={onAddShift}
-            className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#1F1F1F] px-4 text-sm font-semibold text-white shadow-lg transition active:scale-[0.98]"
+            className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-sm font-semibold text-white shadow-lg transition active:scale-[0.98]"
           >
             <span className="text-lg leading-none">
               +

@@ -39,19 +39,19 @@ export default function ProfileSettings() {
   };
 
   return (
-    <section className="rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
-      <div className="border-b border-[#eee8e1] p-5 sm:p-6">
+    <section className="rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
+      <div className="border-b border-[#eff6ff] p-5 sm:p-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
             <User size={19} />
           </div>
 
           <div>
-            <h2 className="font-semibold text-[#29241f]">
+            <h2 className="font-semibold text-[#0f172a]">
               Profile
             </h2>
 
-            <p className="text-sm text-[#9b938a]">
+            <p className="text-sm text-[#64748b]">
               Manage your personal account information.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function ProfileSettings() {
 
       <div className="space-y-5 p-5 sm:p-6">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-[#403a34]">
+          <label className="mb-1.5 block text-sm font-medium text-[#1e293b]">
             Full Name
           </label>
 
@@ -68,25 +68,25 @@ export default function ProfileSettings() {
             value={name || user?.name || ""}
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm text-[#29241f] outline-none focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+            className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm text-[#0f172a] outline-none focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
           />
         </div>
 
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-[#403a34]">
+          <label className="mb-1.5 block text-sm font-medium text-[#1e293b]">
             Email Address
           </label>
 
           <input
             value={user?.email || ""}
             type="email"
-            className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#f3f0eb] px-3 text-sm text-[#756d64] outline-none"
+            className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#f3f0eb] px-3 text-sm text-[#475569] outline-none"
             disabled
           />
         </div>
 
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-[#403a34]">
+          <label className="mb-1.5 block text-sm font-medium text-[#1e293b]">
             Phone Number
           </label>
 
@@ -94,20 +94,20 @@ export default function ProfileSettings() {
             value={phone || user?.phone || ""}
             onChange={(e) => setPhone(e.target.value)}
             type="tel"
-            className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm text-[#29241f] outline-none focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+            className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm text-[#0f172a] outline-none focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
           />
         </div>
 
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-[#403a34]">Location</label>
-          <input value={location || user?.location || ""} onChange={(e) => setLocation(e.target.value)} type="text" className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm text-[#29241f] outline-none focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10" />
+          <label className="mb-1.5 block text-sm font-medium text-[#1e293b]">Location</label>
+          <input value={location || user?.location || ""} onChange={(e) => setLocation(e.target.value)} type="text" className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm text-[#0f172a] outline-none focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10" />
         </div>
 
         <button
           type="button"
           onClick={() => void handleSave()}
           disabled={saving}
-          className="rounded-xl bg-[#b8894b] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#a7773f]"
+          className="rounded-xl bg-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1d4ed8]"
         >
           {saving ? "Saving..." : "Save Profile"}
         </button>

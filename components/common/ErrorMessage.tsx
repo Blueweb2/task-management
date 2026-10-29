@@ -112,7 +112,7 @@ export default function ErrorMessage({
           mt-4
           text-base
           font-semibold
-          text-[#1F2023]
+          text-[#0f172a]
         "
       >
         {title}
@@ -125,7 +125,7 @@ export default function ErrorMessage({
           max-w-md
           text-sm
           leading-5
-          text-[#77746D]
+          text-[#64748b]
         "
       >
         {message}
@@ -143,7 +143,7 @@ export default function ErrorMessage({
             items-center
             justify-center
             rounded-xl
-            bg-[#1F2023]
+            bg-[#0f172a]
             px-4
             text-sm
             font-medium
@@ -152,7 +152,7 @@ export default function ErrorMessage({
             hover:bg-[#2A2B2F]
             focus:outline-none
             focus:ring-2
-            focus:ring-[#B49A6A]/30
+            focus:ring-[#60a5fa]/30
           "
         >
           {retryText}

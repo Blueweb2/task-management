@@ -233,13 +233,13 @@ export default function DatePicker({
         <div className="mb-1.5 flex items-center justify-between gap-2">
           <label
             htmlFor={inputId}
-            className="flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#29241f]"
+            className="flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#0f172a]"
           >
             {label}
-            {required && <span className="text-[#b8894b]">*</span>}
+            {required && <span className="text-[#3b82f6]">*</span>}
           </label>
           {badgeString && (
-            <span className="flex items-center gap-1 rounded-full bg-[#B8894B]/15 px-2.5 py-0.5 text-[11px] font-bold text-[#9A6C37] animate-in fade-in">
+            <span className="flex items-center gap-1 rounded-full bg-[#3b82f6]/15 px-2.5 py-0.5 text-[11px] font-bold text-[#1d4ed8] animate-in fade-in">
               <CalendarDays size={11} />
               {badgeString}
             </span>
@@ -269,25 +269,25 @@ export default function DatePicker({
           group relative flex h-11 w-full min-w-0 items-center justify-between rounded-xl border bg-white px-3.5 text-sm transition-all duration-200 cursor-pointer select-none
           ${
             disabled
-              ? "cursor-not-allowed border-[#e8e1d8] bg-[#fbf9f6] opacity-60"
+              ? "cursor-not-allowed border-[#dbeafe] bg-[#ffffff] opacity-60"
               : error
                 ? "border-rose-400 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/15"
                 : isOpen
-                  ? "border-[#b8894b] ring-2 ring-[#b8894b]/20 shadow-xs"
-                  : "border-[#d8cfc4] hover:border-[#b49a6a] shadow-2xs"
+                  ? "border-[#3b82f6] ring-2 ring-[#3b82f6]/20 shadow-xs"
+                  : "border-[#dbeafe] hover:border-[#60a5fa] shadow-2xs"
           }
           ${className}
         `}
       >
         {/* Left Icon and Display Text */}
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="flex shrink-0 items-center justify-center text-[#8d847b] transition-colors group-hover:text-[#b8894b]">
+          <div className="flex shrink-0 items-center justify-center text-[#64748b] transition-colors group-hover:text-[#3b82f6]">
             <CalendarDays size={18} />
           </div>
 
           <div className="min-w-0 flex-1 truncate">
             {displayString ? (
-              <span className="block truncate font-semibold text-[#29241f]">
+              <span className="block truncate font-semibold text-[#0f172a]">
                 {displayString}
               </span>
             ) : (
@@ -313,8 +313,8 @@ export default function DatePicker({
           )}
 
           <div
-            className={`flex items-center text-[#8d847b] transition-transform duration-200 ${
-              isOpen ? "rotate-180 text-[#b8894b]" : ""
+            className={`flex items-center text-[#64748b] transition-transform duration-200 ${
+              isOpen ? "rotate-180 text-[#3b82f6]" : ""
             }`}
           >
             <ChevronRight size={15} className="rotate-90" />
@@ -335,7 +335,7 @@ export default function DatePicker({
         <div
           role="dialog"
           aria-label="Calendar date picker"
-          className="absolute left-0 top-[calc(100%+6px)] z-50 w-full min-w-[280px] max-w-[340px] rounded-2xl border border-[#e8e1d8] bg-white p-3.5 shadow-xl animate-in fade-in zoom-in-95 duration-150"
+          className="absolute left-0 top-[calc(100%+6px)] z-50 w-full min-w-[280px] max-w-[340px] rounded-2xl border border-[#dbeafe] bg-white p-3.5 shadow-xl animate-in fade-in zoom-in-95 duration-150"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Calendar Header: Month/Year and Navigation Buttons */}
@@ -343,20 +343,20 @@ export default function DatePicker({
             <button
               type="button"
               onClick={handlePrevMonth}
-              className="flex h-8 w-8 items-center justify-center rounded-xl border border-[#eee7dc] bg-[#fcfaf7] text-[#756d64] transition hover:bg-white hover:text-[#29241f] hover:border-[#b8894b] active:scale-95 cursor-pointer shadow-2xs"
+              className="flex h-8 w-8 items-center justify-center rounded-xl border border-[#eff6ff] bg-[#ffffff] text-[#475569] transition hover:bg-white hover:text-[#0f172a] hover:border-[#3b82f6] active:scale-95 cursor-pointer shadow-2xs"
               aria-label="Previous month"
             >
               <ChevronLeft size={16} />
             </button>
 
-            <span className="text-xs sm:text-sm font-bold text-[#29241f]">
+            <span className="text-xs sm:text-sm font-bold text-[#0f172a]">
               {MONTH_NAMES[viewMonth]} {viewYear}
             </span>
 
             <button
               type="button"
               onClick={handleNextMonth}
-              className="flex h-8 w-8 items-center justify-center rounded-xl border border-[#eee7dc] bg-[#fcfaf7] text-[#756d64] transition hover:bg-white hover:text-[#29241f] hover:border-[#b8894b] active:scale-95 cursor-pointer shadow-2xs"
+              className="flex h-8 w-8 items-center justify-center rounded-xl border border-[#eff6ff] bg-[#ffffff] text-[#475569] transition hover:bg-white hover:text-[#0f172a] hover:border-[#3b82f6] active:scale-95 cursor-pointer shadow-2xs"
               aria-label="Next month"
             >
               <ChevronRight size={16} />
@@ -368,7 +368,7 @@ export default function DatePicker({
             {WEEKDAY_NAMES.map((weekday) => (
               <span
                 key={weekday}
-                className="text-[11px] font-bold text-[#8d847b] py-0.5 select-none"
+                className="text-[11px] font-bold text-[#64748b] py-0.5 select-none"
               >
                 {weekday}
               </span>
@@ -412,12 +412,12 @@ export default function DatePicker({
                     flex h-8 w-full min-w-0 items-center justify-center rounded-xl text-xs font-semibold transition-all cursor-pointer select-none
                     ${
                       isSelected
-                        ? "bg-[#b8894b] text-white shadow-xs font-bold scale-102"
+                        ? "bg-[#3b82f6] text-white shadow-xs font-bold scale-102"
                         : isBlocked
                           ? "opacity-25 cursor-not-allowed text-gray-400"
                           : isToday
-                            ? "border border-[#b8894b] text-[#9A6C37] bg-[#B8894B]/10 hover:bg-[#B8894B]/20 font-bold"
-                            : "text-[#29241f] hover:bg-[#f7f3eb] hover:text-[#9A6C37]"
+                            ? "border border-[#3b82f6] text-[#1d4ed8] bg-[#3b82f6]/10 hover:bg-[#3b82f6]/20 font-bold"
+                            : "text-[#0f172a] hover:bg-[#f7f3eb] hover:text-[#1d4ed8]"
                     }
                   `}
                   aria-label={`${day} ${MONTH_NAMES[viewMonth]} ${viewYear}`}
@@ -430,11 +430,11 @@ export default function DatePicker({
           </div>
 
           {/* Quick Shortcuts Footer */}
-          <div className="mt-3.5 flex items-center justify-between border-t border-[#eee7dc] pt-2.5">
+          <div className="mt-3.5 flex items-center justify-between border-t border-[#eff6ff] pt-2.5">
             <button
               type="button"
               onClick={handleQuickToday}
-              className="rounded-lg px-2.5 py-1 text-xs font-bold text-[#9A6C37] hover:bg-[#B8894B]/10 transition active:scale-95 cursor-pointer"
+              className="rounded-lg px-2.5 py-1 text-xs font-bold text-[#1d4ed8] hover:bg-[#3b82f6]/10 transition active:scale-95 cursor-pointer"
             >
               Today
             </button>
@@ -442,7 +442,7 @@ export default function DatePicker({
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="rounded-lg px-2.5 py-1 text-xs font-bold text-[#756d64] hover:bg-gray-100 transition active:scale-95 cursor-pointer"
+              className="rounded-lg px-2.5 py-1 text-xs font-bold text-[#475569] hover:bg-gray-100 transition active:scale-95 cursor-pointer"
             >
               Done
             </button>
@@ -454,7 +454,7 @@ export default function DatePicker({
       {error ? (
         <p className="mt-1.5 text-xs text-rose-600">{error}</p>
       ) : helperText ? (
-        <p className="mt-1.5 text-xs text-[#756d64]">{helperText}</p>
+        <p className="mt-1.5 text-xs text-[#475569]">{helperText}</p>
       ) : null}
     </div>
   );

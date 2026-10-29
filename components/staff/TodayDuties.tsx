@@ -63,30 +63,30 @@ export default function TodayDuties({
   );
 
   return (
-    <section className="rounded-2xl sm:rounded-3xl border border-[#e8e1d8] bg-white p-4 sm:p-5 shadow-sm space-y-4">
+    <section className="rounded-2xl sm:rounded-3xl border border-[#dbeafe] bg-white p-4 sm:p-5 shadow-sm space-y-4">
       <div className="flex items-center justify-between pb-3 border-b border-gray-100">
         <div>
-          <h2 className="text-sm sm:text-base font-bold text-[#29241f]">
+          <h2 className="text-sm sm:text-base font-bold text-[#0f172a]">
             Today&apos;s Assigned Duties
           </h2>
-          <p className="text-xs text-[#756d64]">Live shifts and tasks assigned to you</p>
+          <p className="text-xs text-[#475569]">Live shifts and tasks assigned to you</p>
         </div>
         {showViewAllLink ? (
           <Link
             href="/staff/duties"
-            className="text-xs font-semibold text-[#9a6c37] hover:underline"
+            className="text-xs font-semibold text-[#1d4ed8] hover:underline"
           >
             View All Duties
           </Link>
         ) : (
-          <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold text-[#9a6c37]">
+          <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold text-[#1d4ed8]">
             Today
           </span>
         )}
       </div>
 
       {duties.length === 0 ? (
-        <p className="rounded-2xl bg-[#fdfcfb] p-4 text-xs sm:text-sm text-gray-500 text-center">
+        <p className="rounded-2xl bg-[#ffffff] p-4 text-xs sm:text-sm text-gray-500 text-center">
           No duties assigned for today.
         </p>
       ) : (
@@ -110,19 +110,19 @@ export default function TodayDuties({
                 </div>
 
                 <div className="mt-2.5 space-y-1">
-                  <h3 className="font-extrabold text-sm sm:text-base text-[#29241f]">
+                  <h3 className="font-extrabold text-sm sm:text-base text-[#0f172a]">
                     {duty.dutyTitle}
                   </h3>
-                  <p className="text-xs font-medium text-[#9a6c37]">
+                  <p className="text-xs font-medium text-[#1d4ed8]">
                     {event?.eventName || "Assigned Event"} · <span className="capitalize">{duty.role || "Crew"}</span>
                   </p>
                   <div className="flex flex-wrap items-center gap-3 pt-1 text-[11px] text-gray-500">
                     <span className="flex items-center gap-1 font-semibold text-gray-700">
-                      <Clock3 size={12} className="text-[#9a6c37]" />
+                      <Clock3 size={12} className="text-[#1d4ed8]" />
                       {formatTime24to12(duty.startTime)} - {formatTime24to12(duty.endTime)}
                     </span>
                     <span className="flex items-center gap-1 min-w-0">
-                      <MapPin size={12} className="text-[#9a6c37] shrink-0" />
+                      <MapPin size={12} className="text-[#1d4ed8] shrink-0" />
                       <span className="truncate">{event?.location || "Venue location pending"}</span>
                     </span>
                   </div>
@@ -137,11 +137,11 @@ export default function TodayDuties({
             return (
               <div
                 key={duty._id}
-                className="flex flex-col gap-2.5 rounded-2xl border border-gray-100 bg-[#fdfcfb] p-3.5 sm:flex-row sm:items-center sm:justify-between"
+                className="flex flex-col gap-2.5 rounded-2xl border border-gray-100 bg-[#ffffff] p-3.5 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="space-y-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-bold text-xs sm:text-sm text-[#29241f] break-words">
+                    <span className="font-bold text-xs sm:text-sm text-[#0f172a] break-words">
                       {duty.dutyTitle}
                     </span>
                     <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold text-amber-800">
@@ -153,11 +153,11 @@ export default function TodayDuties({
                   </p>
                   <div className="flex flex-wrap items-center gap-3 pt-0.5 text-[11px] text-gray-400">
                     <span className="flex items-center gap-1">
-                      <Clock3 size={12} className="text-[#9a6c37]" />
+                      <Clock3 size={12} className="text-[#1d4ed8]" />
                       {formatTime24to12(duty.startTime)} - {formatTime24to12(duty.endTime)}
                     </span>
                     <span className="flex items-center gap-1 min-w-0">
-                      <MapPin size={12} className="text-[#9a6c37] shrink-0" />
+                      <MapPin size={12} className="text-[#1d4ed8] shrink-0" />
                       <span className="truncate">{event?.location || "Location pending"}</span>
                     </span>
                   </div>
@@ -180,7 +180,7 @@ export default function TodayDuties({
                   <div
                     key={duty._id}
                     onClick={() => toggleExpand(duty._id)}
-                    className="cursor-pointer rounded-2xl border border-gray-200/70 bg-[#faf8f5] p-3 text-xs transition hover:border-[#9a6c37]/40 hover:bg-white"
+                    className="cursor-pointer rounded-2xl border border-gray-200/70 bg-[#f8fbff] p-3 text-xs transition hover:border-[#1d4ed8]/40 hover:bg-white"
                   >
                     <div className="flex items-center justify-between gap-2">
                       <div className="flex items-center gap-2 min-w-0">

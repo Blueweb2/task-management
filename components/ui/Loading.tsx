@@ -44,7 +44,7 @@ export default function LoadingState({
           items-center
           justify-center
           rounded-full
-          bg-[#F3EBDD]
+          bg-[#eff6ff]
         "
       >
         <span
@@ -55,7 +55,7 @@ export default function LoadingState({
             rounded-full
             border-2
             border-[#D8C9AC]
-            border-t-[#B49A6A]
+            border-t-[#60a5fa]
           "
           aria-hidden="true"
         />

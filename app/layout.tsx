@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body
-        className={`${inter.variable} bg-[#f7f4ec] text-[#29241f] antialiased`}
+        className={`${inter.variable} bg-[#f8fbff] text-[#0f172a] antialiased`}
       >
         <ToastProvider>{children}</ToastProvider>
         <SpeedInsights />

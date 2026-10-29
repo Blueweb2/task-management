@@ -92,22 +92,22 @@ export default function StaffHomePage() {
   return (
     <div className="space-y-6 py-4">
       {/* Welcome Banner */}
-      <section className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-7 shadow-xs overflow-hidden">
-        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#9a6c37]/10 to-transparent" />
+      <section className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-7 shadow-xs overflow-hidden">
+        <div className="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#1d4ed8]/10 to-transparent" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-[#9a6c37] border border-amber-200">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-[#1d4ed8] border border-amber-200">
               <Sparkles size={12} />
               Staff Portal
             </span>
             <span className="text-xs text-gray-400 font-medium hidden sm:inline">• Live Workspace</span>
           </div>
 
-          <h1 className="mt-2 text-xl font-black tracking-tight text-[#29241f] sm:text-2xl lg:text-3xl">
+          <h1 className="mt-2 text-xl font-black tracking-tight text-[#0f172a] sm:text-2xl lg:text-3xl">
             Welcome back, {user?.name || "Staff Member"} 👋
           </h1>
-          <p className="mt-1 text-xs sm:text-sm leading-relaxed text-[#756d64]">
+          <p className="mt-1 text-xs sm:text-sm leading-relaxed text-[#475569]">
             Here are your assigned tasks, voice instructions, and equipment requests.
           </p>
         </div>
@@ -116,16 +116,16 @@ export default function StaffHomePage() {
           <button
             type="button"
             onClick={() => setRequestEquipTask({} as any)}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
           >
             <Package size={14} />
             <span>Request Equipment</span>
           </button>
           <Link
             href="/staff/attendance"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-[#e8e1d8] bg-[#faf8f5] px-3.5 py-2 text-xs font-bold text-[#29241f] hover:bg-white hover:border-[#9a6c37] transition active:scale-95"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-[#dbeafe] bg-[#f8fbff] px-3.5 py-2 text-xs font-bold text-[#0f172a] hover:bg-white hover:border-[#1d4ed8] transition active:scale-95"
           >
-            <Clock3 size={14} className="text-[#9a6c37]" />
+            <Clock3 size={14} className="text-[#1d4ed8]" />
             <span>Clock In / Logs</span>
           </Link>
         </div>
@@ -176,7 +176,7 @@ export default function StaffHomePage() {
           onClick={() => setActiveTab("tasks")}
           className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-1.5 text-xs font-bold transition cursor-pointer ${
             activeTab === "tasks"
-              ? "bg-[#29241f] text-white shadow-xs"
+              ? "bg-[#0f172a] text-white shadow-xs"
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
@@ -189,7 +189,7 @@ export default function StaffHomePage() {
           onClick={() => setActiveTab("requests")}
           className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-1.5 text-xs font-bold transition cursor-pointer ${
             activeTab === "requests"
-              ? "bg-[#29241f] text-white shadow-xs"
+              ? "bg-[#0f172a] text-white shadow-xs"
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
@@ -200,7 +200,7 @@ export default function StaffHomePage() {
 
       {loading ? (
         <div className="flex min-h-64 flex-col items-center justify-center rounded-3xl border border-gray-200 bg-white">
-          <Loader2 size={28} className="animate-spin text-[#9a6c37]" />
+          <Loader2 size={28} className="animate-spin text-[#1d4ed8]" />
           <p className="mt-3 text-xs text-gray-500">Loading your tasks...</p>
         </div>
       ) : activeTab === "requests" ? (
@@ -266,7 +266,7 @@ export default function StaffHomePage() {
       ) : tasks.length === 0 ? (
         /* Empty Tasks State */
         <div className="flex min-h-64 flex-col items-center justify-center rounded-3xl border border-dashed border-gray-300 bg-white p-8 text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-[#9a6c37] mb-2">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-[#1d4ed8] mb-2">
             <ClipboardList size={24} />
           </div>
           <h3 className="text-sm font-bold text-gray-900">No tasks assigned to you</h3>
@@ -284,7 +284,7 @@ export default function StaffHomePage() {
             return (
               <div
                 key={task._id}
-                className="rounded-3xl border border-gray-200 bg-white p-5 shadow-xs transition hover:border-[#9a6c37]/50 space-y-3.5"
+                className="rounded-3xl border border-gray-200 bg-white p-5 shadow-xs transition hover:border-[#1d4ed8]/50 space-y-3.5"
               >
                 {/* Header: Title, Status, Priority */}
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5">
@@ -308,7 +308,7 @@ export default function StaffHomePage() {
 
                       {task.location && (
                         <span className="flex items-center gap-1 text-[11px] text-gray-500 font-medium">
-                          <MapPin size={12} className="text-[#9a6c37]" />
+                          <MapPin size={12} className="text-[#1d4ed8]" />
                           <span>{task.location}</span>
                         </span>
                       )}
@@ -319,7 +319,7 @@ export default function StaffHomePage() {
 
                   {/* Due Date Indicator */}
                   <div className="flex items-center gap-1.5 text-xs text-gray-600 bg-stone-50 px-3 py-1.5 rounded-xl border border-gray-200 self-start shrink-0">
-                    <Calendar size={13} className="text-[#9a6c37]" />
+                    <Calendar size={13} className="text-[#1d4ed8]" />
                     <span>
                       {task.dueDate
                         ? new Date(task.dueDate).toLocaleDateString("en-US", {
@@ -347,7 +347,7 @@ export default function StaffHomePage() {
                 {/* Voice Recording Player */}
                 {hasVoice && (
                   <div>
-                    <span className="text-[10px] font-black uppercase tracking-wider text-[#9a6c37] mb-1 block">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#1d4ed8] mb-1 block">
                       Manager Voice Message
                     </span>
                     <AudioPlayer
@@ -368,7 +368,7 @@ export default function StaffHomePage() {
                       <button
                         type="button"
                         onClick={() => setRequestEquipTask(task)}
-                        className="text-[11px] font-bold text-[#9a6c37] hover:underline"
+                        className="text-[11px] font-bold text-[#1d4ed8] hover:underline"
                       >
                         + Request More
                       </button>
@@ -387,7 +387,7 @@ export default function StaffHomePage() {
                               : "Item"}
                             :
                           </span>
-                          <span className="font-bold text-[#9a6c37]">{eq.quantity}</span>
+                          <span className="font-bold text-[#1d4ed8]">{eq.quantity}</span>
                         </span>
                       ))}
                     </div>
@@ -400,7 +400,7 @@ export default function StaffHomePage() {
                     <button
                       type="button"
                       onClick={() => setSelectedTask(task)}
-                      className="text-xs font-bold text-gray-700 hover:text-[#9a6c37] transition"
+                      className="text-xs font-bold text-gray-700 hover:text-[#1d4ed8] transition"
                     >
                       View Full Details
                     </button>
@@ -408,7 +408,7 @@ export default function StaffHomePage() {
                     <button
                       type="button"
                       onClick={() => setRequestEquipTask(task)}
-                      className="text-xs font-bold text-[#9a6c37] hover:underline"
+                      className="text-xs font-bold text-[#1d4ed8] hover:underline"
                     >
                       Request Equipment
                     </button>

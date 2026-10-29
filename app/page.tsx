@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Get Started */}
         <Link
           href="/login"
-          className="absolute bottom-8 left-1/2 z-10 inline-flex min-h-14 -translate-x-1/2 items-center justify-center rounded-full bg-[#d2b47a] px-10 text-sm font-semibold text-[#17130d] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e0c58f] hover:shadow-xl"
+          className="absolute bottom-8 left-1/2 z-10 inline-flex min-h-14 -translate-x-1/2 items-center justify-center rounded-full bg-[#93c5fd] px-10 text-sm font-semibold text-[#17130d] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e0c58f] hover:shadow-xl"
         >
           Get Started
         </Link>

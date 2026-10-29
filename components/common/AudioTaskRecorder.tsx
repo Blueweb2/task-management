@@ -265,7 +265,7 @@ export default function AudioTaskRecorder({
     <div className="rounded-2xl border border-gray-200 bg-stone-50/70 p-4 transition-all">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-100 text-[#9A7B4F]">
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-100 text-[#2563eb]">
             <Volume2 size={16} />
           </div>
           <div>
@@ -282,7 +282,7 @@ export default function AudioTaskRecorder({
             type="checkbox"
             checked={speechToTextEnabled}
             onChange={(e) => setSpeechToTextEnabled(e.target.checked)}
-            className="rounded border-gray-300 text-[#9A7B4F] focus:ring-[#9A7B4F]"
+            className="rounded border-gray-300 text-[#2563eb] focus:ring-[#2563eb]"
           />
           <span className="flex items-center gap-1">
             <FileText size={12} />
@@ -305,7 +305,7 @@ export default function AudioTaskRecorder({
             type="button"
             onClick={startRecording}
             disabled={disabled}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50 cursor-pointer"
           >
             <Mic size={15} className="text-amber-400" />
             <span>Start Voice Recording</span>
@@ -347,7 +347,7 @@ export default function AudioTaskRecorder({
                 <button
                   type="button"
                   onClick={togglePlayback}
-                  className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#9A7B4F] text-white shadow-xs transition hover:bg-[#85683e] active:scale-95 cursor-pointer"
+                  className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#2563eb] text-white shadow-xs transition hover:bg-[#1d4ed8] active:scale-95 cursor-pointer"
                   title={isPlaying ? "Pause" : "Play recording"}
                 >
                   {isPlaying ? <Pause size={16} /> : <Play size={16} className="ml-0.5" />}
@@ -391,7 +391,7 @@ export default function AudioTaskRecorder({
               <div className="w-full">
                 <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-100">
                   <div
-                    className="h-full bg-[#9A7B4F] transition-all duration-150"
+                    className="h-full bg-[#2563eb] transition-all duration-150"
                     style={{ width: `${playbackProgress}%` }}
                   />
                 </div>

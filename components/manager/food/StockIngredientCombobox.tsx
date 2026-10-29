@@ -110,7 +110,7 @@ export function renderHighlightedText(text: string, query: string): ReactNode {
               isHighlight ? (
                 <span
                   key={`hl-${i}`}
-                  className="font-black text-[#6B5B95] underline decoration-amber-400 decoration-2"
+                  className="font-black text-[#2563eb] underline decoration-amber-400 decoration-2"
                 >
                   {currentChunk}
                 </span>
@@ -130,7 +130,7 @@ export function renderHighlightedText(text: string, query: string): ReactNode {
           isHighlight ? (
             <span
               key="hl-last"
-              className="font-black text-[#6B5B95] underline decoration-amber-400 decoration-2"
+              className="font-black text-[#2563eb] underline decoration-amber-400 decoration-2"
             >
               {currentChunk}
             </span>
@@ -158,7 +158,7 @@ export function renderHighlightedText(text: string, query: string): ReactNode {
             regex.test(part) ? (
               <span
                 key={i}
-                className="font-black text-[#6B5B95] underline decoration-amber-400 decoration-2"
+                className="font-black text-[#2563eb] underline decoration-amber-400 decoration-2"
               >
                 {part}
               </span>
@@ -318,10 +318,10 @@ export default function StockIngredientCombobox({
           }}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
-          className={`w-full rounded-xl border pl-8 pr-8 p-2 text-xs font-bold outline-none transition focus:ring-2 focus:ring-[#6B5B95]/20 ${
+          className={`w-full rounded-xl border pl-8 pr-8 p-2 text-xs font-bold outline-none transition focus:ring-2 focus:ring-[#2563eb]/20 ${
             stockItemId
               ? "border-emerald-300 bg-emerald-50/20 text-stone-900 focus:border-emerald-500"
-              : "border-gray-200 bg-white text-stone-900 focus:border-[#6B5B95]"
+              : "border-gray-200 bg-white text-stone-900 focus:border-[#2563eb]"
           }`}
         />
 
@@ -359,7 +359,7 @@ export default function StockIngredientCombobox({
           {/* Header */}
           <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-stone-500 bg-stone-50 border-b border-stone-100 flex items-center justify-between shrink-0">
             <span className="flex items-center gap-1.5">
-              <Package size={13} className="text-[#6B5B95]" />
+              <Package size={13} className="text-[#2563eb]" />
               <span>Available Stock Items ({filteredItems.length})</span>
             </span>
             <span className="text-[10px] text-stone-400 lowercase font-medium">
@@ -430,7 +430,7 @@ export default function StockIngredientCombobox({
                         : isSelected
                         ? "bg-emerald-50 border border-emerald-300 text-emerald-950 font-bold"
                         : isHighlighted
-                        ? "bg-[#6B5B95]/10 text-stone-900"
+                        ? "bg-[#2563eb]/10 text-stone-900"
                         : "hover:bg-stone-50 text-stone-800"
                     }`}
                   >
@@ -439,7 +439,7 @@ export default function StockIngredientCombobox({
                         className={`h-7 w-7 rounded-lg flex items-center justify-center shrink-0 border ${
                           isSelected
                             ? "bg-emerald-100 text-emerald-800 border-emerald-300"
-                            : "bg-purple-50 text-[#6B5B95] border-purple-100"
+                            : "bg-purple-50 text-[#2563eb] border-purple-100"
                         }`}
                       >
                         <Package size={14} />

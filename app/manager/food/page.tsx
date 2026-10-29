@@ -75,8 +75,8 @@ export default function ManagerFoodPage() {
 
       {/* Loading */}
       {loading && (
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-[#e8e1d8] bg-white p-12 text-center">
-          <Loader2 size={28} className="animate-spin text-[#6B5B95]" />
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-[#dbeafe] bg-white p-12 text-center">
+          <Loader2 size={28} className="animate-spin text-[#2563eb]" />
           <p className="mt-3 text-xs font-medium text-gray-500">
             Loading food catalog...
           </p>

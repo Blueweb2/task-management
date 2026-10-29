@@ -96,7 +96,7 @@ export default function RecentStaffConfirmations() {
         <div>
           <h2
             id="staff-confirmations-heading"
-            className="text-base font-semibold text-[#1F1F1F] flex items-center gap-2"
+            className="text-base font-semibold text-[#0f172a] flex items-center gap-2"
           >
             <UserCheck size={18} className="text-emerald-700" />
             <span>Staff Duty Confirmations</span>
@@ -108,7 +108,7 @@ export default function RecentStaffConfirmations() {
 
         <Link
           href="/manager/duties"
-          className="inline-flex items-center gap-1 text-xs font-semibold text-[#9A7B4F] hover:text-[#7D623E] transition"
+          className="inline-flex items-center gap-1 text-xs font-semibold text-[#2563eb] hover:text-[#1d4ed8] transition"
         >
           <span>View All Duties</span>
           <ArrowRight size={13} />
@@ -154,17 +154,17 @@ export default function RecentStaffConfirmations() {
             return (
               <div
                 key={duty._id}
-                className="group relative flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-[#9A7B4F] hover:shadow-md"
+                className="group relative flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-[#2563eb] hover:shadow-md"
               >
                 <div>
                   {/* Top row: Avatar & Status */}
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#9A7B4F] to-[#D2B47A] text-xs font-black text-white shadow-xs">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#2563eb] to-[#93c5fd] text-xs font-black text-white shadow-xs">
                         {staffName.charAt(0).toUpperCase()}
                       </div>
                       <div className="min-w-0">
-                        <p className="truncate text-xs font-bold text-[#29241f] group-hover:text-[#9A7B4F] transition">
+                        <p className="truncate text-xs font-bold text-[#0f172a] group-hover:text-[#2563eb] transition">
                           {staffName}
                         </p>
                         <p className="truncate text-[10px] text-gray-500">
@@ -194,13 +194,13 @@ export default function RecentStaffConfirmations() {
                 {/* Timing Footer */}
                 <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-2 text-[10px] text-gray-500">
                   <span className="flex items-center gap-1">
-                    <CalendarDays size={11} className="text-[#9A7B4F]" />
+                    <CalendarDays size={11} className="text-[#2563eb]" />
                     <span>{formattedDate}</span>
                   </span>
 
                   {timeString && (
                     <span className="flex items-center gap-1 font-medium text-gray-600">
-                      <Clock3 size={11} className="text-[#9A7B4F]" />
+                      <Clock3 size={11} className="text-[#2563eb]" />
                       <span>{timeString}</span>
                     </span>
                   )}

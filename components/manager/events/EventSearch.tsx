@@ -48,7 +48,7 @@ export default function EventSearch({
           onChange(event.target.value)
         }
         placeholder="Search events, clients, or places..."
-        className="min-h-12 w-full rounded-2xl border border-gray-100 bg-white pl-11 pr-4 text-sm text-[#252525] outline-none shadow-sm placeholder:text-gray-400 focus:border-[#C7B58A] focus:ring-2 focus:ring-[#C7B58A]/20"
+        className="min-h-12 w-full rounded-2xl border border-gray-100 bg-white pl-11 pr-4 text-sm text-[#1e3a8a] outline-none shadow-sm placeholder:text-gray-400 focus:border-[#93c5fd] focus:ring-2 focus:ring-[#93c5fd]/20"
       />
     </div>
   );

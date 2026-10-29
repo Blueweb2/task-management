@@ -30,7 +30,7 @@ export default function StaffStockWidget() {
 
   if (loading) {
     return (
-      <div className="rounded-3xl border border-[#e8e1d8] bg-white p-5 shadow-sm animate-pulse">
+      <div className="rounded-3xl border border-[#dbeafe] bg-white p-5 shadow-sm animate-pulse">
         <div className="h-4 w-32 bg-gray-200 rounded mb-3"></div>
         <div className="h-8 w-full bg-gray-100 rounded-xl"></div>
       </div>
@@ -61,21 +61,21 @@ export default function StaffStockWidget() {
   }
 
   return (
-    <div className="rounded-3xl border border-[#e8e1d8] bg-white p-5 shadow-sm">
+    <div className="rounded-3xl border border-[#dbeafe] bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between border-b border-gray-100 pb-3">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f7f3ee] text-[#9a6c37]">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f8fbff] text-[#1d4ed8]">
             <Package size={18} />
           </div>
           <div>
-            <h3 className="text-sm font-extrabold text-[#252525]">My Stock &amp; Equipment</h3>
+            <h3 className="text-sm font-extrabold text-[#1e3a8a]">My Stock &amp; Equipment</h3>
             <p className="text-[11px] text-gray-400">Assigned event equipment tracking</p>
           </div>
         </div>
 
         <Link
           href="/staff/stock"
-          className="inline-flex items-center gap-1 text-xs font-bold text-[#9a6c37] hover:underline"
+          className="inline-flex items-center gap-1 text-xs font-bold text-[#1d4ed8] hover:underline"
         >
           View All <ArrowRight size={13} />
         </Link>
@@ -130,7 +130,7 @@ export default function StaffStockWidget() {
             </div>
             <Link
               href="/staff/stock"
-              className="rounded-xl bg-[#9a6c37] px-3 py-1.5 text-xs font-bold text-white shadow-2xs hover:bg-[#855c2d] transition"
+              className="rounded-xl bg-[#1d4ed8] px-3 py-1.5 text-xs font-bold text-white shadow-2xs hover:bg-[#1d4ed8] transition"
             >
               Take Stock
             </Link>
@@ -142,7 +142,7 @@ export default function StaffStockWidget() {
       <div className="mt-3 grid grid-cols-3 gap-2 text-center text-xs">
         <div className="rounded-xl bg-gray-50 p-2 border border-gray-100">
           <div className="text-[10px] uppercase font-bold text-gray-400">Events</div>
-          <div className="text-sm font-extrabold text-[#252525] mt-0.5">{distinctEventIds.size}</div>
+          <div className="text-sm font-extrabold text-[#1e3a8a] mt-0.5">{distinctEventIds.size}</div>
         </div>
         <div className="rounded-xl bg-gray-50 p-2 border border-gray-100">
           <div className="text-[10px] uppercase font-bold text-gray-400">In Custody</div>

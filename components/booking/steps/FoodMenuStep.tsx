@@ -186,7 +186,7 @@ export default function FoodMenuStep({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Filter dishes in this course..."
-                className="w-full rounded-2xl border border-[#d8cfc4] bg-white py-2.5 pl-10 pr-3 text-xs text-[#29241f] placeholder-gray-400 focus:border-[#9A7B4F] focus:outline-none focus:ring-1 focus:ring-[#9A7B4F]"
+                className="w-full rounded-2xl border border-[#dbeafe] bg-white py-2.5 pl-10 pr-3 text-xs text-[#0f172a] placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-1 focus:ring-[#2563eb]"
               />
             </div>
 
@@ -196,8 +196,8 @@ export default function FoodMenuStep({
                 onClick={() => setDietaryFilter("all")}
                 className={`rounded-xl px-3 py-2 text-xs font-bold transition cursor-pointer shrink-0 ${
                   dietaryFilter === "all"
-                    ? "bg-[#29241f] text-white"
-                    : "bg-white border border-[#e8e1d8] text-gray-600 hover:bg-gray-50"
+                    ? "bg-[#0f172a] text-white"
+                    : "bg-white border border-[#dbeafe] text-gray-600 hover:bg-gray-50"
                 }`}
               >
                 All
@@ -208,7 +208,7 @@ export default function FoodMenuStep({
                 className={`flex items-center gap-1 rounded-xl px-3 py-2 text-xs font-bold transition cursor-pointer shrink-0 ${
                   dietaryFilter === "veg"
                     ? "bg-emerald-700 text-white"
-                    : "bg-white border border-[#e8e1d8] text-emerald-700 hover:bg-emerald-50"
+                    : "bg-white border border-[#dbeafe] text-emerald-700 hover:bg-emerald-50"
                 }`}
               >
                 🟢 Veg
@@ -219,7 +219,7 @@ export default function FoodMenuStep({
                 className={`flex items-center gap-1 rounded-xl px-3 py-2 text-xs font-bold transition cursor-pointer shrink-0 ${
                   dietaryFilter === "non-veg"
                     ? "bg-rose-700 text-white"
-                    : "bg-white border border-[#e8e1d8] text-rose-700 hover:bg-rose-50"
+                    : "bg-white border border-[#dbeafe] text-rose-700 hover:bg-rose-50"
                 }`}
               >
                 🔴 Non-Veg
@@ -240,8 +240,8 @@ export default function FoodMenuStep({
                   onClick={() => setActiveCategory(cat)}
                   className={`flex shrink-0 items-center gap-2 rounded-2xl px-3.5 py-2.5 text-xs font-extrabold transition-all cursor-pointer ${
                     isActive
-                      ? "bg-[#29241f] text-white shadow-xs"
-                      : "border border-[#e8e1d8] bg-white text-gray-700 hover:bg-gray-50"
+                      ? "bg-[#0f172a] text-white shadow-xs"
+                      : "border border-[#dbeafe] bg-white text-gray-700 hover:bg-gray-50"
                   }`}
                 >
                   <span>{cat}</span>
@@ -249,8 +249,8 @@ export default function FoodMenuStep({
                     <span
                       className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-bold ${
                         isActive
-                          ? "bg-[#d8a86c] text-[#29241f]"
-                          : "bg-[#29241f] text-white"
+                          ? "bg-[#60a5fa] text-[#0f172a]"
+                          : "bg-[#0f172a] text-white"
                       }`}
                     >
                       {selectedInCat}
@@ -263,7 +263,7 @@ export default function FoodMenuStep({
 
           {/* Catalog Grid */}
           {filteredCatalog.length === 0 ? (
-            <div className="rounded-3xl border border-dashed border-[#d8cfc4] bg-white p-8 text-center text-xs text-gray-500">
+            <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-8 text-center text-xs text-gray-500">
               No dishes found in this category matching your search.
             </div>
           ) : (
@@ -279,8 +279,8 @@ export default function FoodMenuStep({
                     onClick={() => handleToggleItem(item)}
                     className={`group relative flex cursor-pointer flex-col justify-between rounded-3xl border p-4 shadow-xs transition-all select-none ${
                       isSelected
-                        ? "border-[#9A7B4F] bg-[#faf6f0] ring-1 ring-[#9A7B4F]"
-                        : "border-[#e8e1d8] bg-white hover:border-[#9A7B4F]/40 hover:bg-[#fbfaf8]"
+                        ? "border-[#2563eb] bg-[#f8fbff] ring-1 ring-[#2563eb]"
+                        : "border-[#dbeafe] bg-white hover:border-[#2563eb]/40 hover:bg-[#fbfaf8]"
                     }`}
                   >
                     <div>
@@ -306,7 +306,7 @@ export default function FoodMenuStep({
                           >
                             ●
                           </span>
-                          <h4 className="text-sm font-bold text-[#29241f] leading-snug">
+                          <h4 className="text-sm font-bold text-[#0f172a] leading-snug">
                             {item.name}
                           </h4>
                         </div>
@@ -325,14 +325,14 @@ export default function FoodMenuStep({
 
                       {/* Description */}
                       {item.description && (
-                        <p className="mt-1.5 text-xs text-[#756d64] line-clamp-2">
+                        <p className="mt-1.5 text-xs text-[#475569] line-clamp-2">
                           {item.description}
                         </p>
                       )}
                     </div>
 
                     {/* Bottom Reference Rate */}
-                    <div className="mt-3.5 flex items-center justify-between border-t border-[#eee7dc] pt-2.5 text-xs">
+                    <div className="mt-3.5 flex items-center justify-between border-t border-[#eff6ff] pt-2.5 text-xs">
                       <span className="text-[10px] text-gray-500 font-medium">
                         ₹{item.defaultRate}/plate
                       </span>
@@ -355,7 +355,7 @@ export default function FoodMenuStep({
                               className="flex items-center gap-2.5"
                               onClick={(event) => event.stopPropagation()}
                             >
-                              <div className="flex items-center overflow-hidden rounded-xl border border-[#d8cfc4] bg-[#faf8f5] shadow-xs">
+                              <div className="flex items-center overflow-hidden rounded-xl border border-[#dbeafe] bg-[#f8fbff] shadow-xs">
                                 <button
                                   type="button"
                                   aria-label={`Decrease ${item.name} quantity`}
@@ -375,7 +375,7 @@ export default function FoodMenuStep({
                                       ),
                                     });
                                   }}
-                                  className="flex h-8 w-8 items-center justify-center bg-white text-[#5c544a] hover:bg-[#eee6d8] hover:text-[#29241f] active:scale-90 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                  className="flex h-8 w-8 items-center justify-center bg-white text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a] active:scale-90 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                 >
                                   <Minus size={13} strokeWidth={2.5} />
                                 </button>
@@ -402,7 +402,7 @@ export default function FoodMenuStep({
                                       ),
                                     });
                                   }}
-                                  className="w-10 bg-transparent text-center text-xs font-black text-[#29241f] focus:outline-none"
+                                  className="w-10 bg-transparent text-center text-xs font-black text-[#0f172a] focus:outline-none"
                                 />
 
                                 <button
@@ -423,14 +423,14 @@ export default function FoodMenuStep({
                                       ),
                                     });
                                   }}
-                                  className="flex h-8 w-8 items-center justify-center bg-white text-[#5c544a] hover:bg-[#eee6d8] hover:text-[#29241f] active:scale-90 transition-all"
+                                  className="flex h-8 w-8 items-center justify-center bg-white text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a] active:scale-90 transition-all"
                                 >
                                   <Plus size={13} strokeWidth={2.5} />
                                 </button>
                               </div>
 
                               <div className="flex flex-col items-end">
-                                <span className="text-xs font-black text-[#29241f]">
+                                <span className="text-xs font-black text-[#0f172a]">
                                   ₹{amount.toLocaleString("en-IN")}
                                 </span>
                               </div>
@@ -438,7 +438,7 @@ export default function FoodMenuStep({
                           );
                         })()
                       ) : (
-                        <span className="text-[11px] font-bold text-[#9A7B4F]">
+                        <span className="text-[11px] font-bold text-[#2563eb]">
                           + Select Dish
                         </span>
                       )}
@@ -451,7 +451,7 @@ export default function FoodMenuStep({
         </div>
       ) : (
         /* When Food is Skipped */
-        <div className="rounded-3xl border border-dashed border-[#d8cfc4] bg-white p-8 text-center">
+        <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-8 text-center">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-100 text-gray-400">
             <ChefHat size={22} />
           </div>

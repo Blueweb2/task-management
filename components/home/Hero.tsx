@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-[#eadbd5]/40 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-[#dbeafe]/40 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -157,7 +157,7 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center gap-2 text-sm text-[var(--taupe)]">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#eadbd5]">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#dbeafe]">
                   <Users
                     size={15}
                     className="text-[var(--rose)]"

@@ -12,7 +12,7 @@ export default function EventStatusBadge({
   status,
 }: EventStatusBadgeProps) {
   const styles: Record<string, string> = {
-    Upcoming: "bg-[#F4EFE4] text-[#8C7A55]",
+    Upcoming: "bg-[#eff6ff] text-[#64748b]",
     CONFIRMED: "bg-emerald-50 text-emerald-700 border border-emerald-200/60",
     Confirmed: "bg-emerald-50 text-emerald-700 border border-emerald-200/60",
     READY_TO_START: "bg-blue-50 text-blue-700 border border-blue-200/60",
@@ -23,11 +23,11 @@ export default function EventStatusBadge({
     Cancelled: "bg-rose-50 text-rose-700 border border-rose-200/80",
     CANCELLED: "bg-rose-50 text-rose-700 border border-rose-200/80",
     Planned: "bg-blue-50 text-blue-700",
-    Invoiced: "bg-[#f8f0df] text-[#9a6c37]",
+    Invoiced: "bg-[#eff6ff] text-[#1d4ed8]",
     Settled: "bg-purple-50 text-purple-700 border border-purple-200/60",
   };
 
-  const badgeStyle = styles[status] || "bg-[#F4EFE4] text-[#8C7A55]";
+  const badgeStyle = styles[status] || "bg-[#eff6ff] text-[#64748b]";
 
   const labelMap: Record<string, string> = {
     IN_PROGRESS: "In Progress",

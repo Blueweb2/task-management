@@ -52,19 +52,19 @@ const recentActivities: Activity[] = [
 const activityConfig = {
   staff: {
     icon: UserPlus,
-    iconClass: "bg-[#F4EBDD] text-[#9A7B4F]",
+    iconClass: "bg-[#eff6ff] text-[#2563eb]",
   },
   assignment: {
     icon: ClipboardCheck,
-    iconClass: "bg-[#F1F1F1] text-[#555555]",
+    iconClass: "bg-[#f1f5f9] text-[#475569]",
   },
   event: {
     icon: CalendarPlus,
-    iconClass: "bg-[#F4EBDD] text-[#9A7B4F]",
+    iconClass: "bg-[#eff6ff] text-[#2563eb]",
   },
   attendance: {
     icon: UserCheck,
-    iconClass: "bg-[#F1F1F1] text-[#555555]",
+    iconClass: "bg-[#f1f5f9] text-[#475569]",
   },
 };
 
@@ -76,7 +76,7 @@ export default function RecentActivity() {
         <div>
           <h2
             id="recent-activity-heading"
-            className="text-base font-semibold text-[#1F1F1F]"
+            className="text-base font-semibold text-[#0f172a]"
           >
             Recent Activity
           </h2>
@@ -88,7 +88,7 @@ export default function RecentActivity() {
 
         <Link
           href="/manager/staff"
-          className="text-xs font-medium text-[#9A7B4F] transition hover:text-[#7D623E]"
+          className="text-xs font-medium text-[#2563eb] transition hover:text-[#1d4ed8]"
         >
           View All
         </Link>
@@ -117,7 +117,7 @@ export default function RecentActivity() {
 
               {/* Activity Content */}
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-semibold text-[#1F1F1F]">
+                <p className="truncate text-sm font-semibold text-[#0f172a]">
                   {activity.title}
                 </p>
 

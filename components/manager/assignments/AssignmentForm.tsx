@@ -218,7 +218,7 @@ export default function AssignmentForm({
     >
       {/* Header */}
       <div>
-        <h2 className="text-lg font-semibold text-[#1F1F1F]">
+        <h2 className="text-lg font-semibold text-[#0f172a]">
           {isEditing
             ? "Edit Assignment"
             : "Create Assignment"}
@@ -270,7 +270,7 @@ export default function AssignmentForm({
             }
             disabled={isEditing || loading}
             placeholder="Enter event ID"
-            className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50 disabled:text-gray-400"
+            className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50 disabled:text-gray-400"
           />
         </div>
 
@@ -306,7 +306,7 @@ export default function AssignmentForm({
             }
             disabled={loading}
             placeholder="Enter staff ID"
-            className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50 disabled:text-gray-400"
+            className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50 disabled:text-gray-400"
           />
         </div>
 
@@ -336,7 +336,7 @@ export default function AssignmentForm({
           }
           disabled={loading}
           placeholder="e.g. Guest Reception"
-          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
         />
       </div>
 
@@ -364,7 +364,7 @@ export default function AssignmentForm({
           }
           disabled={loading}
           placeholder="e.g. Receptionist"
-          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
         />
       </div>
 
@@ -388,7 +388,7 @@ export default function AssignmentForm({
             )
           }
           disabled={loading}
-          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#1F1F1F] outline-none focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+          className="h-12 w-full rounded-xl border border-gray-200 bg-white px-4 text-sm text-[#0f172a] outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
         />
       </div>
 
@@ -401,7 +401,7 @@ export default function AssignmentForm({
           >
             Start Time
             {form.startTime && (
-              <span className="ml-2 font-normal text-[#9A7B4F]">
+              <span className="ml-2 font-normal text-[#2563eb]">
                 ({formatTime24to12(form.startTime)})
               </span>
             )}
@@ -424,7 +424,7 @@ export default function AssignmentForm({
                 )
               }
               disabled={loading}
-              className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-2 text-sm text-[#1F1F1F] outline-none focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+              className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-2 text-sm text-[#0f172a] outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
             />
           </div>
         </div>
@@ -436,7 +436,7 @@ export default function AssignmentForm({
           >
             End Time
             {form.endTime && (
-              <span className="ml-2 font-normal text-[#9A7B4F]">
+              <span className="ml-2 font-normal text-[#2563eb]">
                 ({formatTime24to12(form.endTime)})
               </span>
             )}
@@ -459,7 +459,7 @@ export default function AssignmentForm({
                 )
               }
               disabled={loading}
-              className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-2 text-sm text-[#1F1F1F] outline-none focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+              className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-2 text-sm text-[#0f172a] outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
             />
           </div>
         </div>
@@ -495,7 +495,7 @@ export default function AssignmentForm({
             disabled={loading}
             rows={3}
             placeholder="Describe the staff duty..."
-            className="w-full resize-none rounded-xl border border-gray-200 bg-white py-3 pl-10 pr-4 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+            className="w-full resize-none rounded-xl border border-gray-200 bg-white py-3 pl-10 pr-4 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
           />
         </div>
       </div>
@@ -524,7 +524,7 @@ export default function AssignmentForm({
           disabled={loading}
           rows={3}
           placeholder="Additional notes..."
-          className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-[#1F1F1F] outline-none placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:bg-gray-50"
+          className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-[#0f172a] outline-none placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:bg-gray-50"
         />
       </div>
 
@@ -542,7 +542,7 @@ export default function AssignmentForm({
         <button
           type="submit"
           disabled={loading}
-          className="min-h-12 flex-1 rounded-xl bg-[#1F1F1F] px-4 text-sm font-semibold text-white transition hover:bg-black active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
+          className="min-h-12 flex-1 rounded-xl bg-[#0f172a] px-4 text-sm font-semibold text-white transition hover:bg-black active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading
             ? "Saving..."

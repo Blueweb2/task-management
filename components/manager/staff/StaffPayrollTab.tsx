@@ -64,7 +64,7 @@ export default function StaffPayrollTab() {
   if (loading && duties.length === 0) {
     return (
       <div className="flex min-h-64 items-center justify-center rounded-2xl border border-gray-200 bg-white">
-        <Loader2 size={26} className="animate-spin text-[#9A7B4F]" />
+        <Loader2 size={26} className="animate-spin text-[#2563eb]" />
       </div>
     );
   }

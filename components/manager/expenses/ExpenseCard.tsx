@@ -92,8 +92,8 @@ const getCategoryConfig = (category: string) => {
   }
   return {
     icon: Receipt,
-    bg: "bg-[#f7efe4] text-[#9a6c37] border-[#e8ded0]",
-    badge: "bg-[#f7efe4] text-[#9a6c37] border border-[#e8ded0]",
+    bg: "bg-[#eff6ff] text-[#1d4ed8] border-[#eff6ff]",
+    badge: "bg-[#eff6ff] text-[#1d4ed8] border border-[#eff6ff]",
   };
 };
 
@@ -114,7 +114,7 @@ export default function ExpenseCard({
     "Staff / Admin";
 
   return (
-    <article className="group relative flex flex-col justify-between gap-3.5 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition-all hover:border-[#b8894b]/60 hover:shadow-sm md:flex-row md:items-center">
+    <article className="group relative flex flex-col justify-between gap-3.5 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition-all hover:border-[#3b82f6]/60 hover:shadow-sm md:flex-row md:items-center">
       {/* ========================================================
           LEFT: Category Icon & Main Expense Details
       ======================================================== */}
@@ -131,7 +131,7 @@ export default function ExpenseCard({
         <div className="min-w-0 flex-1">
           {/* Top Line: Title + Category Badge + Ref ID + Vendor / Duty Details */}
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="truncate text-sm font-bold text-[#29241f]">
+            <h3 className="truncate text-sm font-bold text-[#0f172a]">
               {expense.isAutomatedPayroll ? (expense.staffName || expense.title) : expense.title}
             </h3>
 
@@ -154,10 +154,10 @@ export default function ExpenseCard({
           </div>
 
           {/* Sub Line: Event + Date + Shift Times / Added By + Payment Method */}
-          <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#756d64]">
+          <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#475569]">
             {/* Event */}
             <div className="flex min-w-0 items-center gap-1">
-              <MapPin size={12} className="shrink-0 text-[#a7773f]" />
+              <MapPin size={12} className="shrink-0 text-[#1d4ed8]" />
               <span className="truncate max-w-[170px] sm:max-w-[220px] font-medium text-gray-800">
                 {expense.event}
               </span>
@@ -195,7 +195,7 @@ export default function ExpenseCard({
 
                 {/* Added By Badge */}
                 <div className="flex items-center gap-1 font-medium text-gray-600">
-                  <User size={12} className="shrink-0 text-[#b8894b]" />
+                  <User size={12} className="shrink-0 text-[#3b82f6]" />
                   <span>
                     Added by: <strong className="text-gray-800">{addedByName}</strong>
                   </span>
@@ -241,10 +241,10 @@ export default function ExpenseCard({
           <button
             type="button"
             onClick={() => onViewReceipt?.(expense)}
-            className="inline-flex h-8 items-center gap-1.5 rounded-xl border border-amber-200 bg-amber-50 px-2.5 text-xs font-bold text-[#9a6c37] transition hover:bg-amber-100 hover:border-amber-300"
+            className="inline-flex h-8 items-center gap-1.5 rounded-xl border border-amber-200 bg-amber-50 px-2.5 text-xs font-bold text-[#1d4ed8] transition hover:bg-amber-100 hover:border-amber-300"
             title="View attached receipt document"
           >
-            <FileCheck2 size={13} className="text-[#9a6c37]" />
+            <FileCheck2 size={13} className="text-[#1d4ed8]" />
             <span>View Receipt</span>
           </button>
         ) : (
@@ -267,7 +267,7 @@ export default function ExpenseCard({
 
         {/* Amount */}
         <div className="min-w-[95px] text-right">
-          <p className="text-base font-extrabold text-[#29241f] sm:text-lg tabular-nums">
+          <p className="text-base font-extrabold text-[#0f172a] sm:text-lg tabular-nums">
             {formatCurrency(expense.amount)}
           </p>
         </div>

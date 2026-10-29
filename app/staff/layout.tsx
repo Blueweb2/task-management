@@ -79,9 +79,9 @@ export default function StaffLayout({
 
   if (loading || !token) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#fbf6ef]">
+      <div className="flex min-h-screen items-center justify-center bg-[#eff6ff]">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#9a6c37] border-t-transparent" />
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#1d4ed8] border-t-transparent" />
           <p className="text-sm font-medium text-gray-500">
             {loading ? "Loading Staff Portal..." : "Redirecting to login..."}
           </p>
@@ -91,7 +91,7 @@ export default function StaffLayout({
   }
 
   return (
-    <div className="min-h-screen bg-[#fbf6ef] text-[#29241f] selection:bg-[#9a6c37]/20 selection:text-[#29241f]">
+    <div className="min-h-screen bg-[#eff6ff] text-[#0f172a] selection:bg-[#1d4ed8]/20 selection:text-[#0f172a]">
       <StaffServiceWorker />
 
       {/* ======================================================= */}

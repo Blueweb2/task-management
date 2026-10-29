@@ -149,7 +149,7 @@ export default function PricingStep({
               >
                 <div className="flex items-center gap-3.5 min-w-0">
                   {itemImg ? (
-                    <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[#f6f2eb]">
+                    <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-[var(--border)] bg-[#eff6ff]">
                       <img
                         src={itemImg}
                         alt={item.name}

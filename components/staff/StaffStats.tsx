@@ -63,7 +63,7 @@ export default function StaffStats({
         return (
           <div
             key={stat.label}
-            className="flex flex-col justify-between rounded-2xl border border-[#e8e1d8] bg-white p-3.5 sm:p-4 shadow-xs"
+            className="flex flex-col justify-between rounded-2xl border border-[#dbeafe] bg-white p-3.5 sm:p-4 shadow-xs"
           >
             <div className="flex items-center justify-between gap-1.5">
               <span className="truncate text-[11px] font-semibold text-gray-500">
@@ -75,7 +75,7 @@ export default function StaffStats({
                 <Icon size={15} />
               </div>
             </div>
-            <p className="mt-2 text-xl font-black text-[#29241f] sm:text-2xl">
+            <p className="mt-2 text-xl font-black text-[#0f172a] sm:text-2xl">
               {stat.value}
             </p>
           </div>

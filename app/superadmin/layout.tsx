@@ -34,15 +34,15 @@ export default function SuperAdminLayout({ children }: SuperAdminLayoutProps) {
   }, [loading, token, user, router]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F8F7F3]">
+    <div className="flex min-h-screen items-center justify-center bg-[#f8fbff]">
       <div className="flex flex-col items-center gap-4 text-center">
-        <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#9A7B4F] to-[#D2B47A] p-0.5 shadow-md shadow-[#9A7B4F]/20">
+        <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#2563eb] to-[#93c5fd] p-0.5 shadow-md shadow-[#2563eb]/20">
           <div className="flex h-full w-full items-center justify-center rounded-2xl bg-white">
-            <ShieldCheck className="h-7 w-7 text-[#9A7B4F] animate-pulse" />
+            <ShieldCheck className="h-7 w-7 text-[#2563eb] animate-pulse" />
           </div>
         </div>
         <div>
-          <p className="text-sm font-black text-[#29241f] tracking-wide">
+          <p className="text-sm font-black text-[#0f172a] tracking-wide">
             AUTHENTICATING ACCESS
           </p>
           <p className="mt-1 text-xs text-gray-500">

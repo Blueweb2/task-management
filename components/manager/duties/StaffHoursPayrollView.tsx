@@ -342,7 +342,7 @@ export default function StaffHoursPayrollView({
           type="button"
           disabled={isUpdating}
           onClick={() => handleTogglePayment(duty)}
-          className="inline-flex items-center justify-center gap-1.5 rounded-xl px-3.5 py-1.5 text-xs font-bold transition active:scale-95 bg-[#29241f] text-white hover:bg-black shadow-sm"
+          className="inline-flex items-center justify-center gap-1.5 rounded-xl px-3.5 py-1.5 text-xs font-bold transition active:scale-95 bg-[#0f172a] text-white hover:bg-black shadow-sm"
         >
           {isUpdating ? (
             <Loader2 size={12} className="animate-spin" />
@@ -385,8 +385,8 @@ export default function StaffHoursPayrollView({
           onClick={() => setPaymentFilter("ALL")}
           className={`text-left rounded-xl sm:rounded-2xl border p-3 sm:p-4 shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99] ${
             paymentFilter === "ALL"
-              ? "border-[#29241f] bg-white ring-2 ring-[#29241f]/10"
-              : "border-[#e8e1d8] bg-white hover:border-gray-400"
+              ? "border-[#0f172a] bg-white ring-2 ring-[#0f172a]/10"
+              : "border-[#dbeafe] bg-white hover:border-gray-400"
           }`}
         >
           <div className="flex items-center justify-between">
@@ -395,7 +395,7 @@ export default function StaffHoursPayrollView({
               <Clock size={14} className="sm:h-4 sm:w-4" />
             </span>
           </div>
-          <p className="mt-1.5 sm:mt-2 text-lg sm:text-2xl font-black text-[#29241f] truncate">
+          <p className="mt-1.5 sm:mt-2 text-lg sm:text-2xl font-black text-[#0f172a] truncate">
             {metrics.totalHours} <span className="text-xs sm:text-sm font-semibold text-gray-500">hrs</span>
           </p>
           <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-[11px] text-gray-400 font-medium truncate">
@@ -409,17 +409,17 @@ export default function StaffHoursPayrollView({
           onClick={() => setPaymentFilter("ALL")}
           className={`text-left rounded-xl sm:rounded-2xl border p-3 sm:p-4 shadow-sm transition-all hover:scale-[1.01] active:scale-[0.99] ${
             paymentFilter === "ALL"
-              ? "border-[#29241f] bg-white ring-2 ring-[#29241f]/10"
-              : "border-[#e8e1d8] bg-white hover:border-gray-400"
+              ? "border-[#0f172a] bg-white ring-2 ring-[#0f172a]/10"
+              : "border-[#dbeafe] bg-white hover:border-gray-400"
           }`}
         >
           <div className="flex items-center justify-between">
             <span className="text-[11px] sm:text-xs font-bold text-gray-500">Total Payroll</span>
-            <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg sm:rounded-xl bg-[#f7efe4] text-[#a7773f] shrink-0">
+            <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg sm:rounded-xl bg-[#eff6ff] text-[#1d4ed8] shrink-0">
               <IndianRupee size={14} className="sm:h-4 sm:w-4" />
             </span>
           </div>
-          <p className="mt-1.5 sm:mt-2 text-lg sm:text-2xl font-black text-[#29241f] truncate">
+          <p className="mt-1.5 sm:mt-2 text-lg sm:text-2xl font-black text-[#0f172a] truncate">
             {new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(metrics.totalPayroll)}
           </p>
           <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-[11px] text-gray-400 font-medium truncate">
@@ -477,7 +477,7 @@ export default function StaffHoursPayrollView({
       </section>
 
       {/* Filter Toolbar & Batch Actions */}
-      <section className="rounded-xl sm:rounded-2xl border border-[#e8e1d8] bg-white p-3 sm:p-4 shadow-sm space-y-3">
+      <section className="rounded-xl sm:rounded-2xl border border-[#dbeafe] bg-white p-3 sm:p-4 shadow-sm space-y-3">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           {/* Search */}
           <div className="relative w-full lg:flex-1">
@@ -487,7 +487,7 @@ export default function StaffHoursPayrollView({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search staff, event, duty, department..."
-              className="h-10 sm:h-11 w-full rounded-xl border border-gray-200 bg-[#fdfbf8] pl-10 pr-4 text-xs text-gray-900 outline-none focus:border-[#b8894b] transition"
+              className="h-10 sm:h-11 w-full rounded-xl border border-gray-200 bg-[#ffffff] pl-10 pr-4 text-xs text-gray-900 outline-none focus:border-[#3b82f6] transition"
             />
           </div>
 
@@ -533,7 +533,7 @@ export default function StaffHoursPayrollView({
             <select
               value={selectedStaffFilter}
               onChange={(e) => setSelectedStaffFilter(e.target.value)}
-              className="h-10 sm:h-11 w-full sm:w-auto rounded-xl border border-gray-200 bg-[#fdfbf8] px-3 text-xs font-medium text-gray-700 outline-none focus:border-[#b8894b] shrink-0"
+              className="h-10 sm:h-11 w-full sm:w-auto rounded-xl border border-gray-200 bg-[#ffffff] px-3 text-xs font-medium text-gray-700 outline-none focus:border-[#3b82f6] shrink-0"
             >
               <option value="ALL">All Staff Members</option>
               {staffOptions.map((s) => (
@@ -568,7 +568,7 @@ export default function StaffHoursPayrollView({
                 onClick={handleExportCSV}
                 className="flex-1 sm:flex-initial flex h-10 sm:h-11 items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3 sm:px-3.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 active:scale-95 shadow-sm shrink-0"
               >
-                <Download size={14} className="text-[#a7773f]" />
+                <Download size={14} className="text-[#1d4ed8]" />
                 <span>Export CSV</span>
               </button>
             </div>
@@ -589,7 +589,7 @@ export default function StaffHoursPayrollView({
                 setSelectedStaffFilter("ALL");
                 setPaymentFilter("ALL");
               }}
-              className="font-bold text-[#9A7B4F] hover:underline"
+              className="font-bold text-[#2563eb] hover:underline"
             >
               Reset Filters
             </button>
@@ -620,19 +620,19 @@ export default function StaffHoursPayrollView({
                 return (
                   <div
                     key={`mob-${duty.id}`}
-                    className="rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm space-y-3 hover:border-[#d4c5b3] transition"
+                    className="rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm space-y-3 hover:border-[#d4c5b3] transition"
                   >
                     {/* Card Header: Staff Avatar, Name, Department & Shift Status */}
-                    <div className="flex items-start justify-between gap-2 border-b border-[#f4efe8] pb-3">
+                    <div className="flex items-start justify-between gap-2 border-b border-[#eff6ff] pb-3">
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F4EBDD] font-black text-sm text-[#9A7B4F]">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] font-black text-sm text-[#2563eb]">
                           {duty.staffName ? duty.staffName[0].toUpperCase() : "S"}
                         </div>
                         <div className="min-w-0">
                           {duty.staffId ? (
                             <Link
                               href={`/manager/staff/${duty.staffId}`}
-                              className="font-bold text-gray-900 text-sm truncate hover:text-[#9A7B4F] hover:underline block"
+                              className="font-bold text-gray-900 text-sm truncate hover:text-[#2563eb] hover:underline block"
                             >
                               {duty.staffName}
                             </Link>
@@ -640,7 +640,7 @@ export default function StaffHoursPayrollView({
                             <p className="font-bold text-gray-900 text-sm truncate">{duty.staffName}</p>
                           )}
                           <p className="text-[11px] text-gray-500 truncate flex items-center gap-1 mt-0.5">
-                            <Building2 size={11} className="text-[#a7773f] shrink-0" />
+                            <Building2 size={11} className="text-[#1d4ed8] shrink-0" />
                             <span>{duty.department || "Operations"}</span>
                           </p>
                         </div>
@@ -651,7 +651,7 @@ export default function StaffHoursPayrollView({
                     {/* Event & Location Info */}
                     <div className="space-y-1 text-xs">
                       <div className="font-bold text-gray-900 flex items-center gap-1.5">
-                        <span className="text-[#a7773f]">✦</span>
+                        <span className="text-[#1d4ed8]">✦</span>
                         <span className="truncate">{duty.event}</span>
                       </div>
                       {duty.location && (
@@ -663,9 +663,9 @@ export default function StaffHoursPayrollView({
                     </div>
 
                     {/* Date & Shift Timing Box */}
-                    <div className="flex items-center justify-between rounded-xl bg-[#faf8f5] p-2.5 border border-[#eee8e1] text-xs">
+                    <div className="flex items-center justify-between rounded-xl bg-[#f8fbff] p-2.5 border border-[#eff6ff] text-xs">
                       <div className="flex items-center gap-1.5 font-semibold text-gray-800">
-                        <Calendar size={13} className="text-[#a7773f] shrink-0" />
+                        <Calendar size={13} className="text-[#1d4ed8] shrink-0" />
                         <span>{duty.eventDate}</span>
                       </div>
                       <div className="flex items-center gap-1.5 text-[11px] text-gray-600 font-medium">
@@ -693,10 +693,10 @@ export default function StaffHoursPayrollView({
                           <button
                             type="button"
                             onClick={() => onManageChecklist && onManageChecklist(duty)}
-                            className="inline-flex items-center gap-1.5 rounded-lg bg-[#faf6f0] border border-[#e8e1d8] px-2.5 py-1 text-[11px] font-bold text-[#9a6c37] hover:bg-[#f5efe5] transition w-full justify-between"
+                            className="inline-flex items-center gap-1.5 rounded-lg bg-[#f8fbff] border border-[#dbeafe] px-2.5 py-1 text-[11px] font-bold text-[#1d4ed8] hover:bg-[#eff6ff] transition w-full justify-between"
                           >
                             <span className="flex items-center gap-1.5">
-                              <ListChecks size={13} className="text-[#a7773f]" />
+                              <ListChecks size={13} className="text-[#1d4ed8]" />
                               <span>Subtasks ({duty.checklist.filter((c) => c.completed).length}/{duty.checklist.length})</span>
                             </span>
                             <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-black">
@@ -711,7 +711,7 @@ export default function StaffHoursPayrollView({
                               <button
                                 type="button"
                                 onClick={() => onManageChecklist(duty)}
-                                className="inline-flex items-center gap-1 text-[11px] font-bold text-[#9a6c37] hover:underline transition"
+                                className="inline-flex items-center gap-1 text-[11px] font-bold text-[#1d4ed8] hover:underline transition"
                               >
                                 <Plus size={12} />
                                 <span>Assign Checklist Subtasks</span>
@@ -728,7 +728,7 @@ export default function StaffHoursPayrollView({
                     </div>
 
                     {/* Financial Footer: Pay Rate + Total + Action Button */}
-                    <div className="flex items-center justify-between border-t border-[#f4efe8] pt-3">
+                    <div className="flex items-center justify-between border-t border-[#eff6ff] pt-3">
                       <div>
                         <div className="text-[10px] uppercase font-bold tracking-wider text-gray-400">Total Compensation</div>
                         <div className="flex items-baseline gap-1.5">
@@ -756,10 +756,10 @@ export default function StaffHoursPayrollView({
             {/* ========================================================
                 DESKTOP DATA TABLE VIEW (Visible on md+ screens)
             ======================================================== */}
-            <div className="hidden md:block overflow-hidden rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
+            <div className="hidden md:block overflow-hidden rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="border-b border-[#eee8e1] bg-[#faf8f5] text-[11px] font-bold uppercase tracking-wider text-[#756d64]">
+                  <thead className="border-b border-[#eff6ff] bg-[#f8fbff] text-[11px] font-bold uppercase tracking-wider text-[#475569]">
                     <tr>
                       <th className="px-4 py-3.5">Staff & Department</th>
                       <th className="px-4 py-3.5">Event & Location</th>
@@ -770,7 +770,7 @@ export default function StaffHoursPayrollView({
                       <th className="px-4 py-3.5 text-right">Payment Action</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#f0eae1]">
+                  <tbody className="divide-y divide-[#eff6ff]">
                     {filteredDuties.map((duty) => {
                       const hours = duty.totalHours || calculateHoursFromTime(duty.startTime, duty.endTime);
                       const rate = duty.hourlyRate || 0;
@@ -778,18 +778,18 @@ export default function StaffHoursPayrollView({
                       const isPaid = duty.paymentStatus === "PAID";
 
                       return (
-                        <tr key={duty.id} className="transition hover:bg-[#fdfbf8]">
+                        <tr key={duty.id} className="transition hover:bg-[#ffffff]">
                           {/* Staff */}
                           <td className="px-4 py-3.5">
                             <div className="flex items-center gap-2.5">
-                              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F4EBDD] font-bold text-[#9A7B4F]">
+                              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] font-bold text-[#2563eb]">
                                 {duty.staffName ? duty.staffName[0].toUpperCase() : "S"}
                               </div>
                               <div className="min-w-0">
                                 {duty.staffId ? (
                                   <Link
                                     href={`/manager/staff/${duty.staffId}`}
-                                    className="font-bold text-gray-900 truncate hover:text-[#9A7B4F] hover:underline block"
+                                    className="font-bold text-gray-900 truncate hover:text-[#2563eb] hover:underline block"
                                   >
                                     {duty.staffName}
                                   </Link>
@@ -808,7 +808,7 @@ export default function StaffHoursPayrollView({
                             <p className="font-bold text-gray-900">{duty.event}</p>
                             {duty.location && (
                               <p className="text-[11px] text-gray-500 flex items-center gap-1 mt-0.5">
-                                <MapPin size={11} className="text-[#a7773f]" /> {duty.location}
+                                <MapPin size={11} className="text-[#1d4ed8]" /> {duty.location}
                               </p>
                             )}
                           </td>
@@ -816,7 +816,7 @@ export default function StaffHoursPayrollView({
                           {/* Date & Shift */}
                           <td className="px-4 py-3.5 whitespace-nowrap">
                             <div className="flex items-center gap-1.5 font-semibold text-gray-900">
-                              <Calendar size={12} className="text-[#a7773f]" />
+                              <Calendar size={12} className="text-[#1d4ed8]" />
                               <span>{duty.eventDate}</span>
                             </div>
                             <div className="mt-1 flex items-center gap-1 text-[11px] text-gray-500">
@@ -839,9 +839,9 @@ export default function StaffHoursPayrollView({
                                 <button
                                   type="button"
                                   onClick={() => onManageChecklist && onManageChecklist(duty)}
-                                  className="inline-flex items-center gap-1.5 rounded-md bg-[#faf6f0] border border-[#e8e1d8] px-2 py-0.5 text-[10px] font-bold text-[#9a6c37] hover:bg-[#f5efe5] transition"
+                                  className="inline-flex items-center gap-1.5 rounded-md bg-[#f8fbff] border border-[#dbeafe] px-2 py-0.5 text-[10px] font-bold text-[#1d4ed8] hover:bg-[#eff6ff] transition"
                                 >
-                                  <ListChecks size={12} className="text-[#a7773f]" />
+                                  <ListChecks size={12} className="text-[#1d4ed8]" />
                                   <span>
                                     {duty.checklist.filter((c) => c.completed).length}/{duty.checklist.length} subtasks (
                                     {Math.round(
@@ -855,7 +855,7 @@ export default function StaffHoursPayrollView({
                                     <button
                                       type="button"
                                       onClick={() => onManageChecklist(duty)}
-                                      className="inline-flex items-center gap-1 text-[10px] font-bold text-[#9a6c37] hover:underline transition"
+                                      className="inline-flex items-center gap-1 text-[10px] font-bold text-[#1d4ed8] hover:underline transition"
                                     >
                                       <Plus size={12} />
                                       <span>Assign Subtasks</span>

@@ -55,7 +55,7 @@ export default function SearchInput({
           -translate-y-1/2
           items-center
           justify-center
-          text-[#77746D]
+          text-[#64748b]
         "
       >
         <SearchIcon />
@@ -73,27 +73,27 @@ export default function SearchInput({
           w-full
           rounded-xl
           border
-          border-[#DEDAD1]
+          border-[#dbeafe]
           bg-white
           pl-10
           pr-10
           text-sm
-          text-[#1F2023]
+          text-[#0f172a]
           outline-none
           transition-all
           duration-200
 
-          placeholder:text-[#A3A09A]
+          placeholder:text-[#64748b]
 
           hover:border-[#D1CCC2]
 
-          focus:border-[#B49A6A]
+          focus:border-[#60a5fa]
           focus:ring-2
-          focus:ring-[#B49A6A]/15
+          focus:ring-[#60a5fa]/15
 
           disabled:cursor-not-allowed
-          disabled:bg-[#F3F1EC]
-          disabled:text-[#99968F]
+          disabled:bg-[#eff6ff]
+          disabled:text-[#64748b]
 
           [&::-webkit-search-cancel-button]:hidden
         "
@@ -118,13 +118,13 @@ export default function SearchInput({
             items-center
             justify-center
             rounded-lg
-            text-[#77746D]
+            text-[#64748b]
             transition-colors
-            hover:bg-[#F3F1EC]
-            hover:text-[#1F2023]
+            hover:bg-[#eff6ff]
+            hover:text-[#0f172a]
             focus:outline-none
             focus:ring-2
-            focus:ring-[#B49A6A]/30
+            focus:ring-[#60a5fa]/30
             disabled:cursor-not-allowed
             disabled:opacity-50
           "

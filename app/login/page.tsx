@@ -9,14 +9,14 @@ export default function LoginPage() {
       <div className="mx-auto flex min-h-screen max-w-7xl flex-col">
         {/* Top navigation */}
         <div className="flex items-center px-4 py-5 sm:px-6 lg:px-8">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition hover:text-[#D2B47A]" >
+          <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition hover:text-[#93c5fd]" >
             <ArrowLeft size={17} /> Back 
           </Link> 
         </div>
         
         {/* Login */}
         <div className="flex flex-1 items-center justify-center px-4 pb-12 pt-4 sm:px-6">
-          <Suspense fallback={<div className="h-96 w-full max-w-md animate-pulse rounded-2xl bg-[#171717]" />}>
+          <Suspense fallback={<div className="h-96 w-full max-w-md animate-pulse rounded-2xl bg-[#0f172a]" />}>
             <LoginForm />
           </Suspense>
         </div>

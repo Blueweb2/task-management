@@ -114,7 +114,7 @@ export default function ClientModal({
       >
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4 sm:px-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A7B4F]">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#2563eb]">
               <UserRound size={19} />
             </div>
             <div>
@@ -139,8 +139,8 @@ export default function ClientModal({
             <Field label="Alternate phone" icon={<Phone size={15} />} value={form.alternatePhone || ""} onChange={(value) => updateField("alternatePhone", value)} placeholder="Optional" />
           </div>
 
-          <div className="rounded-2xl border border-[#eadfce] bg-[#fcfaf6] p-4">
-            <div className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[#9A7B4F]"><MapPin size={14} /> Location</div>
+          <div className="rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4">
+            <div className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[#2563eb]"><MapPin size={14} /> Location</div>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Address" value={form.address || ""} onChange={(value) => updateField("address", value)} placeholder="Street and building" className="sm:col-span-2" />
               <Field label="City" value={form.city || ""} onChange={(value) => updateField("city", value)} placeholder="City" />
@@ -151,12 +151,12 @@ export default function ClientModal({
 
           <div>
             <label className="block text-xs font-semibold text-gray-700">Notes</label>
-            <textarea value={form.notes || ""} onChange={(event) => updateField("notes", event.target.value)} rows={3} placeholder="Preferences, follow-ups, or useful context" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:outline-none focus:ring-1 focus:ring-[#6B5B95]" />
+            <textarea value={form.notes || ""} onChange={(event) => updateField("notes", event.target.value)} rows={3} placeholder="Preferences, follow-ups, or useful context" className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-1 focus:ring-[#2563eb]" />
           </div>
 
           <div className="flex flex-col-reverse gap-2 border-t border-gray-100 pt-4 sm:flex-row sm:justify-end">
             <button type="button" onClick={onClose} disabled={saving} className="rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-600 hover:bg-gray-100 disabled:opacity-50">Cancel</button>
-            <button type="submit" disabled={saving} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#6B5B95] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#57487e] disabled:opacity-60">
+            <button type="submit" disabled={saving} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#2563eb] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#2563eb] disabled:opacity-60">
               {saving && <Loader2 size={16} className="animate-spin" />}
               {editingClient ? "Save changes" : "Create client"}
             </button>
@@ -191,7 +191,7 @@ function Field({
       <label className="block text-xs font-semibold text-gray-700">{label} {required && <span className="text-red-500">*</span>}</label>
       <div className="relative mt-1">
         {icon && <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">{icon}</span>}
-        <input type={type} value={value} required={required} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} className={`w-full rounded-xl border border-gray-300 py-2.5 pr-3 text-sm text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:outline-none focus:ring-1 focus:ring-[#6B5B95] ${icon ? "pl-9" : "pl-3"}`} />
+        <input type={type} value={value} required={required} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} className={`w-full rounded-xl border border-gray-300 py-2.5 pr-3 text-sm text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-1 focus:ring-[#2563eb] ${icon ? "pl-9" : "pl-3"}`} />
       </div>
     </div>
   );

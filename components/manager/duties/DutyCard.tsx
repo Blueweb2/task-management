@@ -54,7 +54,7 @@ export default function DutyCard({
     ASSIGNED: "bg-amber-50 text-amber-800 border border-amber-200/80",
     ACCEPTED: "bg-emerald-50 text-emerald-800 border border-emerald-200/80 font-bold",
     REJECTED: "bg-rose-50 text-rose-700 border border-rose-200/80 font-bold",
-    IN_PROGRESS: "bg-[#f8f0df] text-[#9a6c37]",
+    IN_PROGRESS: "bg-[#eff6ff] text-[#1d4ed8]",
     COMPLETED: "bg-[#edf5ed] text-[#557555]",
     CANCELLED: "bg-[#fdf1ef] text-[#a15f57]",
   };
@@ -87,7 +87,7 @@ export default function DutyCard({
   };
 
   return (
-    <article className="w-full min-w-0 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5 flex flex-col justify-between">
+    <article className="w-full min-w-0 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5 flex flex-col justify-between">
       <div>
         {/* Top */}
         <div className="flex items-start gap-4">
@@ -97,7 +97,7 @@ export default function DutyCard({
                 ? "bg-rose-50 text-rose-600"
                 : duty.status === "ACCEPTED"
                 ? "bg-emerald-50 text-emerald-600"
-                : "bg-[#f7efe4] text-[#a7773f]"
+                : "bg-[#eff6ff] text-[#1d4ed8]"
             }`}
           >
             {duty.status === "REJECTED" ? (
@@ -112,11 +112,11 @@ export default function DutyCard({
           <div className="min-w-0 flex-1">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <h3 className="truncate text-base font-semibold text-[#29241f]">
+                <h3 className="truncate text-base font-semibold text-[#0f172a]">
                   {duty.title}
                 </h3>
 
-                <p className="mt-1 truncate text-sm text-[#756d64]">
+                <p className="mt-1 truncate text-sm text-[#475569]">
                   {duty.event}
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function DutyCard({
                   aria-label={`More options for ${duty.title}`}
                   title="More options"
                   onClick={() => setMenuOpen((value) => !value)}
-                  className="flex h-8 w-8 items-center justify-center rounded-lg text-[#8d847b] transition hover:bg-[#f7f3ee] hover:text-[#29241f]"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-[#64748b] transition hover:bg-[#f8fbff] hover:text-[#0f172a]"
                 >
                   <MoreVertical size={17} />
                 </button>
@@ -141,7 +141,7 @@ export default function DutyCard({
                       onClick={() => setMenuOpen(false)}
                     />
 
-                    <div className="absolute right-0 top-9 z-20 w-44 overflow-hidden rounded-xl border border-[#e8e1d8] bg-white p-1 shadow-lg">
+                    <div className="absolute right-0 top-9 z-20 w-44 overflow-hidden rounded-xl border border-[#dbeafe] bg-white p-1 shadow-lg">
                       {onManageChecklist && (
                         <button
                           type="button"
@@ -157,7 +157,7 @@ export default function DutyCard({
                           }}
                           className={`flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-xs font-semibold ${
                             ["ACCEPTED", "IN_PROGRESS", "COMPLETED"].includes(duty.status)
-                              ? "text-[#a7773f] hover:bg-[#faf6f0]"
+                              ? "text-[#1d4ed8] hover:bg-[#f8fbff]"
                               : "text-gray-400 hover:bg-gray-50"
                           }`}
                           title={!["ACCEPTED", "IN_PROGRESS", "COMPLETED"].includes(duty.status) ? "Sub-tasks can only be assigned after staff accepts duty" : ""}
@@ -173,7 +173,7 @@ export default function DutyCard({
                           setMenuOpen(false);
                           onEdit(duty);
                         }}
-                        className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-xs font-medium text-[#403a34] hover:bg-[#f8f4ee]"
+                        className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-xs font-medium text-[#1e293b] hover:bg-[#eff6ff]"
                       >
                         <Edit3 size={14} />
                         Edit / Reassign
@@ -244,19 +244,19 @@ export default function DutyCard({
         )}
 
         {/* Details */}
-        <div className="mt-4 space-y-2.5 border-t border-[#eee8e1] pt-3">
+        <div className="mt-4 space-y-2.5 border-t border-[#eff6ff] pt-3">
           <div className="flex items-start gap-2.5">
             <CalendarDays
               size={15}
-              className="mt-0.5 shrink-0 text-[#a7773f]"
+              className="mt-0.5 shrink-0 text-[#1d4ed8]"
             />
 
             <div>
-              <p className="text-xs font-semibold text-[#403a34]">
+              <p className="text-xs font-semibold text-[#1e293b]">
                 {duty.eventDate}
               </p>
 
-              <p className="mt-0.5 flex items-center gap-1 text-xs text-[#9b938a]">
+              <p className="mt-0.5 flex items-center gap-1 text-xs text-[#64748b]">
                 <Clock3 size={12} />
                 {formatTime24to12(duty.startTime)} – {formatTime24to12(duty.endTime)}
               </p>
@@ -267,10 +267,10 @@ export default function DutyCard({
             <div className="flex items-start gap-2.5">
               <MapPin
                 size={15}
-                className="mt-0.5 shrink-0 text-[#a7773f]"
+                className="mt-0.5 shrink-0 text-[#1d4ed8]"
               />
 
-              <p className="text-xs leading-5 text-[#756d64]">
+              <p className="text-xs leading-5 text-[#475569]">
                 {duty.location}
               </p>
             </div>
@@ -279,14 +279,14 @@ export default function DutyCard({
           <div className="flex items-center gap-2.5">
             <User
               size={15}
-              className="shrink-0 text-[#a7773f]"
+              className="shrink-0 text-[#1d4ed8]"
             />
 
             <p
               className={`text-xs font-semibold ${
                 duty.staffId
-                  ? "text-[#403a34]"
-                  : "text-[#9a6c37]"
+                  ? "text-[#1e293b]"
+                  : "text-[#1d4ed8]"
               }`}
             >
               Assigned: {duty.staffName}
@@ -295,7 +295,7 @@ export default function DutyCard({
 
           {/* Working Hours & Compensation Info */}
           {(duty.hourlyRate !== undefined || duty.totalHours !== undefined) && (
-            <div className="mt-2 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-[#faf8f5] border border-[#eee7dc] px-3 py-2 text-xs">
+            <div className="mt-2 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-[#f8fbff] border border-[#eff6ff] px-3 py-2 text-xs">
               <div>
                 <span className="text-[11px] font-medium text-gray-500">Working Hours: </span>
                 <strong className="text-gray-900">
@@ -307,7 +307,7 @@ export default function DutyCard({
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="font-bold text-[#b8894b]">
+                <span className="font-bold text-[#3b82f6]">
                   ₹{(duty.totalAmount || (duty.totalHours && duty.hourlyRate ? duty.totalHours * duty.hourlyRate : 0)).toFixed(2)}
                 </span>
                 <span
@@ -325,33 +325,33 @@ export default function DutyCard({
         </div>
 
         {duty.description && (
-          <p className="mt-3 line-clamp-2 text-xs leading-5 text-[#8d847b]">
+          <p className="mt-3 line-clamp-2 text-xs leading-5 text-[#64748b]">
             {duty.description}
           </p>
         )}
 
         {/* Subtask Checklist Section */}
         {totalCount > 0 ? (
-          <div className="mt-4 rounded-xl border border-[#eee8e1] bg-[#faf6f0] p-3">
-            <div className="flex w-full items-center justify-between text-xs font-semibold text-[#403a34]">
+          <div className="mt-4 rounded-xl border border-[#eff6ff] bg-[#f8fbff] p-3">
+            <div className="flex w-full items-center justify-between text-xs font-semibold text-[#1e293b]">
               <button
                 type="button"
                 onClick={() => setShowChecklist((prev) => !prev)}
-                className="flex items-center gap-1.5 hover:text-[#9a6c37]"
+                className="flex items-center gap-1.5 hover:text-[#1d4ed8]"
               >
-                <ListChecks size={14} className="text-[#a7773f]" />
+                <ListChecks size={14} className="text-[#1d4ed8]" />
                 <span>Subtasks ({completedCount}/{totalCount})</span>
                 {showChecklist ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
               </button>
 
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-bold text-[#9a6c37]">{progressPercent}%</span>
+                <span className="text-[11px] font-bold text-[#1d4ed8]">{progressPercent}%</span>
                 {onManageChecklist && (
                   ["ACCEPTED", "IN_PROGRESS", "COMPLETED"].includes(duty.status) ? (
                     <button
                       type="button"
                       onClick={() => onManageChecklist(duty)}
-                      className="rounded-md bg-white border border-[#d8cfc4] px-2 py-0.5 text-[10px] font-bold text-[#403a34] hover:bg-[#f7efe4]"
+                      className="rounded-md bg-white border border-[#dbeafe] px-2 py-0.5 text-[10px] font-bold text-[#1e293b] hover:bg-[#eff6ff]"
                     >
                       Edit
                     </button>
@@ -365,10 +365,10 @@ export default function DutyCard({
             </div>
 
             {/* Progress Bar */}
-            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-[#eee8e1]">
+            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-[#eff6ff]">
               <div
                 className={`h-full rounded-full transition-all duration-300 ${
-                  progressPercent === 100 ? "bg-emerald-600" : "bg-[#9a7b4f]"
+                  progressPercent === 100 ? "bg-emerald-600" : "bg-[#2563eb]"
                 }`}
                 style={{ width: `${progressPercent}%` }}
               />
@@ -376,20 +376,20 @@ export default function DutyCard({
 
             {/* Expandable Sub-task items */}
             {showChecklist && (
-              <div className="mt-3 space-y-1.5 border-t border-[#e8e1d8] pt-2">
+              <div className="mt-3 space-y-1.5 border-t border-[#dbeafe] pt-2">
                 {checklistItems.map((item, idx) => (
                   <div
                     key={idx}
                     onClick={() => handleCheckitemClick(idx)}
-                    className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-2.5 py-1.5 text-xs text-[#29241f] transition hover:bg-[#f8f4ee]"
+                    className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-2.5 py-1.5 text-xs text-[#0f172a] transition hover:bg-[#eff6ff]"
                   >
                     <input
                       type="checkbox"
                       checked={item.completed}
                       onChange={() => {}} // Handled by div click
-                      className="h-3.5 w-3.5 rounded border-[#d0c6ba] text-[#9a7b4f] focus:ring-[#9a7b4f]"
+                      className="h-3.5 w-3.5 rounded border-[#d0c6ba] text-[#2563eb] focus:ring-[#2563eb]"
                     />
-                    <span className={item.completed ? "line-through text-[#9b938a]" : "font-medium"}>
+                    <span className={item.completed ? "line-through text-[#64748b]" : "font-medium"}>
                       {item.text}
                     </span>
                   </div>
@@ -434,9 +434,9 @@ export default function DutyCard({
               <button
                 type="button"
                 onClick={() => onManageChecklist(duty)}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl border border-[#d8cfc4] bg-white px-3 py-2 text-xs font-bold text-[#403a34] transition hover:bg-[#faf6f0]"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl border border-[#dbeafe] bg-white px-3 py-2 text-xs font-bold text-[#1e293b] transition hover:bg-[#f8fbff]"
               >
-                <ListChecks size={14} className="text-[#a7773f]" />
+                <ListChecks size={14} className="text-[#1d4ed8]" />
                 <span>Sub-Tasks</span>
               </button>
             )}
@@ -444,7 +444,7 @@ export default function DutyCard({
             <button
               type="button"
               onClick={() => onStatusChange(duty)}
-              className="flex-1 rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] px-3 py-2 text-xs font-semibold text-[#756d64] transition hover:bg-[#f8f4ee] hover:text-[#29241f]"
+              className="flex-1 rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 py-2 text-xs font-semibold text-[#475569] transition hover:bg-[#eff6ff] hover:text-[#0f172a]"
             >
               {duty.status === "IN_PROGRESS" ? "Mark Completed" : "Start Progress"}
             </button>

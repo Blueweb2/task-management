@@ -54,9 +54,9 @@ export default function PageHeader({
                     <Link
                       href={breadcrumb.href}
                       className="
-                        text-[#77746D]
+                        text-[#64748b]
                         transition-colors
-                        hover:text-[#1F2023]
+                        hover:text-[#0f172a]
                       "
                     >
                       {breadcrumb.label}
@@ -65,8 +65,8 @@ export default function PageHeader({
                     <span
                       className={
                         isLast
-                          ? "font-medium text-[#1F2023]"
-                          : "text-[#77746D]"
+                          ? "font-medium text-[#0f172a]"
+                          : "text-[#64748b]"
                       }
                     >
                       {breadcrumb.label}
@@ -94,9 +94,9 @@ export default function PageHeader({
             gap-1.5
             text-sm
             font-medium
-            text-[#77746D]
+            text-[#64748b]
             transition-colors
-            hover:text-[#1F2023]
+            hover:text-[#0f172a]
           "
         >
           <ChevronLeft />
@@ -123,7 +123,7 @@ export default function PageHeader({
               text-2xl
               font-semibold
               tracking-[-0.02em]
-              text-[#1F2023]
+              text-[#0f172a]
               sm:text-3xl
             "
           >
@@ -137,7 +137,7 @@ export default function PageHeader({
                 max-w-2xl
                 text-sm
                 leading-5
-                text-[#77746D]
+                text-[#64748b]
                 sm:text-base
               "
             >
@@ -168,7 +168,7 @@ function ChevronRight() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="shrink-0 text-[#A3A09A]"
+      className="shrink-0 text-[#64748b]"
       aria-hidden="true"
     >
       <path d="m9 18 6-6-6-6" />

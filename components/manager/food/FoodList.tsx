@@ -136,7 +136,7 @@ export default function FoodList({
         </div>
       )}
       {/* Search and Filters */}
-      <div className="flex flex-col gap-4 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
         {/* Search */}
         <div className="relative flex-1">
           <Search
@@ -148,7 +148,7 @@ export default function FoodList({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search dishes by name or ingredients..."
-            className="w-full rounded-xl border border-gray-200 bg-gray-50/50 py-2.5 pl-10 pr-4 text-sm text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#6B5B95]"
+            className="w-full rounded-xl border border-gray-200 bg-gray-50/50 py-2.5 pl-10 pr-4 text-sm text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#2563eb]"
           />
         </div>
 
@@ -206,7 +206,7 @@ export default function FoodList({
               onClick={() => setSelectedCategory(cat)}
               className={`flex shrink-0 items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-medium transition ${
                 isActive
-                  ? "bg-[#6B5B95] text-white shadow-sm"
+                  ? "bg-[#2563eb] text-white shadow-sm"
                   : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
               }`}
             >
@@ -258,7 +258,7 @@ export default function FoodList({
             return (
               <div key={category} className="space-y-3">
                 <div className="flex items-center justify-between border-b border-gray-200/80 pb-2">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-[#6B5B95]">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-[#2563eb]">
                     {category} ({categoryItems.length})
                   </h3>
                 </div>
@@ -269,7 +269,7 @@ export default function FoodList({
                       key={item._id}
                       className={`group relative flex flex-col justify-between rounded-2xl border p-4 shadow-sm transition-all hover:shadow-md ${
                         item.active
-                          ? "border-[#e8e1d8] bg-white hover:border-[#6B5B95]/40"
+                          ? "border-[#dbeafe] bg-white hover:border-[#2563eb]/40"
                           : "border-gray-200 bg-gray-50/70 opacity-70"
                       }`}
                     >
@@ -328,7 +328,7 @@ export default function FoodList({
                           <p className="text-[10px] font-medium uppercase tracking-wider text-gray-400">
                             Base Rate
                           </p>
-                          <p className="text-base font-bold text-[#6B5B95]">
+                          <p className="text-base font-bold text-[#2563eb]">
                             ₹{item.defaultRate}
                             <span className="text-[11px] font-normal text-gray-400">
                               {" "}

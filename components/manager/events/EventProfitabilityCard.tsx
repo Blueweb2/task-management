@@ -71,8 +71,8 @@ export default function EventProfitabilityCard({
 
   if (loading && !data) {
     return (
-      <div className="flex min-h-[220px] flex-col items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white p-8">
-        <Loader2 className="h-7 w-7 animate-spin text-[#9a6c37]" />
+      <div className="flex min-h-[220px] flex-col items-center justify-center rounded-3xl border border-[#dbeafe] bg-white p-8">
+        <Loader2 className="h-7 w-7 animate-spin text-[#1d4ed8]" />
         <p className="mt-3 text-xs font-bold text-gray-500">
           Calculating direct expenses and operational costs...
         </p>
@@ -102,12 +102,12 @@ export default function EventProfitabilityCard({
   return (
     <div className="space-y-6">
       {/* Main Financial Analytics Card */}
-      <section className="overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white shadow-sm">
+      <section className="overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-sm">
         {/* Header */}
-        <div className="border-b border-[#f1ece5] bg-gradient-to-r from-[#faf8f5] to-white p-4 sm:p-6">
+        <div className="border-b border-[#eff6ff] bg-gradient-to-r from-[#f8fbff] to-white p-4 sm:p-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h3 className="text-base sm:text-xl font-black tracking-tight text-[#29241f]">
+              <h3 className="text-base sm:text-xl font-black tracking-tight text-[#0f172a]">
                 Event Expenses
               </h3>
             </div>
@@ -118,7 +118,7 @@ export default function EventProfitabilityCard({
                 disabled={loading || expensesLoading}
                 title="Refresh expenses"
                 aria-label="Refresh expenses"
-                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#ded5cb] bg-white text-[#756d64] hover:bg-[#f7f2ec] transition disabled:opacity-50"
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#dbeafe] bg-white text-[#475569] hover:bg-[#eff6ff] transition disabled:opacity-50"
               >
                 <RefreshCw
                   size={14}
@@ -129,7 +129,7 @@ export default function EventProfitabilityCard({
               <button
                 type="button"
                 onClick={handleAddExpense}
-                className="flex-1 sm:flex-initial inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95"
+                className="flex-1 sm:flex-initial inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95"
               >
                 <Plus size={14} />
                 <span>Add Expense</span>
@@ -139,7 +139,7 @@ export default function EventProfitabilityCard({
         </div>
 
         {/* KPI Cards: Total Revenue (Super Admin Only), Total Direct Costs (All Managers), Net Operating Profit (Super Admin Only) */}
-        <div className={`grid grid-cols-2 gap-px bg-[#f1ece5] ${isSuperAdmin ? "sm:grid-cols-2" : ""}`}>
+        <div className={`grid grid-cols-2 gap-px bg-[#eff6ff] ${isSuperAdmin ? "sm:grid-cols-2" : ""}`}>
           {/* Total Revenue - Strictly Super Admin Only */}
         
 
@@ -177,7 +177,7 @@ export default function EventProfitabilityCard({
         </div>
 
         {/* Unified Department-wise Operational Expenses Section (Includes Automated Staff Duty Payroll) */}
-        <div className="border-t border-[#f1ece5] p-5 sm:p-6">
+        <div className="border-t border-[#eff6ff] p-5 sm:p-6">
           <UnifiedExpensesSection
             ref={expensesRef}
             eventId={eventId}

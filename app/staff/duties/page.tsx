@@ -320,9 +320,9 @@ export default function StaffDutiesPage() {
   if (assignmentsLoading && localDuties.length === 0) {
     return (
       <main className="space-y-4 py-5 sm:py-6">
-        <div className="border-b border-[#e8e1d8] pb-6">
-          <p className="text-sm font-semibold text-[#9a6c37]">Staff Portal</p>
-          <h1 className="mt-1 text-2xl font-bold text-[#29241f] sm:text-3xl">
+        <div className="border-b border-[#dbeafe] pb-6">
+          <p className="text-sm font-semibold text-[#1d4ed8]">Staff Portal</p>
+          <h1 className="mt-1 text-2xl font-bold text-[#0f172a] sm:text-3xl">
             My Duties & Shifts
           </h1>
         </div>
@@ -365,7 +365,7 @@ export default function StaffDutiesPage() {
         className={`overflow-hidden rounded-3xl border bg-white shadow-sm transition hover:shadow-md ${
           isLiveHighlight
             ? "border-emerald-300 ring-2 ring-emerald-500/20"
-            : "border-[#e8e1d8]"
+            : "border-[#dbeafe]"
         }`}
       >
         {/* Live Highlight Banner */}
@@ -443,8 +443,8 @@ export default function StaffDutiesPage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-lg bg-[#faf6f0] px-2.5 py-0.5 text-[11px] font-extrabold text-[#9a6c37] border border-[#ede5d8]">
-                  <DeptIcon size={13} className="shrink-0 text-[#9a6c37]" />
+                <span className="inline-flex items-center gap-1.5 rounded-lg bg-[#f8fbff] px-2.5 py-0.5 text-[11px] font-extrabold text-[#1d4ed8] border border-[#eff6ff]">
+                  <DeptIcon size={13} className="shrink-0 text-[#1d4ed8]" />
                   <span>{deptCategory}</span>
                 </span>
 
@@ -467,10 +467,10 @@ export default function StaffDutiesPage() {
                 )}
               </div>
 
-              <h2 className="mt-2 text-lg font-black text-[#29241f] sm:text-xl">
+              <h2 className="mt-2 text-lg font-black text-[#0f172a] sm:text-xl">
                 {assignment.dutyTitle}
               </h2>
-              <p className="text-xs font-medium text-[#8d847b]">
+              <p className="text-xs font-medium text-[#64748b]">
                 {event ? event.eventName : "Event"} · {event?.eventType || "Event"}
               </p>
             </div>
@@ -521,10 +521,10 @@ export default function StaffDutiesPage() {
               value={event?.location || "Venue TBA"}
             />
 
-            <div className="flex items-center gap-3 rounded-2xl bg-[#faf8f5] border border-[#eee7dc] p-3">
-              <span className="text-[#a7773f] shrink-0 font-bold text-sm">💰</span>
+            <div className="flex items-center gap-3 rounded-2xl bg-[#f8fbff] border border-[#eff6ff] p-3">
+              <span className="text-[#1d4ed8] shrink-0 font-bold text-sm">💰</span>
               <div className="min-w-0">
-                <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#9b938a]">
+                <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#64748b]">
                   Compensation
                 </p>
                 <p className="mt-0.5 truncate text-xs font-black text-emerald-800">
@@ -548,11 +548,11 @@ export default function StaffDutiesPage() {
 
           {/* Duty Description / Special Instructions */}
           {(assignment.description || assignment.notes) && (
-            <div className="mt-4 rounded-2xl bg-[#faf8f5] border border-[#f0ebe3] p-4 text-xs">
-              <p className="font-extrabold uppercase tracking-wider text-[#9b938a] text-[10px]">
+            <div className="mt-4 rounded-2xl bg-[#f8fbff] border border-[#f0ebe3] p-4 text-xs">
+              <p className="font-extrabold uppercase tracking-wider text-[#64748b] text-[10px]">
                 Duty Instructions & Notes
               </p>
-              <p className="mt-1 leading-5 text-[#403a34]">
+              <p className="mt-1 leading-5 text-[#1e293b]">
                 {assignment.description || assignment.notes}
               </p>
             </div>
@@ -560,17 +560,17 @@ export default function StaffDutiesPage() {
 
           {/* Checklist Section */}
           {checklist.length > 0 && (
-            <div className="mt-5 rounded-2xl border border-[#eee7dc] bg-[#faf8f5] p-4 sm:p-5">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-b border-[#eee7dc] pb-3">
+            <div className="mt-5 rounded-2xl border border-[#eff6ff] bg-[#f8fbff] p-4 sm:p-5">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-b border-[#eff6ff] pb-3">
                 <div className="flex items-center gap-2">
-                  <ListChecks size={18} className="text-[#9a6c37]" />
-                  <h3 className="text-xs font-black uppercase tracking-wider text-[#29241f]">
+                  <ListChecks size={18} className="text-[#1d4ed8]" />
+                  <h3 className="text-xs font-black uppercase tracking-wider text-[#0f172a]">
                     Shift Sub-Task Checklist
                   </h3>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-extrabold text-[#9a6c37]">
+                  <span className="text-[11px] font-extrabold text-[#1d4ed8]">
                     {completedChecklistCount} of {checklist.length} Completed ({checklistProgress}%)
                   </span>
                 </div>
@@ -579,7 +579,7 @@ export default function StaffDutiesPage() {
               {/* Progress Bar */}
               <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
                 <div
-                  className="h-full rounded-full bg-[#b8894b] transition-all duration-300"
+                  className="h-full rounded-full bg-[#3b82f6] transition-all duration-300"
                   style={{ width: `${checklistProgress}%` }}
                 />
               </div>
@@ -602,7 +602,7 @@ export default function StaffDutiesPage() {
                           ? "border-emerald-200 bg-emerald-50/50 text-gray-500"
                           : isEventCompleted
                           ? "border-gray-200 bg-gray-50/70 text-gray-400 cursor-not-allowed"
-                          : "border-gray-200 bg-white text-[#29241f] hover:border-[#b8894b]"
+                          : "border-gray-200 bg-white text-[#0f172a] hover:border-[#3b82f6]"
                       }`}
                     >
                       <span className="mt-0.5 shrink-0 text-emerald-600">
@@ -694,7 +694,7 @@ export default function StaffDutiesPage() {
                       onClick={() => handleCheckIn(assignment._id)}
                       className={`inline-flex min-h-10 items-center gap-2 rounded-xl px-5 text-xs font-extrabold text-white shadow-sm transition ${
                         canCheckIn
-                          ? "bg-[#29241f] hover:bg-black"
+                          ? "bg-[#0f172a] hover:bg-black"
                           : "bg-gray-200 text-gray-400 border border-gray-300 cursor-not-allowed"
                       }`}
                       title={!canCheckIn ? windowNotice : ""}
@@ -777,14 +777,14 @@ export default function StaffDutiesPage() {
       )}
 
       {/* Header */}
-      <header className="border-b border-[#e8e1d8] pb-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a6c37]">
+      <header className="border-b border-[#dbeafe] pb-6">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#1d4ed8]">
           Staff Operations
         </p>
-        <h1 className="mt-1 text-2xl font-bold text-[#29241f] sm:text-3xl">
+        <h1 className="mt-1 text-2xl font-bold text-[#0f172a] sm:text-3xl">
           My Duties & Shift Roster
         </h1>
-        <p className="mt-2 text-xs text-[#756d64] sm:text-sm">
+        <p className="mt-2 text-xs text-[#475569] sm:text-sm">
           Review assigned shifts, accept duty schedules, and complete operational task checklists.
         </p>
       </header>
@@ -871,7 +871,7 @@ export default function StaffDutiesPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                   </span>
-                  <h2 className="text-base font-extrabold tracking-tight text-[#29241f]">
+                  <h2 className="text-base font-extrabold tracking-tight text-[#0f172a]">
                     Live & In-Progress Shifts
                   </h2>
                   <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-800 border border-emerald-200">
@@ -888,8 +888,8 @@ export default function StaffDutiesPage() {
             {upcomingDuties.length > 0 && (
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <CalendarDays size={18} className="text-[#9a6c37]" />
-                  <h2 className="text-base font-extrabold tracking-tight text-[#29241f]">
+                  <CalendarDays size={18} className="text-[#1d4ed8]" />
+                  <h2 className="text-base font-extrabold tracking-tight text-[#0f172a]">
                     Upcoming & Assigned Shifts
                   </h2>
                   <span className="rounded-full bg-stone-100 px-2.5 py-0.5 text-xs font-bold text-stone-700 border border-stone-200">
@@ -904,11 +904,11 @@ export default function StaffDutiesPage() {
 
             {/* 3. COMPLETED SHIFTS (BOTTOM AS SMALL CARDS WITH CLICK-TO-ELABORATE) */}
             {completedDuties.length > 0 && (
-              <section className="space-y-4 pt-4 border-t border-[#ede5d8]">
+              <section className="space-y-4 pt-4 border-t border-[#eff6ff]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 size={18} className="text-stone-500" />
-                    <h2 className="text-base font-extrabold tracking-tight text-[#29241f]">
+                    <h2 className="text-base font-extrabold tracking-tight text-[#0f172a]">
                       Completed Shifts
                     </h2>
                     <span className="rounded-full bg-stone-100 px-2.5 py-0.5 text-xs font-bold text-stone-600 border border-stone-200">
@@ -937,7 +937,7 @@ export default function StaffDutiesPage() {
                           onClick={() => toggleDutyExpand(duty._id)}
                           role="button"
                           tabIndex={0}
-                          className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-2xl border border-stone-200 bg-[#faf8f5]/80 hover:bg-white hover:border-[#9a6c37]/50 hover:shadow-xs transition cursor-pointer"
+                          className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-2xl border border-stone-200 bg-[#f8fbff]/80 hover:bg-white hover:border-[#1d4ed8]/50 hover:shadow-xs transition cursor-pointer"
                         >
                           <div className="flex items-start sm:items-center gap-3">
                             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
@@ -945,7 +945,7 @@ export default function StaffDutiesPage() {
                             </div>
                             <div>
                               <div className="flex items-center gap-2">
-                                <h3 className="text-sm font-black text-[#29241f] group-hover:text-[#9a6c37] transition">
+                                <h3 className="text-sm font-black text-[#0f172a] group-hover:text-[#1d4ed8] transition">
                                   {duty.dutyTitle}
                                 </h3>
                                 <span className="rounded-md bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">
@@ -962,7 +962,7 @@ export default function StaffDutiesPage() {
                             <span className="text-xs font-semibold text-stone-500">
                               {completedTasks}/{checklist.length} Tasks
                             </span>
-                            <span className="inline-flex items-center gap-1 text-xs font-extrabold text-[#9a6c37] group-hover:underline">
+                            <span className="inline-flex items-center gap-1 text-xs font-extrabold text-[#1d4ed8] group-hover:underline">
                               <span>{isExpanded ? "Collapse" : "Elaborate"}</span>
                               {isExpanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
                             </span>
@@ -971,7 +971,7 @@ export default function StaffDutiesPage() {
 
                         {/* Elaborated Full Card on Expand */}
                         {isExpanded && (
-                          <div className="mt-3 pl-2 sm:pl-4 border-l-2 border-[#9a6c37]/40 animate-in fade-in slide-in-from-top-2 duration-200">
+                          <div className="mt-3 pl-2 sm:pl-4 border-l-2 border-[#1d4ed8]/40 animate-in fade-in slide-in-from-top-2 duration-200">
                             {renderDutyCard(duty, false)}
                           </div>
                         )}
@@ -1048,13 +1048,13 @@ function Info({
   value: string | undefined;
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl bg-[#faf8f5] border border-[#eee7dc] p-3">
-      <span className="text-[#a7773f] shrink-0">{icon}</span>
+    <div className="flex items-center gap-3 rounded-2xl bg-[#f8fbff] border border-[#eff6ff] p-3">
+      <span className="text-[#1d4ed8] shrink-0">{icon}</span>
       <div className="min-w-0">
-        <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#9b938a]">
+        <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#64748b]">
           {label}
         </p>
-        <p className="mt-0.5 truncate text-xs font-extrabold text-[#403a34]">
+        <p className="mt-0.5 truncate text-xs font-extrabold text-[#1e293b]">
           {value}
         </p>
       </div>

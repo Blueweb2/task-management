@@ -129,9 +129,9 @@ export default function ShiftNotificationsFeed({
       if (element) {
         onClose?.();
         element.scrollIntoView({ behavior: "smooth", block: "center" });
-        element.classList.add("ring-2", "ring-[#9a6c37]", "ring-offset-2", "rounded-2xl", "transition-all", "duration-500");
+        element.classList.add("ring-2", "ring-[#1d4ed8]", "ring-offset-2", "rounded-2xl", "transition-all", "duration-500");
         setTimeout(() => {
-          element.classList.remove("ring-2", "ring-[#9a6c37]", "ring-offset-2", "transition-all", "duration-500");
+          element.classList.remove("ring-2", "ring-[#1d4ed8]", "ring-offset-2", "transition-all", "duration-500");
         }, 2200);
         return;
       }
@@ -150,12 +150,12 @@ export default function ShiftNotificationsFeed({
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   return (
-    <div className="rounded-2xl border border-[#e8e1d8] bg-white p-4 sm:p-5 shadow-xs">
+    <div className="rounded-2xl border border-[#dbeafe] bg-white p-4 sm:p-5 shadow-xs">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-gray-100">
-        <div className="flex items-center gap-2 text-[#9a6c37]">
+        <div className="flex items-center gap-2 text-[#1d4ed8]">
           <Bell size={18} />
-          <h2 className="text-sm sm:text-base font-bold text-[#29241f]">Shift Reminders & Notifications</h2>
+          <h2 className="text-sm sm:text-base font-bold text-[#0f172a]">Shift Reminders & Notifications</h2>
           {unreadCount > 0 && (
             <span className="rounded-full bg-rose-500 px-2 py-0.5 text-[10px] font-extrabold text-white">
               {unreadCount}
@@ -167,7 +167,7 @@ export default function ShiftNotificationsFeed({
           <button
             type="button"
             onClick={() => setFilter(filter === "ALL" ? "UNREAD" : "ALL")}
-            className="text-xs font-semibold text-[#9a6c37] hover:underline"
+            className="text-xs font-semibold text-[#1d4ed8] hover:underline"
           >
             {filter === "ALL" ? "Unread Only" : "Show All"}
           </button>
@@ -196,7 +196,7 @@ export default function ShiftNotificationsFeed({
       {/* Feed List */}
       <div className="mt-4 space-y-3 max-h-96 overflow-y-auto pr-1">
         {filtered.length === 0 ? (
-          <p className="rounded-xl bg-[#fdfcfb] p-4 text-center text-xs text-gray-500">
+          <p className="rounded-xl bg-[#ffffff] p-4 text-center text-xs text-gray-500">
             No notifications found.
           </p>
         ) : (
@@ -204,14 +204,14 @@ export default function ShiftNotificationsFeed({
             <div
               key={item.id}
               onClick={() => handleNotificationClick(item)}
-              className={`group flex items-start gap-3 rounded-xl border p-3.5 transition cursor-pointer hover:border-[#9a6c37] ${item.read
-                  ? "border-gray-100 bg-[#fdfcfb] text-gray-600 opacity-85"
+              className={`group flex items-start gap-3 rounded-xl border p-3.5 transition cursor-pointer hover:border-[#1d4ed8] ${item.read
+                  ? "border-gray-100 bg-[#ffffff] text-gray-600 opacity-85"
                   : "border-amber-200/80 bg-amber-50/40 text-gray-900 shadow-2xs"
                 }`}
             >
               <div
                 className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition group-hover:scale-105 ${item.type === "ASSIGNMENT"
-                    ? "bg-amber-100 text-[#9a6c37]"
+                    ? "bg-amber-100 text-[#1d4ed8]"
                     : item.type === "CHECKLIST"
                       ? "bg-emerald-100 text-emerald-800"
                       : item.type === "REMINDER"
@@ -232,7 +232,7 @@ export default function ShiftNotificationsFeed({
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
-                  <h4 className={`text-xs font-bold ${item.read ? "text-gray-700" : "text-[#29241f]"}`}>
+                  <h4 className={`text-xs font-bold ${item.read ? "text-gray-700" : "text-[#0f172a]"}`}>
                     {item.title}
                   </h4>
                   <span className="text-[10px] text-gray-400 shrink-0">{item.timestamp}</span>
@@ -240,7 +240,7 @@ export default function ShiftNotificationsFeed({
                 <p className="mt-1 text-xs leading-5 text-gray-600">{item.message}</p>
 
                 {item.actionText && (
-                  <div className="mt-2 flex items-center gap-1 text-[11px] font-extrabold text-[#9a6c37] group-hover:underline">
+                  <div className="mt-2 flex items-center gap-1 text-[11px] font-extrabold text-[#1d4ed8] group-hover:underline">
                     <span>{item.actionText}</span>
                   </div>
                 )}

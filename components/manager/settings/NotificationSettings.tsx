@@ -81,19 +81,19 @@ export default function NotificationSettings() {
   ];
 
   return (
-    <section className="rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
-      <div className="flex items-center justify-between border-b border-[#eee8e1] p-5 sm:p-6">
+    <section className="rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
+      <div className="flex items-center justify-between border-b border-[#eff6ff] p-5 sm:p-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
             <Bell size={19} />
           </div>
 
           <div>
-            <h2 className="font-semibold text-[#29241f]">
+            <h2 className="font-semibold text-[#0f172a]">
               Notification Preferences
             </h2>
 
-            <p className="text-sm text-[#9b938a]">
+            <p className="text-sm text-[#64748b]">
               Choose which operational updates you want to receive in the notification drawer.
             </p>
           </div>
@@ -107,18 +107,18 @@ export default function NotificationSettings() {
         )}
       </div>
 
-      <div className="divide-y divide-[#eee8e1]">
+      <div className="divide-y divide-[#eff6ff]">
         {settings.map((setting) => (
           <div
             key={setting.label}
             className="flex items-center justify-between gap-4 p-5 sm:p-6"
           >
             <div>
-              <p className="text-sm font-semibold text-[#403a34]">
+              <p className="text-sm font-semibold text-[#1e293b]">
                 {setting.label}
               </p>
 
-              <p className="mt-1 max-w-xl text-xs leading-5 text-[#9b938a]">
+              <p className="mt-1 max-w-xl text-xs leading-5 text-[#64748b]">
                 {setting.description}
               </p>
             </div>
@@ -130,8 +130,8 @@ export default function NotificationSettings() {
               onClick={() => setting.onToggle(!setting.value)}
               className={`relative h-6 w-11 shrink-0 rounded-full transition ${
                 setting.value
-                  ? "bg-[#b8894b]"
-                  : "bg-[#d9d0c7]"
+                  ? "bg-[#3b82f6]"
+                  : "bg-[#dbeafe]"
               }`}
             >
               <span

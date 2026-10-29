@@ -44,7 +44,7 @@ const emptyForm: DutyFormValues = {
 };
 
 const inputClass =
-  "h-11 w-full rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] px-3 text-sm text-[#29241f] outline-none placeholder:text-[#b0a79e] focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10 disabled:opacity-50";
+  "h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm text-[#0f172a] outline-none placeholder:text-[#94a3b8] focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10 disabled:opacity-50";
 
 export default function AddDutyModal({
   open,
@@ -184,17 +184,17 @@ export default function AddDutyModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-[#29241f]/40 p-0 backdrop-blur-sm sm:items-center sm:p-4"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[#0f172a]/40 p-0 backdrop-blur-sm sm:items-center sm:p-4"
       onMouseDown={(event) => event.target === event.currentTarget && onClose()}
     >
       <div className="max-h-[92vh] w-full overflow-y-auto rounded-t-3xl bg-white shadow-2xl sm:max-w-lg sm:rounded-2xl">
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#eee8e1] bg-white px-5 py-4 sm:px-6">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#eff6ff] bg-white px-5 py-4 sm:px-6">
           <div>
-            <h2 className="text-lg font-bold text-[#29241f]">
+            <h2 className="text-lg font-bold text-[#0f172a]">
               {editingDuty ? "Edit Duty" : "Assign Staff Duty"}
             </h2>
-            <p className="mt-0.5 text-xs text-[#9b938a]">
+            <p className="mt-0.5 text-xs text-[#64748b]">
               Smart dispatch & real-time conflict checking.
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function AddDutyModal({
             onClick={onClose}
             disabled={loading}
             aria-label="Close"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-[#8d847b] hover:bg-[#f7f3ee] disabled:opacity-50"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-[#64748b] hover:bg-[#f8fbff] disabled:opacity-50"
           >
             <X size={19} />
           </button>
@@ -247,13 +247,13 @@ export default function AddDutyModal({
           {/* Department Filter for Staff */}
           {departments.length > 0 && (
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#403a34] flex items-center gap-1">
+              <span className="text-xs font-semibold text-[#1e293b] flex items-center gap-1">
                 <Filter size={12} /> Filter Staff by Department
               </span>
               <select
                 value={departmentFilter}
                 onChange={(e) => setDepartmentFilter(e.target.value)}
-                className="h-8 rounded-lg border border-[#e3dbd2] bg-white px-2 text-xs font-medium text-[#29241f]"
+                className="h-8 rounded-lg border border-[#dbeafe] bg-white px-2 text-xs font-medium text-[#0f172a]"
               >
                 <option value="ALL">All Departments</option>
                 {departments.map((d) => (
@@ -398,7 +398,7 @@ export default function AddDutyModal({
               </p>
             </Field>
 
-            <div className="flex flex-col justify-center rounded-xl border border-[#eee8e1] bg-[#faf8f5] p-3 text-xs">
+            <div className="flex flex-col justify-center rounded-xl border border-[#eff6ff] bg-[#f8fbff] p-3 text-xs">
               <p className="font-semibold text-gray-700">Calculated Shift Payout</p>
               <div className="mt-1 flex items-center justify-between text-[11px] text-gray-600">
                 <span>Duration: <strong>{(() => {
@@ -410,7 +410,7 @@ export default function AddDutyModal({
                   if (endMin < startMin) endMin += 24 * 60;
                   return (Math.max(0, endMin - startMin) / 60).toFixed(1);
                 })()} hrs</strong></span>
-                <span className="font-bold text-[#b8894b]">Est. Pay: ₹{(() => {
+                <span className="font-bold text-[#3b82f6]">Est. Pay: ₹{(() => {
                   if (!form.startTime || !form.endTime) return "0.00";
                   const [sH, sM] = form.startTime.split(":").map(Number);
                   const [eH, eM] = form.endTime.split(":").map(Number);
@@ -438,10 +438,10 @@ export default function AddDutyModal({
           </Field>
 
           {/* Sub-Task Checklist Builder */}
-          <div className="space-y-2 rounded-2xl border border-[#eee8e1] bg-[#faf6f0] p-3.5">
+          <div className="space-y-2 rounded-2xl border border-[#eff6ff] bg-[#f8fbff] p-3.5">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-[#403a34] flex items-center gap-1.5">
-                <ListChecks size={14} className="text-[#a7773f]" />
+              <span className="text-xs font-semibold text-[#1e293b] flex items-center gap-1.5">
+                <ListChecks size={14} className="text-[#1d4ed8]" />
                 Duty Checklist Sub-tasks ({form.checklist?.length || 0})
               </span>
             </div>
@@ -450,7 +450,7 @@ export default function AddDutyModal({
             {form.checklist && form.checklist.length > 0 && (
               <div className="space-y-1.5 pt-1">
                 {form.checklist.map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2 text-xs border border-[#eee8e1]">
+                  <div key={idx} className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2 text-xs border border-[#eff6ff]">
                     <span className="text-gray-800 break-words flex-1">{item.text}</span>
                     <button
                       type="button"
@@ -488,7 +488,7 @@ export default function AddDutyModal({
                     }
                   }
                 }}
-                className="h-10 min-w-0 flex-1 rounded-xl border border-[#e3dbd2] bg-white px-3 text-xs outline-none focus:border-[#b8894b]"
+                className="h-10 min-w-0 flex-1 rounded-xl border border-[#dbeafe] bg-white px-3 text-xs outline-none focus:border-[#3b82f6]"
               />
               <button
                 type="button"
@@ -501,7 +501,7 @@ export default function AddDutyModal({
                     setNewCheckitem("");
                   }
                 }}
-                className="inline-flex h-10 shrink-0 items-center gap-1 rounded-xl bg-[#b8894b] px-3.5 text-xs font-semibold text-white hover:bg-[#a7773f]"
+                className="inline-flex h-10 shrink-0 items-center gap-1 rounded-xl bg-[#3b82f6] px-3.5 text-xs font-semibold text-white hover:bg-[#1d4ed8]"
               >
                 <Plus size={14} /> Add
               </button>
@@ -514,7 +514,7 @@ export default function AddDutyModal({
               type="button"
               onClick={onClose}
               disabled={loading}
-              className="min-h-11 w-full rounded-xl border border-[#e3dbd2] px-5 text-sm font-semibold text-[#756d64] hover:bg-[#f8f4ee] disabled:opacity-50 sm:w-auto"
+              className="min-h-11 w-full rounded-xl border border-[#dbeafe] px-5 text-sm font-semibold text-[#475569] hover:bg-[#eff6ff] disabled:opacity-50 sm:w-auto"
             >
               Cancel
             </button>
@@ -522,7 +522,7 @@ export default function AddDutyModal({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#b8894b] px-5 text-sm font-semibold text-white hover:bg-[#a7773f] disabled:opacity-50 sm:w-auto"
+              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl bg-[#3b82f6] px-5 text-sm font-semibold text-white hover:bg-[#1d4ed8] disabled:opacity-50 sm:w-auto"
             >
               <Save size={16} />
               {loading ? "Saving..." : editingDuty ? "Save Changes" : "Assign Duty"}
@@ -537,7 +537,7 @@ export default function AddDutyModal({
 function Field({ label, htmlFor, children }: { label: string; htmlFor: string; children: React.ReactNode }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-1.5 block text-xs font-semibold text-[#403a34]">
+      <label htmlFor={htmlFor} className="mb-1.5 block text-xs font-semibold text-[#1e293b]">
         {label}
       </label>
       {children}

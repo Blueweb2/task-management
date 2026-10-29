@@ -9,7 +9,7 @@ export default function ScheduleLegend() {
       </div>
 
       <div className="flex items-center gap-1.5">
-        <span className="h-2 w-2 rounded-full bg-[#B89563]" />
+        <span className="h-2 w-2 rounded-full bg-[#3b82f6]" />
         Selected
       </div>
     </div>

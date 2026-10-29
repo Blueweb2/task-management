@@ -418,15 +418,15 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
   return (
     <div className="space-y-6">
       {/* Event Details & Stock Banner */}
-      <div className="rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-6 shadow-xs">
+      <div className="rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-6 shadow-xs">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-gray-100 pb-5">
           <div className="flex items-start gap-3.5">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f7f3ee] text-[#9a6c37] shadow-inner">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f8fbff] text-[#1d4ed8] shadow-inner">
               <Package size={26} />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-bold text-[#252525]">Stock &amp; Equipment Management</h2>
+                <h2 className="text-lg font-bold text-[#1e3a8a]">Stock &amp; Equipment Management</h2>
                 <span className="rounded-full bg-amber-50 border border-amber-200 px-2.5 py-0.5 text-[10px] font-extrabold uppercase text-amber-800 tracking-wide">
                   Live Operations
                 </span>
@@ -477,7 +477,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
             <button
               type="button"
               onClick={() => setIsAddOpen(true)}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#9a6c37] hover:bg-[#855c2d] rounded-xl shadow-xs transition"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-[#1d4ed8] hover:bg-[#1d4ed8] rounded-xl shadow-xs transition"
             >
               <Plus size={14} />
               Add Stock Item
@@ -514,7 +514,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
       </div>
 
       {/* Main Stock Table & Queue Section */}
-      <div className="rounded-3xl border border-[#e8e1d8] bg-white p-4 sm:p-6 shadow-xs">
+      <div className="rounded-3xl border border-[#dbeafe] bg-white p-4 sm:p-6 shadow-xs">
         {/* Navigation Tabs & Search Toolbar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-100 pb-4">
           <div className="flex items-center gap-1.5 overflow-x-auto pb-2 sm:pb-0 scrollbar-none">
@@ -523,7 +523,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
               onClick={() => setActiveQueueTab("all")}
               className={`px-3 sm:px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 ${
                 activeQueueTab === "all"
-                  ? "bg-[#252525] text-white shadow-2xs"
+                  ? "bg-[#1e3a8a] text-white shadow-2xs"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
@@ -576,7 +576,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search items, SKU, or staff..."
-              className="w-full rounded-xl border border-gray-200 bg-gray-50/50 pl-8 pr-3 py-1.5 text-xs text-gray-800 placeholder-gray-400 focus:bg-white focus:border-[#9a6c37] focus:outline-none"
+              className="w-full rounded-xl border border-gray-200 bg-gray-50/50 pl-8 pr-3 py-1.5 text-xs text-gray-800 placeholder-gray-400 focus:bg-white focus:border-[#1d4ed8] focus:outline-none"
             />
           </div>
         </div>
@@ -585,7 +585,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
         <div className="mt-4">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-16 text-gray-400">
-              <RefreshCw size={28} className="animate-spin text-[#9a6c37]" />
+              <RefreshCw size={28} className="animate-spin text-[#1d4ed8]" />
               <span className="mt-3 text-xs font-semibold text-gray-600">Loading stock data and verification queues...</span>
             </div>
           ) : filteredStocks.length === 0 ? (
@@ -621,13 +621,13 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                       className={`rounded-2xl border p-4 space-y-3 transition ${
                         stock.status === "RETURN_PENDING"
                           ? "border-purple-200 bg-purple-50/20"
-                          : "border-gray-200 bg-[#faf8f5]/40"
+                          : "border-gray-200 bg-[#f8fbff]/40"
                       }`}
                     >
                       {/* Top: Item Title & Status Badge */}
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
-                          <h4 className="font-bold text-[#252525] text-sm truncate">
+                          <h4 className="font-bold text-[#1e3a8a] text-sm truncate">
                             {item?.name || "Unknown Item"}
                           </h4>
                           <p className="text-[11px] text-gray-500">
@@ -813,7 +813,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                           }`}
                         >
                           <td className="px-4 py-3.5">
-                            <div className="font-bold text-[#252525]">{item?.name || "Unknown Item"}</div>
+                            <div className="font-bold text-[#1e3a8a]">{item?.name || "Unknown Item"}</div>
                             <div className="text-[11px] text-gray-400">
                               {item?.category || "Equipment"} {item?.sku && <span>&bull; SKU: {item.sku}</span>}
                             </div>
@@ -999,7 +999,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
       {isAddOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 backdrop-blur-xs">
           <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl border border-gray-100 animate-in fade-in zoom-in duration-150">
-            <h3 className="text-base font-bold text-[#252525]">Add Stock Requirement</h3>
+            <h3 className="text-base font-bold text-[#1e3a8a]">Add Stock Requirement</h3>
             <p className="mt-1 text-xs text-gray-500">
               Select an item from warehouse inventory and specify the required count for this event.
             </p>
@@ -1011,7 +1011,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   value={addForm.stockItemId}
                   onChange={(e) => setAddForm({ ...addForm, stockItemId: e.target.value })}
                   required
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 >
                   <option value="">-- Choose Stock Item --</option>
                   {stockCatalog.map((item) => (
@@ -1035,7 +1035,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   }}
                   onFocus={(e) => e.target.select()}
                   required
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none font-bold"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none font-bold"
                 />
               </div>
 
@@ -1045,7 +1045,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   id="autoReserve"
                   checked={addForm.autoReserve}
                   onChange={(e) => setAddForm({ ...addForm, autoReserve: e.target.checked })}
-                  className="rounded border-gray-300 text-[#9a6c37] focus:ring-[#9a6c37]"
+                  className="rounded border-gray-300 text-[#1d4ed8] focus:ring-[#1d4ed8]"
                 />
                 <label htmlFor="autoReserve" className="text-xs font-medium text-gray-700">
                   Auto-reserve available stock from warehouse immediately
@@ -1059,7 +1059,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   value={addForm.notes}
                   onChange={(e) => setAddForm({ ...addForm, notes: e.target.value })}
                   placeholder="e.g. Ensure items are inspected and sanitized prior to packing"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1074,7 +1074,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                 <button
                   type="submit"
                   disabled={actionLoading}
-                  className="rounded-xl bg-[#9a6c37] px-4 py-2 text-xs font-semibold text-white hover:bg-[#855c2d] transition disabled:opacity-50"
+                  className="rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-semibold text-white hover:bg-[#1d4ed8] transition disabled:opacity-50"
                 >
                   {actionLoading ? "Adding..." : "Add to Event"}
                 </button>
@@ -1090,7 +1090,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
       {isAssignOpen && selectedStock && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 backdrop-blur-xs">
           <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl border border-gray-100 animate-in fade-in zoom-in duration-150">
-            <h3 className="text-base font-bold text-[#252525]">Assign Staff &amp; Recollection Schedule</h3>
+            <h3 className="text-base font-bold text-[#1e3a8a]">Assign Staff &amp; Recollection Schedule</h3>
             <p className="mt-1 text-xs text-gray-500">
               Assign physical custody for <span className="font-semibold text-gray-800">{selectedStock.stockItemId?.name || selectedStock.stockItem?.name}</span> ({selectedStock.requiredQuantity} units) and set scheduled recollection time.
             </p>
@@ -1102,7 +1102,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   value={assignForm.staffId}
                   onChange={(e) => setAssignForm({ ...assignForm, staffId: e.target.value })}
                   required
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none font-medium"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none font-medium"
                 >
                   <option value="">-- Choose Staff Member --</option>
                   {staffList.map((st) => (
@@ -1121,7 +1121,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   type="datetime-local"
                   value={assignForm.expectedReturnAt}
                   onChange={(e) => setAssignForm({ ...assignForm, expectedReturnAt: e.target.value })}
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
                 <p className="mt-1 text-[11px] text-gray-400">
                   Target deadline when staff must recollect plates/items and return to storage.
@@ -1135,7 +1135,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   value={assignForm.notes}
                   onChange={(e) => setAssignForm({ ...assignForm, notes: e.target.value })}
                   placeholder="e.g. Ensure all plates are counted and inspected prior to leaving banquet hall"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1171,7 +1171,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
           <div className="w-full max-w-lg rounded-3xl bg-white p-4 sm:p-6 shadow-2xl border border-gray-100 max-h-[92dvh] overflow-y-auto animate-in fade-in zoom-in duration-150">
             <div className="flex items-start justify-between gap-2">
               <div>
-                <h3 className="text-base font-bold text-[#252525]">Stock Return Inspection &amp; Approval</h3>
+                <h3 className="text-base font-bold text-[#1e3a8a]">Stock Return Inspection &amp; Approval</h3>
                 <p className="mt-0.5 text-xs text-gray-500">
                   Inspect returned items for <span className="font-semibold text-gray-800">{selectedStock.stockItemId?.name || selectedStock.stockItem?.name}</span> by{" "}
                   <span className="font-semibold text-gray-800">{selectedStock.assignedStaff?.name || "Staff"}</span>.
@@ -1183,7 +1183,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
             </div>
 
             {/* Staff Reported Breakdown Display */}
-            <div className="mt-4 rounded-2xl bg-[#faf8f5] p-3.5 sm:p-4 text-xs space-y-3 border border-[#e8e1d8]">
+            <div className="mt-4 rounded-2xl bg-[#f8fbff] p-3.5 sm:p-4 text-xs space-y-3 border border-[#dbeafe]">
               <div className="flex items-center justify-between text-[11px] font-bold text-gray-500 uppercase tracking-wider">
                 <span>Staff Reported Breakdown</span>
                 {selectedStock.returnedAt && (
@@ -1328,7 +1328,7 @@ export default function EventStockTab({ eventId, eventName, token: propToken }: 
                   value={verifyForm.managerNotes}
                   onChange={(e) => setVerifyForm({ ...verifyForm, managerNotes: e.target.value })}
                   placeholder="e.g. Physically verified on shelf; 15 good plates restocked, 3 damaged plates kept in quarantine."
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 

@@ -189,7 +189,7 @@ export default function StaffSidebar({
       {/* - Mobile: Slide-over drawer (w-72) triggered by isOpen    */}
       {/* ========================================================= */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex h-full flex-col bg-white border-r border-[#e8e1d8] transition-[width,transform] duration-300 ease-in-out lg:z-30 lg:shadow-none ${
+        className={`fixed inset-y-0 left-0 z-50 flex h-full flex-col bg-white border-r border-[#dbeafe] transition-[width,transform] duration-300 ease-in-out lg:z-30 lg:shadow-none ${
           isCollapsed ? "lg:w-20" : "lg:w-64"
         } ${
           isOpen
@@ -203,7 +203,7 @@ export default function StaffSidebar({
         {/* Top Header: Hamburger Button & Logo                     */}
         {/* ======================================================= */}
         <div
-          className={`flex h-16 shrink-0 items-center border-b border-[#e8e1d8] ${
+          className={`flex h-16 shrink-0 items-center border-b border-[#dbeafe] ${
             isCollapsed
               ? "justify-center px-2"
               : "justify-between px-4"
@@ -216,7 +216,7 @@ export default function StaffSidebar({
               onClick={onToggle || onClose}
               aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
               title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-gray-700 transition hover:bg-[#fbf6ef] hover:text-[#9a6c37] active:scale-95 cursor-pointer"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-gray-700 transition hover:bg-[#eff6ff] hover:text-[#1d4ed8] active:scale-95 cursor-pointer"
             >
               <Menu size={22} strokeWidth={2} />
             </button>
@@ -282,8 +282,8 @@ export default function StaffSidebar({
                         : "gap-3 px-3 py-2.5 w-full"
                     } ${
                       isActive
-                        ? "bg-[#29241f] text-white shadow-xs"
-                        : "text-gray-700 hover:bg-[#fbf6ef] hover:text-[#9a6c37]"
+                        ? "bg-[#0f172a] text-white shadow-xs"
+                        : "text-gray-700 hover:bg-[#eff6ff] hover:text-[#1d4ed8]"
                     }`}
                   >
                     {/* Icon */}
@@ -293,8 +293,8 @@ export default function StaffSidebar({
                         strokeWidth={isActive ? 2.3 : 1.8}
                         className={`transition-colors ${
                           isActive
-                            ? "text-[#d8a86c]"
-                            : "text-gray-500 group-hover:text-[#9a6c37]"
+                            ? "text-[#60a5fa]"
+                            : "text-gray-500 group-hover:text-[#1d4ed8]"
                         }`}
                       />
                       {/* Indicator dot when collapsed */}
@@ -335,10 +335,10 @@ export default function StaffSidebar({
 
                     {/* Tooltip on Collapsed Desktop View */}
                     {isCollapsed && (
-                      <span className="pointer-events-none absolute left-full ml-3 hidden rounded-xl bg-[#29241f] px-3 py-1.5 text-xs font-bold text-white shadow-xl group-hover:flex items-center gap-1.5 z-50 whitespace-nowrap animate-in fade-in zoom-in-95">
+                      <span className="pointer-events-none absolute left-full ml-3 hidden rounded-xl bg-[#0f172a] px-3 py-1.5 text-xs font-bold text-white shadow-xl group-hover:flex items-center gap-1.5 z-50 whitespace-nowrap animate-in fade-in zoom-in-95">
                         <span>{item.label}</span>
                         {item.badge && (
-                          <span className="rounded-md bg-white/20 px-1.5 py-0.2 text-[9px] font-extrabold text-[#d8a86c]">
+                          <span className="rounded-md bg-white/20 px-1.5 py-0.2 text-[9px] font-extrabold text-[#60a5fa]">
                             {item.badge}
                           </span>
                         )}
@@ -355,12 +355,12 @@ export default function StaffSidebar({
             <div className="pt-2">
               <div className="rounded-2xl border border-amber-200/80 bg-gradient-to-br from-amber-50/70 to-orange-50/40 p-3 shadow-2xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-black uppercase tracking-wider text-[#9a6c37]">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[#1d4ed8]">
                     Today&apos;s Duty
                   </span>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
-                <p className="mt-1 truncate text-xs font-bold text-[#29241f]">
+                <p className="mt-1 truncate text-xs font-bold text-[#0f172a]">
                   {todayShift.dutyTitle}
                 </p>
                 <p className="text-[11px] text-gray-500">
@@ -370,7 +370,7 @@ export default function StaffSidebar({
                 <Link
                   href="/staff/duties"
                   onClick={onClose}
-                  className="mt-2.5 flex items-center justify-between rounded-xl bg-white px-2.5 py-1.5 text-[11px] font-bold text-[#9a6c37] border border-amber-200 hover:bg-[#9a6c37] hover:text-white transition shadow-2xs"
+                  className="mt-2.5 flex items-center justify-between rounded-xl bg-white px-2.5 py-1.5 text-[11px] font-bold text-[#1d4ed8] border border-amber-200 hover:bg-[#1d4ed8] hover:text-white transition shadow-2xs"
                 >
                   <span>{isClockedIn ? "Manage Shift" : "Clock In / View"}</span>
                   <ArrowUpRight size={13} />
@@ -384,7 +384,7 @@ export default function StaffSidebar({
         {/* Footer Area: Staff User Profile Card & Sign Out         */}
         {/* ======================================================= */}
         <div
-          className={`shrink-0 border-t border-[#e8e1d8] space-y-2 bg-[#faf7f2]/60 ${
+          className={`shrink-0 border-t border-[#dbeafe] space-y-2 bg-[#eff6ff]/60 ${
             isCollapsed ? "p-2" : "p-3"
           }`}
         >
@@ -396,7 +396,7 @@ export default function StaffSidebar({
                 onClose();
               }
             }}
-            className={`flex items-center rounded-2xl border border-[#ede5d8] bg-white transition hover:border-[#9a6c37]/50 hover:shadow-2xs relative group ${
+            className={`flex items-center rounded-2xl border border-[#eff6ff] bg-white transition hover:border-[#1d4ed8]/50 hover:shadow-2xs relative group ${
               isCollapsed
                 ? "h-11 w-11 justify-center mx-auto"
                 : "gap-2.5 p-2.5 w-full"
@@ -404,7 +404,7 @@ export default function StaffSidebar({
             title={isCollapsed ? `${user?.name || "Staff Member"} (Profile)` : "View profile & account"}
           >
             <div className="relative shrink-0 flex items-center justify-center">
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#9a6c37] to-[#bd8c4b] font-black text-white shadow-xs text-xs">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#1d4ed8] to-[#bd8c4b] font-black text-white shadow-xs text-xs">
                 {user?.name ? user.name.charAt(0).toUpperCase() : "S"}
               </div>
               <span
@@ -420,7 +420,7 @@ export default function StaffSidebar({
 
             {!isCollapsed && (
               <div className="min-w-0 flex-1">
-                <p className="truncate text-xs font-bold text-[#29241f]">
+                <p className="truncate text-xs font-bold text-[#0f172a]">
                   {user?.name || "Staff Member"}
                 </p>
                 <div className="mt-0.5 flex items-center gap-1.5">
@@ -453,7 +453,7 @@ export default function StaffSidebar({
 
             {/* Tooltip on Collapsed View */}
             {isCollapsed && (
-              <span className="pointer-events-none absolute left-full ml-3 hidden rounded-xl bg-[#29241f] px-3 py-1.5 text-xs font-bold text-white shadow-xl group-hover:block z-50 whitespace-nowrap animate-in fade-in zoom-in-95">
+              <span className="pointer-events-none absolute left-full ml-3 hidden rounded-xl bg-[#0f172a] px-3 py-1.5 text-xs font-bold text-white shadow-xl group-hover:block z-50 whitespace-nowrap animate-in fade-in zoom-in-95">
                 {user?.name || "Staff Member"}
               </span>
             )}

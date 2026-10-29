@@ -359,11 +359,11 @@ export default function FoodRecipeModal({
                   {foodItem.category}
                 </span>
                 <span className="text-xs text-gray-300">·</span>
-                <span className="text-xs font-semibold text-[#6B5B95]">
+                <span className="text-xs font-semibold text-[#2563eb]">
                   Recipe Details
                 </span>
               </div>
-              <h2 className="text-lg font-black text-[#29241f] leading-tight">
+              <h2 className="text-lg font-black text-[#0f172a] leading-tight">
                 {foodItem.name}
               </h2>
             </div>
@@ -381,7 +381,7 @@ export default function FoodRecipeModal({
         {/* Global Modal Loader */}
         {loading ? (
           <div className="flex h-64 flex-col items-center justify-center text-center">
-            <Loader2 size={32} className="animate-spin text-[#6B5B95]" />
+            <Loader2 size={32} className="animate-spin text-[#2563eb]" />
             <p className="mt-3 text-xs font-semibold text-gray-500">
               Loading recipe details...
             </p>
@@ -409,15 +409,15 @@ export default function FoodRecipeModal({
             )}
 
             {/* Live Kitchen Stock Banner */}
-            <div className="flex items-center justify-between rounded-2xl border border-stone-200 bg-[#faf8f5] px-3.5 py-2 text-stone-700">
+            <div className="flex items-center justify-between rounded-2xl border border-stone-200 bg-[#f8fbff] px-3.5 py-2 text-stone-700">
               <div className="flex items-center gap-2">
-                <Package size={15} className="text-[#6B5B95]" />
+                <Package size={15} className="text-[#2563eb]" />
                 <span className="font-bold text-xs text-stone-800">
                   Store Stock:
                 </span>
                 {stockLoading ? (
                   <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-stone-500">
-                    <Loader2 size={12} className="animate-spin text-[#9a6c37]" />
+                    <Loader2 size={12} className="animate-spin text-[#1d4ed8]" />
                     Checking stock...
                   </span>
                 ) : stockError ? (
@@ -457,7 +457,7 @@ export default function FoodRecipeModal({
                     required
                     value={yieldServings}
                     onChange={(e) => setYieldServings(Number(e.target.value))}
-                    className="w-full rounded-xl border border-stone-300 bg-white p-2 text-xs font-bold text-stone-900 outline-none focus:border-[#6B5B95] focus:ring-1 focus:ring-[#6B5B95]"
+                    className="w-full rounded-xl border border-stone-300 bg-white p-2 text-xs font-bold text-stone-900 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                   <span className="text-stone-400 text-[11px] shrink-0 font-medium">
                     plates
@@ -481,7 +481,7 @@ export default function FoodRecipeModal({
                     required
                     value={defaultWastagePercent}
                     onChange={(e) => setDefaultWastagePercent(Number(e.target.value))}
-                    className="w-full rounded-xl border border-stone-300 bg-white p-2 text-xs font-bold text-stone-900 outline-none focus:border-[#6B5B95] focus:ring-1 focus:ring-[#6B5B95]"
+                    className="w-full rounded-xl border border-stone-300 bg-white p-2 text-xs font-bold text-stone-900 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                   <span className="text-stone-400 text-[11px] shrink-0 font-medium">
                     % extra
@@ -497,8 +497,8 @@ export default function FoodRecipeModal({
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-black text-[#29241f] text-xs uppercase tracking-wider flex items-center gap-1.5">
-                    <Layers size={14} className="text-[#6B5B95]" />
+                  <h3 className="font-black text-[#0f172a] text-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <Layers size={14} className="text-[#2563eb]" />
                     <span>Ingredients ({ingredients.length})</span>
                   </h3>
                   <p className="text-[11px] text-gray-500">
@@ -509,7 +509,7 @@ export default function FoodRecipeModal({
                 <button
                   type="button"
                   onClick={handleAddIngredient}
-                  className="inline-flex items-center gap-1 rounded-xl bg-[#6B5B95] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#594980] transition shadow-xs cursor-pointer"
+                  className="inline-flex items-center gap-1 rounded-xl bg-[#2563eb] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#594980] transition shadow-xs cursor-pointer"
                 >
                   <Plus size={14} />
                   <span>Add Item</span>
@@ -567,7 +567,7 @@ export default function FoodRecipeModal({
                               onChange={(e) =>
                                 handleIngredientChange(idx, "quantityPerServing", e.target.value)
                               }
-                              className="w-full rounded-xl border border-gray-200 bg-white p-2 text-xs font-black text-[#6B5B95] outline-none focus:border-[#6B5B95]"
+                              className="w-full rounded-xl border border-gray-200 bg-white p-2 text-xs font-black text-[#2563eb] outline-none focus:border-[#2563eb]"
                             />
                           </div>
 
@@ -581,7 +581,7 @@ export default function FoodRecipeModal({
                               onChange={(e) =>
                                 handleIngredientChange(idx, "unit", e.target.value)
                               }
-                              className="w-full rounded-xl border border-gray-200 bg-white px-2.5 py-2 text-xs font-semibold outline-none focus:border-[#6B5B95] cursor-pointer min-w-[70px]"
+                              className="w-full rounded-xl border border-gray-200 bg-white px-2.5 py-2 text-xs font-semibold outline-none focus:border-[#2563eb] cursor-pointer min-w-[70px]"
                             >
                               {COMMON_UNITS.map((u) => (
                                 <option key={u} value={u}>
@@ -619,7 +619,7 @@ export default function FoodRecipeModal({
                             onChange={(e) =>
                               handleIngredientChange(idx, "notes", e.target.value)
                             }
-                            className="w-full rounded-lg border border-stone-200 bg-stone-50/60 px-2.5 py-1.5 text-[11px] text-stone-700 outline-none focus:border-[#6B5B95] focus:bg-white"
+                            className="w-full rounded-lg border border-stone-200 bg-stone-50/60 px-2.5 py-1.5 text-[11px] text-stone-700 outline-none focus:border-[#2563eb] focus:bg-white"
                           />
                         </div>
                       </div>
@@ -639,7 +639,7 @@ export default function FoodRecipeModal({
                 placeholder="Cooking steps, masala mixing tips, boiling time, or special instructions..."
                 value={chefNotes}
                 onChange={(e) => setChefNotes(e.target.value)}
-                className="w-full rounded-xl border border-stone-300 p-2.5 text-xs text-stone-800 outline-none focus:border-[#6B5B95] focus:ring-1 focus:ring-[#6B5B95]"
+                className="w-full rounded-xl border border-stone-300 p-2.5 text-xs text-stone-800 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
               />
             </div>
 

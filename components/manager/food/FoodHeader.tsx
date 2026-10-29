@@ -17,15 +17,15 @@ export default function FoodHeader({ items, onAddNew }: FoodHeaderProps) {
     <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <div className="flex items-center gap-2">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#6B5B95]/10 text-[#6B5B95]">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#2563eb]/10 text-[#2563eb]">
             <UtensilsCrossed size={16} />
           </span>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7A55]">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748b]">
             Catering & Menu
           </p>
         </div>
 
-        <h1 className="mt-1 text-2xl font-bold tracking-tight text-[#252525]">
+        <h1 className="mt-1 text-2xl font-bold tracking-tight text-[#1e3a8a]">
           Food Menu Management
         </h1>
         <p className="mt-1 text-xs text-gray-500">

@@ -149,16 +149,16 @@ export default function ServiceCategoryTabs({
               aria-pressed={isSelected}
               className={`group inline-flex shrink-0 items-center gap-2 rounded-2xl px-4 py-2.5 text-xs font-extrabold transition-all duration-200 cursor-pointer ${
                 isSelected
-                  ? "bg-[#29241f] text-white shadow-md shadow-[#29241f]/20 scale-[1.02]"
-                  : "border border-[#e7decfa8] bg-white text-gray-700 hover:border-[#9A7B4F] hover:bg-[#faf7f2] hover:text-[#29241f]"
+                  ? "bg-[#0f172a] text-white shadow-md shadow-[#0f172a]/20 scale-[1.02]"
+                  : "border border-[#e7decfa8] bg-white text-gray-700 hover:border-[#2563eb] hover:bg-[#eff6ff] hover:text-[#0f172a]"
               }`}
             >
               <IconComponent
                 size={15}
                 className={
                   isSelected
-                    ? "text-[#d8a86c]"
-                    : "text-gray-400 group-hover:text-[#9A7B4F]"
+                    ? "text-[#60a5fa]"
+                    : "text-gray-400 group-hover:text-[#2563eb]"
                 }
               />
 

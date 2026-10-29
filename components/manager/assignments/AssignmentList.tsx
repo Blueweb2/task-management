@@ -180,7 +180,7 @@ export default function AssignmentList({
       {/* Header */}
       <div className="flex items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-semibold text-[#1F1F1F]">
+          <h1 className="text-xl font-semibold text-[#0f172a]">
             Assignments
           </h1>
 
@@ -193,7 +193,7 @@ export default function AssignmentList({
           type="button"
           onClick={onAddAssignment}
           aria-label="Add assignment"
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#1F1F1F] text-white shadow-sm transition active:scale-95"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0f172a] text-white shadow-sm transition active:scale-95"
         >
           <Plus
             size={20}
@@ -216,7 +216,7 @@ export default function AssignmentList({
             setSearch(event.target.value)
           }
           placeholder="Search assignments..."
-          className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#1F1F1F] outline-none transition placeholder:text-gray-400 focus:border-[#B89563] focus:ring-2 focus:ring-[#B89563]/10"
+          className="h-12 w-full rounded-xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
         />
       </div>
 
@@ -256,7 +256,7 @@ export default function AssignmentList({
             <button
               type="button"
               onClick={onAddAssignment}
-              className="mt-3 min-h-11 w-full rounded-xl bg-[#1F1F1F] px-4 text-sm font-medium text-white transition active:scale-[0.99]"
+              className="mt-3 min-h-11 w-full rounded-xl bg-[#0f172a] px-4 text-sm font-medium text-white transition active:scale-[0.99]"
             >
               Add Assignment
             </button>
@@ -288,7 +288,7 @@ export default function AssignmentList({
                   pagination.page <= 1 ||
                   loading
                 }
-                className="min-h-11 rounded-lg px-4 text-sm font-medium text-[#1F1F1F] transition disabled:cursor-not-allowed disabled:opacity-40"
+                className="min-h-11 rounded-lg px-4 text-sm font-medium text-[#0f172a] transition disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Previous
               </button>
@@ -306,7 +306,7 @@ export default function AssignmentList({
                     pagination.totalPages ||
                   loading
                 }
-                className="min-h-11 rounded-lg px-4 text-sm font-medium text-[#1F1F1F] transition disabled:cursor-not-allowed disabled:opacity-40"
+                className="min-h-11 rounded-lg px-4 text-sm font-medium text-[#0f172a] transition disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Next
               </button>

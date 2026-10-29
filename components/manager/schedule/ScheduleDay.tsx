@@ -28,8 +28,8 @@ export default function ScheduleDay({
   return (
     <section>
       {/* Day heading */}
-      <div className="border-b border-gray-200 bg-[#F8F7F3] px-4 py-3">
-        <h2 className="text-sm font-semibold text-[#1F1F1F]">
+      <div className="border-b border-gray-200 bg-[#f8fbff] px-4 py-3">
+        <h2 className="text-sm font-semibold text-[#0f172a]">
           {formattedDate}
         </h2>
       </div>

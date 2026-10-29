@@ -55,10 +55,10 @@ export default function TaskCard({
   // Format date: "Nov 25, 2026"
   const formattedDate = task.dueDate
     ? new Date(task.dueDate).toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      })
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    })
     : "No due date";
 
   // Check if overdue
@@ -81,7 +81,7 @@ export default function TaskCard({
   return (
     <div
       onClick={() => onSelect(task)}
-      className="group relative flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4.5 shadow-xs transition hover:border-[#9A7B4F]/60 hover:shadow-md cursor-pointer"
+      className="group relative flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4.5 shadow-xs transition hover:border-[#2563eb]/60 hover:shadow-md cursor-pointer"
     >
       {/* Top Header: Category, Priority, Status */}
       <div className="flex items-start justify-between gap-2">
@@ -134,7 +134,7 @@ export default function TaskCard({
 
       {/* Title & Description */}
       <div className="mt-3">
-        <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#9A7B4F] transition line-clamp-2">
+        <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#2563eb] transition line-clamp-2">
           {task.title}
         </h3>
         {task.description && (
@@ -148,9 +148,8 @@ export default function TaskCard({
       <div className="mt-3 flex flex-wrap items-center gap-2 pt-2 border-t border-gray-100 text-[11px] text-gray-500">
         {/* Due Date & Time */}
         <div
-          className={`flex items-center gap-1 font-medium ${
-            isOverdue ? "text-red-600 font-bold" : "text-gray-600"
-          }`}
+          className={`flex items-center gap-1 font-medium ${isOverdue ? "text-red-600 font-bold" : "text-gray-600"
+            }`}
         >
           <Calendar size={12} />
           <span>{formattedDate}</span>
@@ -172,8 +171,8 @@ export default function TaskCard({
 
         {/* Voice Note Indicator */}
         {hasVoice && (
-          <span className="inline-flex items-center gap-1 rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-bold text-amber-800 border border-amber-200">
-            <Volume2 size={11} />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-100 bg-blue-50 px-2.5 py-1 text-[10px] font-semibold text-blue-700">
+            <Volume2 size={11} className="text-blue-600" />
             <span>Voice Note</span>
           </span>
         )}

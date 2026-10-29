@@ -205,13 +205,13 @@ export default function ManageChecklistModal({
       aria-modal="true"
       className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-3 sm:p-4 backdrop-blur-xs overflow-y-auto animate-in fade-in"
     >
-      <div className="relative flex max-h-[92dvh] w-full max-w-2xl flex-col rounded-3xl border border-[#e8e1d8] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
+      <div className="relative flex max-h-[92dvh] w-full max-w-2xl flex-col rounded-3xl border border-[#dbeafe] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
         {/* Header */}
-        <div className="flex items-start justify-between border-b border-[#eee7dc] bg-[#faf8f5] px-4 py-4 sm:px-6 sm:py-5">
+        <div className="flex items-start justify-between border-b border-[#eff6ff] bg-[#f8fbff] px-4 py-4 sm:px-6 sm:py-5">
           <div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1 rounded-lg bg-[#29241f] px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-white">
-                <ListChecks size={13} className="text-[#d8a86c]" /> Event Day Subtasks
+              <span className="inline-flex items-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-white">
+                <ListChecks size={13} className="text-[#60a5fa]" /> Event Day Subtasks
               </span>
 
               {isLocked ? (
@@ -225,11 +225,11 @@ export default function ManageChecklistModal({
               )}
             </div>
 
-            <h2 className="mt-2 text-lg sm:text-xl font-black text-[#29241f]">
+            <h2 className="mt-2 text-lg sm:text-xl font-black text-[#0f172a]">
               {duty.title}
             </h2>
-            <p className="text-xs font-semibold text-[#8d847b]">
-              {duty.event} · Assigned to <span className="font-extrabold text-[#403a34]">{duty.staffName}</span>
+            <p className="text-xs font-semibold text-[#64748b]">
+              {duty.event} · Assigned to <span className="font-extrabold text-[#1e293b]">{duty.staffName}</span>
             </p>
           </div>
 
@@ -256,17 +256,17 @@ export default function ManageChecklistModal({
         )}
 
         {/* Shift Details Banner */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-[#eee7dc] bg-[#faf8f5]/60 px-4 sm:px-6 py-2.5 sm:py-3 text-xs text-[#554e46]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-[#eff6ff] bg-[#f8fbff]/60 px-4 sm:px-6 py-2.5 sm:py-3 text-xs text-[#475569]">
           <div className="flex items-center gap-1.5 truncate">
-            <CalendarDays size={14} className="text-[#a7773f] shrink-0" />
+            <CalendarDays size={14} className="text-[#1d4ed8] shrink-0" />
             <span className="truncate">{duty.eventDate}</span>
           </div>
           <div className="flex items-center gap-1.5 truncate">
-            <Clock3 size={14} className="text-[#a7773f] shrink-0" />
+            <Clock3 size={14} className="text-[#1d4ed8] shrink-0" />
             <span className="truncate">{formatTime24to12(duty.startTime)} - {formatTime24to12(duty.endTime)}</span>
           </div>
           <div className="flex items-center gap-1.5 truncate">
-            <MapPin size={14} className="text-[#a7773f] shrink-0" />
+            <MapPin size={14} className="text-[#1d4ed8] shrink-0" />
             <span className="truncate">{duty.location || "Venue TBA"}</span>
           </div>
         </div>
@@ -274,22 +274,22 @@ export default function ManageChecklistModal({
         {/* Content Body */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
           {/* Real-time Sub-Task Progress Card */}
-          <div className="rounded-2xl border border-[#e8e1d8] bg-linear-to-br from-[#faf7f2] to-white p-4">
+          <div className="rounded-2xl border border-[#dbeafe] bg-linear-to-br from-[#eff6ff] to-white p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-wider text-[#9a6c37]">
+                <p className="text-xs font-extrabold uppercase tracking-wider text-[#1d4ed8]">
                   Sub-Task Completion Progress
                 </p>
-                <p className="mt-0.5 text-sm font-black text-[#29241f]">
+                <p className="mt-0.5 text-sm font-black text-[#0f172a]">
                   {completedTasks} of {totalTasks} Subtasks Completed
                 </p>
               </div>
 
               <div className="text-right">
-                <span className="text-xl font-black text-[#b8894b]">
+                <span className="text-xl font-black text-[#3b82f6]">
                   {progressPercent}%
                 </span>
-                <p className="text-[10px] font-bold text-[#8d847b]">
+                <p className="text-[10px] font-bold text-[#64748b]">
                   {progressPercent === 100
                     ? "🎉 All Done!"
                     : progressPercent > 0
@@ -306,7 +306,7 @@ export default function ManageChecklistModal({
                   progressPercent === 100
                     ? "bg-emerald-600"
                     : progressPercent > 50
-                    ? "bg-[#b8894b]"
+                    ? "bg-[#3b82f6]"
                     : "bg-amber-500"
                 }`}
                 style={{ width: `${progressPercent}%` }}
@@ -329,7 +329,7 @@ export default function ManageChecklistModal({
             <>
               {/* New Subtask Input Form */}
               <div className="space-y-2">
-                <label className="text-xs font-extrabold uppercase tracking-wider text-[#756d64]">
+                <label className="text-xs font-extrabold uppercase tracking-wider text-[#475569]">
                   Assign New Subtask to Staff Member
                 </label>
                 <div className="flex gap-2">
@@ -344,14 +344,14 @@ export default function ManageChecklistModal({
                         handleAddTask();
                       }
                     }}
-                    className="flex-1 rounded-xl border border-[#d8cfc4] bg-white px-3.5 py-2.5 text-xs text-[#29241f] outline-none transition placeholder:text-gray-400 focus:border-[#a7773f] focus:ring-2 focus:ring-[#a7773f]/20"
+                    className="flex-1 rounded-xl border border-[#dbeafe] bg-white px-3.5 py-2.5 text-xs text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#1d4ed8] focus:ring-2 focus:ring-[#1d4ed8]/20"
                   />
 
                   <button
                     type="button"
                     onClick={() => handleAddTask()}
                     disabled={!newTaskText.trim()}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-black disabled:opacity-40"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-black disabled:opacity-40"
                   >
                     <Plus size={15} />
                     <span>Add Task</span>
@@ -360,9 +360,9 @@ export default function ManageChecklistModal({
               </div>
 
               {/* One-Click Template Suggestions */}
-              <div className="rounded-2xl border border-dashed border-[#d8cfc4] bg-[#faf8f5] p-3.5">
-                <div className="flex items-center gap-1.5 text-xs font-extrabold text-[#756d64] mb-2.5">
-                  <Sparkles size={14} className="text-[#a7773f]" />
+              <div className="rounded-2xl border border-dashed border-[#dbeafe] bg-[#f8fbff] p-3.5">
+                <div className="flex items-center gap-1.5 text-xs font-extrabold text-[#475569] mb-2.5">
+                  <Sparkles size={14} className="text-[#1d4ed8]" />
                   <span>Quick-Add Recommended Duty Subtasks</span>
                 </div>
 
@@ -375,7 +375,7 @@ export default function ManageChecklistModal({
                       onClick={() => setActiveTemplateTab(category)}
                       className={`rounded-lg px-2.5 py-1 text-[11px] font-bold capitalize transition ${
                         activeTemplateTab === category
-                          ? "bg-[#29241f] text-white shadow-xs"
+                          ? "bg-[#0f172a] text-white shadow-xs"
                           : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-100"
                       }`}
                     >
@@ -391,9 +391,9 @@ export default function ManageChecklistModal({
                       type="button"
                       key={idx}
                       onClick={() => handleAddTask(suggestion)}
-                      className="inline-flex items-center gap-1 rounded-lg border border-[#e0d6ca] bg-white px-2.5 py-1 text-[11px] font-medium text-[#403a34] transition hover:border-[#a7773f] hover:bg-[#f7efe4]"
+                      className="inline-flex items-center gap-1 rounded-lg border border-[#dbeafe] bg-white px-2.5 py-1 text-[11px] font-medium text-[#1e293b] transition hover:border-[#1d4ed8] hover:bg-[#eff6ff]"
                     >
-                      <Plus size={11} className="text-[#a7773f]" />
+                      <Plus size={11} className="text-[#1d4ed8]" />
                       <span>{suggestion}</span>
                     </button>
                   ))}
@@ -405,7 +405,7 @@ export default function ManageChecklistModal({
           {/* Active Checklist Items List */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-extrabold uppercase tracking-wider text-[#756d64]">
+              <p className="text-xs font-extrabold uppercase tracking-wider text-[#475569]">
                 Event Day Subtasks ({items.length})
               </p>
               {items.length > 0 && !isLocked && (
@@ -431,10 +431,10 @@ export default function ManageChecklistModal({
                         item.completed
                           ? "border-emerald-200 bg-emerald-50/40 text-gray-500"
                           : isLocked
-                          ? "border-gray-200 bg-gray-50/60 text-[#29241f]"
+                          ? "border-gray-200 bg-gray-50/60 text-[#0f172a]"
                           : isEditing
-                          ? "border-[#a7773f] bg-[#faf8f5] ring-2 ring-[#a7773f]/10"
-                          : "border-gray-200 bg-white text-[#29241f] hover:border-[#a7773f]"
+                          ? "border-[#1d4ed8] bg-[#f8fbff] ring-2 ring-[#1d4ed8]/10"
+                          : "border-gray-200 bg-white text-[#0f172a] hover:border-[#1d4ed8]"
                       }`}
                     >
                       {isEditing ? (
@@ -454,7 +454,7 @@ export default function ManageChecklistModal({
                             }}
                             autoFocus
                             placeholder="Edit subtask instruction..."
-                            className="flex-1 rounded-lg border border-[#a7773f] bg-white px-3 py-1.5 text-xs text-[#29241f] outline-none"
+                            className="flex-1 rounded-lg border border-[#1d4ed8] bg-white px-3 py-1.5 text-xs text-[#0f172a] outline-none"
                           />
                           <button
                             type="button"
@@ -493,7 +493,7 @@ export default function ManageChecklistModal({
                                   className={
                                     isLocked
                                       ? "text-gray-300"
-                                      : "text-gray-400 group-hover:text-[#a7773f]"
+                                      : "text-gray-400 group-hover:text-[#1d4ed8]"
                                   }
                                 />
                               )}
@@ -503,7 +503,7 @@ export default function ManageChecklistModal({
                                 className={`font-semibold ${
                                   item.completed
                                     ? "line-through text-gray-400"
-                                    : "text-[#29241f]"
+                                    : "text-[#0f172a]"
                                 }`}
                               >
                                 {item.text}
@@ -553,7 +553,7 @@ export default function ManageChecklistModal({
         </div>
 
         {/* Footer Actions */}
-        <div className="flex items-center justify-end gap-2.5 border-t border-[#eee7dc] bg-[#faf8f5] px-4 py-3.5 sm:px-6 sm:py-4">
+        <div className="flex items-center justify-end gap-2.5 border-t border-[#eff6ff] bg-[#f8fbff] px-4 py-3.5 sm:px-6 sm:py-4">
           <button
             type="button"
             onClick={onClose}
@@ -568,7 +568,7 @@ export default function ManageChecklistModal({
               type="button"
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#29241f] px-5 sm:px-6 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-50"
+              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#0f172a] px-5 sm:px-6 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-50"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin" />

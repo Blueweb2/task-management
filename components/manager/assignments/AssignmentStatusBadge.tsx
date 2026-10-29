@@ -16,8 +16,8 @@ const statusConfig: Record<
 > = {
   ASSIGNED: {
     label: "Assigned",
-    className: "bg-[#F4EBDD] text-[#9A7B4F]",
-    dotClassName: "bg-[#B89563]",
+    className: "bg-[#eff6ff] text-[#2563eb]",
+    dotClassName: "bg-[#3b82f6]",
   },
 
   ACCEPTED: {

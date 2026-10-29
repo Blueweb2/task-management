@@ -13,8 +13,8 @@ export default function GalleryGrid({
 }: GalleryGridProps) {
   if (items.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-[#ddd5cb] bg-[#faf8f5] px-6 py-16 text-center">
-        <p className="text-base font-semibold text-[#403a34]">
+      <div className="rounded-2xl border border-dashed border-[#dbeafe] bg-[#f8fbff] px-6 py-16 text-center">
+        <p className="text-base font-semibold text-[#1e293b]">
           No images found
         </p>
 

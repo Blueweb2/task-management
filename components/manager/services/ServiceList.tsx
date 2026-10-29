@@ -240,11 +240,11 @@ export default function ServiceList({
           {/* Header */}
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-[#5F6062]">
+              <h2 className="text-2xl font-semibold tracking-tight text-[#475569]">
                 Services
               </h2>
 
-              <p className="mt-1 text-sm text-[#8A8B8F]">
+              <p className="mt-1 text-sm text-[#64748b]">
                 Manage services, pricing and service options.
               </p>
             </div>
@@ -255,7 +255,7 @@ export default function ServiceList({
                 type="button"
                 onClick={() => loadServices(true)}
                 disabled={refreshing}
-                className="group inline-flex items-center gap-2 rounded-lg border border-[#E5E6EA] bg-[#F3F4F8] px-3.5 py-2.5 text-sm font-medium text-[#5F6062] transition-all duration-200 hover:bg-[#E9EAF0] hover:shadow-sm disabled:cursor-not-allowed disabled:opacity-50"
+                className="group inline-flex items-center gap-2 rounded-lg border border-[#E5E6EA] bg-[#eff6ff] px-3.5 py-2.5 text-sm font-medium text-[#475569] transition-all duration-200 hover:bg-[#E9EAF0] hover:shadow-sm disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <RefreshCw
                   size={16}
@@ -276,7 +276,7 @@ export default function ServiceList({
               <button
                 type="button"
                 onClick={handleAdd}
-                className="inline-flex items-center gap-2 rounded-lg bg-[#5F6062] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#454649] active:bg-[#3F4042]"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#475569] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#454649] active:bg-[#3F4042]"
               >
                 <Plus size={17} strokeWidth={2.5} />
                 Add Service
@@ -286,32 +286,32 @@ export default function ServiceList({
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-            <div className="rounded-2xl border border-[#E5E7EB] bg-[#FEFEFE] p-4">
-              <p className="text-xs font-medium uppercase tracking-wider text-[#8A8B8E]">
+            <div className="rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4">
+              <p className="text-xs font-medium uppercase tracking-wider text-[#64748b]">
                 Total Services
               </p>
 
-              <p className="mt-2 text-2xl font-semibold text-[#5F6062]">
+              <p className="mt-2 text-2xl font-semibold text-[#475569]">
                 {services.length}
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#E5E7EB] bg-[#FEFEFE] p-4">
-              <p className="text-xs font-medium uppercase tracking-wider text-[#8A8B8E]">
+            <div className="rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4">
+              <p className="text-xs font-medium uppercase tracking-wider text-[#64748b]">
                 Active
               </p>
 
-              <p className="mt-2 text-2xl font-semibold text-[#5F6062]">
+              <p className="mt-2 text-2xl font-semibold text-[#475569]">
                 {activeCount}
               </p>
             </div>
 
-            <div className="col-span-2 rounded-2xl border border-[#E5E7EB] bg-[#FEFEFE] p-4 lg:col-span-1">
-              <p className="text-xs font-medium uppercase tracking-wider text-[#8A8B8E]">
+            <div className="col-span-2 rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4 lg:col-span-1">
+              <p className="text-xs font-medium uppercase tracking-wider text-[#64748b]">
                 Inactive
               </p>
 
-              <p className="mt-2 text-2xl font-semibold text-[#5F6062]">
+              <p className="mt-2 text-2xl font-semibold text-[#475569]">
                 {inactiveCount}
               </p>
             </div>
@@ -319,8 +319,8 @@ export default function ServiceList({
 
           {/* Error */}
           {error && (
-            <div className="flex items-start gap-3 rounded-xl border border-[#E2D9D9] bg-[#FAF7F7] px-4 py-3.5 text-sm text-[#5F6062]">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F3F4F8]">
+            <div className="flex items-start gap-3 rounded-xl border border-[#E2D9D9] bg-[#FAF7F7] px-4 py-3.5 text-sm text-[#475569]">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#eff6ff]">
                 <AlertCircle
                   size={17}
                   strokeWidth={2}
@@ -329,11 +329,11 @@ export default function ServiceList({
               </div>
 
               <div className="min-w-0">
-                <p className="font-medium text-[#5F6062]">
+                <p className="font-medium text-[#475569]">
                   Something went wrong
                 </p>
 
-                <p className="mt-0.5 text-[#85868A]">
+                <p className="mt-0.5 text-[#64748b]">
                   {error}
                 </p>
               </div>
@@ -341,14 +341,14 @@ export default function ServiceList({
           )}
 
           {/* Filters */}
-          <div className="rounded-2xl border border-[#E5E7EB] bg-[#FEFEFE] p-4">
+          <div className="rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
               {/* Search */}
               <div className="relative flex-1">
                 <Search
                   size={17}
                   strokeWidth={2}
-                  className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8A8B8F]"
+                  className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#64748b]"
                 />
 
                 <input
@@ -358,7 +358,7 @@ export default function ServiceList({
                     setSearch(event.target.value)
                   }
                   placeholder="Search services..."
-                  className="h-11 w-full rounded-xl border border-[#E5E7EB] bg-[#F9FAFC] py-2.5 pl-10 pr-4 text-sm text-[#5F6062] outline-none transition-all duration-200 placeholder:text-[#9A9BA0] hover:border-[#DCDDE2] focus:border-[#BFC1C5] focus:bg-[#FEFEFE] focus:ring-2 focus:ring-[#5F6062]/5"
+                  className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#f8fafc] py-2.5 pl-10 pr-4 text-sm text-[#475569] outline-none transition-all duration-200 placeholder:text-[#64748b] hover:border-[#e2e8f0] focus:border-[#cbd5e1] focus:bg-[#ffffff] focus:ring-2 focus:ring-[#475569]/5"
                 />
               </div>
 
@@ -367,7 +367,7 @@ export default function ServiceList({
                 <SlidersHorizontal
                   size={17}
                   strokeWidth={2}
-                  className="shrink-0 text-[#8A8B8F]"
+                  className="shrink-0 text-[#64748b]"
                 />
 
                 <select
@@ -375,7 +375,7 @@ export default function ServiceList({
                   onChange={(event) =>
                     setCategory(event.target.value)
                   }
-                  className="h-11 min-w-[190px] cursor-pointer rounded-xl border border-[#E5E7EB] bg-[#F9FAFC] px-4 text-sm font-medium text-[#5F6062] outline-none transition-all duration-200 hover:border-[#DCDDE2] focus:border-[#BFC1C5] focus:bg-[#FEFEFE] focus:ring-2 focus:ring-[#5F6062]/5"
+                  className="h-11 min-w-[190px] cursor-pointer rounded-xl border border-[#dbeafe] bg-[#f8fafc] px-4 text-sm font-medium text-[#475569] outline-none transition-all duration-200 hover:border-[#e2e8f0] focus:border-[#cbd5e1] focus:bg-[#ffffff] focus:ring-2 focus:ring-[#475569]/5"
                 >
                   {categories.map((item) => (
                     <option
@@ -399,37 +399,37 @@ export default function ServiceList({
               {Array.from({ length: 6 }).map((_, index) => (
                 <div
                   key={index}
-                  className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-[#FEFEFE] p-5"
+                  className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-5"
                 >
                   {/* Banner skeleton */}
-                  <div className="-mx-5 -mt-5 mb-4 h-36 shrink-0 animate-pulse bg-[#F3F4F8]" />
+                  <div className="-mx-5 -mt-5 mb-4 h-36 shrink-0 animate-pulse bg-[#eff6ff]" />
 
                   {/* Header */}
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 animate-pulse rounded-xl bg-[#F3F4F8]" />
+                      <div className="h-10 w-10 animate-pulse rounded-xl bg-[#eff6ff]" />
 
                       <div className="space-y-2">
-                        <div className="h-4 w-28 animate-pulse rounded-md bg-[#F3F4F8]" />
-                        <div className="h-3 w-20 animate-pulse rounded-md bg-[#F3F4F8]" />
+                        <div className="h-4 w-28 animate-pulse rounded-md bg-[#eff6ff]" />
+                        <div className="h-3 w-20 animate-pulse rounded-md bg-[#eff6ff]" />
                       </div>
                     </div>
 
-                    <div className="h-7 w-16 animate-pulse rounded-full bg-[#F3F4F8]" />
+                    <div className="h-7 w-16 animate-pulse rounded-full bg-[#eff6ff]" />
                   </div>
 
                   {/* Content */}
                   <div className="mt-4 min-h-[40px] space-y-2">
-                    <div className="h-3 w-full animate-pulse rounded-md bg-[#F3F4F8]" />
-                    <div className="h-3 w-4/5 animate-pulse rounded-md bg-[#F3F4F8]" />
+                    <div className="h-3 w-full animate-pulse rounded-md bg-[#eff6ff]" />
+                    <div className="h-3 w-4/5 animate-pulse rounded-md bg-[#eff6ff]" />
                   </div>
 
                   {/* Bottom section */}
                   <div className="mt-auto space-y-4 pt-4">
-                    <div className="h-20 animate-pulse rounded-xl bg-[#F3F4F8]" />
+                    <div className="h-20 animate-pulse rounded-xl bg-[#eff6ff]" />
                     <div className="flex h-7 items-center justify-between border-t border-[#F0F1F3] pt-4">
-                      <div className="h-3 w-20 animate-pulse rounded-md bg-[#F3F4F8]" />
-                      <div className="h-7 w-16 animate-pulse rounded-full bg-[#F3F4F8]" />
+                      <div className="h-3 w-20 animate-pulse rounded-md bg-[#eff6ff]" />
+                      <div className="h-7 w-16 animate-pulse rounded-full bg-[#eff6ff]" />
                     </div>
                   </div>
                 </div>
@@ -437,44 +437,41 @@ export default function ServiceList({
             </div>
           ) : filteredServices.length === 0 ? (
             /* Empty */
-            <div className="flex min-h-[280px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#DCDDE2] bg-[#FEFEFE] px-6 py-12 text-center">
+            <div className="flex min-h-[280px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#e2e8f0] bg-[#ffffff] px-6 py-12 text-center">
               {/* Icon */}
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F3F4F8]">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eff6ff]">
                 <Search
                   size={22}
                   strokeWidth={1.8}
-                  className="text-[#7A7B7F]"
+                  className="text-[#64748b]"
                 />
               </div>
 
               {/* Title */}
-              <h3 className="mt-5 text-base font-semibold text-[#5F6062]">
+              <h3 className="mt-5 text-base font-semibold text-[#475569]">
                 {services.length === 0
                   ? "No services yet"
                   : "No services found"}
               </h3>
 
               {/* Description */}
-              <p className="mx-auto mt-1.5 max-w-md text-sm leading-6 text-[#8A8B8F]">
+              <p className="mx-auto mt-1.5 max-w-md text-sm leading-6 text-[#64748b]">
                 {services.length === 0
                   ? "Create your first service to make it available in the booking flow."
                   : "Try changing your search or category filter."}
               </p>
 
               {/* Action */}
-              {services.length === 0 && (
-                <button
-                  type="button"
-                  onClick={handleAdd}
-                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#5F6062] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#48494B] active:scale-[0.98]"
-                >
-                  <Plus
-                    size={17}
-                    strokeWidth={2.5}
-                  />
-                  Add Service
-                </button>
-              )}
+{services.length === 0 && (
+  <button
+    type="button"
+    onClick={handleAdd}
+    className="mt-6 inline-flex items-center gap-2.5 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-blue-600/20 transition-all duration-200 hover:bg-blue-700 hover:shadow-md hover:shadow-blue-600/25 active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-100"
+  >
+    <Plus size={18} strokeWidth={2.5} />
+    Add Service
+  </button>
+)}
             </div>
           ) : (
             /* Service Cards */
@@ -505,13 +502,13 @@ export default function ServiceList({
             {/* Result count */}
             {!loading && filteredServices.length > 0 && (
               <div className="flex justify-center">
-                <p className="rounded-full bg-[#F3F4F8] px-3.5 py-1.5 text-xs font-medium text-[#7A7B7F]">
+                <p className="rounded-full bg-[#eff6ff] px-3.5 py-1.5 text-xs font-medium text-[#64748b]">
                   Showing{" "}
-                  <span className="font-semibold text-[#5F6062]">
+                  <span className="font-semibold text-[#475569]">
                     {filteredServices.length}
                   </span>{" "}
                   of{" "}
-                  <span className="font-semibold text-[#5F6062]">
+                  <span className="font-semibold text-[#475569]">
                     {services.length}
                   </span>{" "}
                   services

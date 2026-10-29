@@ -36,26 +36,26 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#B49A6A]/30 disabled:cursor-not-allowed disabled:opacity-50";
+    "inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#60a5fa]/30 disabled:cursor-not-allowed disabled:opacity-50";
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-[#1F2023] text-white hover:bg-[#2A2B2F] active:bg-[#17181A]",
+      "bg-[#0f172a] text-white hover:bg-[#2A2B2F] active:bg-[#17181A]",
 
     secondary:
-      "bg-white text-[#1F2023] border border-[#E5E1D8] hover:bg-[#F8F7F3] active:bg-[#F0EEE8]",
+      "bg-white text-[#0f172a] border border-[#dbeafe] hover:bg-[#f8fbff] active:bg-[#F0EEE8]",
 
     outline:
-      "bg-transparent text-[#1F2023] border border-[#D8D3C8] hover:bg-[#F8F7F3] active:bg-[#EFEBE3]",
+      "bg-transparent text-[#0f172a] border border-[#D8D3C8] hover:bg-[#f8fbff] active:bg-[#EFEBE3]",
 
     ghost:
-      "bg-transparent text-[#55565A] hover:bg-[#F3F1EC] hover:text-[#1F2023] active:bg-[#EBE8E1]",
+      "bg-transparent text-[#55565A] hover:bg-[#eff6ff] hover:text-[#0f172a] active:bg-[#EBE8E1]",
 
     danger:
       "bg-[#B42318] text-white hover:bg-[#981B12] active:bg-[#7F160F]",
 
     gold:
-      "bg-[#B49A6A] text-white hover:bg-[#A58C5F] active:bg-[#927A50]",
+      "bg-[#60a5fa] text-white hover:bg-[#A58C5F] active:bg-[#927A50]",
   };
 
   const sizes: Record<ButtonSize, string> = {

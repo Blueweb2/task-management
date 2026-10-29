@@ -906,11 +906,11 @@ export default function EstimatePreviewStep({
 
           {/* Referral Source */}
           {formData.referralSource && (
-            <div className="mt-4 rounded-xl border border-[#e8e1d8] bg-[#faf6f0] p-3 text-xs">
-              <span className="font-bold uppercase tracking-wider text-[#9a6c37]">
+            <div className="mt-4 rounded-xl border border-[#dbeafe] bg-[#f8fbff] p-3 text-xs">
+              <span className="font-bold uppercase tracking-wider text-[#1d4ed8]">
                 Lead / Inquiry Source:{" "}
               </span>
-              <span className="font-semibold text-[#29241f]">
+              <span className="font-semibold text-[#0f172a]">
                 {formData.customReferral && formData.customReferral.trim()
                   ? `${formData.referralSource || "Referral"} (${formData.customReferral.trim()})`
                   : formData.referralSource}
@@ -949,7 +949,7 @@ export default function EstimatePreviewStep({
                   </div>
                 </div>
 
-                <div className="rounded-xl bg-[#f4ecdc] px-3.5 py-1.5 text-xs font-bold text-[#8C7A55]">
+                <div className="rounded-xl bg-[#eff6ff] px-3.5 py-1.5 text-xs font-bold text-[#64748b]">
                   {formatCurrency(cateringSubtotal)} package subtotal
                 </div>
               </div>
@@ -1141,7 +1141,7 @@ export default function EstimatePreviewStep({
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         {itemImg ? (
-                          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-[var(--border)] bg-[#f6f2eb]">
+                          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-[var(--border)] bg-[#eff6ff]">
                             <img
                               src={itemImg}
                               alt={item.name}
@@ -1212,7 +1212,7 @@ export default function EstimatePreviewStep({
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3 min-w-0">
                         {itemImg ? (
-                          <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg border border-[var(--border)] bg-[#f6f2eb]">
+                          <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg border border-[var(--border)] bg-[#eff6ff]">
                             <img
                               src={itemImg}
                               alt={item.name}
@@ -1410,7 +1410,7 @@ export default function EstimatePreviewStep({
 
               {/* Grand Total */}
 
-              <div className="flex items-center justify-between rounded-xl bg-[#f4ecdc] px-4 py-4">
+              <div className="flex items-center justify-between rounded-xl bg-[#eff6ff] px-4 py-4">
                 <span className="font-semibold text-[var(--sage-dark)]">
                   Grand Total
                 </span>
@@ -1514,9 +1514,9 @@ export default function EstimatePreviewStep({
                 <button
                   type="button"
                   onClick={onEditEstimate}
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl border border-[#d8cfc4] bg-white px-4 py-2.5 text-xs font-bold text-[#29241f] shadow-2xs hover:bg-[#faf8f5] transition active:scale-95 cursor-pointer"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl border border-[#dbeafe] bg-white px-4 py-2.5 text-xs font-bold text-[#0f172a] shadow-2xs hover:bg-[#f8fbff] transition active:scale-95 cursor-pointer"
                 >
-                  <FileEdit size={14} className="text-[#9a6c37]" />
+                  <FileEdit size={14} className="text-[#1d4ed8]" />
                   <span>Edit This Estimate</span>
                 </button>
               )}
@@ -1534,7 +1534,7 @@ export default function EstimatePreviewStep({
 
               <Link
                 href="/manager/events?tab=estimates"
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl bg-[#29241f] px-4 py-2.5 text-xs font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 cursor-pointer"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2.5 text-xs font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 cursor-pointer"
               >
                 <span>View All Estimates</span>
                 <ArrowRight size={14} />

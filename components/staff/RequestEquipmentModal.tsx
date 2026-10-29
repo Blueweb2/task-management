@@ -100,7 +100,7 @@ export default function RequestEquipmentModal({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4 bg-stone-50">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-100 text-[#9A7B4F]">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-100 text-[#2563eb]">
               <Package size={17} />
             </div>
             <div>
@@ -145,7 +145,7 @@ export default function RequestEquipmentModal({
               </label>
               {catalogLoading ? (
                 <div className="flex items-center gap-2 py-2 text-xs text-gray-500">
-                  <Loader2 size={14} className="animate-spin text-[#9A7B4F]" />
+                  <Loader2 size={14} className="animate-spin text-[#2563eb]" />
                   <span>Loading catalog...</span>
                 </div>
               ) : (
@@ -153,7 +153,7 @@ export default function RequestEquipmentModal({
                   required
                   value={selectedStockId}
                   onChange={(e) => setSelectedStockId(e.target.value)}
-                  className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none bg-white cursor-pointer"
+                  className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none bg-white cursor-pointer"
                 >
                   {stockCatalog.map((item) => (
                     <option key={item._id} value={item._id}>
@@ -175,7 +175,7 @@ export default function RequestEquipmentModal({
                 required
                 value={quantity}
                 onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -189,7 +189,7 @@ export default function RequestEquipmentModal({
                 value={reason}
                 onChange={(e) => setReason(e.target.value)}
                 placeholder="Explain why this equipment is needed..."
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none resize-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none resize-none"
               />
             </div>
 
@@ -205,7 +205,7 @@ export default function RequestEquipmentModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
               >
                 {loading ? (
                   <Loader2 size={14} className="animate-spin" />

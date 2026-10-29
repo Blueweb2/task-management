@@ -51,19 +51,19 @@ export default function SecuritySettings() {
   };
 
   return (
-    <section className="rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
-      <div className="border-b border-[#eee8e1] p-5 sm:p-6">
+    <section className="rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
+      <div className="border-b border-[#eff6ff] p-5 sm:p-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
             <ShieldCheck size={19} />
           </div>
 
           <div>
-            <h2 className="font-semibold text-[#29241f]">
+            <h2 className="font-semibold text-[#0f172a]">
               Security
             </h2>
 
-            <p className="text-sm text-[#9b938a]">
+            <p className="text-sm text-[#64748b]">
               Manage your password and account security.
             </p>
           </div>
@@ -75,10 +75,10 @@ export default function SecuritySettings() {
           <div className="mb-4 flex items-center gap-2">
             <KeyRound
               size={17}
-              className="text-[#a7773f]"
+              className="text-[#1d4ed8]"
             />
 
-            <h3 className="text-sm font-semibold text-[#403a34]">
+            <h3 className="text-sm font-semibold text-[#1e293b]">
               Change Password
             </h3>
           </div>
@@ -91,7 +91,7 @@ export default function SecuritySettings() {
                 setCurrentPassword(e.target.value)
               }
               placeholder="Current password"
-              className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm outline-none focus:border-[#b8894b]"
+              className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm outline-none focus:border-[#3b82f6]"
             />
 
             <input
@@ -101,7 +101,7 @@ export default function SecuritySettings() {
                 setNewPassword(e.target.value)
               }
               placeholder="New password"
-              className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm outline-none focus:border-[#b8894b]"
+              className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm outline-none focus:border-[#3b82f6]"
             />
 
             <input
@@ -111,14 +111,14 @@ export default function SecuritySettings() {
                 setConfirmPassword(e.target.value)
               }
               placeholder="Confirm new password"
-              className="h-11 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm outline-none focus:border-[#b8894b]"
+              className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm outline-none focus:border-[#3b82f6]"
             />
 
             <button
               type="button"
               onClick={() => void handlePasswordChange()}
               disabled={saving}
-              className="rounded-xl border border-[#b8894b] px-5 py-2.5 text-sm font-semibold text-[#9a6c37] transition hover:bg-[#f7efe4]"
+              className="rounded-xl border border-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-[#1d4ed8] transition hover:bg-[#eff6ff]"
             >
               {saving ? "Updating..." : "Update Password"}
             </button>
@@ -126,14 +126,14 @@ export default function SecuritySettings() {
           </div>
         </div>
 
-        <div className="border-t border-[#eee8e1] pt-6">
+        <div className="border-t border-[#eff6ff] pt-6">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold text-[#403a34]">
+              <p className="text-sm font-semibold text-[#1e293b]">
                 Two-Factor Authentication
               </p>
 
-              <p className="mt-1 text-xs leading-5 text-[#9b938a]">
+              <p className="mt-1 text-xs leading-5 text-[#64748b]">
                 Add an additional security layer to your account.
               </p>
             </div>
@@ -147,8 +147,8 @@ export default function SecuritySettings() {
               }
               className={`relative h-6 w-11 shrink-0 rounded-full transition ${
                 twoFactorEnabled
-                  ? "bg-[#b8894b]"
-                  : "bg-[#d9d0c7]"
+                  ? "bg-[#3b82f6]"
+                  : "bg-[#dbeafe]"
               }`}
             >
               <span

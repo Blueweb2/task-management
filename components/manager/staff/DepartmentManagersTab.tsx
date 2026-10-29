@@ -532,7 +532,7 @@ export default function DepartmentManagersTab() {
   if (!isSuperAdmin) {
     return (
       <div className="flex flex-col items-center justify-center rounded-3xl border border-amber-200 bg-amber-50/60 p-8 sm:p-12 text-center shadow-xs">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-[#9A7B4F] mb-4 shadow-xs">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-[#2563eb] mb-4 shadow-xs">
           <ShieldCheck size={28} />
         </div>
         <h3 className="text-base sm:text-lg font-bold text-gray-900">
@@ -550,12 +550,12 @@ export default function DepartmentManagersTab() {
       {/* =========================================================
           SUPERADMIN OVERVIEW & ACTION BAR
       ========================================================= */}
-      <section className="relative overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-7 shadow-xs">
+      <section className="relative overflow-hidden rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-7 shadow-xs">
         <div className="relative z-10 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
         
 
-            <h2 className="mt-2 text-xl sm:text-2xl font-black tracking-tight text-[#29241f]">
+            <h2 className="mt-2 text-xl sm:text-2xl font-black tracking-tight text-[#0f172a]">
               Department Managers & Scoped Roles
             </h2>
 
@@ -571,7 +571,7 @@ export default function DepartmentManagersTab() {
             >
               <RefreshCw
                 size={13}
-                className={loading ? "animate-spin text-[#9A7B4F]" : "text-gray-500"}
+                className={loading ? "animate-spin text-[#2563eb]" : "text-gray-500"}
               />
               <span>Refresh</span>
             </button>
@@ -582,7 +582,7 @@ export default function DepartmentManagersTab() {
                 setModalError(null);
                 setIsModalOpen(true);
               }}
-              className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#29241f] hover:bg-black px-4 text-xs font-bold text-white shadow-xs transition active:scale-95 cursor-pointer"
+              className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-4 text-xs font-bold text-white shadow-xs transition active:scale-95 cursor-pointer"
             >
               <UserPlus size={15} className="text-amber-300" />
               <span>Create Department Manager</span>
@@ -691,7 +691,7 @@ export default function DepartmentManagersTab() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by name, email, department, location..."
-            className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-9 pr-4 text-xs text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] shadow-2xs"
+            className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-9 pr-4 text-xs text-gray-900 placeholder:text-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] shadow-2xs"
           />
         </div>
 
@@ -700,7 +700,7 @@ export default function DepartmentManagersTab() {
           <select
             value={departmentFilter}
             onChange={(e) => setDepartmentFilter(e.target.value)}
-            className="h-10 rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-700 outline-none focus:border-[#9A7B4F] shadow-2xs cursor-pointer"
+            className="h-10 rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold text-gray-700 outline-none focus:border-[#2563eb] shadow-2xs cursor-pointer"
           >
             <option value="ALL">All Departments</option>
             <option value="Kitchen">Kitchen / Chef</option>
@@ -719,7 +719,7 @@ export default function DepartmentManagersTab() {
               onClick={() => setStatusFilter(filter)}
               className={`h-10 rounded-xl px-3.5 text-xs font-bold transition cursor-pointer ${
                 statusFilter === filter
-                  ? "bg-[#29241f] text-white shadow-2xs"
+                  ? "bg-[#0f172a] text-white shadow-2xs"
                   : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
               }`}
             >
@@ -738,8 +738,8 @@ export default function DepartmentManagersTab() {
       ========================================================= */}
       <section>
         {loading ? (
-          <div className="flex h-64 flex-col items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white shadow-xs">
-            <Loader2 size={32} className="animate-spin text-[#9A7B4F]" />
+          <div className="flex h-64 flex-col items-center justify-center rounded-3xl border border-[#dbeafe] bg-white shadow-xs">
+            <Loader2 size={32} className="animate-spin text-[#2563eb]" />
             <p className="mt-3 text-xs font-medium text-gray-500">
               Loading managers directory...
             </p>
@@ -763,17 +763,17 @@ export default function DepartmentManagersTab() {
               return (
                 <div
                   key={m.id}
-                  className="group relative flex flex-col justify-between rounded-3xl border border-[#e8e1d8] bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#9a6c37] hover:shadow-md"
+                  className="group relative flex flex-col justify-between rounded-3xl border border-[#dbeafe] bg-white p-5 shadow-xs transition-all duration-300 hover:border-[#1d4ed8] hover:shadow-md"
                 >
                   <div>
                     {/* Top Row: User Avatar & Department Badge */}
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#9A7B4F] to-[#D2B47A] text-sm font-black text-white shadow-xs">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#2563eb] to-[#93c5fd] text-sm font-black text-white shadow-xs">
                           {m.name.charAt(0).toUpperCase()}
                         </div>
                         <div>
-                          <h3 className="font-bold text-[#29241f] text-sm group-hover:text-[#9A7B4F] transition truncate">
+                          <h3 className="font-bold text-[#0f172a] text-sm group-hover:text-[#2563eb] transition truncate">
                             {m.name}
                           </h3>
                           <p className="text-xs text-gray-500">@{m.username}</p>
@@ -791,20 +791,20 @@ export default function DepartmentManagersTab() {
                     {/* Metadata fields */}
                     <div className="mt-4 space-y-2 border-t border-gray-100 pt-3 text-xs text-gray-600">
                       <div className="flex items-center gap-2 truncate">
-                        <Mail size={13} className="shrink-0 text-[#9A7B4F]" />
+                        <Mail size={13} className="shrink-0 text-[#2563eb]" />
                         <span className="truncate">{m.email}</span>
                       </div>
 
                       {m.phone && (
                         <div className="flex items-center gap-2">
-                          <Phone size={13} className="shrink-0 text-[#9A7B4F]" />
+                          <Phone size={13} className="shrink-0 text-[#2563eb]" />
                           <span>{m.phone}</span>
                         </div>
                       )}
 
                       {m.location && (
                         <div className="flex items-center gap-2 truncate">
-                          <MapPin size={13} className="shrink-0 text-[#9A7B4F]" />
+                          <MapPin size={13} className="shrink-0 text-[#2563eb]" />
                           <span className="truncate">{m.location}</span>
                         </div>
                       )}
@@ -827,7 +827,7 @@ export default function DepartmentManagersTab() {
                         </span>
                       )}
                       {m.permissions && m.permissions.length > 3 && (
-                        <span className="rounded-md bg-amber-50 px-1.5 py-0.5 text-[9px] font-bold text-[#9A7B4F] border border-amber-200">
+                        <span className="rounded-md bg-amber-50 px-1.5 py-0.5 text-[9px] font-bold text-[#2563eb] border border-amber-200">
                           +{m.permissions.length - 3} more
                         </span>
                       )}
@@ -839,9 +839,9 @@ export default function DepartmentManagersTab() {
                     <button
                       type="button"
                       onClick={() => openEditModal(m)}
-                      className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-white hover:border-[#9A7B4F] hover:text-[#29241f] shadow-2xs cursor-pointer"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-white hover:border-[#2563eb] hover:text-[#0f172a] shadow-2xs cursor-pointer"
                     >
-                      <Edit size={12} className="text-[#9A7B4F]" />
+                      <Edit size={12} className="text-[#2563eb]" />
                       <span>Edit Access</span>
                     </button>
 
@@ -877,16 +877,16 @@ export default function DepartmentManagersTab() {
           <div
             role="dialog"
             aria-modal="true"
-            className="relative z-10 w-full max-w-xl rounded-3xl border border-[#e8e1d8] bg-white p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200 text-[#29241f] max-h-[90vh] overflow-y-auto"
+            className="relative z-10 w-full max-w-xl rounded-3xl border border-[#dbeafe] bg-white p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200 text-[#0f172a] max-h-[90vh] overflow-y-auto"
           >
             {/* Header */}
             <div className="flex items-start justify-between border-b border-gray-100 pb-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#9A7B4F] to-[#D2B47A] text-white shadow-xs">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#2563eb] to-[#93c5fd] text-white shadow-xs">
                   <UserPlus size={20} />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-[#29241f]">
+                  <h2 className="text-lg font-bold text-[#0f172a]">
                     Create Department Manager
                   </h2>
                   <p className="text-xs text-gray-500">
@@ -924,7 +924,7 @@ export default function DepartmentManagersTab() {
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     onBlur={handleNameBlur}
                     placeholder="e.g. Marco Silva"
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
 
@@ -938,7 +938,7 @@ export default function DepartmentManagersTab() {
                     value={formData.username}
                     onChange={(e) => handleInputChange("username", e.target.value)}
                     placeholder="e.g. marco_chef"
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -954,7 +954,7 @@ export default function DepartmentManagersTab() {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="marco@eventmanagement.com"
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
 
@@ -969,7 +969,7 @@ export default function DepartmentManagersTab() {
                       value={formData.password}
                       onChange={(e) => handleInputChange("password", e.target.value)}
                       placeholder="Minimum 6 characters"
-                      className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                      className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                     />
                     <button
                       type="button"
@@ -992,7 +992,7 @@ export default function DepartmentManagersTab() {
                     value={formData.phone || ""}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     placeholder="e.g. +91 98765 43210"
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
 
@@ -1005,7 +1005,7 @@ export default function DepartmentManagersTab() {
                     value={formData.location || ""}
                     onChange={(e) => handleInputChange("location", e.target.value)}
                     placeholder="e.g. Central Banquet Hall"
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 placeholder-gray-400 outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -1026,13 +1026,13 @@ export default function DepartmentManagersTab() {
                         onClick={() => handleInputChange("department", dept.value)}
                         className={`flex items-center gap-2 rounded-xl border p-2.5 text-left text-xs font-semibold transition cursor-pointer ${
                           isSelected
-                            ? "border-[#9A7B4F] bg-amber-50 text-amber-950 font-bold shadow-xs"
+                            ? "border-[#2563eb] bg-amber-50 text-amber-950 font-bold shadow-xs"
                             : "border-gray-200 bg-stone-50/60 text-gray-600 hover:bg-stone-100 hover:text-gray-900"
                         }`}
                       >
                         <Icon
                           size={14}
-                          className={isSelected ? "text-[#9A7B4F]" : "text-gray-400"}
+                          className={isSelected ? "text-[#2563eb]" : "text-gray-400"}
                         />
                         <span className="truncate">{dept.label}</span>
                       </button>
@@ -1058,7 +1058,7 @@ export default function DepartmentManagersTab() {
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => handlePermissionToggle(perm.id)}
-                          className="rounded border-gray-300 text-[#9A7B4F] focus:ring-[#9A7B4F]"
+                          className="rounded border-gray-300 text-[#2563eb] focus:ring-[#2563eb]"
                         />
                         <span>{perm.label}</span>
                       </label>
@@ -1081,7 +1081,7 @@ export default function DepartmentManagersTab() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#29241f] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting && <Loader2 size={14} className="animate-spin" />}
                   <span>{isSubmitting ? "Creating..." : "Provision Manager Account"}</span>
@@ -1105,15 +1105,15 @@ export default function DepartmentManagersTab() {
           <div
             role="dialog"
             aria-modal="true"
-            className="relative z-10 w-full max-w-xl rounded-3xl border border-[#e8e1d8] bg-white p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200 text-[#29241f] max-h-[90vh] overflow-y-auto"
+            className="relative z-10 w-full max-w-xl rounded-3xl border border-[#dbeafe] bg-white p-6 sm:p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200 text-[#0f172a] max-h-[90vh] overflow-y-auto"
           >
             <div className="flex items-start justify-between border-b border-gray-100 pb-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-[#9A7B4F] shadow-xs">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-[#2563eb] shadow-xs">
                   <Edit size={20} />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-[#29241f]">
+                  <h2 className="text-lg font-bold text-[#0f172a]">
                     Edit Department & Scoped Permissions
                   </h2>
                   <p className="text-xs text-gray-500">
@@ -1148,7 +1148,7 @@ export default function DepartmentManagersTab() {
                     type="text"
                     value={editFormData.name}
                     onChange={(e) => handleEditInputChange("name", e.target.value)}
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
 
@@ -1160,7 +1160,7 @@ export default function DepartmentManagersTab() {
                     type="tel"
                     value={editFormData.phone || ""}
                     onChange={(e) => handleEditInputChange("phone", e.target.value)}
-                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                    className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
@@ -1173,7 +1173,7 @@ export default function DepartmentManagersTab() {
                   type="text"
                   value={editFormData.location || ""}
                   onChange={(e) => handleEditInputChange("location", e.target.value)}
-                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F]"
+                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-gray-900 outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb]"
                 />
               </div>
 
@@ -1194,13 +1194,13 @@ export default function DepartmentManagersTab() {
                         }
                         className={`flex items-center gap-2 rounded-xl border p-2.5 text-left text-xs font-semibold transition cursor-pointer ${
                           isSelected
-                            ? "border-[#9A7B4F] bg-amber-50 text-amber-950 font-bold shadow-xs"
+                            ? "border-[#2563eb] bg-amber-50 text-amber-950 font-bold shadow-xs"
                             : "border-gray-200 bg-stone-50/60 text-gray-600 hover:bg-stone-100 hover:text-gray-900"
                         }`}
                       >
                         <Icon
                           size={14}
-                          className={isSelected ? "text-[#9A7B4F]" : "text-gray-400"}
+                          className={isSelected ? "text-[#2563eb]" : "text-gray-400"}
                         />
                         <span className="truncate">{dept.label}</span>
                       </button>
@@ -1227,7 +1227,7 @@ export default function DepartmentManagersTab() {
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => handleEditPermissionToggle(perm.id)}
-                          className="rounded border-gray-300 text-[#9A7B4F] focus:ring-[#9A7B4F]"
+                          className="rounded border-gray-300 text-[#2563eb] focus:ring-[#2563eb]"
                         />
                         <span>{perm.label}</span>
                       </label>
@@ -1249,7 +1249,7 @@ export default function DepartmentManagersTab() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#29241f] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting && <Loader2 size={14} className="animate-spin" />}
                   <span>{isSubmitting ? "Saving..." : "Save Changes"}</span>

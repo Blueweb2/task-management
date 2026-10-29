@@ -8,7 +8,7 @@ export default function ManagerBookingPage() {
       <BookingHeader />
       <Suspense
         fallback={
-          <div className="rounded-2xl border border-[#e8e1d8] bg-white p-12 text-center text-sm text-[#756d64]">
+          <div className="rounded-2xl border border-[#dbeafe] bg-white p-12 text-center text-sm text-[#475569]">
             Loading proposal workflow...
           </div>
         }

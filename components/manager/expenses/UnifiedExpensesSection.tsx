@@ -456,7 +456,7 @@ const UnifiedExpensesSection = forwardRef<
               disabled={loading}
               title="Refresh expenses"
               aria-label="Refresh expenses"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-[#ded5cb] bg-white text-[#756d64] hover:bg-[#f7f2ec] transition disabled:opacity-50"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-[#dbeafe] bg-white text-[#475569] hover:bg-[#eff6ff] transition disabled:opacity-50"
             >
               <RefreshCw size={14} className={loading ? "animate-spin" : ""} />
             </button>
@@ -464,7 +464,7 @@ const UnifiedExpensesSection = forwardRef<
             <button
               type="button"
               onClick={handleAddExpense}
-              className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-black"
+              className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-black"
             >
               <Plus size={14} />
               <span>Add Expense</span>
@@ -515,7 +515,7 @@ const UnifiedExpensesSection = forwardRef<
 
       {/* Expenses List */}
       {loading ? (
-        <div className="rounded-2xl border border-[#e8e1d8] bg-white p-12 text-center text-sm text-[#756d64]">
+        <div className="rounded-2xl border border-[#dbeafe] bg-white p-12 text-center text-sm text-[#475569]">
           Loading department operational expenses...
         </div>
       ) : (

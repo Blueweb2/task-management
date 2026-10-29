@@ -52,7 +52,7 @@ export function TableContainer({
         overflow-x-auto
         rounded-2xl
         border
-        border-[#E5E1D8]
+        border-[#dbeafe]
         bg-white
         ${className}
       `}
@@ -92,7 +92,7 @@ export function TableHeader({
   return (
     <thead
       className={`
-        bg-[#FCFBF8]
+        bg-[#ffffff]
         ${className}
       `}
       {...props}
@@ -118,7 +118,7 @@ export function TableHead({
         font-semibold
         uppercase
         tracking-[0.04em]
-        text-[#77746D]
+        text-[#64748b]
         first:pl-5
         last:pr-5
         sm:px-5
@@ -140,7 +140,7 @@ export function TableBody({
     <tbody
       className={`
         divide-y
-        divide-[#EEEAE2]
+        divide-[#eff6ff]
         ${className}
       `}
       {...props}
@@ -163,7 +163,7 @@ export function TableRow({
         bg-white
         transition-colors
         duration-150
-        hover:bg-[#FCFBF8]
+        hover:bg-[#ffffff]
         ${clickable ? "cursor-pointer" : ""}
         ${className}
       `}
@@ -185,7 +185,7 @@ export function TableCell({
         px-4
         py-4
         text-sm
-        text-[#3F4044]
+        text-[#334155]
         first:pl-5
         last:pr-5
         sm:px-5

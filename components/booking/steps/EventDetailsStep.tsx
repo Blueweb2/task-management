@@ -175,12 +175,12 @@ export default function EventDetailsStep({
     updateField("eventTime", build24HourFrom12(hr, min, newAmpm));
   };
   return (
-    <div className="rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-8 shadow-xs">
+    <div className="rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-8 shadow-xs">
       {/* Step Header */}
-      <div className="mb-6 flex items-start gap-3 border-b border-[#eee7dc] pb-5">
+      <div className="mb-6 flex items-start gap-3 border-b border-[#eff6ff] pb-5">
        
         <div>
-          <h2 className="text-lg sm:text-xl font-black text-[#29241f]">
+          <h2 className="text-lg sm:text-xl font-black text-[#0f172a]">
             Event Information
           </h2>
      
@@ -228,21 +228,21 @@ export default function EventDetailsStep({
             <div className="flex items-center justify-between">
               <label
                 htmlFor="eventTimeHour"
-                className="text-xs sm:text-sm font-semibold text-[#29241f] flex items-center gap-1"
+                className="text-xs sm:text-sm font-semibold text-[#0f172a] flex items-center gap-1"
               >
                 Event Time
-                <span className="text-[#b8894b]">*</span>
+                <span className="text-[#3b82f6]">*</span>
               </label>
               {formData.eventTime && (
-                <span className="text-[11px] font-bold text-[#9A6C37] bg-[#B8894B]/15 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <span className="text-[11px] font-bold text-[#1d4ed8] bg-[#3b82f6]/15 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                   <Clock3 size={11} />
                   {formatTime24to12(formData.eventTime)}
                 </span>
               )}
             </div>
 
-            <div className="flex items-center gap-1.5 rounded-2xl border border-[#e8e1d8] bg-white p-1.5 shadow-2xs focus-within:border-[#b8894b] focus-within:ring-2 focus-within:ring-[#b8894b]/20 transition-all">
-              <div className="flex items-center justify-center pl-2 pr-1 text-[#756d64]">
+            <div className="flex items-center gap-1.5 rounded-2xl border border-[#dbeafe] bg-white p-1.5 shadow-2xs focus-within:border-[#3b82f6] focus-within:ring-2 focus-within:ring-[#3b82f6]/20 transition-all">
+              <div className="flex items-center justify-center pl-2 pr-1 text-[#475569]">
                 <Clock3 size={18} />
               </div>
 
@@ -252,7 +252,7 @@ export default function EventDetailsStep({
                   id="eventTimeHour"
                   value={timeHour}
                   onChange={(e) => handleHourChange(e.target.value)}
-                  className="w-full rounded-xl bg-[#fcfaf7] px-2.5 py-2 text-xs sm:text-sm font-bold text-[#29241f] border border-[#eee7dc] focus:bg-white focus:outline-none transition cursor-pointer"
+                  className="w-full rounded-xl bg-[#ffffff] px-2.5 py-2 text-xs sm:text-sm font-bold text-[#0f172a] border border-[#eff6ff] focus:bg-white focus:outline-none transition cursor-pointer"
                 >
                   <option value="">Hour</option>
                   {Array.from({ length: 12 }, (_, i) => String(i + 1)).map((h) => (
@@ -263,7 +263,7 @@ export default function EventDetailsStep({
                 </select>
               </div>
 
-              <span className="text-sm font-bold text-[#756d64]">:</span>
+              <span className="text-sm font-bold text-[#475569]">:</span>
 
               {/* Minute Dropdown */}
               <div className="flex-1 min-w-[70px]">
@@ -272,7 +272,7 @@ export default function EventDetailsStep({
                   value={timeMinute}
                   onChange={(e) => handleMinuteChange(e.target.value)}
                   disabled={!timeHour}
-                  className="w-full rounded-xl bg-[#fcfaf7] px-2.5 py-2 text-xs sm:text-sm font-bold text-[#29241f] border border-[#eee7dc] focus:bg-white focus:outline-none transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full rounded-xl bg-[#ffffff] px-2.5 py-2 text-xs sm:text-sm font-bold text-[#0f172a] border border-[#eff6ff] focus:bg-white focus:outline-none transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {minuteOptions.map((m) => (
                     <option key={m} value={m}>
@@ -283,14 +283,14 @@ export default function EventDetailsStep({
               </div>
 
               {/* AM / PM Segmented Toggle */}
-              <div className="inline-flex rounded-xl bg-[#f0ece4] p-1 border border-[#e8e1d8] shrink-0">
+              <div className="inline-flex rounded-xl bg-[#eff6ff] p-1 border border-[#dbeafe] shrink-0">
                 <button
                   type="button"
                   onClick={() => handleAmpmChange("AM")}
                   className={`rounded-lg px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
                     timeAmpm === "AM" && formData.eventTime
-                      ? "bg-white text-[#29241f] shadow-xs"
-                      : "text-[#756d64] hover:text-[#29241f]"
+                      ? "bg-white text-[#0f172a] shadow-xs"
+                      : "text-[#475569] hover:text-[#0f172a]"
                   }`}
                 >
                   AM
@@ -300,8 +300,8 @@ export default function EventDetailsStep({
                   onClick={() => handleAmpmChange("PM")}
                   className={`rounded-lg px-2.5 py-1 text-xs font-bold transition cursor-pointer ${
                     timeAmpm === "PM" && formData.eventTime
-                      ? "bg-[#b8894b] text-white shadow-xs"
-                      : "text-[#756d64] hover:text-[#29241f]"
+                      ? "bg-[#3b82f6] text-white shadow-xs"
+                      : "text-[#475569] hover:text-[#0f172a]"
                   }`}
                 >
                   PM
@@ -321,14 +321,14 @@ export default function EventDetailsStep({
         </div>
 
         {/* Guests */}
-        <div className="rounded-2xl border border-[#e8e1d8] bg-[#fcfaf7] p-4 sm:p-5 transition-all">
+        <div className="rounded-2xl border border-[#dbeafe] bg-[#ffffff] p-4 sm:p-5 transition-all">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
             <label
               htmlFor="guests"
-              className="text-xs sm:text-sm font-semibold text-[#29241f] flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-[#0f172a] flex items-center gap-1"
             >
               Estimated Number of Guests
-              <span className="text-[#b8894b]">*</span>
+              <span className="text-[#3b82f6]">*</span>
             </label>
 
             {(() => {
@@ -372,7 +372,7 @@ export default function EventDetailsStep({
           </div>
 
           <div className="relative flex items-center">
-            <div className="pointer-events-none absolute left-3.5 flex items-center justify-center text-[#8d847b]">
+            <div className="pointer-events-none absolute left-3.5 flex items-center justify-center text-[#64748b]">
               <Users size={18} />
             </div>
 
@@ -389,7 +389,7 @@ export default function EventDetailsStep({
               }}
               onFocus={(event) => event.target.select()}
               required
-              className="h-12 w-full rounded-xl border border-[#d8cfc4] bg-white pl-10 pr-24 text-sm font-medium text-[#29241f] placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/20 shadow-2xs"
+              className="h-12 w-full rounded-xl border border-[#dbeafe] bg-white pl-10 pr-24 text-sm font-medium text-[#0f172a] placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 shadow-2xs"
             />
 
             {/* Stepper Buttons */}
@@ -403,7 +403,7 @@ export default function EventDetailsStep({
                 }}
                 disabled={!formData.guests || Number(formData.guests) <= 1}
                 aria-label="Decrease guest count by 25"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#e0d6c8] bg-[#f9f6f0] text-[#5c544a] hover:bg-[#eee6d8] hover:text-[#29241f] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#dbeafe] bg-[#f8fbff] text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a] active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 <Minus size={13} />
               </button>
@@ -415,7 +415,7 @@ export default function EventDetailsStep({
                   updateField("guests", String(next));
                 }}
                 aria-label="Increase guest count by 25"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#e0d6c8] bg-[#f9f6f0] text-[#5c544a] hover:bg-[#eee6d8] hover:text-[#29241f] active:scale-95 transition-all"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#dbeafe] bg-[#f8fbff] text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a] active:scale-95 transition-all"
               >
                 <Plus size={13} />
               </button>
@@ -424,7 +424,7 @@ export default function EventDetailsStep({
 
           {/* Quick Preset Chips */}
           {/* <div className="mt-3 flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-[#8d847b] font-medium mr-1">Quick Select:</span>
+            <span className="text-xs text-[#64748b] font-medium mr-1">Quick Select:</span>
             {[50, 100, 200, 350, 500, 1000].map((preset) => {
               const isSelected = formData.guests === String(preset);
               return (
@@ -434,8 +434,8 @@ export default function EventDetailsStep({
                   onClick={() => updateField("guests", String(preset))}
                   className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition-all duration-150 ${
                     isSelected
-                      ? "bg-[#29241f] text-white shadow-xs scale-105"
-                      : "bg-white border border-[#e0d6c8] text-[#5c544a] hover:border-[#9A7B4F] hover:text-[#29241f]"
+                      ? "bg-[#0f172a] text-white shadow-xs scale-105"
+                      : "bg-white border border-[#dbeafe] text-[#475569] hover:border-[#2563eb] hover:text-[#0f172a]"
                   }`}
                 >
                   {preset}
@@ -444,7 +444,7 @@ export default function EventDetailsStep({
             })}
           </div> */}
 
-          <p className="mt-2.5 text-xs text-[#756d64]">
+          <p className="mt-2.5 text-xs text-[#475569]">
             Guest count is used to calculate per-guest services, catering quantities, and staff allocations.
           </p>
         </div>
@@ -501,7 +501,7 @@ export default function EventDetailsStep({
                   <ChevronDown
                     size={16}
                     className={`transition-transform duration-200 ${
-                      isVenueDropdownOpen ? "rotate-180 text-[#9A7B4F]" : ""
+                      isVenueDropdownOpen ? "rotate-180 text-[#2563eb]" : ""
                     }`}
                   />
                 </button>
@@ -516,23 +516,23 @@ export default function EventDetailsStep({
           {isVenueDropdownOpen && (
             <div
               role="listbox"
-              className="absolute z-40 left-0 right-0 top-full mt-1 max-h-72 overflow-y-auto rounded-xl border border-[#e8e1d8] bg-white shadow-xl p-1.5 focus:outline-none transition-all"
+              className="absolute z-40 left-0 right-0 top-full mt-1 max-h-72 overflow-y-auto rounded-xl border border-[#dbeafe] bg-white shadow-xl p-1.5 focus:outline-none transition-all"
             >
               {/* Custom Location Option (when text typed does not match exact venue) */}
               {formData.location.trim() && !hasExactMatch && (
-                <div className="mb-1 p-1 border-b border-[#f0eae1]">
+                <div className="mb-1 p-1 border-b border-[#eff6ff]">
                   <button
                     type="button"
                     onClick={() => setIsVenueDropdownOpen(false)}
-                    className="w-full flex items-center justify-between gap-2 px-3 py-2 text-xs rounded-lg text-left bg-[#fcfaf7] hover:bg-[#f5efe6] border border-dashed border-[#d8cfc4] text-[#6B5B95] font-medium transition-colors"
+                    className="w-full flex items-center justify-between gap-2 px-3 py-2 text-xs rounded-lg text-left bg-[#ffffff] hover:bg-[#eff6ff] border border-dashed border-[#dbeafe] text-[#2563eb] font-medium transition-colors"
                   >
                     <span className="flex items-center gap-2 min-w-0">
-                      <MapPin size={14} className="text-[#9A7B4F] shrink-0" />
+                      <MapPin size={14} className="text-[#2563eb] shrink-0" />
                       <span className="truncate">
-                        Use custom location: <strong className="text-[#29241f]">&quot;{formData.location.trim()}&quot;</strong>
+                        Use custom location: <strong className="text-[#0f172a]">&quot;{formData.location.trim()}&quot;</strong>
                       </span>
                     </span>
-                    <span className="shrink-0 text-[10px] text-gray-500 bg-white border border-[#e8e1d8] px-1.5 py-0.5 rounded font-semibold">
+                    <span className="shrink-0 text-[10px] text-gray-500 bg-white border border-[#dbeafe] px-1.5 py-0.5 rounded font-semibold">
                       Custom
                     </span>
                   </button>
@@ -577,25 +577,25 @@ export default function EventDetailsStep({
                         }}
                         className={`w-full flex items-center justify-between gap-3 px-3 py-2 text-left rounded-lg transition-colors ${
                           isSelected
-                            ? "bg-[#6B5B95]/10 text-[#6B5B95] font-medium"
-                            : "text-[#29241f] hover:bg-[#fcfaf7]"
+                            ? "bg-[#2563eb]/10 text-[#2563eb] font-medium"
+                            : "text-[#0f172a] hover:bg-[#ffffff]"
                         }`}
                       >
                         <div className="flex items-center gap-2.5 min-w-0">
                           <div
                             className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${
                               venue.isBackend
-                                ? "bg-[#6B5B95]/10 text-[#6B5B95]"
-                                : "bg-[#9A7B4F]/10 text-[#9A7B4F]"
+                                ? "bg-[#2563eb]/10 text-[#2563eb]"
+                                : "bg-[#2563eb]/10 text-[#2563eb]"
                             }`}
                           >
                             <Building2 size={14} />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-xs font-semibold text-[#29241f] truncate flex items-center gap-1.5">
+                            <div className="text-xs font-semibold text-[#0f172a] truncate flex items-center gap-1.5">
                               <span>{venue.name}</span>
                               {venue.isBackend && (
-                                <span className="rounded bg-[#6B5B95]/15 px-1.5 py-0.2 text-[9px] font-semibold text-[#6B5B95]">
+                                <span className="rounded bg-[#2563eb]/15 px-1.5 py-0.2 text-[9px] font-semibold text-[#2563eb]">
                                   Registered
                                 </span>
                               )}
@@ -611,12 +611,12 @@ export default function EventDetailsStep({
 
                         <div className="flex items-center gap-2 shrink-0">
                           {venue.price && venue.price > 0 && (
-                            <span className="text-[11px] font-semibold text-[#9A7B4F]">
+                            <span className="text-[11px] font-semibold text-[#2563eb]">
                               ₹{venue.price.toLocaleString("en-IN")}/day
                             </span>
                           )}
                           {isSelected && (
-                            <Check size={14} className="text-[#6B5B95] shrink-0" />
+                            <Check size={14} className="text-[#2563eb] shrink-0" />
                           )}
                         </div>
                       </button>
@@ -632,7 +632,7 @@ export default function EventDetailsStep({
         <div>
           <label
             htmlFor="description"
-            className="mb-1.5 block text-xs sm:text-sm font-semibold text-[#29241f]"
+            className="mb-1.5 block text-xs sm:text-sm font-semibold text-[#0f172a]"
           >
             Event Notes &amp; Setup Requirements
             <span className="ml-1 text-xs font-normal text-gray-500">(Optional)</span>
@@ -646,7 +646,7 @@ export default function EventDetailsStep({
             onChange={(event) =>
               updateField("description", event.target.value)
             }
-            className="w-full resize-none rounded-2xl border border-[#d8cfc4] bg-white p-3.5 text-sm text-[#29241f] placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/20 shadow-2xs"
+            className="w-full resize-none rounded-2xl border border-[#dbeafe] bg-white p-3.5 text-sm text-[#0f172a] placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 shadow-2xs"
           />
         </div>
       </div>

@@ -109,7 +109,7 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
 
   if (loading) {
     return (
-      <div className="flex h-64 items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white">
+      <div className="flex h-64 items-center justify-center rounded-3xl border border-[#dbeafe] bg-white">
         <div className="flex items-center gap-3 text-sm font-semibold text-stone-600">
           <Loader2 size={20} className="animate-spin text-rose-600" />
           <span>Loading Decoration Dashboard...</span>
@@ -123,7 +123,7 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
   return (
     <div className="space-y-6">
       {/* 1. Welcoming Header */}
-      <section className="rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-6 shadow-xs">
+      <section className="rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-6 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 shadow-2xs shrink-0">
@@ -137,7 +137,7 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
                 <span className="text-xs text-gray-400">·</span>
                 <span className="text-xs text-gray-500 font-medium">Stage & Florals</span>
               </div>
-              <h1 className="text-xl sm:text-2xl font-black text-[#29241f] mt-0.5">
+              <h1 className="text-xl sm:text-2xl font-black text-[#0f172a] mt-0.5">
                 Decoration Overview
               </h1>
               <p className="text-xs text-gray-500 mt-0.5">
@@ -158,17 +158,17 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
         </div>
 
         {/* 3 Snapshot Badges */}
-        <div className="mt-5 grid grid-cols-3 gap-2.5 sm:gap-4 pt-4 border-t border-[#f0ece6]">
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+        <div className="mt-5 grid grid-cols-3 gap-2.5 sm:gap-4 pt-4 border-t border-[#eff6ff]">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Events to Decorate
             </p>
-            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#29241f]">
+            <p className="mt-0.5 text-xl sm:text-2xl font-black text-[#0f172a]">
               {events.length}
             </p>
           </div>
 
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Props In Stock
             </p>
@@ -177,7 +177,7 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
             </p>
           </div>
 
-          <div className="rounded-2xl bg-[#faf8f5] p-3 text-center border border-stone-100">
+          <div className="rounded-2xl bg-[#f8fbff] p-3 text-center border border-stone-100">
             <p className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
               Setup Tasks
             </p>
@@ -192,14 +192,14 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
       <section className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <Link
           href="/manager/stock"
-          className="group flex items-center justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-rose-400"
+          className="group flex items-center justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-rose-400"
         >
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-50 text-rose-700 group-hover:bg-rose-600 group-hover:text-white transition">
               <Package size={18} />
             </div>
             <div>
-              <p className="text-xs font-black text-[#29241f]">Decor Props & Stock</p>
+              <p className="text-xs font-black text-[#0f172a]">Decor Props & Stock</p>
               <p className="text-[11px] text-gray-500">Backdrops, lights, linens</p>
             </div>
           </div>
@@ -208,30 +208,30 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
 
         <Link
           href="/manager/staff"
-          className="group flex items-center justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-rose-400"
+          className="group flex items-center justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-rose-400"
         >
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stone-100 text-stone-800 group-hover:bg-[#29241f] group-hover:text-white transition">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-stone-100 text-stone-800 group-hover:bg-[#0f172a] group-hover:text-white transition">
               <Users size={18} />
             </div>
             <div>
-              <p className="text-xs font-black text-[#29241f]">Decoration Crew</p>
+              <p className="text-xs font-black text-[#0f172a]">Decoration Crew</p>
               <p className="text-[11px] text-gray-500">Stage stylists & helpers</p>
             </div>
           </div>
-          <ArrowRight size={14} className="text-gray-300 group-hover:text-[#29241f] transition" />
+          <ArrowRight size={14} className="text-gray-300 group-hover:text-[#0f172a] transition" />
         </Link>
 
         <Link
           href="/manager/events"
-          className="group flex items-center justify-between rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-xs transition hover:border-rose-400"
+          className="group flex items-center justify-between rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-xs transition hover:border-rose-400"
         >
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-800 group-hover:bg-emerald-700 group-hover:text-white transition">
               <Calendar size={18} />
             </div>
             <div>
-              <p className="text-xs font-black text-[#29241f]">Upcoming Events</p>
+              <p className="text-xs font-black text-[#0f172a]">Upcoming Events</p>
               <p className="text-[11px] text-gray-500">Event dates & venues</p>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Events to Decorate */}
         <div className="lg:col-span-2 space-y-4">
-          <h2 className="text-base font-black text-[#29241f]">
+          <h2 className="text-base font-black text-[#0f172a]">
             Upcoming Events to Decorate
           </h2>
 
@@ -266,13 +266,13 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
                     className={`rounded-2xl border p-4 sm:p-5 transition cursor-pointer shadow-xs ${
                       isSelected
                         ? "border-rose-400 bg-rose-50/20"
-                        : "border-[#e8e1d8] bg-white hover:border-gray-300"
+                        : "border-[#dbeafe] bg-white hover:border-gray-300"
                     }`}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                       <div>
                         <div className="flex items-center gap-2">
-                          <h3 className="text-sm sm:text-base font-black text-[#29241f]">
+                          <h3 className="text-sm sm:text-base font-black text-[#0f172a]">
                             {ev.eventName}
                           </h3>
                           <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800 border border-emerald-200">
@@ -325,11 +325,11 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
 
         {/* Right: Setup Checklist */}
         <div className="space-y-4">
-          <h2 className="text-base font-black text-[#29241f]">
+          <h2 className="text-base font-black text-[#0f172a]">
             Setup & Teardown Checklist
           </h2>
 
-          <div className="rounded-2xl border border-[#e8e1d8] bg-white p-4 sm:p-5 shadow-xs space-y-3.5">
+          <div className="rounded-2xl border border-[#dbeafe] bg-white p-4 sm:p-5 shadow-xs space-y-3.5">
             <form onSubmit={handleCreateTask} className="flex gap-1.5">
               <input
                 type="text"
@@ -356,9 +356,9 @@ export default function DecorationDashboard({ token }: DecorationDashboardProps)
                 tasks.map((task) => (
                   <div
                     key={task.id}
-                    className="flex items-center justify-between p-2.5 rounded-xl border border-stone-200 bg-[#faf8f5] text-xs"
+                    className="flex items-center justify-between p-2.5 rounded-xl border border-stone-200 bg-[#f8fbff] text-xs"
                   >
-                    <span className="font-bold text-[#29241f]">{task.title}</span>
+                    <span className="font-bold text-[#0f172a]">{task.title}</span>
                     <span className="rounded-md bg-amber-100 px-2 py-0.5 text-[10px] font-extrabold text-amber-800">
                       {task.status}
                     </span>

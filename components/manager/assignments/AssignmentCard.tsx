@@ -80,11 +80,11 @@ export default function AssignmentCard({
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <p className="text-xs font-medium uppercase tracking-wide text-[#B89563]">
+          <p className="text-xs font-medium uppercase tracking-wide text-[#3b82f6]">
             Assignment
           </p>
 
-          <h3 className="mt-1 truncate text-base font-semibold text-[#1F1F1F]">
+          <h3 className="mt-1 truncate text-base font-semibold text-[#0f172a]">
             {assignment.dutyTitle}
           </h3>
 
@@ -101,12 +101,12 @@ export default function AssignmentCard({
       </div>
 
       {/* Event */}
-      <div className="mt-4 rounded-xl bg-[#F8F7F3] p-3">
+      <div className="mt-4 rounded-xl bg-[#f8fbff] p-3">
         <p className="text-xs font-medium text-gray-400">
           EVENT
         </p>
 
-        <p className="mt-1 text-sm font-semibold text-[#1F1F1F]">
+        <p className="mt-1 text-sm font-semibold text-[#0f172a]">
           {eventName}
         </p>
 
@@ -124,7 +124,7 @@ export default function AssignmentCard({
       <div className="mt-4 space-y-3">
         {/* Staff */}
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#9A7B4F]">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#eff6ff] text-[#2563eb]">
             <UserRound size={17} />
           </div>
 
@@ -133,7 +133,7 @@ export default function AssignmentCard({
               Staff
             </p>
 
-            <p className="truncate text-sm font-medium text-[#1F1F1F]">
+            <p className="truncate text-sm font-medium text-[#0f172a]">
               {staffName}
             </p>
 
@@ -156,7 +156,7 @@ export default function AssignmentCard({
               Date
             </p>
 
-            <p className="text-sm font-medium text-[#1F1F1F]">
+            <p className="text-sm font-medium text-[#0f172a]">
               {formatDate(assignment.dutyDate)}
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function AssignmentCard({
               Time
             </p>
 
-            <p className="text-sm font-medium text-[#1F1F1F]">
+            <p className="text-sm font-medium text-[#0f172a]">
               {formatTime(assignment.startTime)}{" "}
               –{" "}
               {formatTime(assignment.endTime)}
@@ -197,7 +197,7 @@ export default function AssignmentCard({
 
       {/* Notes */}
       {assignment.notes && (
-        <div className="mt-3 rounded-xl bg-[#F8F7F3] p-3">
+        <div className="mt-3 rounded-xl bg-[#f8fbff] p-3">
           <p className="text-xs font-medium text-gray-400">
             NOTES
           </p>
@@ -215,7 +215,7 @@ export default function AssignmentCard({
             <button
               type="button"
               onClick={() => onEdit(assignment)}
-              className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-4 text-sm font-medium text-[#1F1F1F] transition active:scale-[0.98]"
+              className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-4 text-sm font-medium text-[#0f172a] transition active:scale-[0.98]"
             >
               <Pencil size={16} />
               Edit

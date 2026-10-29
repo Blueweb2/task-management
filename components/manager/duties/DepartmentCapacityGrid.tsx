@@ -87,15 +87,15 @@ export default function DepartmentCapacityGrid({
   return (
     <div className="space-y-6">
       {/* Date Navigator Bar */}
-      <section className="flex flex-col gap-4 rounded-3xl border border-[#e8e1d8] bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between sm:p-5">
+      <section className="flex flex-col gap-4 rounded-3xl border border-[#dbeafe] bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between sm:p-5">
         <div>
           <div className="flex items-center gap-2">
-            <Building2 size={16} className="text-[#9a6c37] shrink-0" />
-            <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#9a6c37]">
+            <Building2 size={16} className="text-[#1d4ed8] shrink-0" />
+            <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#1d4ed8]">
               Department Capacity Matrix
             </h2>
           </div>
-          <p className="mt-0.5 text-xs text-[#756d64]">
+          <p className="mt-0.5 text-xs text-[#475569]">
             Monitor staffing levels, leave records, and allocation capacity by department.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function DepartmentCapacityGrid({
               type="date"
               value={targetDate}
               onChange={(e) => setTargetDate(e.target.value)}
-              className="h-9 min-w-0 flex-1 sm:flex-initial rounded-xl border border-gray-200 bg-[#faf8f5] px-2 text-xs font-bold text-gray-900 outline-none focus:border-[#9a6c37]"
+              className="h-9 min-w-0 flex-1 sm:flex-initial rounded-xl border border-gray-200 bg-[#f8fbff] px-2 text-xs font-bold text-gray-900 outline-none focus:border-[#1d4ed8]"
             />
 
             <button
@@ -130,7 +130,7 @@ export default function DepartmentCapacityGrid({
           <button
             type="button"
             onClick={() => setTargetDate(new Date().toISOString().slice(0, 10))}
-            className="w-full sm:w-auto rounded-xl bg-[#29241f] px-3.5 py-2 text-xs font-bold text-white hover:bg-black text-center"
+            className="w-full sm:w-auto rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white hover:bg-black text-center"
           >
             Today
           </button>
@@ -140,11 +140,11 @@ export default function DepartmentCapacityGrid({
       {/* KPI Cards */}
       {data && (
         <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-4">
-          <div className="rounded-2xl border border-[#e8e1d8] bg-white p-3 sm:p-4 text-center shadow-2xs">
+          <div className="rounded-2xl border border-[#dbeafe] bg-white p-3 sm:p-4 text-center shadow-2xs">
             <p className="text-[10px] font-extrabold uppercase text-gray-400">
               Total Staff Pool
             </p>
-            <p className="mt-1 text-xl sm:text-2xl font-black text-[#29241f]">
+            <p className="mt-1 text-xl sm:text-2xl font-black text-[#0f172a]">
               {data.totalStaff}
             </p>
           </div>
@@ -190,7 +190,7 @@ export default function DepartmentCapacityGrid({
             placeholder="Search staff by name or ID..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="h-10 w-full rounded-2xl border border-gray-200 bg-white pl-9 pr-4 text-xs outline-none focus:border-[#9a6c37]"
+            className="h-10 w-full rounded-2xl border border-gray-200 bg-white pl-9 pr-4 text-xs outline-none focus:border-[#1d4ed8]"
           />
         </div>
 
@@ -201,7 +201,7 @@ export default function DepartmentCapacityGrid({
               onClick={() => setSelectedDept("ALL")}
               className={`shrink-0 rounded-xl px-3 py-1.5 text-xs font-bold transition whitespace-nowrap ${
                 selectedDept === "ALL"
-                  ? "bg-[#9a6c37] text-white shadow-xs"
+                  ? "bg-[#1d4ed8] text-white shadow-xs"
                   : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
               }`}
             >
@@ -215,7 +215,7 @@ export default function DepartmentCapacityGrid({
                 onClick={() => setSelectedDept(d.department)}
                 className={`flex shrink-0 items-center gap-1 rounded-xl px-3 py-1.5 text-xs font-bold transition whitespace-nowrap ${
                   selectedDept === d.department
-                    ? "bg-[#9a6c37] text-white shadow-xs"
+                    ? "bg-[#1d4ed8] text-white shadow-xs"
                     : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
                 }`}
               >
@@ -230,8 +230,8 @@ export default function DepartmentCapacityGrid({
       </div>
 
       {loading ? (
-        <div className="flex min-h-[250px] flex-col items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white p-8">
-          <Loader2 className="h-7 w-7 animate-spin text-[#9a6c37]" />
+        <div className="flex min-h-[250px] flex-col items-center justify-center rounded-3xl border border-[#dbeafe] bg-white p-8">
+          <Loader2 className="h-7 w-7 animate-spin text-[#1d4ed8]" />
           <p className="mt-3 text-xs font-semibold text-gray-500">
             Calculating department capacity...
           </p>
@@ -242,7 +242,7 @@ export default function DepartmentCapacityGrid({
           <p className="font-bold">{error}</p>
         </div>
       ) : filteredDepartments.length === 0 ? (
-        <div className="rounded-3xl border border-[#e8e1d8] bg-white p-8 text-center text-xs text-gray-500">
+        <div className="rounded-3xl border border-[#dbeafe] bg-white p-8 text-center text-xs text-gray-500">
           No departments matching your filter.
         </div>
       ) : (
@@ -267,17 +267,17 @@ export default function DepartmentCapacityGrid({
             return (
               <div
                 key={dept.department}
-                className="flex flex-col justify-between rounded-3xl border border-[#e8e1d8] bg-white p-5 shadow-sm transition hover:shadow-md"
+                className="flex flex-col justify-between rounded-3xl border border-[#dbeafe] bg-white p-5 shadow-sm transition hover:shadow-md"
               >
                 <div>
                   {/* Department Title & Capacity Progress */}
                   <div className="flex items-center justify-between border-b border-gray-100 pb-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#faf6f0] text-lg text-[#9a6c37] border border-[#ede5d8]">
-                        <DeptIcon size={18} className="text-[#9a6c37]" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#f8fbff] text-lg text-[#1d4ed8] border border-[#eff6ff]">
+                        <DeptIcon size={18} className="text-[#1d4ed8]" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-black text-[#29241f]">
+                        <h3 className="text-sm font-black text-[#0f172a]">
                           {dept.department}
                         </h3>
                         <p className="text-[11px] text-gray-500">
@@ -287,7 +287,7 @@ export default function DepartmentCapacityGrid({
                     </div>
 
                     <div className="text-right">
-                      <span className="text-xs font-black text-[#9a6c37]">
+                      <span className="text-xs font-black text-[#1d4ed8]">
                         {availRate}%
                       </span>
                       <p className="text-[9px] uppercase font-bold text-gray-400">
@@ -299,7 +299,7 @@ export default function DepartmentCapacityGrid({
                   {/* Progress Bar */}
                   <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-gray-100">
                     <div
-                      className="h-full rounded-full bg-[#b8894b] transition-all duration-500"
+                      className="h-full rounded-full bg-[#3b82f6] transition-all duration-500"
                       style={{ width: `${availRate}%` }}
                     />
                   </div>
@@ -314,11 +314,11 @@ export default function DepartmentCapacityGrid({
                       filteredStaff.map((staff) => (
                         <div
                           key={staff.id}
-                          className="flex items-center justify-between rounded-2xl border border-gray-100 bg-[#faf8f5] p-2.5 transition hover:border-[#9a6c37]"
+                          className="flex items-center justify-between rounded-2xl border border-gray-100 bg-[#f8fbff] p-2.5 transition hover:border-[#1d4ed8]"
                         >
                           <div className="min-w-0 pr-2">
                             <div className="flex items-center gap-1.5">
-                              <p className="truncate text-xs font-bold text-[#29241f]">
+                              <p className="truncate text-xs font-bold text-[#0f172a]">
                                 {staff.name}
                               </p>
                               <span className="text-[10px] text-gray-400">
@@ -351,7 +351,7 @@ export default function DepartmentCapacityGrid({
                               onClick={() =>
                                 onSelectStaffForDuty(staff, targetDate)
                               }
-                              className="flex shrink-0 items-center gap-1 rounded-xl bg-[#29241f] px-2.5 py-1 text-[10px] font-bold text-white hover:bg-black"
+                              className="flex shrink-0 items-center gap-1 rounded-xl bg-[#0f172a] px-2.5 py-1 text-[10px] font-bold text-white hover:bg-black"
                             >
                               <UserPlus size={12} />
                               Assign

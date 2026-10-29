@@ -111,9 +111,9 @@ export default function ImageUploadField({
             type="button"
             disabled={disabled || isUploading}
             onClick={() => setIsLibraryOpen(true)}
-            className="inline-flex items-center gap-1 text-xs font-bold text-[#9A7B4F] hover:text-[#7A5F35] transition disabled:opacity-50"
+            className="inline-flex items-center gap-1 text-xs font-bold text-[#2563eb] hover:text-[#7A5F35] transition disabled:opacity-50"
           >
-            <FolderHeart size={13} className="text-[#9A7B4F]" />
+            <FolderHeart size={13} className="text-[#2563eb]" />
             <span>Choose from Library</span>
           </button>
           <span className="text-gray-300 text-xs">|</span>
@@ -148,7 +148,7 @@ export default function ImageUploadField({
                 setUploadError("");
               }}
               placeholder="https://images.unsplash.com/photo-..."
-              className="h-11 w-full rounded-xl border border-[#E5E7EB] bg-[#F9FAFC] px-4 text-xs text-[#333] outline-none transition placeholder:text-[#9A9BA0] focus:border-[#9A7B4F] focus:bg-white focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:cursor-not-allowed disabled:opacity-60"
+              className="h-11 w-full rounded-xl border border-[#dbeafe] bg-[#f8fafc] px-4 text-xs text-[#333] outline-none transition placeholder:text-[#64748b] focus:border-[#2563eb] focus:bg-white focus:ring-2 focus:ring-[#2563eb]/10 disabled:cursor-not-allowed disabled:opacity-60"
             />
           </div>
           {displayUrl && (
@@ -179,7 +179,7 @@ export default function ImageUploadField({
         <div>
           {value ? (
             /* Uploaded Preview Card */
-            <div className="relative flex items-center gap-3.5 rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition hover:border-[#9A7B4F]/40">
+            <div className="relative flex items-center gap-3.5 rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition hover:border-[#2563eb]/40">
               <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
                 <img
                   src={displayUrl}
@@ -204,7 +204,7 @@ export default function ImageUploadField({
                     type="button"
                     disabled={disabled || isUploading}
                     onClick={() => setIsLibraryOpen(true)}
-                    className="inline-flex items-center gap-1 rounded-lg bg-[#FAF7F2] border border-[#E9DFD1] px-2.5 py-1 text-[11px] font-bold text-[#8C6B3E] hover:bg-[#F4ECE0] active:scale-95 transition disabled:opacity-50"
+                    className="inline-flex items-center gap-1 rounded-lg bg-[#eff6ff] border border-[#E9DFD1] px-2.5 py-1 text-[11px] font-bold text-[#8C6B3E] hover:bg-[#F4ECE0] active:scale-95 transition disabled:opacity-50"
                   >
                     <Sparkles size={11} />
                     <span>Choose from Library</span>
@@ -243,20 +243,20 @@ export default function ImageUploadField({
               onDrop={handleDrop}
               className={`group flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-5 text-center transition-all ${
                 isDragging
-                  ? "border-[#9A7B4F] bg-[#9A7B4F]/5"
-                  : "border-gray-200 bg-[#FBFBFC] hover:border-[#9A7B4F]/60 hover:bg-white"
+                  ? "border-[#2563eb] bg-[#2563eb]/5"
+                  : "border-gray-200 bg-[#FBFBFC] hover:border-[#2563eb]/60 hover:bg-white"
               } ${disabled ? "cursor-not-allowed opacity-60" : ""}`}
             >
               {isUploading ? (
                 <div className="flex flex-col items-center gap-2 py-2">
-                  <Loader2 size={24} className="animate-spin text-[#9A7B4F]" />
+                  <Loader2 size={24} className="animate-spin text-[#2563eb]" />
                   <p className="text-xs font-semibold text-gray-700">
                     Uploading image...
                   </p>
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-2.5">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F4EBDD] text-[#9A7B4F] shadow-xs transition group-hover:scale-105">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#eff6ff] text-[#2563eb] shadow-xs transition group-hover:scale-105">
                     <UploadCloud size={22} />
                   </span>
                   
@@ -274,9 +274,9 @@ export default function ImageUploadField({
                       type="button"
                       disabled={disabled || isUploading}
                       onClick={() => setIsLibraryOpen(true)}
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 py-1.5 text-xs font-bold text-white shadow-xs hover:bg-black active:scale-95 transition disabled:opacity-50 cursor-pointer"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-1.5 text-xs font-bold text-white shadow-xs hover:bg-black active:scale-95 transition disabled:opacity-50 cursor-pointer"
                     >
-                      <FolderHeart size={13} className="text-[#d8a86c]" />
+                      <FolderHeart size={13} className="text-[#60a5fa]" />
                       <span>Browse Media Library</span>
                     </button>
 

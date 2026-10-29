@@ -129,12 +129,12 @@ export default function EventTaskProgressCard({
   };
 
   return (
-    <div className="rounded-2xl border border-[#9a6c37]/20 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-[#1d4ed8]/20 bg-white p-6 shadow-sm">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
         <div>
           <div className="flex items-center gap-2">
-            <h3 className="text-lg font-bold text-[#29241f] flex items-center gap-2">
-              <CheckSquare className="w-5 h-5 text-[#9a6c37]" />
+            <h3 className="text-lg font-bold text-[#0f172a] flex items-center gap-2">
+              <CheckSquare className="w-5 h-5 text-[#1d4ed8]" />
               Event Task Execution Progress
             </h3>
             {isCompleted && (
@@ -152,7 +152,7 @@ export default function EventTaskProgressCard({
           <button
             onClick={onRefresh}
             disabled={loading}
-            className="p-1.5 text-slate-400 hover:text-[#9a6c37] transition-colors rounded-lg hover:bg-slate-100 self-start sm:self-auto"
+            className="p-1.5 text-slate-400 hover:text-[#1d4ed8] transition-colors rounded-lg hover:bg-slate-100 self-start sm:self-auto"
             title="Refresh tasks"
           >
             <Clock className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />

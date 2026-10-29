@@ -104,7 +104,7 @@ export default function PricingDisplay({
       </div>
 
       {showBadge && (
-        <span className="mt-0.5 inline-block text-[10px] font-semibold tracking-wider uppercase text-[#8d847b]">
+        <span className="mt-0.5 inline-block text-[10px] font-semibold tracking-wider uppercase text-[#64748b]">
           {badgeText}
         </span>
       )}

@@ -145,14 +145,14 @@ export default function StaffAttendancePage() {
   return (
     <main className="space-y-6 py-5 sm:space-y-8 sm:py-6">
       {/* Header */}
-      <header className="border-b border-[#e8e1d8] pb-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a6c37]">
+      <header className="border-b border-[#dbeafe] pb-6">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#1d4ed8]">
           Staff Portal
         </p>
-        <h1 className="mt-1 text-2xl font-bold text-[#29241f] sm:text-3xl">
+        <h1 className="mt-1 text-2xl font-bold text-[#0f172a] sm:text-3xl">
           Check In & Shift Attendance
         </h1>
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#756d64]">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#475569]">
           Record attendance, check in to assigned event duties, and view shift history.
         </p>
       </header>
@@ -175,8 +175,8 @@ export default function StaffAttendancePage() {
       )}
 
       {loading ? (
-        <div className="flex min-h-64 items-center justify-center rounded-2xl border border-[#e8e1d8] bg-white">
-          <Loader2 size={28} className="animate-spin text-[#9a6c37]" />
+        <div className="flex min-h-64 items-center justify-center rounded-2xl border border-[#dbeafe] bg-white">
+          <Loader2 size={28} className="animate-spin text-[#1d4ed8]" />
         </div>
       ) : (
         <>
@@ -251,22 +251,22 @@ export default function StaffAttendancePage() {
           )}
 
           {/* Assigned Duties List */}
-          <section className="rounded-2xl border border-[#e8e1d8] bg-white p-5 shadow-sm sm:p-6">
-            <div className="flex items-center justify-between border-b border-[#eee8e1] pb-4">
+          <section className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm sm:p-6">
+            <div className="flex items-center justify-between border-b border-[#eff6ff] pb-4">
               <div>
-                <h2 className="text-base font-bold text-[#29241f]">
+                <h2 className="text-base font-bold text-[#0f172a]">
                   Assigned Duty Shifts
                 </h2>
-                <p className="mt-0.5 text-xs text-[#8d847b]">
+                <p className="mt-0.5 text-xs text-[#64748b]">
                   Tap Check In when you arrive at your assigned event venue.
                 </p>
               </div>
-              <CalendarDays size={19} className="text-[#a7773f]" />
+              <CalendarDays size={19} className="text-[#1d4ed8]" />
             </div>
 
             <div className="mt-4 space-y-4">
               {assignments.length === 0 ? (
-                <p className="rounded-xl bg-[#fdfbf8] p-4 text-xs text-gray-500">
+                <p className="rounded-xl bg-[#ffffff] p-4 text-xs text-gray-500">
                   No duties assigned yet. Check back soon for upcoming events.
                 </p>
               ) : (
@@ -287,13 +287,13 @@ export default function StaffAttendancePage() {
                       className={`rounded-2xl border p-4.5 transition ${
                         isCheckedIn
                           ? "border-emerald-200 bg-emerald-50/40"
-                          : "border-[#eee8e1] bg-[#fdfcfb] hover:border-[#e3dbd2]"
+                          : "border-[#eff6ff] bg-[#ffffff] hover:border-[#dbeafe]"
                       }`}
                     >
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                         <div className="min-w-0">
                           <div className="flex flex-wrap items-center gap-2">
-                            <h3 className="text-sm font-bold text-[#29241f]">
+                            <h3 className="text-sm font-bold text-[#0f172a]">
                               {assignment.dutyTitle}
                             </h3>
                             <span
@@ -317,20 +317,20 @@ export default function StaffAttendancePage() {
                             {event?.eventName || "Assigned event"}
                           </p>
 
-                          <div className="mt-2.5 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-[#756d64]">
+                          <div className="mt-2.5 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-[#475569]">
                             <span className="flex items-center gap-1.5">
                               <CalendarDays
                                 size={14}
-                                className="text-[#a7773f]"
+                                className="text-[#1d4ed8]"
                               />
                               {dateLabel(assignment.dutyDate)}
                             </span>
                             <span className="flex items-center gap-1.5">
-                              <Clock3 size={14} className="text-[#a7773f]" />
+                              <Clock3 size={14} className="text-[#1d4ed8]" />
                               {formatTime24to12(assignment.startTime)} - {formatTime24to12(assignment.endTime)}
                             </span>
                             <span className="flex items-center gap-1.5">
-                              <MapPin size={14} className="text-[#a7773f]" />
+                              <MapPin size={14} className="text-[#1d4ed8]" />
                               {event?.location || "Location pending"}
                             </span>
                           </div>
@@ -349,7 +349,7 @@ export default function StaffAttendancePage() {
                                   [assignment._id]: e.target.value,
                                 }))
                               }
-                              className="h-8 w-full sm:w-48 rounded-lg border border-[#e3dbd2] bg-white px-2.5 text-[11px] outline-none focus:border-[#9a6c37]"
+                              className="h-8 w-full sm:w-48 rounded-lg border border-[#dbeafe] bg-white px-2.5 text-[11px] outline-none focus:border-[#1d4ed8]"
                             />
                           )}
 
@@ -366,7 +366,7 @@ export default function StaffAttendancePage() {
                             className={`min-h-10 w-full sm:w-auto rounded-xl px-5 text-xs font-bold text-white shadow-sm transition disabled:cursor-not-allowed disabled:opacity-40 ${
                               isCheckedIn
                                 ? "bg-[#557555] hover:bg-[#456345]"
-                                : "bg-[#9a6c37] hover:bg-[#7e582d]"
+                                : "bg-[#1d4ed8] hover:bg-[#7e582d]"
                             }`}
                           >
                             {actionId === assignment._id ? (
@@ -409,16 +409,16 @@ export default function StaffAttendancePage() {
           </section>
 
           {/* Attendance History */}
-          <section className="rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
-            <div className="border-b border-[#eee8e1] px-5 py-4">
-              <h2 className="text-base font-bold text-[#29241f]">
+          <section className="rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
+            <div className="border-b border-[#eff6ff] px-5 py-4">
+              <h2 className="text-base font-bold text-[#0f172a]">
                 Attendance History Logs
               </h2>
-              <p className="mt-0.5 text-xs text-[#8d847b]">
+              <p className="mt-0.5 text-xs text-[#64748b]">
                 Recent recorded duty attendance entries
               </p>
             </div>
-            <div className="divide-y divide-[#eee8e1]">
+            <div className="divide-y divide-[#eff6ff]">
               {attendance.length === 0 ? (
                 <p className="p-5 text-xs text-gray-500">
                   No attendance records logged yet.
@@ -427,15 +427,15 @@ export default function StaffAttendancePage() {
                 attendance.slice(0, 10).map((record) => (
                   <div
                     key={record._id}
-                    className="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between hover:bg-[#faf8f5] transition"
+                    className="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between hover:bg-[#f8fbff] transition"
                   >
                     <div>
-                      <p className="text-xs font-bold text-[#29241f]">
+                      <p className="text-xs font-bold text-[#0f172a]">
                         {typeof record.duty === "string"
                           ? "Duty attendance"
                           : record.duty.dutyTitle}
                       </p>
-                      <p className="mt-0.5 text-[11px] text-[#756d64]">
+                      <p className="mt-0.5 text-[11px] text-[#475569]">
                         {dateLabel(record.date)} · In {timeLabel(record.checkIn)} · Out {timeLabel(record.checkOut)}
                       </p>
                     </div>
@@ -465,14 +465,14 @@ function Summary({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5">
+    <div className="rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5">
       <div className="flex items-center justify-between">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-[#8d847b]">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-[#64748b]">
           {label}
         </p>
         {icon}
       </div>
-      <p className="mt-2 text-2xl font-extrabold tracking-tight text-[#29241f]">
+      <p className="mt-2 text-2xl font-extrabold tracking-tight text-[#0f172a]">
         {value}
       </p>
       <p className="mt-0.5 text-[10px] text-gray-400">{subtext}</p>

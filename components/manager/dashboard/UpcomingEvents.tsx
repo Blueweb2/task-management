@@ -112,7 +112,7 @@ export default function UpcomingEvents() {
         <div>
           <h2
             id="upcoming-events-heading"
-            className="text-base font-semibold text-[#1F1F1F]"
+            className="text-base font-semibold text-[#0f172a]"
           >
             Upcoming Events
           </h2>
@@ -124,7 +124,7 @@ export default function UpcomingEvents() {
 
         <Link
           href="/manager/events"
-          className="text-xs font-medium text-[#9A7B4F] transition hover:text-[#7D623E]"
+          className="text-xs font-medium text-[#2563eb] transition hover:text-[#1d4ed8]"
         >
           See All
         </Link>
@@ -147,7 +147,7 @@ export default function UpcomingEvents() {
           </p>
           <Link
             href="/manager/booking"
-            className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-[#9A7B4F] px-3.5 py-1.5 text-xs font-semibold text-white transition hover:bg-[#7D623E]"
+            className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-[#2563eb] px-3.5 py-1.5 text-xs font-semibold text-white transition hover:bg-[#1d4ed8]"
           >
             <Plus size={14} />
             Create Booking
@@ -175,18 +175,18 @@ export default function UpcomingEvents() {
               >
                 <div className="flex items-start gap-3">
                   {/* Event Image Placeholder */}
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#F4EBDD]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#eff6ff]">
                     <CalendarDays
                       size={20}
                       strokeWidth={1.8}
-                      className="text-[#9A7B4F]"
+                      className="text-[#2563eb]"
                     />
                   </div>
 
                   {/* Event Information */}
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="truncate text-sm font-semibold text-[#1F1F1F]">
+                      <h3 className="truncate text-sm font-semibold text-[#0f172a]">
                         {event.eventName}
                       </h3>
 

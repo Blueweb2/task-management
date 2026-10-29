@@ -181,7 +181,7 @@ export default function FoodModal({
         {/* Sticky Header */}
         <div className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-100 bg-white px-5 sm:px-6 py-4 shrink-0">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#6B5B95]/10 text-[#6B5B95]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2563eb]/10 text-[#2563eb]">
               <Utensils size={20} />
             </div>
             <div className="min-w-0">
@@ -226,7 +226,7 @@ export default function FoodModal({
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g., Paneer Tikka Angara"
-              className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 px-3.5 text-sm text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:outline-none focus:ring-2 focus:ring-[#6B5B95]/20"
+              className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 px-3.5 text-sm text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-2 focus:ring-[#2563eb]/20"
               required
             />
           </div>
@@ -240,7 +240,7 @@ export default function FoodModal({
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value as FoodCategory)}
-                className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-[#6B5B95] focus:outline-none focus:ring-2 focus:ring-[#6B5B95]/20"
+                className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-[#2563eb] focus:outline-none focus:ring-2 focus:ring-[#2563eb]/20"
               >
                 {CATEGORIES.map((cat) => (
                   <option key={cat} value={cat}>
@@ -257,7 +257,7 @@ export default function FoodModal({
               <select
                 value={dietary}
                 onChange={(e) => setDietary(e.target.value as DietaryType)}
-                className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-[#6B5B95] focus:outline-none focus:ring-2 focus:ring-[#6B5B95]/20"
+                className="mt-1.5 h-11 w-full rounded-xl border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-[#2563eb] focus:outline-none focus:ring-2 focus:ring-[#2563eb]/20"
               >
                 <option value="veg">🟢 Pure Vegetarian</option>
                 <option value="non-veg">🔴 Non-Vegetarian</option>
@@ -283,7 +283,7 @@ export default function FoodModal({
                 value={defaultRate}
                 onChange={(e) => setDefaultRate(e.target.value)}
                 placeholder="150"
-                className="h-11 w-full rounded-xl border border-gray-300 pl-8 pr-3.5 text-sm font-semibold text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:outline-none focus:ring-2 focus:ring-[#6B5B95]/20"
+                className="h-11 w-full rounded-xl border border-gray-300 pl-8 pr-3.5 text-sm font-semibold text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-2 focus:ring-[#2563eb]/20"
                 required
               />
             </div>
@@ -302,7 +302,7 @@ export default function FoodModal({
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="e.g., Tandoor roasted cottage cheese in spicy marinade..."
-              className="mt-1.5 w-full rounded-xl border border-gray-300 p-3 text-sm text-gray-900 placeholder-gray-400 focus:border-[#6B5B95] focus:outline-none focus:ring-2 focus:ring-[#6B5B95]/20"
+              className="mt-1.5 w-full rounded-xl border border-gray-300 p-3 text-sm text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:outline-none focus:ring-2 focus:ring-[#2563eb]/20"
             />
           </div>
 
@@ -311,7 +311,7 @@ export default function FoodModal({
             <label className="block text-xs font-bold uppercase tracking-wider text-gray-700">
               Food Image
             </label>
-            <label className="mt-1.5 flex cursor-pointer items-center gap-3 rounded-2xl border border-dashed border-gray-300 p-3 transition hover:border-[#6B5B95] hover:bg-gray-50/50">
+            <label className="mt-1.5 flex cursor-pointer items-center gap-3 rounded-2xl border border-dashed border-gray-300 p-3 transition hover:border-[#2563eb] hover:bg-gray-50/50">
               {imageFile || imageUrl ? (
                 <img
                   src={imageFile ? URL.createObjectURL(imageFile) : `${process.env.NEXT_PUBLIC_API_URL?.replace(/\/api$/, "") || "http://localhost:5000"}${imageUrl}`}
@@ -347,7 +347,7 @@ export default function FoodModal({
                 type="checkbox"
                 checked={isPopular}
                 onChange={(e) => setIsPopular(e.target.checked)}
-                className="h-4 w-4 rounded border-gray-300 text-[#6B5B95] focus:ring-[#6B5B95]"
+                className="h-4 w-4 rounded border-gray-300 text-[#2563eb] focus:ring-[#2563eb]"
               />
               <span>⭐ Chef Special / Popular</span>
             </label>
@@ -357,7 +357,7 @@ export default function FoodModal({
                 type="checkbox"
                 checked={active}
                 onChange={(e) => setActive(e.target.checked)}
-                className="h-4 w-4 rounded border-gray-300 text-[#6B5B95] focus:ring-[#6B5B95]"
+                className="h-4 w-4 rounded border-gray-300 text-[#2563eb] focus:ring-[#2563eb]"
               />
               <span>✓ Active & Available</span>
             </label>

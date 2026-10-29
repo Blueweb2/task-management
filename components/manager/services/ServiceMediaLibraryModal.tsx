@@ -148,23 +148,23 @@ export default function ServiceMediaLibraryModal({
       aria-modal="true"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs animate-in fade-in"
     >
-      <div className="relative flex max-h-[92vh] w-full max-w-4xl flex-col rounded-3xl border border-[#e8e1d8] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
+      <div className="relative flex max-h-[92vh] w-full max-w-4xl flex-col rounded-3xl border border-[#dbeafe] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#eee7dc] bg-[#faf8f5] px-6 py-4">
+        <div className="flex items-center justify-between border-b border-[#eff6ff] bg-[#f8fbff] px-6 py-4">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#29241f] text-white">
-              <FolderHeart size={18} className="text-[#d8a86c]" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#0f172a] text-white">
+              <FolderHeart size={18} className="text-[#60a5fa]" />
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-black text-[#29241f]">
+                <h2 className="text-lg font-black text-[#0f172a]">
                   Service Media Library
                 </h2>
-                <span className="rounded-full bg-[#9A7B4F]/15 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-[#9A7B4F]">
+                <span className="rounded-full bg-[#2563eb]/15 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb]">
                   {allItems.length} Photos
                 </span>
               </div>
-              <p className="text-xs text-[#8d847b]">
+              <p className="text-xs text-[#64748b]">
                 Pick high-resolution preset photos or your previously uploaded images for this service.
               </p>
             </div>
@@ -177,7 +177,7 @@ export default function ServiceMediaLibraryModal({
                   type="button"
                   disabled={isUploading}
                   onClick={() => fileInputRef.current?.click()}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 py-2 text-xs font-bold text-white transition hover:bg-black disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white transition hover:bg-black disabled:opacity-50"
                 >
                   {isUploading ? (
                     <Loader2 size={14} className="animate-spin" />
@@ -214,7 +214,7 @@ export default function ServiceMediaLibraryModal({
         )}
 
         {/* Search Bar & Source Tabs */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-[#eee7dc] bg-white px-6 py-3.5">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-[#eff6ff] bg-white px-6 py-3.5">
           {/* Search Input */}
           <div className="relative flex-1">
             <Search
@@ -226,7 +226,7 @@ export default function ServiceMediaLibraryModal({
               placeholder="Search library by service title, flowers, buffet, lighting, camera..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-10 w-full rounded-xl border border-[#d8cfc4] bg-[#faf8f5]/60 pl-9.5 pr-4 text-xs text-[#29241f] outline-none transition placeholder:text-gray-400 focus:border-[#a7773f] focus:bg-white focus:ring-2 focus:ring-[#a7773f]/20"
+              className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#f8fbff]/60 pl-9.5 pr-4 text-xs text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#1d4ed8] focus:bg-white focus:ring-2 focus:ring-[#1d4ed8]/20"
             />
             {searchQuery && (
               <button
@@ -246,7 +246,7 @@ export default function ServiceMediaLibraryModal({
               onClick={() => setActiveTab("all")}
               className={`inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
                 activeTab === "all"
-                  ? "bg-white text-[#29241f] shadow-xs"
+                  ? "bg-white text-[#0f172a] shadow-xs"
                   : "text-gray-500 hover:text-gray-800"
               }`}
             >
@@ -258,11 +258,11 @@ export default function ServiceMediaLibraryModal({
               onClick={() => setActiveTab("preset")}
               className={`inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
                 activeTab === "preset"
-                  ? "bg-white text-[#29241f] shadow-xs"
+                  ? "bg-white text-[#0f172a] shadow-xs"
                   : "text-gray-500 hover:text-gray-800"
               }`}
             >
-              <Sparkles size={13} className="text-[#a7773f]" />
+              <Sparkles size={13} className="text-[#1d4ed8]" />
               <span>Curated Presets ({PRESET_SERVICE_LIBRARY.length})</span>
             </button>
             <button
@@ -270,7 +270,7 @@ export default function ServiceMediaLibraryModal({
               onClick={() => setActiveTab("uploaded")}
               className={`inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-bold transition ${
                 activeTab === "uploaded"
-                  ? "bg-white text-[#29241f] shadow-xs"
+                  ? "bg-white text-[#0f172a] shadow-xs"
                   : "text-gray-500 hover:text-gray-800"
               }`}
             >
@@ -281,7 +281,7 @@ export default function ServiceMediaLibraryModal({
         </div>
 
         {/* Category Pills Slider */}
-        <div className="flex gap-1.5 overflow-x-auto border-b border-[#eee7dc] bg-[#faf8f5]/40 px-6 py-2.5 no-scrollbar">
+        <div className="flex gap-1.5 overflow-x-auto border-b border-[#eff6ff] bg-[#f8fbff]/40 px-6 py-2.5 no-scrollbar">
           {SERVICE_LIBRARY_CATEGORIES.map((cat) => (
             <button
               type="button"
@@ -289,7 +289,7 @@ export default function ServiceMediaLibraryModal({
               onClick={() => setSelectedCategory(cat.id)}
               className={`shrink-0 rounded-lg px-3 py-1 text-xs font-bold transition ${
                 selectedCategory === cat.id
-                  ? "bg-[#29241f] text-white shadow-xs"
+                  ? "bg-[#0f172a] text-white shadow-xs"
                   : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-100"
               }`}
             >
@@ -302,7 +302,7 @@ export default function ServiceMediaLibraryModal({
         <div className="flex-1 overflow-y-auto p-6">
           {loadingUploaded ? (
             <div className="flex min-h-[300px] flex-col items-center justify-center gap-2 text-center text-xs text-gray-400">
-              <Loader2 size={24} className="animate-spin text-[#a7773f]" />
+              <Loader2 size={24} className="animate-spin text-[#1d4ed8]" />
               <span>Loading media library...</span>
             </div>
           ) : filteredItems.length === 0 ? (
@@ -340,8 +340,8 @@ export default function ServiceMediaLibraryModal({
                     }}
                     className={`group relative flex flex-col overflow-hidden rounded-2xl border text-left transition-all duration-200 ${
                       isSelected
-                        ? "border-[#9A7B4F] ring-2 ring-[#9A7B4F] shadow-md"
-                        : "border-gray-200 bg-white hover:border-[#9A7B4F]/60 hover:shadow-md"
+                        ? "border-[#2563eb] ring-2 ring-[#2563eb] shadow-md"
+                        : "border-gray-200 bg-white hover:border-[#2563eb]/60 hover:shadow-md"
                     }`}
                   >
                     {/* Image Preview */}
@@ -358,7 +358,7 @@ export default function ServiceMediaLibraryModal({
 
                       {/* Selected Indicator */}
                       {isSelected && (
-                        <div className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#9A7B4F] text-white shadow-md">
+                        <div className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#2563eb] text-white shadow-md">
                           <Check size={14} />
                         </div>
                       )}
@@ -377,7 +377,7 @@ export default function ServiceMediaLibraryModal({
                       {/* Hover action overlay button */}
                       <div className="absolute inset-x-2 bottom-2 opacity-0 transition-opacity group-hover:opacity-100">
                         <span className="flex w-full items-center justify-center gap-1 rounded-xl bg-white/95 py-1.5 text-center text-xs font-bold text-gray-900 shadow-md">
-                          <Check size={13} className="text-[#9A7B4F]" />
+                          <Check size={13} className="text-[#2563eb]" />
                           <span>Select Photo</span>
                         </span>
                       </div>
@@ -385,7 +385,7 @@ export default function ServiceMediaLibraryModal({
 
                     {/* Meta Footer */}
                     <div className="p-3">
-                      <p className="truncate text-xs font-bold text-gray-900 group-hover:text-[#9A7B4F]">
+                      <p className="truncate text-xs font-bold text-gray-900 group-hover:text-[#2563eb]">
                         {item.title}
                       </p>
                       <p className="mt-0.5 truncate text-[10px] capitalize text-gray-400">
@@ -400,7 +400,7 @@ export default function ServiceMediaLibraryModal({
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between border-t border-[#eee7dc] bg-[#faf8f5] px-6 py-3 text-xs text-[#756d64]">
+        <div className="flex items-center justify-between border-t border-[#eff6ff] bg-[#f8fbff] px-6 py-3 text-xs text-[#475569]">
           <p>
             Showing <strong>{filteredItems.length}</strong> photo options. Click any photo to apply immediately.
           </p>

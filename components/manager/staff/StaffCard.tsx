@@ -37,7 +37,7 @@ export default function StaffCard({ staff }: StaffCardProps) {
   return (
     <Link
       href={`/manager/staff/${staff.id}`}
-      className="group block rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-[#9A7B4F]/40 hover:shadow-md active:scale-[0.99]"
+      className="group block rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:border-[#2563eb]/40 hover:shadow-md active:scale-[0.99]"
     >
       {/* Top Section */}
       <div className="flex items-start gap-3">
@@ -50,7 +50,7 @@ export default function StaffCard({ staff }: StaffCardProps) {
               className="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100"
             />
           ) : (
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F4EBDD] text-sm font-bold text-[#9A7B4F] ring-2 ring-gray-100">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#eff6ff] text-sm font-bold text-[#2563eb] ring-2 ring-gray-100">
               {getInitials(staff.name)}
             </div>
           )}
@@ -84,7 +84,7 @@ export default function StaffCard({ staff }: StaffCardProps) {
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <h3 className="truncate text-sm font-bold text-[#1F1F1F] group-hover:text-[#9A7B4F] transition-colors">
+              <h3 className="truncate text-sm font-bold text-[#0f172a] group-hover:text-[#2563eb] transition-colors">
                 {staff.name}
               </h3>
 
@@ -128,7 +128,7 @@ export default function StaffCard({ staff }: StaffCardProps) {
             <ChevronRight
               size={18}
               strokeWidth={2}
-              className="mt-1 shrink-0 text-gray-300 group-hover:text-[#9A7B4F] group-hover:translate-x-0.5 transition-all"
+              className="mt-1 shrink-0 text-gray-300 group-hover:text-[#2563eb] group-hover:translate-x-0.5 transition-all"
             />
           </div>
 
@@ -194,14 +194,14 @@ export default function StaffCard({ staff }: StaffCardProps) {
       {/* Bottom Information */}
       <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-3">
         <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-500">
-          <CalendarDays size={14} strokeWidth={1.8} className="text-[#9A7B4F]" />
+          <CalendarDays size={14} strokeWidth={1.8} className="text-[#2563eb]" />
           <span>
             {staff.eventsAssigned ?? 0}{" "}
             {(staff.eventsAssigned ?? 0) === 1 ? "Event" : "Events"} Assigned
           </span>
         </div>
 
-        <span className="text-[11px] font-bold text-[#9A7B4F] group-hover:underline">
+        <span className="text-[11px] font-bold text-[#2563eb] group-hover:underline">
           View Profile & Schedule →
         </span>
       </div>

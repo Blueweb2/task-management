@@ -35,9 +35,9 @@ export default function ScheduleFilters({
   onEndDateChange,
 }: ScheduleFiltersProps) {
   return (
-    <div className="space-y-3.5 rounded-2xl border border-[#e8e1d8] bg-white p-4 shadow-sm sm:p-5">
+    <div className="space-y-3.5 rounded-2xl border border-[#dbeafe] bg-white p-4 shadow-sm sm:p-5">
       <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar scrollbar-none pb-1 sm:pb-0">
-        <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+        <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
           <SlidersHorizontal size={15} />
         </div>
 
@@ -52,7 +52,7 @@ export default function ScheduleFilters({
                 onClick={() => onFilterChange(filter)}
                 className={`min-h-8 sm:min-h-9 shrink-0 rounded-xl px-3 sm:px-4 text-xs font-semibold transition whitespace-nowrap ${
                   active
-                    ? "bg-[#9a7b4f] text-white shadow-xs"
+                    ? "bg-[#2563eb] text-white shadow-xs"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -64,24 +64,24 @@ export default function ScheduleFilters({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-        <label className="text-xs font-semibold text-[#403a34]">
+        <label className="text-xs font-semibold text-[#1e293b]">
           From Date
           <input
             type="date"
             value={startDate}
             onChange={(event) => onStartDateChange(event.target.value)}
-            className="mt-1 h-10 w-full rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none focus:border-[#b8894b]"
+            className="mt-1 h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none focus:border-[#3b82f6]"
           />
         </label>
 
-        <label className="text-xs font-semibold text-[#403a34]">
+        <label className="text-xs font-semibold text-[#1e293b]">
           To Date
           <input
             type="date"
             value={endDate}
             min={startDate || undefined}
             onChange={(event) => onEndDateChange(event.target.value)}
-            className="mt-1 h-10 w-full rounded-xl border border-[#e3dbd2] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none focus:border-[#b8894b]"
+            className="mt-1 h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none focus:border-[#3b82f6]"
           />
         </label>
       </div>

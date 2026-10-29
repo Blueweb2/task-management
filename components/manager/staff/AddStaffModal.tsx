@@ -314,14 +314,14 @@ export default function AddStaffModal({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A7B4F]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#2563eb]">
               <UserRound size={19} strokeWidth={1.9} />
             </div>
 
             <div className="min-w-0">
               <h2
                 id="add-staff-title"
-                className="text-base font-bold text-[#1F1F1F]"
+                className="text-base font-bold text-[#0f172a]"
               >
                 Add Staff Member
               </h2>
@@ -369,10 +369,10 @@ export default function AddStaffModal({
                 <img
                   src={avatarDisplayUrl}
                   alt="Staff Preview"
-                  className="h-20 w-20 rounded-full object-cover border-2 border-[#9A7B4F]/30 shadow-sm"
+                  className="h-20 w-20 rounded-full object-cover border-2 border-[#2563eb]/30 shadow-sm"
                 />
               ) : (
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#F4EBDD] text-[#9A7B4F] text-xl font-bold border-2 border-dashed border-[#9A7B4F]/40 shadow-inner">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#eff6ff] text-[#2563eb] text-xl font-bold border-2 border-dashed border-[#2563eb]/40 shadow-inner">
                   {formData.name ? formData.name.charAt(0).toUpperCase() : <UserRound size={28} />}
                 </div>
               )}
@@ -381,7 +381,7 @@ export default function AddStaffModal({
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
                 disabled={isSaving || isUploadingAvatar}
-                className="absolute bottom-0 right-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#9A7B4F] text-white shadow-md transition hover:bg-[#85673E] active:scale-90 disabled:opacity-50 cursor-pointer"
+                className="absolute bottom-0 right-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#2563eb] text-white shadow-md transition hover:bg-[#85673E] active:scale-90 disabled:opacity-50 cursor-pointer"
                 title="Upload staff photo"
               >
                 {isUploadingAvatar ? (
@@ -397,7 +397,7 @@ export default function AddStaffModal({
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
                 disabled={isSaving || isUploadingAvatar}
-                className="text-[11px] font-medium text-[#9A7B4F] hover:underline cursor-pointer"
+                className="text-[11px] font-medium text-[#2563eb] hover:underline cursor-pointer"
               >
                 {formData.avatar ? "Change Photo" : "Upload Photo"}
               </button>
@@ -428,7 +428,7 @@ export default function AddStaffModal({
               autoComplete="name"
               disabled={isSaving}
               required
-              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
             />
           </FormField>
 
@@ -442,7 +442,7 @@ export default function AddStaffModal({
               autoComplete="username"
               disabled={isSaving}
               required
-              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
             />
             <p className="mt-1 text-[10px] text-gray-400">
               Unique identifier (3-30 lowercase characters, letters, numbers, dot, underscore, hyphen)
@@ -460,7 +460,7 @@ export default function AddStaffModal({
               autoComplete="email"
               disabled={isSaving}
               required
-              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
             />
           </FormField>
 
@@ -473,7 +473,7 @@ export default function AddStaffModal({
               placeholder="+91 98765 43210"
               autoComplete="tel"
               disabled={isSaving}
-              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+              className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3.5 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
             />
           </FormField>
 
@@ -505,7 +505,7 @@ export default function AddStaffModal({
                 onChange={(e) => handleChange("department", e.target.value)}
                 disabled={isSaving}
                 required
-                className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50 cursor-pointer"
+                className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50 cursor-pointer"
               >
                 <option value="">Select a department</option>
                 {departmentOptions.map((dept) => (
@@ -519,7 +519,7 @@ export default function AddStaffModal({
 
           {/* Salary & Pay Structure (Hidden for Chef Manager) */}
           {!isChefManager && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-2xl bg-[#faf8f5] p-3 border border-[#e8e1d8]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-2xl bg-[#f8fbff] p-3 border border-[#dbeafe]">
               <FormField label="Rate / Base Pay (₹)" icon={IndianRupee}>
                 <input
                   type="number"
@@ -529,7 +529,7 @@ export default function AddStaffModal({
                   onChange={(e) => handleChange("salary", e.target.value)}
                   placeholder="e.g. 500"
                   disabled={isSaving}
-                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
                 />
               </FormField>
 
@@ -538,7 +538,7 @@ export default function AddStaffModal({
                   value={formData.salaryType}
                   onChange={(e) => handleChange("salaryType", e.target.value as any)}
                   disabled={isSaving}
-                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50 cursor-pointer"
+                  className="h-10 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50 cursor-pointer"
                 >
                   <option value="hourly">Hourly Rate (₹/hr)</option>
                   <option value="daily">Daily Rate (₹/day)</option>
@@ -560,7 +560,7 @@ export default function AddStaffModal({
                 autoComplete="new-password"
                 disabled={isSaving}
                 required
-                className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+                className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
               />
               <button
                 type="button"
@@ -585,7 +585,7 @@ export default function AddStaffModal({
                 autoComplete="new-password"
                 disabled={isSaving}
                 required
-                className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-[#1F1F1F] outline-none transition focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] disabled:bg-gray-50"
+                className="h-10 w-full rounded-xl border border-gray-200 bg-white pl-3 pr-10 text-xs text-[#0f172a] outline-none transition focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] disabled:bg-gray-50"
               />
               <button
                 type="button"
@@ -611,7 +611,7 @@ export default function AddStaffModal({
             <button
               type="submit"
               disabled={isSaving}
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#29241f] px-5 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-5 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50 cursor-pointer"
             >
               {isSaving && <Loader2 size={13} className="animate-spin" />}
               <span>{isSaving ? "Creating Staff..." : "Create Staff Member"}</span>
@@ -637,7 +637,7 @@ function FormField({
   return (
     <div>
       <label className="mb-1.5 flex items-center gap-1.5 text-xs font-bold text-gray-700">
-        {Icon && <Icon size={13} className="text-[#9A7B4F]" />}
+        {Icon && <Icon size={13} className="text-[#2563eb]" />}
         <span>{label}</span>
         {required && <span className="text-red-500">*</span>}
       </label>

@@ -241,7 +241,7 @@ export default function StaffAttendanceTab({
       {/* Header & Export Toolbar */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-lg font-bold tracking-tight text-[#1F1F1F] sm:text-xl">
+          <h2 className="text-lg font-bold tracking-tight text-[#0f172a] sm:text-xl">
             Staff Attendance & Clock Logs
           </h2>
           <p className="text-xs text-gray-500">
@@ -255,14 +255,14 @@ export default function StaffAttendanceTab({
             onClick={exportAttendanceCSV}
             className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3.5 text-xs font-semibold text-gray-700 shadow-xs transition hover:bg-gray-50 active:scale-95"
           >
-            <Download size={14} className="text-[#9A7B4F]" />
+            <Download size={14} className="text-[#2563eb]" />
             <span>Export CSV</span>
           </button>
 
           <button
             type="button"
             onClick={() => void loadAttendance()}
-            className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#1F1F1F] px-4 text-xs font-semibold text-white transition hover:bg-gray-800 active:scale-95 shadow-xs"
+            className="inline-flex h-9 items-center justify-center gap-1.5 rounded-xl bg-[#0f172a] px-4 text-xs font-semibold text-white transition hover:bg-gray-800 active:scale-95 shadow-xs"
           >
             <RotateCw size={13} className={loading ? "animate-spin" : ""} />
             <span>Refresh Roster</span>
@@ -287,7 +287,7 @@ export default function StaffAttendanceTab({
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="h-9 rounded-xl border border-gray-200 px-3 text-xs font-semibold text-gray-900 focus:border-[#9A7B4F] focus:outline-none"
+            className="h-9 rounded-xl border border-gray-200 px-3 text-xs font-semibold text-gray-900 focus:border-[#2563eb] focus:outline-none"
           />
 
           <button
@@ -319,7 +319,7 @@ export default function StaffAttendanceTab({
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             placeholder="Search staff, duty, or event..."
-            className="h-9 w-full rounded-xl border border-gray-200 bg-gray-50/50 pl-8 pr-3 text-xs focus:border-[#9A7B4F] focus:bg-white focus:outline-none"
+            className="h-9 w-full rounded-xl border border-gray-200 bg-gray-50/50 pl-8 pr-3 text-xs focus:border-[#2563eb] focus:bg-white focus:outline-none"
           />
         </div>
 
@@ -333,7 +333,7 @@ export default function StaffAttendanceTab({
                 onClick={() => setStatus(item)}
                 className={`rounded-xl px-2.5 py-1.5 text-[10px] font-bold transition whitespace-nowrap ${
                   status === item
-                    ? "bg-[#9A7B4F] text-white"
+                    ? "bg-[#2563eb] text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -363,7 +363,7 @@ export default function StaffAttendanceTab({
 
       {loading ? (
         <div className="flex min-h-64 items-center justify-center rounded-2xl border border-gray-200 bg-white">
-          <Loader2 size={26} className="animate-spin text-[#9A7B4F]" />
+          <Loader2 size={26} className="animate-spin text-[#2563eb]" />
         </div>
       ) : (
         <>
@@ -387,7 +387,7 @@ export default function StaffAttendanceTab({
               <div className="mt-2">
                 <div className="h-1.5 w-full overflow-hidden rounded-full bg-amber-200">
                   <div
-                    className="h-full bg-[#9A7B4F] transition-all duration-300"
+                    className="h-full bg-[#2563eb] transition-all duration-300"
                     style={{ width: `${counts.rate}%` }}
                   />
                 </div>
@@ -409,7 +409,7 @@ export default function StaffAttendanceTab({
                   {rows.length} matching duty record{rows.length === 1 ? "" : "s"}
                 </p>
               </div>
-              <UserCheck size={18} className="text-[#9A7B4F]" />
+              <UserCheck size={18} className="text-[#2563eb]" />
             </div>
 
             <div className="divide-y divide-gray-100">
@@ -482,7 +482,7 @@ function AttendanceRow({
   return (
     <article className="flex flex-col gap-3.5 p-4 sm:p-5 transition hover:bg-gray-50/70 lg:flex-row lg:items-center lg:justify-between">
       <div className="flex min-w-0 items-start gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F4EBDD] font-bold text-xs text-[#9A7B4F]">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#eff6ff] font-bold text-xs text-[#2563eb]">
           {staff?.name?.charAt(0).toUpperCase() || "S"}
         </div>
 
@@ -491,7 +491,7 @@ function AttendanceRow({
             {staffId ? (
               <Link
                 href={`/manager/staff/${staffId}`}
-                className="text-sm font-bold text-gray-900 hover:text-[#9A7B4F] hover:underline"
+                className="text-sm font-bold text-gray-900 hover:text-[#2563eb] hover:underline"
               >
                 {staff?.name || "Staff member"}
               </Link>
@@ -509,12 +509,12 @@ function AttendanceRow({
 
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
             <span className="flex items-center gap-1">
-              <Clock3 size={13} className="text-[#9A7B4F]" />
+              <Clock3 size={13} className="text-[#2563eb]" />
               {formatTime24to12(assignment.startTime)} - {formatTime24to12(assignment.endTime)}
             </span>
 
             <span className="flex items-center gap-1">
-              <MapPin size={13} className="text-[#9A7B4F]" />
+              <MapPin size={13} className="text-[#2563eb]" />
               {event?.location || "Location pending"}
             </span>
 
@@ -528,9 +528,9 @@ function AttendanceRow({
           {/* Staff Check-in Notes & GPS Tag */}
           {record?.notes && (
             <div className="mt-2.5 flex items-start gap-1.5 rounded-xl border border-amber-100 bg-amber-50/60 p-2 text-[11px] text-amber-900">
-              <FileText size={13} className="mt-0.5 shrink-0 text-[#9A7B4F]" />
+              <FileText size={13} className="mt-0.5 shrink-0 text-[#2563eb]" />
               <span className="line-clamp-2 inline-flex items-center gap-1">
-                {isGPS && <MapPin size={12} className="shrink-0 text-[#9A7B4F]" />}
+                {isGPS && <MapPin size={12} className="shrink-0 text-[#2563eb]" />}
                 <span>{record.notes}</span>
               </span>
             </div>
@@ -546,7 +546,7 @@ function AttendanceRow({
           title="Manual Edit / Override"
           className="inline-flex items-center gap-1 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-xs transition hover:bg-gray-50 active:scale-95"
         >
-          <Edit3 size={13} className="text-[#9A7B4F]" />
+          <Edit3 size={13} className="text-[#2563eb]" />
           <span>Edit</span>
         </button>
 
@@ -570,7 +570,7 @@ function AttendanceRow({
             className={`rounded-xl px-3.5 py-1.5 text-xs font-semibold text-white shadow-xs transition disabled:opacity-50 active:scale-95 ${
               checkedIn
                 ? "bg-[#557555] hover:bg-[#456345]"
-                : "bg-[#9A7B4F] hover:bg-[#80653e]"
+                : "bg-[#2563eb] hover:bg-[#1d4ed8]"
             }`}
           >
             {checkedIn ? (
@@ -762,7 +762,7 @@ function EditAttendanceModal({
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value as AttendanceStatus)}
-              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold focus:border-[#9A7B4F] focus:outline-none"
+              className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 bg-white px-3 text-xs font-semibold focus:border-[#2563eb] focus:outline-none"
             >
               <option value="PRESENT">PRESENT 🟢</option>
               <option value="LATE">LATE 🟡</option>
@@ -775,7 +775,7 @@ function EditAttendanceModal({
               <label className="block text-xs font-semibold text-gray-700">
                 Check-In Time
                 {checkInTime && (
-                  <span className="ml-1.5 font-normal text-[#9A7B4F]">
+                  <span className="ml-1.5 font-normal text-[#2563eb]">
                     ({formatTime24to12(checkInTime)})
                   </span>
                 )}
@@ -784,7 +784,7 @@ function EditAttendanceModal({
                 type="time"
                 value={checkInTime}
                 onChange={(e) => setCheckInTime(e.target.value)}
-                className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#9A7B4F] focus:outline-none"
+                className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#2563eb] focus:outline-none"
               />
             </div>
 
@@ -792,7 +792,7 @@ function EditAttendanceModal({
               <label className="block text-xs font-semibold text-gray-700">
                 Check-Out Time
                 {checkOutTime && (
-                  <span className="ml-1.5 font-normal text-[#9A7B4F]">
+                  <span className="ml-1.5 font-normal text-[#2563eb]">
                     ({formatTime24to12(checkOutTime)})
                   </span>
                 )}
@@ -801,7 +801,7 @@ function EditAttendanceModal({
                 type="time"
                 value={checkOutTime}
                 onChange={(e) => setCheckOutTime(e.target.value)}
-                className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#9A7B4F] focus:outline-none"
+                className="mt-1 h-9.5 w-full rounded-xl border border-gray-200 px-3 text-xs focus:border-[#2563eb] focus:outline-none"
               />
             </div>
           </div>
@@ -815,7 +815,7 @@ function EditAttendanceModal({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Add manager override note (e.g. Approved late arrival due to traffic)"
-              className="mt-1 w-full rounded-xl border border-gray-200 p-2 text-xs outline-none focus:border-[#9A7B4F]"
+              className="mt-1 w-full rounded-xl border border-gray-200 p-2 text-xs outline-none focus:border-[#2563eb]"
             />
           </div>
 
@@ -831,7 +831,7 @@ function EditAttendanceModal({
             <button
               type="submit"
               disabled={loading}
-              className="h-9.5 rounded-xl bg-[#9A7B4F] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#80653e] disabled:opacity-50 active:scale-95"
+              className="h-9.5 rounded-xl bg-[#2563eb] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#1d4ed8] disabled:opacity-50 active:scale-95"
             >
               {loading ? "Saving..." : "Save Record"}
             </button>

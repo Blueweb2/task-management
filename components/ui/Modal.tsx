@@ -94,7 +94,7 @@ export default function Modal({
         flex
         items-center
         justify-center
-        bg-[#1F2023]/45
+        bg-[#0f172a]/45
         p-4
         backdrop-blur-[2px]
       "
@@ -115,7 +115,7 @@ export default function Modal({
           overflow-hidden
           rounded-2xl
           border
-          border-[#E5E1D8]
+          border-[#dbeafe]
           bg-white
           shadow-[0_20px_60px_rgba(31,32,35,0.18)]
           ${sizes[size]}
@@ -125,19 +125,19 @@ export default function Modal({
       >
         {/* Header */}
         {(title || description || showCloseButton) && (
-          <div className="flex shrink-0 items-start justify-between border-b border-[#EEEAE2] px-5 py-4 sm:px-6 sm:py-5">
+          <div className="flex shrink-0 items-start justify-between border-b border-[#eff6ff] px-5 py-4 sm:px-6 sm:py-5">
             <div className="min-w-0 pr-4">
               {title && (
                 <h2
                   id="modal-title"
-                  className="text-lg font-semibold tracking-[-0.01em] text-[#1F2023]"
+                  className="text-lg font-semibold tracking-[-0.01em] text-[#0f172a]"
                 >
                   {title}
                 </h2>
               )}
 
               {description && (
-                <p className="mt-1 text-sm leading-5 text-[#77746D]">
+                <p className="mt-1 text-sm leading-5 text-[#64748b]">
                   {description}
                 </p>
               )}
@@ -156,13 +156,13 @@ export default function Modal({
                   items-center
                   justify-center
                   rounded-lg
-                  text-[#77746D]
+                  text-[#64748b]
                   transition-colors
-                  hover:bg-[#F3F1EC]
-                  hover:text-[#1F2023]
+                  hover:bg-[#eff6ff]
+                  hover:text-[#0f172a]
                   focus:outline-none
                   focus:ring-2
-                  focus:ring-[#B49A6A]/30
+                  focus:ring-[#60a5fa]/30
                 "
               >
                 <svg
@@ -191,7 +191,7 @@ export default function Modal({
 
         {/* Footer */}
         {footer && (
-          <div className="shrink-0 border-t border-[#EEEAE2] bg-[#FCFBF8] px-5 py-4 sm:px-6">
+          <div className="shrink-0 border-t border-[#eff6ff] bg-[#ffffff] px-5 py-4 sm:px-6">
             {footer}
           </div>
         )}

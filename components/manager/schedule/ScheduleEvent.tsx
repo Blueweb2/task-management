@@ -31,7 +31,7 @@ export default function ScheduleEvent({
     >
       <div className="flex items-center gap-3">
         {/* Avatar */}
-        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[#F4EBDD]">
+        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[#eff6ff]">
           {event.staffAvatar ? (
             <img
               src={event.staffAvatar}
@@ -39,7 +39,7 @@ export default function ScheduleEvent({
               className="h-full w-full object-cover"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-[#9A7B4F]">
+            <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-[#2563eb]">
               {event.staffName
                 .charAt(0)
                 .toUpperCase()}
@@ -50,7 +50,7 @@ export default function ScheduleEvent({
         {/* Main information */}
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-2">
-            <p className="truncate text-sm font-semibold text-[#1F1F1F]">
+            <p className="truncate text-sm font-semibold text-[#0f172a]">
               {event.staffName}
             </p>
 

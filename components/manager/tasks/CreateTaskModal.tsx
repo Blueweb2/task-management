@@ -107,13 +107,15 @@ export default function CreateTaskModal({
   if (!isOpen) return null;
 
   // Toggle staff selection
-  const toggleStaff = (staffId: string) => {
-    setAssignedStaffIds((prev) =>
-      prev.includes(staffId)
-        ? prev.filter((id) => id !== staffId)
-        : [...prev, staffId]
-    );
-  };
+const toggleStaff = (staffId: string) => {
+  if (!staffId) return;
+
+  setAssignedStaffIds((prev) =>
+    prev.includes(staffId)
+      ? prev.filter((id) => id !== staffId)
+      : [...prev, staffId]
+  );
+};
 
   // Equipment helpers
   const addEquipmentRow = () => {
@@ -290,7 +292,7 @@ export default function CreateTaskModal({
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g. Stage lighting setup & audio system soundcheck"
-                className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-sm font-medium text-gray-900 focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-sm font-medium text-gray-900 focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] outline-none"
               />
             </div>
 
@@ -303,7 +305,7 @@ export default function CreateTaskModal({
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Provide details about requirements, step-by-step procedures, or special guidelines..."
-                className="w-full rounded-xl border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] outline-none resize-none"
+                className="w-full rounded-xl border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] outline-none resize-none"
               />
             </div>
           </div>
@@ -342,7 +344,7 @@ export default function CreateTaskModal({
                   type="date"
                   value={taskDate}
                   onChange={(e) => setTaskDate(e.target.value)}
-                  className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                  className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
                 />
               </div>
             </div>
@@ -356,7 +358,7 @@ export default function CreateTaskModal({
                 required
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -368,7 +370,7 @@ export default function CreateTaskModal({
                 type="time"
                 value={dueTime}
                 onChange={(e) => setDueTime(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -379,7 +381,7 @@ export default function CreateTaskModal({
               <select
                 value={priority}
                 onChange={(e) => setPriority(e.target.value as TaskPriority)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#9A7B4F] outline-none bg-white cursor-pointer"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#2563eb] outline-none bg-white cursor-pointer"
               >
                 <option value="LOW">Low</option>
                 <option value="MEDIUM">Medium</option>
@@ -398,7 +400,7 @@ export default function CreateTaskModal({
               <select
                 value={serviceId}
                 onChange={(e) => setServiceId(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none bg-white cursor-pointer"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none bg-white cursor-pointer"
               >
                 <option value="">None / Custom Category</option>
                 {services.map((svc) => (
@@ -419,7 +421,7 @@ export default function CreateTaskModal({
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   placeholder="e.g. Main Hall, Floor 2, Warehouse B"
-                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
                 />
                 <MapPin size={14} className="absolute left-2.5 top-2.5 text-gray-400" />
               </div>
@@ -441,7 +443,7 @@ export default function CreateTaskModal({
 
             {catalogLoading ? (
               <div className="flex items-center gap-2 py-3 text-xs text-gray-500">
-                <Loader2 size={16} className="animate-spin text-[#9A7B4F]" />
+                <Loader2 size={16} className="animate-spin text-[#2563eb]" />
                 <span>Loading staff directory...</span>
               </div>
             ) : staffList.length === 0 ? (
@@ -449,17 +451,24 @@ export default function CreateTaskModal({
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-48 overflow-y-auto p-1">
                 {staffList.map((st) => {
-                  const isSelected = assignedStaffIds.includes(st._id);
+                  const staffId = String(st._id ?? st.id ?? "");
+
+                  if (!staffId) {
+                    console.warn("Staff record is missing an ID:", st);
+                    return null;
+                  }
+
+                  const isSelected = assignedStaffIds.includes(staffId);
+
                   return (
                     <button
-                      key={st._id}
+                      key={staffId}
                       type="button"
-                      onClick={() => toggleStaff(st._id)}
-                      className={`flex items-center gap-2.5 rounded-xl border p-2 text-left transition active:scale-[0.98] cursor-pointer ${
-                        isSelected
-                          ? "border-[#9A7B4F] bg-[#9A7B4F]/10 shadow-2xs"
+                      onClick={() => toggleStaff(staffId)}
+                      className={`flex items-center gap-2.5 rounded-xl border p-2 text-left transition active:scale-[0.98] cursor-pointer ${isSelected
+                          ? "border-[#2563eb] bg-[#2563eb]/10 shadow-2xs"
                           : "border-gray-200 bg-white hover:border-gray-300"
-                      }`}
+                        }`}
                     >
                       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-stone-800 text-xs font-bold text-white">
                         {st.name ? st.name.charAt(0).toUpperCase() : "S"}
@@ -473,7 +482,7 @@ export default function CreateTaskModal({
                         </p>
                       </div>
                       {isSelected && (
-                        <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#9A7B4F] text-white">
+                        <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2563eb] text-white">
                           <Check size={12} strokeWidth={3} />
                         </div>
                       )}
@@ -519,7 +528,7 @@ export default function CreateTaskModal({
                     <select
                       value={row.item}
                       onChange={(e) => updateEquipmentRow(idx, "item", e.target.value)}
-                      className="flex-1 min-w-[140px] rounded-lg border border-gray-200 px-2.5 py-1.5 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+                      className="flex-1 min-w-[140px] rounded-lg border border-gray-200 px-2.5 py-1.5 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
                     >
                       <option value="">Select stock item</option>
                       {stockCatalog.map((item) => (
@@ -538,7 +547,7 @@ export default function CreateTaskModal({
                         onChange={(e) =>
                           updateEquipmentRow(idx, "quantity", Number(e.target.value))
                         }
-                        className="w-16 rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none text-center"
+                        className="w-16 rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-900 focus:border-[#2563eb] outline-none text-center"
                       />
                     </div>
 
@@ -547,7 +556,7 @@ export default function CreateTaskModal({
                       placeholder="Notes (optional)"
                       value={row.notes}
                       onChange={(e) => updateEquipmentRow(idx, "notes", e.target.value)}
-                      className="flex-1 min-w-[120px] rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-700 focus:border-[#9A7B4F] outline-none"
+                      className="flex-1 min-w-[120px] rounded-lg border border-gray-200 px-2 py-1 text-xs text-gray-700 focus:border-[#2563eb] outline-none"
                     />
 
                     <button
@@ -577,7 +586,7 @@ export default function CreateTaskModal({
                   value={estimatedExpenses}
                   onChange={(e) => setEstimatedExpenses(e.target.value)}
                   placeholder="0.00"
-                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
                 />
                 <DollarSign size={14} className="absolute left-2.5 top-2.5 text-gray-400" />
               </div>
@@ -640,7 +649,7 @@ export default function CreateTaskModal({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#29241f] px-5 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] px-5 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
             >
               {loading ? (
                 <>

@@ -33,7 +33,7 @@ export default function StaffDetails({
       <div className="mb-4">
         <h2
           id="staff-details-heading"
-          className="text-sm font-semibold text-[#1F1F1F]"
+          className="text-sm font-semibold text-[#0f172a]"
         >
           Staff Details
         </h2>
@@ -160,7 +160,7 @@ function DetailRow({
   const content = (
     <>
       {/* Icon */}
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A7B4F]">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#2563eb]">
         <Icon
           size={16}
           strokeWidth={1.8}
@@ -173,7 +173,7 @@ function DetailRow({
           {label}
         </p>
 
-        <p className="mt-0.5 truncate text-xs font-medium text-[#1F1F1F]">
+        <p className="mt-0.5 truncate text-xs font-medium text-[#0f172a]">
           {value}
         </p>
       </div>
@@ -184,7 +184,7 @@ function DetailRow({
     return (
       <a
         href={href}
-        className="flex min-h-12 items-center gap-3 rounded-xl px-2 transition hover:bg-[#F8F7F3] active:bg-[#F4EBDD]"
+        className="flex min-h-12 items-center gap-3 rounded-xl px-2 transition hover:bg-[#f8fbff] active:bg-[#eff6ff]"
       >
         {content}
       </a>

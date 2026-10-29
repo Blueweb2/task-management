@@ -19,11 +19,11 @@ export default function EventsHeader({
   return (
     <header className="flex flex-row items-center justify-between gap-3 sm:gap-4 w-full max-w-full min-w-0">
       <div className="min-w-0 flex-1">
-        <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-[#8C7A55]">
+        <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-[#64748b]">
           {isOperationsManager ? "Events" : "Events & Billing"}
         </p>
 
-        <h1 className="mt-0.5 sm:mt-1 text-xl sm:text-2xl font-black tracking-tight text-[#252525]">
+        <h1 className="mt-0.5 sm:mt-1 text-xl sm:text-2xl font-black tracking-tight text-[#1e3a8a]">
           Events
         </h1>
         <p className="mt-0.5 text-xs text-gray-500 hidden sm:block">
@@ -39,9 +39,9 @@ export default function EventsHeader({
           onClick={() => {
             router.push("/manager/booking");
           }}
-          className="inline-flex min-h-10 sm:min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#252525] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 cursor-pointer"
+          className="inline-flex min-h-10 sm:min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#1e3a8a] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 cursor-pointer"
         >
-          <Plus size={15} className="text-[#D4AF37]" />
+          <Plus size={15} className="text-[#3b82f6]" />
           <span>New Booking</span>
         </button>
       </div>

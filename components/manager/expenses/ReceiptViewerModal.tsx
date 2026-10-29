@@ -96,21 +96,21 @@ export default function ReceiptViewerModal({
       aria-modal="true"
       aria-labelledby="receipt-modal-title"
     >
-      <div className="flex flex-col w-full max-w-3xl max-h-[92vh] rounded-3xl border border-[#e8e1d8] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95 duration-150">
+      <div className="flex flex-col w-full max-w-3xl max-h-[92vh] rounded-3xl border border-[#dbeafe] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95 duration-150">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#eee8e1] bg-[#fdfbf8] px-5 py-4">
+        <div className="flex items-center justify-between border-b border-[#eff6ff] bg-[#ffffff] px-5 py-4">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f7efe4] text-[#a7773f]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#eff6ff] text-[#1d4ed8]">
               <Receipt size={20} />
             </div>
             <div className="min-w-0">
               <h3
                 id="receipt-modal-title"
-                className="text-base font-bold text-[#29241f] truncate"
+                className="text-base font-bold text-[#0f172a] truncate"
               >
                 {expense.title}
               </h3>
-              <p className="text-xs text-[#756d64] truncate">
+              <p className="text-xs text-[#475569] truncate">
                 {expense.category} • {formattedAmount} • {expense.date}
                 {expense.vendorName ? ` • Vendor: ${expense.vendorName}` : ""}
               </p>
@@ -124,7 +124,7 @@ export default function ReceiptViewerModal({
                 download={fileName || "expense-receipt"}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-[#ded5cb] bg-white px-3 text-xs font-semibold text-[#403a34] transition hover:bg-[#f7f2ec]"
+                className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-[#dbeafe] bg-white px-3 text-xs font-semibold text-[#1e293b] transition hover:bg-[#eff6ff]"
                 title="Download receipt"
               >
                 <Download size={14} />
@@ -135,7 +135,7 @@ export default function ReceiptViewerModal({
               type="button"
               onClick={onClose}
               aria-label="Close receipt modal"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-[#756d64] hover:bg-[#f2ece4] transition"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-[#475569] hover:bg-[#f2ece4] transition"
             >
               <X size={18} />
             </button>
@@ -143,11 +143,11 @@ export default function ReceiptViewerModal({
         </div>
 
         {/* Content Body */}
-        <div className="relative flex-1 overflow-auto bg-[#faf8f5] p-4 sm:p-6 min-h-[320px] max-h-[70vh] flex items-center justify-center">
+        <div className="relative flex-1 overflow-auto bg-[#f8fbff] p-4 sm:p-6 min-h-[320px] max-h-[70vh] flex items-center justify-center">
           {loading && (
             <div className="flex flex-col items-center gap-3 py-16 text-center">
-              <Loader2 size={32} className="animate-spin text-[#b8894b]" />
-              <p className="text-sm font-medium text-[#756d64]">
+              <Loader2 size={32} className="animate-spin text-[#3b82f6]" />
+              <p className="text-sm font-medium text-[#475569]">
                 Loading receipt document...
               </p>
             </div>
@@ -158,32 +158,32 @@ export default function ReceiptViewerModal({
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 text-amber-700 border border-amber-200">
                 <FileQuestion size={24} />
               </div>
-              <h4 className="text-sm font-bold text-[#29241f]">
+              <h4 className="text-sm font-bold text-[#0f172a]">
                 Receipt Unavailable
               </h4>
-              <p className="text-xs text-[#756d64] leading-relaxed">{error}</p>
+              <p className="text-xs text-[#475569] leading-relaxed">{error}</p>
             </div>
           )}
 
           {!loading && !error && blobUrl && (
             <div className="w-full h-full flex flex-col items-center justify-center">
               {isPdf ? (
-                <div className="w-full h-[60vh] flex flex-col rounded-2xl overflow-hidden border border-[#e8e1d8] bg-white">
+                <div className="w-full h-[60vh] flex flex-col rounded-2xl overflow-hidden border border-[#dbeafe] bg-white">
                   <iframe
                     src={blobUrl}
                     title="PDF Receipt Viewer"
                     className="w-full h-full border-0"
                   />
-                  <div className="flex items-center justify-between border-t border-[#eee8e1] bg-white px-4 py-2 text-xs text-[#756d64]">
+                  <div className="flex items-center justify-between border-t border-[#eff6ff] bg-white px-4 py-2 text-xs text-[#475569]">
                     <span className="flex items-center gap-1.5 font-medium">
-                      <FileText size={14} className="text-[#a7773f]" />
+                      <FileText size={14} className="text-[#1d4ed8]" />
                       {fileName}
                     </span>
                     <a
                       href={blobUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1 font-semibold text-[#a7773f] hover:underline"
+                      className="inline-flex items-center gap-1 font-semibold text-[#1d4ed8] hover:underline"
                     >
                       Open in new tab <ExternalLink size={12} />
                     </a>
@@ -195,9 +195,9 @@ export default function ReceiptViewerModal({
                   <img
                     src={blobUrl}
                     alt={expense.title || "Receipt attachment"}
-                    className="max-h-[56vh] max-w-full rounded-2xl object-contain shadow-md border border-[#eee8e1]"
+                    className="max-h-[56vh] max-w-full rounded-2xl object-contain shadow-md border border-[#eff6ff]"
                   />
-                  <p className="mt-2 text-xs text-[#756d64] font-medium">
+                  <p className="mt-2 text-xs text-[#475569] font-medium">
                     {fileName}
                     {expense.receiptSize
                       ? ` (${Math.round(expense.receiptSize / 1024)} KB)`
@@ -210,10 +210,10 @@ export default function ReceiptViewerModal({
         </div>
 
         {/* Footer Meta */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-[#eee8e1] bg-white px-5 py-3 text-xs text-[#756d64] gap-2">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-t border-[#eff6ff] bg-white px-5 py-3 text-xs text-[#475569] gap-2">
           <div>
             <span>Recorded by: </span>
-            <strong className="text-[#29241f]">
+            <strong className="text-[#0f172a]">
               {expense.createdByName || "Staff/Manager"}
             </strong>
           </div>
@@ -222,7 +222,7 @@ export default function ReceiptViewerModal({
             <button
               type="button"
               onClick={onClose}
-              className="h-8 rounded-lg bg-[#29241f] px-4 text-xs font-semibold text-white hover:bg-black transition"
+              className="h-8 rounded-lg bg-[#0f172a] px-4 text-xs font-semibold text-white hover:bg-black transition"
             >
               Close
             </button>

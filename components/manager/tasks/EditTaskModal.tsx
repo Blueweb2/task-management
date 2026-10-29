@@ -234,7 +234,7 @@ export default function EditTaskModal({
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-sm font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3.5 py-2.5 text-sm font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -246,7 +246,7 @@ export default function EditTaskModal({
                 rows={3}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-[#9A7B4F] outline-none resize-none"
+                className="w-full rounded-xl border border-gray-300 px-3.5 py-2 text-sm text-gray-900 focus:border-[#2563eb] outline-none resize-none"
               />
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function EditTaskModal({
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value as TaskStatus)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#9A7B4F] outline-none bg-white cursor-pointer"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#2563eb] outline-none bg-white cursor-pointer"
               >
                 <option value="TODO">To Do</option>
                 <option value="ASSIGNED">Assigned</option>
@@ -277,7 +277,7 @@ export default function EditTaskModal({
               <select
                 value={priority}
                 onChange={(e) => setPriority(e.target.value as TaskPriority)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#9A7B4F] outline-none bg-white cursor-pointer"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold text-gray-900 focus:border-[#2563eb] outline-none bg-white cursor-pointer"
               >
                 <option value="LOW">Low</option>
                 <option value="MEDIUM">Medium</option>
@@ -297,7 +297,7 @@ export default function EditTaskModal({
                 type="date"
                 value={taskDate}
                 onChange={(e) => setTaskDate(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -310,7 +310,7 @@ export default function EditTaskModal({
                 required
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
 
@@ -322,7 +322,7 @@ export default function EditTaskModal({
                 type="time"
                 value={dueTime}
                 onChange={(e) => setDueTime(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none"
               />
             </div>
           </div>
@@ -336,7 +336,7 @@ export default function EditTaskModal({
               <select
                 value={serviceId}
                 onChange={(e) => setServiceId(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#9A7B4F] outline-none bg-white"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 text-xs font-medium text-gray-900 focus:border-[#2563eb] outline-none bg-white"
               >
                 <option value="">None / Custom</option>
                 {services.map((svc) => (
@@ -356,7 +356,7 @@ export default function EditTaskModal({
                   type="text"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#9A7B4F] outline-none"
+                  className="w-full rounded-xl border border-gray-300 pl-8 pr-3 py-2 text-xs text-gray-900 focus:border-[#2563eb] outline-none"
                 />
                 <MapPin size={14} className="absolute left-2.5 top-2.5 text-gray-400" />
               </div>
@@ -378,7 +378,7 @@ export default function EditTaskModal({
                     onClick={() => toggleStaff(st._id)}
                     className={`flex items-center gap-2.5 rounded-xl border p-2 text-left transition active:scale-[0.98] cursor-pointer ${
                       isSelected
-                        ? "border-[#9A7B4F] bg-[#9A7B4F]/10 shadow-2xs"
+                        ? "border-[#2563eb] bg-[#2563eb]/10 shadow-2xs"
                         : "border-gray-200 bg-white hover:border-gray-300"
                     }`}
                   >
@@ -392,7 +392,7 @@ export default function EditTaskModal({
                       </p>
                     </div>
                     {isSelected && (
-                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#9A7B4F] text-white">
+                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2563eb] text-white">
                         <Check size={12} strokeWidth={3} />
                       </div>
                     )}
@@ -518,7 +518,7 @@ export default function EditTaskModal({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#29241f] px-5 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50"
             >
               {loading ? (
                 <>

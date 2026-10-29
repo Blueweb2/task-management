@@ -152,7 +152,7 @@ export default function ResetPasswordModal({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A7B4F]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eff6ff] text-[#2563eb]">
               <KeyRound
                 size={19}
                 strokeWidth={1.9}
@@ -162,7 +162,7 @@ export default function ResetPasswordModal({
             <div className="min-w-0">
               <h2
                 id="reset-password-title"
-                className="text-base font-semibold text-[#1F1F1F]"
+                className="text-base font-semibold text-[#0f172a]"
               >
                 Reset Password
               </h2>
@@ -192,7 +192,7 @@ export default function ResetPasswordModal({
           className="space-y-5 px-5 pb-6 pt-5"
         >
           {/* Information */}
-          <div className="rounded-xl bg-[#F8F7F3] px-4 py-3">
+          <div className="rounded-xl bg-[#f8fbff] px-4 py-3">
             <p className="text-xs leading-5 text-gray-600">
               Set a new password for this staff
               member. They can use the new
@@ -230,7 +230,7 @@ export default function ResetPasswordModal({
                 placeholder="Enter new password"
                 autoComplete="new-password"
                 disabled={isSaving}
-                className="h-12 w-full rounded-xl border border-gray-200 bg-white px-3 pr-12 text-sm text-[#1F1F1F] outline-none transition placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:cursor-not-allowed disabled:bg-gray-50"
+                className="h-12 w-full rounded-xl border border-gray-200 bg-white px-3 pr-12 text-sm text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:cursor-not-allowed disabled:bg-gray-50"
               />
 
               <button
@@ -291,7 +291,7 @@ export default function ResetPasswordModal({
                 placeholder="Confirm new password"
                 autoComplete="new-password"
                 disabled={isSaving}
-                className="h-12 w-full rounded-xl border border-gray-200 bg-white px-3 pr-12 text-sm text-[#1F1F1F] outline-none transition placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 disabled:cursor-not-allowed disabled:bg-gray-50"
+                className="h-12 w-full rounded-xl border border-gray-200 bg-white px-3 pr-12 text-sm text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 disabled:cursor-not-allowed disabled:bg-gray-50"
               />
 
               <button
@@ -344,7 +344,7 @@ export default function ResetPasswordModal({
             <button
               type="submit"
               disabled={isSaving}
-              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#1F1F1F] px-4 text-sm font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-sm font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSaving ? (
                 <>

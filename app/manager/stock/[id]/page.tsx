@@ -275,7 +275,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
     return (
       <div className="flex min-h-[400px] items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 size={32} className="animate-spin text-[#9a6c37]" />
+          <Loader2 size={32} className="animate-spin text-[#1d4ed8]" />
           <p className="text-xs font-semibold text-gray-500">Loading stock details...</p>
         </div>
       </div>
@@ -338,7 +338,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
         <div className="flex items-center gap-3">
           <Link
             href="/manager/stock"
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-600 shadow-2xs hover:border-[#9a6c37]/50 hover:bg-[#faf8f5] transition active:scale-95 cursor-pointer"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-600 shadow-2xs hover:border-[#1d4ed8]/50 hover:bg-[#f8fbff] transition active:scale-95 cursor-pointer"
             title="Back to Stock Inventory"
           >
             <ArrowLeft size={18} />
@@ -368,7 +368,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 </span>
               )}
             </div>
-            <h1 className="mt-1 text-2xl font-black tracking-tight text-[#29241f]">
+            <h1 className="mt-1 text-2xl font-black tracking-tight text-[#0f172a]">
               {item.name}
             </h1>
           </div>
@@ -472,7 +472,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           onClick={() => setActiveTab("rental")}
           className={`flex items-center gap-2 border-b-2 px-4 py-3 text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
             activeTab === "rental"
-              ? "border-[#9a6c37] text-[#9a6c37]"
+              ? "border-[#1d4ed8] text-[#1d4ed8]"
               : "border-transparent text-gray-500 hover:text-gray-900"
           }`}
         >
@@ -490,7 +490,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           onClick={() => setActiveTab("details")}
           className={`flex items-center gap-2 border-b-2 px-4 py-3 text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
             activeTab === "details"
-              ? "border-[#9a6c37] text-[#9a6c37]"
+              ? "border-[#1d4ed8] text-[#1d4ed8]"
               : "border-transparent text-gray-500 hover:text-gray-900"
           }`}
         >
@@ -503,7 +503,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           onClick={() => setActiveTab("history")}
           className={`flex items-center gap-2 border-b-2 px-4 py-3 text-xs sm:text-sm font-bold transition whitespace-nowrap cursor-pointer ${
             activeTab === "history"
-              ? "border-[#9a6c37] text-[#9a6c37]"
+              ? "border-[#1d4ed8] text-[#1d4ed8]"
               : "border-transparent text-gray-500 hover:text-gray-900"
           }`}
         >
@@ -521,7 +521,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-gray-100 pb-3">
               <div>
-                <h3 className="text-base font-extrabold text-[#29241f]">
+                <h3 className="text-base font-extrabold text-[#0f172a]">
                   Active Event Allocations & Rentals
                 </h3>
                 <p className="text-xs text-gray-500 mt-0.5">
@@ -557,13 +557,13 @@ export default function StockItemDetailPage({ params }: PageProps) {
                       className={`rounded-2xl border p-4 sm:p-5 transition ${
                         isPendingVerification
                           ? "border-amber-300 bg-amber-50/20 shadow-xs"
-                          : "border-gray-200 bg-[#fdfcfb] hover:border-[#9a6c37]/30"
+                          : "border-gray-200 bg-[#ffffff] hover:border-[#1d4ed8]/30"
                       }`}
                     >
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                         <div className="space-y-1.5 min-w-0">
                           <div className="flex flex-wrap items-center gap-2">
-                            <h4 className="font-bold text-sm text-[#29241f]">
+                            <h4 className="font-bold text-sm text-[#0f172a]">
                               {ev?.eventName || "Event Shift"}
                             </h4>
                             <span
@@ -582,7 +582,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                           </div>
 
                           <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
-                            <span className="flex items-center gap-1 font-semibold text-[#9a6c37]">
+                            <span className="flex items-center gap-1 font-semibold text-[#1d4ed8]">
                               <Calendar size={13} />
                               {ev?.eventDate ? new Date(ev.eventDate).toLocaleDateString() : "Date TBD"}
                             </span>
@@ -674,7 +674,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* General Specifications */}
           <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-xs space-y-4">
-            <h3 className="text-base font-extrabold text-[#29241f] border-b border-gray-100 pb-3">
+            <h3 className="text-base font-extrabold text-[#0f172a] border-b border-gray-100 pb-3">
               Item Information & Specifications
             </h3>
 
@@ -686,7 +686,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
 
               <div className="flex justify-between py-1 border-b border-gray-50">
                 <span className="font-bold text-gray-500">Category</span>
-                <span className="font-bold text-[#9a6c37]">{item.category}</span>
+                <span className="font-bold text-[#1d4ed8]">{item.category}</span>
               </div>
 
               <div className="flex justify-between py-1 border-b border-gray-50">
@@ -711,7 +711,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
 
               <div>
                 <span className="font-bold text-gray-500 block mb-1">Description / Notes</span>
-                <p className="rounded-xl bg-[#faf8f5] p-3 text-gray-700 text-xs leading-relaxed border border-gray-100 italic">
+                <p className="rounded-xl bg-[#f8fbff] p-3 text-gray-700 text-xs leading-relaxed border border-gray-100 italic">
                   {item.description || "No description provided for this stock equipment."}
                 </p>
               </div>
@@ -720,7 +720,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
 
           {/* Pricing & Rental Policy */}
           <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-xs space-y-4">
-            <h3 className="text-base font-extrabold text-[#29241f] border-b border-gray-100 pb-3">
+            <h3 className="text-base font-extrabold text-[#0f172a] border-b border-gray-100 pb-3">
               Rental & Valuation Policy
             </h3>
 
@@ -781,7 +781,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-gray-100 pb-4">
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-base font-extrabold text-[#29241f]">Stock Transaction Audit History</h3>
+                <h3 className="text-base font-extrabold text-[#0f172a]">Stock Transaction Audit History</h3>
                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 text-[11px] font-black">
                   <PackagePlus size={12} className="text-emerald-700" />
                   {restockTransactions.length} Restocks Recorded
@@ -822,7 +822,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
               <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
                 Restock Batches
               </p>
-              <p className="mt-1 text-xl font-black text-[#29241f]">
+              <p className="mt-1 text-xl font-black text-[#0f172a]">
                 {restockTransactions.length} <span className="text-xs font-semibold text-gray-500">batches</span>
               </p>
               <p className="mt-0.5 text-[11px] text-gray-500">Recorded restock events</p>
@@ -833,7 +833,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
               <p className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
                 Last Restocked
               </p>
-              <p className="mt-1 text-xs font-black text-[#29241f] truncate">
+              <p className="mt-1 text-xs font-black text-[#0f172a] truncate">
                 {lastRestockTx ? new Date(lastRestockTx.createdAt).toLocaleDateString() : "Never"}
               </p>
               <p className="mt-0.5 text-[11px] text-gray-500 truncate">
@@ -842,11 +842,11 @@ export default function StockItemDetailPage({ params }: PageProps) {
             </div>
 
             {/* Current Available On Hand */}
-            <div className="rounded-xl border border-[#e8e1d8] bg-amber-50/30 p-3.5">
-              <p className="text-[10px] font-bold uppercase tracking-wider text-[#9a6c37]">
+            <div className="rounded-xl border border-[#dbeafe] bg-amber-50/30 p-3.5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-[#1d4ed8]">
                 Available On Hand
               </p>
-              <p className="mt-1 text-xl font-black text-[#29241f]">
+              <p className="mt-1 text-xl font-black text-[#0f172a]">
                 {item?.availableQuantity} <span className="text-xs font-medium text-gray-500">/ {item?.totalQuantity} {item?.unit}</span>
               </p>
               <p className="mt-0.5 text-[11px] text-gray-500">Current available balance</p>
@@ -861,7 +861,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 onClick={() => setHistoryFilter("ALL")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer whitespace-nowrap ${
                   historyFilter === "ALL"
-                    ? "bg-[#29241f] text-white shadow-2xs"
+                    ? "bg-[#0f172a] text-white shadow-2xs"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -910,7 +910,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 placeholder="Search history, notes, user..."
                 value={historySearch}
                 onChange={(e) => setHistorySearch(e.target.value)}
-                className="w-full pl-8 pr-3 py-1.5 rounded-lg border border-gray-200 text-xs focus:outline-hidden focus:border-[#9a6c37]"
+                className="w-full pl-8 pr-3 py-1.5 rounded-lg border border-gray-200 text-xs focus:outline-hidden focus:border-[#1d4ed8]"
               />
             </div>
           </div>
@@ -928,7 +928,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           ) : (
             <div className="overflow-x-auto rounded-xl border border-gray-100">
               <table className="w-full text-left text-xs">
-                <thead className="border-b border-gray-200 bg-[#faf8f5] text-[11px] font-bold text-gray-600">
+                <thead className="border-b border-gray-200 bg-[#f8fbff] text-[11px] font-bold text-gray-600">
                   <tr>
                     <th className="px-3.5 py-3">Timestamp</th>
                     <th className="px-3.5 py-3">Item Restocked / Inventory Item</th>
@@ -980,7 +980,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                                   Inventory Item
                                 </span>
                               )}
-                              <span className="font-extrabold text-[#29241f] text-xs">
+                              <span className="font-extrabold text-[#0f172a] text-xs">
                                 {itemName}
                               </span>
                             </div>
@@ -1070,7 +1070,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
 
                         {/* Performed By */}
                         <td className="px-3.5 py-3 text-gray-600 whitespace-nowrap">
-                          <div className="font-semibold text-[#29241f]">{tx.performedBy?.name || "System"}</div>
+                          <div className="font-semibold text-[#0f172a]">{tx.performedBy?.name || "System"}</div>
                           {tx.performedBy?.role && (
                             <div className="text-[10px] text-gray-400 capitalize">{tx.performedBy.role}</div>
                           )}
@@ -1106,7 +1106,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
           <div className="w-full max-w-md rounded-3xl bg-white p-5 sm:p-6 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <div>
-                <h3 className="text-base font-black text-[#29241f]">Restock Inventory</h3>
+                <h3 className="text-base font-black text-[#0f172a]">Restock Inventory</h3>
                 <p className="text-xs text-gray-500 mt-0.5">{item.name}</p>
               </div>
               <button
@@ -1181,7 +1181,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-xs">
           <div className="w-full max-w-lg rounded-3xl bg-white p-5 sm:p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-              <h3 className="text-base font-black text-[#29241f]">Edit Stock Item Details</h3>
+              <h3 className="text-base font-black text-[#0f172a]">Edit Stock Item Details</h3>
               <button
                 type="button"
                 onClick={() => setEditModalOpen(false)}
@@ -1199,7 +1199,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                   required
                   value={editData.name || ""}
                   onChange={(e) => setEditData({ ...editData, name: e.target.value })}
-                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -1218,7 +1218,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                         rentalPrice: isNowKitchen ? 0 : editData.rentalPrice,
                       });
                     }}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-bold text-gray-700 outline-none focus:border-[#1d4ed8]"
                   >
                     {CATEGORIES.map((c) => (
                       <option key={c} value={c}>
@@ -1234,7 +1234,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                     type="text"
                     value={editData.unit || ""}
                     onChange={(e) => setEditData({ ...editData, unit: e.target.value })}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
               </div>
@@ -1247,7 +1247,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                     min="0"
                     value={editData.unitPrice || 0}
                     onChange={(e) => setEditData({ ...editData, unitPrice: Number(e.target.value) })}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -1278,7 +1278,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                     min="0"
                     value={editData.minStockLevel || 10}
                     onChange={(e) => setEditData({ ...editData, minStockLevel: Number(e.target.value) })}
-                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                    className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
               </div>
@@ -1311,7 +1311,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                   type="text"
                   value={editData.location || ""}
                   onChange={(e) => setEditData({ ...editData, location: e.target.value })}
-                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#9a6c37]"
+                  className="mt-1 h-10 w-full rounded-xl border border-gray-200 px-3 text-xs font-medium outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -1321,7 +1321,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                   rows={3}
                   value={editData.description || ""}
                   onChange={(e) => setEditData({ ...editData, description: e.target.value })}
-                  className="mt-1 w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#9a6c37]"
+                  className="mt-1 w-full rounded-xl border border-gray-200 p-2.5 text-xs outline-none focus:border-[#1d4ed8]"
                 />
               </div>
 
@@ -1337,7 +1337,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 <button
                   type="submit"
                   disabled={editSubmitting}
-                  className="rounded-xl bg-[#29241f] px-5 py-2 text-xs font-extrabold text-white hover:bg-black cursor-pointer flex items-center gap-2"
+                  className="rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-extrabold text-white hover:bg-black cursor-pointer flex items-center gap-2"
                 >
                   {editSubmitting ? (
                     <>
@@ -1361,7 +1361,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-xs">
           <div className="w-full max-w-md rounded-3xl bg-white p-5 sm:p-6 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-              <h3 className="text-base font-black text-[#29241f]">Confirm Return Verification</h3>
+              <h3 className="text-base font-black text-[#0f172a]">Confirm Return Verification</h3>
               <button
                 type="button"
                 onClick={() => setVerifyAllocation(null)}

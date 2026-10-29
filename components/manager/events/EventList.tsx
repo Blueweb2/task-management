@@ -59,7 +59,7 @@ export default function EventList({
       <section className="space-y-3 w-full max-w-full min-w-0">
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping shrink-0" />
-          <h3 className="text-xs font-black uppercase tracking-wider text-[#29241f] truncate">
+          <h3 className="text-xs font-black uppercase tracking-wider text-[#0f172a] truncate">
             Events Running Today ({ongoingEvents.length})
           </h3>
         </div>

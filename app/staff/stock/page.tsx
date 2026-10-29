@@ -381,17 +381,17 @@ export default function StaffStockPage() {
   const returnDiff = returnTarget - returnAccounted;
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] pb-24 text-[#252525]">
+    <div className="min-h-screen bg-[#f8fbff] pb-24 text-[#1e3a8a]">
       {/* Sticky Header */}
-      <div className="sticky top-0 z-30 border-b border-[#e8e1d8] bg-white/95 backdrop-blur-md px-4 py-3.5 shadow-2xs">
+      <div className="sticky top-0 z-30 border-b border-[#dbeafe] bg-white/95 backdrop-blur-md px-4 py-3.5 shadow-2xs">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f7f3ee] text-[#9a6c37]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f8fbff] text-[#1d4ed8]">
               <Package size={24} />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-base font-extrabold text-[#252525]">Items &amp; Equipment</h1>
+                <h1 className="text-base font-extrabold text-[#1e3a8a]">Items &amp; Equipment</h1>
                 <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-amber-800">
                   <Sparkles size={10} /> Available Now
                 </span>
@@ -409,7 +409,7 @@ export default function StaffStockPage() {
             className="flex h-9 w-9 items-center justify-center rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
             title="Refresh Items"
           >
-            <RefreshCw size={16} className={loading ? "animate-spin text-[#9a6c37]" : ""} />
+            <RefreshCw size={16} className={loading ? "animate-spin text-[#1d4ed8]" : ""} />
           </button>
         </div>
 
@@ -420,7 +420,7 @@ export default function StaffStockPage() {
             onClick={() => setActiveTab("catalog")}
             className={`flex items-center justify-center gap-1.5 flex-1 min-w-[130px] rounded-xl py-2 px-3 text-center transition ${
               activeTab === "catalog"
-                ? "bg-white text-[#9a6c37] shadow-xs"
+                ? "bg-white text-[#1d4ed8] shadow-xs"
                 : "text-gray-600 hover:text-gray-900"
             }`}
           >
@@ -499,7 +499,7 @@ export default function StaffStockPage() {
         {/* Loading Spinner */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20 text-gray-400">
-            <RefreshCw size={32} className="animate-spin text-[#9a6c37]" />
+            <RefreshCw size={32} className="animate-spin text-[#1d4ed8]" />
             <p className="mt-3 text-xs font-bold text-gray-600">Loading items...</p>
           </div>
         ) : (
@@ -510,7 +510,7 @@ export default function StaffStockPage() {
             {activeTab === "catalog" && (
               <div className="space-y-4">
                 {/* Search & Filter Header Bar */}
-                <div className="rounded-3xl border border-[#e8e1d8] bg-white p-4 shadow-sm">
+                <div className="rounded-3xl border border-[#dbeafe] bg-white p-4 shadow-sm">
                   <div className="flex flex-col sm:flex-row gap-3">
                     <div className="relative flex-1">
                       <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -519,7 +519,7 @@ export default function StaffStockPage() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search item name, code, or category..."
-                        className="w-full rounded-2xl border border-gray-200 bg-[#faf8f5] pl-10 pr-4 py-2 text-xs font-semibold text-[#252525] placeholder:text-gray-400 focus:border-[#9a6c37] focus:bg-white focus:outline-none"
+                        className="w-full rounded-2xl border border-gray-200 bg-[#f8fbff] pl-10 pr-4 py-2 text-xs font-semibold text-[#1e3a8a] placeholder:text-gray-400 focus:border-[#1d4ed8] focus:bg-white focus:outline-none"
                       />
                       {searchQuery && (
                         <button
@@ -532,12 +532,12 @@ export default function StaffStockPage() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <label className="flex items-center gap-2 cursor-pointer rounded-2xl border border-gray-200 bg-[#faf8f5] px-3.5 py-2 text-xs font-bold text-gray-700 hover:bg-gray-100 transition">
+                      <label className="flex items-center gap-2 cursor-pointer rounded-2xl border border-gray-200 bg-[#f8fbff] px-3.5 py-2 text-xs font-bold text-gray-700 hover:bg-gray-100 transition">
                         <input
                           type="checkbox"
                           checked={onlyAvailable}
                           onChange={(e) => setOnlyAvailable(e.target.checked)}
-                          className="rounded text-[#9a6c37] focus:ring-0"
+                          className="rounded text-[#1d4ed8] focus:ring-0"
                         />
                         <span>Available Only</span>
                       </label>
@@ -553,7 +553,7 @@ export default function StaffStockPage() {
                         onClick={() => setSelectedCategory(cat.value)}
                         className={`rounded-xl px-3 py-1.5 text-xs font-bold whitespace-nowrap transition ${
                           selectedCategory === cat.value
-                            ? "bg-[#9a6c37] text-white shadow-2xs"
+                            ? "bg-[#1d4ed8] text-white shadow-2xs"
                             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                         }`}
                       >
@@ -565,7 +565,7 @@ export default function StaffStockPage() {
 
                 {/* Info Callout */}
                 <div className="flex items-center gap-2.5 rounded-2xl border border-amber-200/80 bg-amber-50/70 px-4 py-2.5 text-xs font-medium text-amber-900 shadow-2xs">
-                  <Mail size={16} className="text-[#9a6c37] shrink-0" />
+                  <Mail size={16} className="text-[#1d4ed8] shrink-0" />
                   <span>
                     When you book an item, it is saved for you in the store and an email alert is sent to your manager.
                   </span>
@@ -573,7 +573,7 @@ export default function StaffStockPage() {
 
                 {/* Stock Cards Grid */}
                 {filteredCatalog.length === 0 ? (
-                  <div className="rounded-3xl border border-dashed border-[#e8e1d8] bg-white p-12 text-center shadow-2xs">
+                  <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-12 text-center shadow-2xs">
                     <Package size={40} className="mx-auto text-gray-300" />
                     <h3 className="mt-3 text-sm font-bold text-gray-800">No Items Found</h3>
                     <p className="mt-1 text-xs text-gray-500">
@@ -589,7 +589,7 @@ export default function StaffStockPage() {
                       return (
                         <div
                           key={item._id}
-                          className="flex flex-col justify-between rounded-3xl border border-[#e8e1d8] bg-white p-5 shadow-sm transition hover:shadow-md hover:border-[#9a6c37]/40"
+                          className="flex flex-col justify-between rounded-3xl border border-[#dbeafe] bg-white p-5 shadow-sm transition hover:shadow-md hover:border-[#1d4ed8]/40"
                         >
                           <div>
                             {/* Header / Category & SKU */}
@@ -598,7 +598,7 @@ export default function StaffStockPage() {
                                 <span className="inline-block rounded-full bg-gray-100 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-gray-600">
                                   {item.category || "Equipment"}
                                 </span>
-                                <h3 className="mt-1 text-sm font-black text-[#252525]">{item.name}</h3>
+                                <h3 className="mt-1 text-sm font-black text-[#1e3a8a]">{item.name}</h3>
                                 <p className="text-[11px] text-gray-400">
                                   Code: {item.sku || "N/A"} {item.location ? `• Place: ${item.location}` : ""}
                                 </p>
@@ -623,7 +623,7 @@ export default function StaffStockPage() {
                             </div>
 
                             {/* Live Quantities Counter Grid */}
-                            <div className="mt-3.5 grid grid-cols-4 gap-2 rounded-2xl bg-[#faf8f5] p-3 text-center border border-[#e8e1d8]">
+                            <div className="mt-3.5 grid grid-cols-4 gap-2 rounded-2xl bg-[#f8fbff] p-3 text-center border border-[#dbeafe]">
                               <div className="rounded-xl bg-white p-1.5 shadow-2xs">
                                 <div className="text-[10px] font-bold text-gray-400 uppercase">Available</div>
                                 <div className="text-base font-black text-emerald-700">
@@ -665,7 +665,7 @@ export default function StaffStockPage() {
                               type="button"
                               onClick={() => openHoldModal(item)}
                               disabled={isOutOfStock}
-                              className="inline-flex items-center gap-1.5 rounded-xl bg-[#9a6c37] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-[#855c2d] active:scale-[0.98] transition disabled:opacity-40 disabled:cursor-not-allowed"
+                              className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-[#1d4ed8] active:scale-[0.98] transition disabled:opacity-40 disabled:cursor-not-allowed"
                             >
                               <BookmarkCheck size={14} />
                               Book This Item
@@ -685,7 +685,7 @@ export default function StaffStockPage() {
             {activeTab === "held" && (
               <div className="space-y-3">
                 {heldStocks.length === 0 ? (
-                  <div className="rounded-3xl border border-dashed border-[#e8e1d8] bg-white p-12 text-center shadow-2xs">
+                  <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-12 text-center shadow-2xs">
                     <BookmarkCheck size={40} className="mx-auto text-gray-300" />
                     <h3 className="mt-3 text-sm font-bold text-gray-800">No Booked Items</h3>
                     <p className="mt-1 text-xs text-gray-500 max-w-md mx-auto">
@@ -694,7 +694,7 @@ export default function StaffStockPage() {
                     <button
                       type="button"
                       onClick={() => setActiveTab("catalog")}
-                      className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-[#9a6c37] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#855c2d]"
+                      className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#1d4ed8]"
                     >
                       Browse All Items
                     </button>
@@ -715,7 +715,7 @@ export default function StaffStockPage() {
                             <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-amber-800 border border-amber-200">
                               <BookmarkCheck size={11} /> Booked (Saved for You)
                             </span>
-                            <h3 className="mt-1 text-sm font-extrabold text-[#252525]">
+                            <h3 className="mt-1 text-sm font-extrabold text-[#1e3a8a]">
                               {item?.name || "Equipment Item"}
                             </h3>
                             <p className="text-[11px] text-gray-400">
@@ -725,7 +725,7 @@ export default function StaffStockPage() {
 
                           <div className="text-right">
                             <span className="text-[10px] uppercase font-bold text-gray-400">Booked Amount</span>
-                            <div className="text-lg font-black text-[#9a6c37]">
+                            <div className="text-lg font-black text-[#1d4ed8]">
                               {holdQty} <span className="text-xs font-normal text-gray-500">{item?.unit || "pcs"}</span>
                             </div>
                           </div>
@@ -774,7 +774,7 @@ export default function StaffStockPage() {
                           <button
                             type="button"
                             onClick={() => openTakeModal(stock)}
-                            className="inline-flex items-center gap-1.5 rounded-xl bg-[#9a6c37] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#855c2d] active:scale-[0.98] transition"
+                            className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#1d4ed8] active:scale-[0.98] transition"
                           >
                             <Truck size={14} />
                             Pick Up / Take Item
@@ -793,7 +793,7 @@ export default function StaffStockPage() {
             {activeTab === "custody" && (
               <div className="space-y-3">
                 {custodyStocks.length === 0 ? (
-                  <div className="rounded-3xl border border-dashed border-[#e8e1d8] bg-white p-12 text-center shadow-2xs">
+                  <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-12 text-center shadow-2xs">
                     <ShieldCheck size={40} className="mx-auto text-gray-300" />
                     <h3 className="mt-3 text-sm font-bold text-gray-800">No Items With You</h3>
                     <p className="mt-1 text-xs text-gray-500">
@@ -815,7 +815,7 @@ export default function StaffStockPage() {
                             <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-indigo-700 border border-indigo-200">
                               <ShieldCheck size={11} /> With You (In Use)
                             </span>
-                            <h3 className="mt-1 text-sm font-extrabold text-[#252525]">
+                            <h3 className="mt-1 text-sm font-extrabold text-[#1e3a8a]">
                               {item?.name || "Equipment Item"}
                             </h3>
                             <p className="text-[11px] text-gray-400">
@@ -880,7 +880,7 @@ export default function StaffStockPage() {
             {activeTab === "history" && (
               <div className="space-y-3">
                 {historyStocks.length === 0 ? (
-                  <div className="rounded-3xl border border-dashed border-[#e8e1d8] bg-white p-12 text-center shadow-2xs">
+                  <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-12 text-center shadow-2xs">
                     <RotateCcw size={40} className="mx-auto text-gray-300" />
                     <h3 className="mt-3 text-sm font-bold text-gray-800">No Returned Items Yet</h3>
                     <p className="mt-1 text-xs text-gray-500">
@@ -924,7 +924,7 @@ export default function StaffStockPage() {
                               </span>
                             )}
 
-                            <h3 className="mt-1 text-sm font-extrabold text-[#252525]">{item?.name || "Item"}</h3>
+                            <h3 className="mt-1 text-sm font-extrabold text-[#1e3a8a]">{item?.name || "Item"}</h3>
                             <p className="text-[11px] text-gray-400">
                               {event?.eventName || "Staff Work"}{" "}
                               {stock.returnedAt ? `• Returned on ${new Date(stock.returnedAt).toLocaleDateString()}` : ""}
@@ -1007,11 +1007,11 @@ export default function StaffStockPage() {
           <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl border border-gray-100 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-50 text-[#9a6c37]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-50 text-[#1d4ed8]">
                   <BookmarkCheck size={24} />
                 </div>
                 <div>
-                  <h3 className="text-base font-extrabold text-[#252525]">Book / Reserve Item</h3>
+                  <h3 className="text-base font-extrabold text-[#1e3a8a]">Book / Reserve Item</h3>
                   <p className="text-xs text-gray-500">Save item for your upcoming shift or event</p>
                 </div>
               </div>
@@ -1024,8 +1024,8 @@ export default function StaffStockPage() {
             </div>
 
             {/* Item Details Summary Card */}
-            <div className="mt-4 rounded-2xl bg-[#faf8f5] p-4 text-xs border border-[#e8e1d8]">
-              <div className="font-bold text-[#252525] text-sm">{holdModalItem.name}</div>
+            <div className="mt-4 rounded-2xl bg-[#f8fbff] p-4 text-xs border border-[#dbeafe]">
+              <div className="font-bold text-[#1e3a8a] text-sm">{holdModalItem.name}</div>
               <div className="mt-1 flex justify-between text-gray-600">
                 <span>Category:</span>
                 <span className="font-bold text-gray-800">{holdModalItem.category}</span>
@@ -1040,7 +1040,7 @@ export default function StaffStockPage() {
 
             {/* Manager Email Alert Callout */}
             <div className="mt-3.5 flex items-start gap-2.5 rounded-2xl border border-amber-200 bg-amber-50/80 p-3 text-xs text-amber-900">
-              <Mail size={16} className="text-[#9a6c37] shrink-0 mt-0.5" />
+              <Mail size={16} className="text-[#1d4ed8] shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold">Manager Alert:</span>
                 <p className="text-[11px] text-amber-800 mt-0.5">
@@ -1061,7 +1061,7 @@ export default function StaffStockPage() {
                   value={holdForm.quantity}
                   onChange={(e) => setHoldForm({ ...holdForm, quantity: Number(e.target.value) })}
                   required
-                  className="w-full rounded-2xl border-2 border-gray-200 px-4 py-2.5 text-base font-bold text-gray-900 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-2xl border-2 border-gray-200 px-4 py-2.5 text-base font-bold text-gray-900 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1073,7 +1073,7 @@ export default function StaffStockPage() {
                   type="date"
                   value={holdForm.expectedReturnAt}
                   onChange={(e) => setHoldForm({ ...holdForm, expectedReturnAt: e.target.value })}
-                  className="w-full rounded-xl border border-gray-200 px-3.5 py-2 text-xs font-semibold text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3.5 py-2 text-xs font-semibold text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1086,7 +1086,7 @@ export default function StaffStockPage() {
                   value={holdForm.notes}
                   onChange={(e) => setHoldForm({ ...holdForm, notes: e.target.value })}
                   placeholder="e.g. Needed for evening dinner shift..."
-                  className="w-full rounded-xl border border-gray-200 px-3.5 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3.5 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1101,7 +1101,7 @@ export default function StaffStockPage() {
                 <button
                   type="submit"
                   disabled={actionLoading || holdModalItem.availableQuantity <= 0}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#9a6c37] px-5 py-2 text-xs font-bold text-white hover:bg-[#855c2d] shadow-sm transition disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-5 py-2 text-xs font-bold text-white hover:bg-[#1d4ed8] shadow-sm transition disabled:opacity-50"
                 >
                   <Send size={14} />
                   {actionLoading ? "Booking..." : "Confirm & Book Item"}
@@ -1120,11 +1120,11 @@ export default function StaffStockPage() {
           <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl border border-gray-100 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between border-b border-gray-100 pb-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f7f3ee] text-[#9a6c37]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f8fbff] text-[#1d4ed8]">
                   <Truck size={22} />
                 </div>
                 <div>
-                  <h3 className="text-base font-extrabold text-[#252525]">Pick Up Item</h3>
+                  <h3 className="text-base font-extrabold text-[#1e3a8a]">Pick Up Item</h3>
                   <p className="text-xs text-gray-500">Confirm you are taking this item now</p>
                 </div>
               </div>
@@ -1145,13 +1145,13 @@ export default function StaffStockPage() {
                   : null;
 
               return (
-                <div className="mt-4 rounded-2xl bg-[#faf8f5] p-4 text-xs border border-[#e8e1d8]">
-                  <div className="font-bold text-[#252525] text-sm">
+                <div className="mt-4 rounded-2xl bg-[#f8fbff] p-4 text-xs border border-[#dbeafe]">
+                  <div className="font-bold text-[#1e3a8a] text-sm">
                     {item?.name || "Item"}
                   </div>
                   <div className="mt-1 flex justify-between text-gray-500">
                     <span>Saved for You:</span>
-                    <span className="font-black text-[#9a6c37] text-sm">
+                    <span className="font-black text-[#1d4ed8] text-sm">
                       {takeModalStock.reservedQuantity || takeModalStock.requiredQuantity}{" "}
                       {item?.unit || "units"}
                     </span>
@@ -1171,7 +1171,7 @@ export default function StaffStockPage() {
                   value={takeForm.takenQuantity}
                   onChange={(e) => setTakeForm({ ...takeForm, takenQuantity: Number(e.target.value) })}
                   required
-                  className="w-full rounded-2xl border-2 border-gray-200 px-4 py-2.5 text-base font-bold text-gray-900 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-2xl border-2 border-gray-200 px-4 py-2.5 text-base font-bold text-gray-900 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 
@@ -1206,7 +1206,7 @@ export default function StaffStockPage() {
                 <button
                   type="submit"
                   disabled={actionLoading}
-                  className="rounded-xl bg-[#9a6c37] px-5 py-2 text-xs font-bold text-white hover:bg-[#855c2d] shadow-sm transition disabled:opacity-50"
+                  className="rounded-xl bg-[#1d4ed8] px-5 py-2 text-xs font-bold text-white hover:bg-[#1d4ed8] shadow-sm transition disabled:opacity-50"
                 >
                   {actionLoading ? "Picking up..." : "Confirm & Pick Up Item"}
                 </button>
@@ -1228,7 +1228,7 @@ export default function StaffStockPage() {
                   <RotateCcw size={22} />
                 </div>
                 <div>
-                  <h3 className="text-base font-extrabold text-[#252525]">Return Item to Store</h3>
+                  <h3 className="text-base font-extrabold text-[#1e3a8a]">Return Item to Store</h3>
                   <p className="text-xs text-gray-500">Tell us how many are in good condition, damaged, or lost</p>
                 </div>
               </div>
@@ -1253,7 +1253,7 @@ export default function StaffStockPage() {
                 <div className="mt-4 flex items-center justify-between rounded-2xl bg-gray-50 p-4 border border-gray-100">
                   <div>
                     <span className="text-[11px] font-bold text-gray-400 uppercase">Item to Return</span>
-                    <div className="font-extrabold text-[#252525] text-sm">
+                    <div className="font-extrabold text-[#1e3a8a] text-sm">
                       {item?.name || "Item"}
                     </div>
                   </div>
@@ -1385,7 +1385,7 @@ export default function StaffStockPage() {
                   value={returnForm.returnNotes}
                   onChange={(e) => setReturnForm({ ...returnForm, returnNotes: e.target.value })}
                   placeholder="Optional note for manager..."
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#9a6c37] focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2 text-xs text-gray-800 focus:border-[#1d4ed8] focus:outline-none"
                 />
               </div>
 

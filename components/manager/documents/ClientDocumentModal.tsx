@@ -155,25 +155,25 @@ export default function ClientDocumentModal({
       }}
       className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-3 sm:p-6 overflow-y-auto modal-backdrop-container"
     >
-      <div className="relative w-full max-w-4xl max-h-[92dvh] flex flex-col rounded-3xl bg-[#FAF8F5] border border-[#E8E1D8] shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 modal-card-container">
+      <div className="relative w-full max-w-4xl max-h-[92dvh] flex flex-col rounded-3xl bg-[#f8fbff] border border-[#dbeafe] shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 modal-card-container">
         {/* ==========================================
             Modal Control Header (Screen Only)
         ========================================== */}
-        <div className="no-print flex flex-wrap items-center justify-between gap-3 border-b border-[#E8E1D8] bg-white px-5 py-4 sm:px-6">
+        <div className="no-print flex flex-wrap items-center justify-between gap-3 border-b border-[#dbeafe] bg-white px-5 py-4 sm:px-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A6C37]">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
               <FileText size={20} />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-base font-bold text-[#29241F]">
+                <h2 className="text-base font-bold text-[#0f172a]">
                   Client Export Studio
                 </h2>
-                <span className="rounded-full bg-[#B8894B]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#9A6C37] uppercase tracking-wider">
+                <span className="rounded-full bg-[#3b82f6]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#1d4ed8] uppercase tracking-wider">
                   {docType}
                 </span>
               </div>
-              <p className="text-xs text-[#756D64]">
+              <p className="text-xs text-[#475569]">
                 Ref: {docNumber} · {currentDoc.client.name}
               </p>
             </div>
@@ -182,14 +182,14 @@ export default function ClientDocumentModal({
           {/* Mode Switcher & Actions */}
           <div className="flex flex-wrap items-center gap-2">
             {/* Pricing Details Toggle */}
-            <div className="inline-flex rounded-xl bg-[#F0ECE4] p-1 text-xs font-semibold text-[#756D64]">
+            <div className="inline-flex rounded-xl bg-[#eff6ff] p-1 text-xs font-semibold text-[#475569]">
               <button
                 type="button"
                 onClick={() => setShowItemizedPrices(false)}
                 className={`rounded-lg px-2.5 py-1.5 transition cursor-pointer ${
                   !showItemizedPrices
-                    ? "bg-white text-[#29241F] shadow-xs font-bold"
-                    : "hover:text-[#29241F]"
+                    ? "bg-white text-[#0f172a] shadow-xs font-bold"
+                    : "hover:text-[#0f172a]"
                 }`}
                 title="Only show total estimate amount to client without individual item rates"
               >
@@ -200,8 +200,8 @@ export default function ClientDocumentModal({
                 onClick={() => setShowItemizedPrices(true)}
                 className={`rounded-lg px-2.5 py-1.5 transition cursor-pointer ${
                   showItemizedPrices
-                    ? "bg-white text-[#29241F] shadow-xs font-bold"
-                    : "hover:text-[#29241F]"
+                    ? "bg-white text-[#0f172a] shadow-xs font-bold"
+                    : "hover:text-[#0f172a]"
                 }`}
                 title="Show itemized line prices"
               >
@@ -210,14 +210,14 @@ export default function ClientDocumentModal({
             </div>
 
             {/* Document Mode Toggle */}
-            <div className="inline-flex rounded-xl bg-[#F0ECE4] p-1 text-xs font-semibold text-[#756D64]">
+            <div className="inline-flex rounded-xl bg-[#eff6ff] p-1 text-xs font-semibold text-[#475569]">
               <button
                 type="button"
                 onClick={() => setDocType("ESTIMATE")}
                 className={`rounded-lg px-3 py-1.5 transition cursor-pointer ${
                   docType === "ESTIMATE"
-                    ? "bg-white text-[#29241F] shadow-sm font-bold"
-                    : "hover:text-[#29241F]"
+                    ? "bg-white text-[#0f172a] shadow-sm font-bold"
+                    : "hover:text-[#0f172a]"
                 }`}
               >
                 Estimate
@@ -227,8 +227,8 @@ export default function ClientDocumentModal({
                 onClick={() => setDocType("INVOICE")}
                 className={`rounded-lg px-3 py-1.5 transition cursor-pointer ${
                   docType === "INVOICE"
-                    ? "bg-white text-[#29241F] shadow-sm font-bold"
-                    : "hover:text-[#29241F]"
+                    ? "bg-white text-[#0f172a] shadow-sm font-bold"
+                    : "hover:text-[#0f172a]"
                 }`}
               >
                 Tax Invoice
@@ -239,7 +239,7 @@ export default function ClientDocumentModal({
             <button
               type="button"
               onClick={onClose}
-              className="flex h-9 w-9 items-center justify-center rounded-xl text-[#756D64] hover:bg-[#F0ECE4] transition cursor-pointer"
+              className="flex h-9 w-9 items-center justify-center rounded-xl text-[#475569] hover:bg-[#eff6ff] transition cursor-pointer"
               aria-label="Close modal"
             >
               <X size={18} />
@@ -250,15 +250,15 @@ export default function ClientDocumentModal({
         {/* ==========================================
             Tab Navigation Bar (Screen Only)
         ========================================== */}
-        <div className="no-print flex items-center justify-between border-b border-[#E8E1D8] bg-[#F7F4EE] px-6 py-2.5">
+        <div className="no-print flex items-center justify-between border-b border-[#dbeafe] bg-[#f8fbff] px-6 py-2.5">
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={() => setActiveTab("preview")}
               className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${
                 activeTab === "preview"
-                  ? "bg-white text-[#29241F] shadow-sm"
-                  : "text-[#756D64] hover:text-[#29241F]"
+                  ? "bg-white text-[#0f172a] shadow-sm"
+                  : "text-[#475569] hover:text-[#0f172a]"
               }`}
             >
               <Printer size={15} />
@@ -283,7 +283,7 @@ export default function ClientDocumentModal({
               <button
                 type="button"
                 onClick={handlePrint}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241F] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-black transition active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-black transition active:scale-95 cursor-pointer"
               >
                 <Printer size={14} />
                 <span>Save as PDF / Print</span>
@@ -312,49 +312,49 @@ export default function ClientDocumentModal({
             ========================================== */
             <div
               id="printable-client-document"
-              className="mx-auto max-w-3xl rounded-2xl bg-white p-8 sm:p-10 border border-[#E8E1D8] shadow-sm text-[#29241F]"
+              className="mx-auto max-w-3xl rounded-2xl bg-white p-8 sm:p-10 border border-[#dbeafe] shadow-sm text-[#0f172a]"
             >
               {/* Document Letterhead */}
-              <div className="print-avoid-break flex flex-col sm:flex-row sm:items-start justify-between gap-6 border-b border-[#E8E1D8] pb-6">
+              <div className="print-avoid-break flex flex-col sm:flex-row sm:items-start justify-between gap-6 border-b border-[#dbeafe] pb-6">
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-xl">✨</span>
-                    <h1 className="text-xl font-black tracking-tight text-[#29241F]">
+                    <h1 className="text-xl font-black tracking-tight text-[#0f172a]">
                       {currentDoc.company.name}
                     </h1>
                   </div>
-                  <p className="mt-1 text-xs text-[#756D64]">
+                  <p className="mt-1 text-xs text-[#475569]">
                     {currentDoc.company.tagline}
                   </p>
-                  <p className="mt-2 text-xs text-[#756D64] max-w-sm leading-relaxed">
+                  <p className="mt-2 text-xs text-[#475569] max-w-sm leading-relaxed">
                     {currentDoc.company.address}
                   </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-[#756D64]">
+                  <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-[#475569]">
                     <span className="inline-flex items-center gap-1">
-                      <Phone size={13} className="text-[#9A6C37]" />
+                      <Phone size={13} className="text-[#1d4ed8]" />
                       {currentDoc.company.phone}
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <Mail size={13} className="text-[#9A6C37]" />
+                      <Mail size={13} className="text-[#1d4ed8]" />
                       {currentDoc.company.email}
                     </span>
                   </div>
                   {currentDoc.company.gstin && (
-                    <p className="mt-1 text-[11px] font-mono text-[#9A6C37]">
+                    <p className="mt-1 text-[11px] font-mono text-[#1d4ed8]">
                       GSTIN: {currentDoc.company.gstin}
                     </p>
                   )}
                 </div>
 
                 <div className="sm:text-right">
-                  <div className="inline-block rounded-xl bg-[#FAF8F5] border border-[#E8E1D8] px-4 py-3">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#9A6C37]">
+                  <div className="inline-block rounded-xl bg-[#f8fbff] border border-[#dbeafe] px-4 py-3">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#1d4ed8]">
                       {isInvoice ? "TAX INVOICE" : "Proposal / QUOTE"}
                     </p>
-                    <p className="mt-1 text-base font-black font-mono text-[#29241F]">
+                    <p className="mt-1 text-base font-black font-mono text-[#0f172a]">
                       {docNumber}
                     </p>
-                    <div className="mt-2 text-xs text-[#756D64] space-y-0.5">
+                    <div className="mt-2 text-xs text-[#475569] space-y-0.5">
                       <p>Date: {currentDoc.date ? currentDoc.date.slice(0, 10) : new Date().toISOString().slice(0, 10)}</p>
                       {isInvoice ? (
                         <p>Due: On Receipt</p>
@@ -367,61 +367,61 @@ export default function ClientDocumentModal({
               </div>
 
               {/* Client & Event Meta Row */}
-              <div className="print-avoid-break grid sm:grid-cols-2 gap-6 border-b border-[#E8E1D8] py-6">
+              <div className="print-avoid-break grid sm:grid-cols-2 gap-6 border-b border-[#dbeafe] py-6">
                 {/* Billed To */}
-                <div className="rounded-xl bg-[#FAF8F5] p-4 border border-[#E8E1D8]">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#9A6C37]">
+                <div className="rounded-xl bg-[#f8fbff] p-4 border border-[#dbeafe]">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#1d4ed8]">
                     Billed To
                   </p>
-                  <p className="mt-2 text-sm font-bold text-[#29241F]">
+                  <p className="mt-2 text-sm font-bold text-[#0f172a]">
                     {currentDoc.client.name}
                   </p>
-                  <p className="mt-1 text-xs text-[#756D64] flex items-center gap-1.5">
-                    <Phone size={13} className="text-[#9A6C37] shrink-0" />
+                  <p className="mt-1 text-xs text-[#475569] flex items-center gap-1.5">
+                    <Phone size={13} className="text-[#1d4ed8] shrink-0" />
                     <span>{currentDoc.client.phone || "N/A"}</span>
                   </p>
-                  <p className="text-xs text-[#756D64] flex items-center gap-1.5 mt-0.5">
-                    <Mail size={13} className="text-[#9A6C37] shrink-0" />
+                  <p className="text-xs text-[#475569] flex items-center gap-1.5 mt-0.5">
+                    <Mail size={13} className="text-[#1d4ed8] shrink-0" />
                     <span>{currentDoc.client.email || "N/A"}</span>
                   </p>
                   {currentDoc.client.address && (
-                    <p className="mt-1 text-xs text-[#756D64] flex items-center gap-1.5">
-                      <MapPin size={13} className="text-[#9A6C37] shrink-0" />
+                    <p className="mt-1 text-xs text-[#475569] flex items-center gap-1.5">
+                      <MapPin size={13} className="text-[#1d4ed8] shrink-0" />
                       <span>{currentDoc.client.address}</span>
                     </p>
                   )}
                 </div>
 
                 {/* Event Scope */}
-                <div className="rounded-xl bg-[#FAF8F5] p-4 border border-[#E8E1D8]">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#9A6C37]">
+                <div className="rounded-xl bg-[#f8fbff] p-4 border border-[#dbeafe]">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#1d4ed8]">
                     Event Details
                   </p>
-                  <p className="mt-2 text-sm font-bold text-[#29241F]">
+                  <p className="mt-2 text-sm font-bold text-[#0f172a]">
                     {currentDoc.event.name}
                   </p>
-                  <p className="mt-1 text-xs text-[#756D64] flex items-center gap-1.5">
-                    <Calendar size={13} className="text-[#9A6C37] shrink-0" />
+                  <p className="mt-1 text-xs text-[#475569] flex items-center gap-1.5">
+                    <Calendar size={13} className="text-[#1d4ed8] shrink-0" />
                     <span>
                       {currentDoc.event.date ? currentDoc.event.date.slice(0, 10) : "TBD"}{" "}
                       {currentDoc.event.time ? `· ${formatTime24to12(currentDoc.event.time)}` : ""}
                     </span>
                   </p>
-                  <p className="text-xs text-[#756D64] flex items-center gap-1.5 mt-0.5">
-                    <Users size={13} className="text-[#9A6C37] shrink-0" />
+                  <p className="text-xs text-[#475569] flex items-center gap-1.5 mt-0.5">
+                    <Users size={13} className="text-[#1d4ed8] shrink-0" />
                     <span>{currentDoc.event.guests} Guests · {currentDoc.event.type}</span>
                   </p>
-                  <p className="mt-1 text-xs text-[#756D64] flex items-center gap-1.5 truncate">
-                    <MapPin size={13} className="text-[#9A6C37] shrink-0" />
+                  <p className="mt-1 text-xs text-[#475569] flex items-center gap-1.5 truncate">
+                    <MapPin size={13} className="text-[#1d4ed8] shrink-0" />
                     <span className="truncate">{currentDoc.event.location}</span>
                   </p>
                 </div>
               </div>
 
               {/* Services Table */}
-              <div className="py-6 border-b border-[#E8E1D8]">
+              <div className="py-6 border-b border-[#dbeafe]">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#9A6C37]">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">
                     Production & Event Services Deliverables
                   </h3>
                   {!showItemizedPrices && (
@@ -434,7 +434,7 @@ export default function ClientDocumentModal({
                 {currentDoc.services && currentDoc.services.length > 0 ? (
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="border-b border-[#E8E1D8] text-[11px] font-bold uppercase tracking-wider text-[#756D64]">
+                      <tr className="border-b border-[#dbeafe] text-[11px] font-bold uppercase tracking-wider text-[#475569]">
                         <th className="pb-2.5">Service Deliverable</th>
                         <th className="pb-2.5 text-center">Department</th>
                         <th className="pb-2.5 text-right">Scope / Quantity</th>
@@ -446,24 +446,24 @@ export default function ClientDocumentModal({
                         )}
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#E8E1D8]/60 text-xs">
+                    <tbody className="divide-y divide-[#dbeafe]/60 text-xs">
                       {currentDoc.services.map((item, idx) => (
                         <tr key={item.id || idx}>
                           <td className="py-3 pr-2">
-                            <p className="font-bold text-[#29241F]">{item.name}</p>
+                            <p className="font-bold text-[#0f172a]">{item.name}</p>
                           </td>
-                          <td className="py-3 text-center capitalize text-[#756D64]">
+                          <td className="py-3 text-center capitalize text-[#475569]">
                             {item.category || "Service"}
                           </td>
-                          <td className="py-3 text-right font-medium text-[#29241F]">
+                          <td className="py-3 text-right font-medium text-[#0f172a]">
                             {item.quantity} {item.unitLabel || "unit(s)"}
                           </td>
                           {showItemizedPrices && (
                             <>
-                              <td className="py-3 text-right text-[#756D64]">
+                              <td className="py-3 text-right text-[#475569]">
                                 {formatINR(item.unitPrice, currentDoc.currency)}
                               </td>
-                              <td className="py-3 text-right font-bold text-[#29241F]">
+                              <td className="py-3 text-right font-bold text-[#0f172a]">
                                 {formatINR(item.total, currentDoc.currency)}
                               </td>
                             </>
@@ -493,20 +493,20 @@ export default function ClientDocumentModal({
                 const finalCateringTotal = Number(cateringData.total ?? (cateringTaxable + cateringGstAmount));
 
                 return (
-                  <div className="print-avoid-break py-6 border-b border-[#E8E1D8] space-y-4">
+                  <div className="print-avoid-break py-6 border-b border-[#dbeafe] space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-[#9A6C37]">
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">
                           Catering & Culinary Experience
                         </h3>
-                        <p className="text-[11px] text-[#756D64] mt-0.5">
+                        <p className="text-[11px] text-[#475569] mt-0.5">
                           Package Scope: {cateringGuestCount.toLocaleString("en-IN")} Guests · {cateringData.servingType || "Buffet"}
                         </p>
                       </div>
                       {showItemizedPrices ? (
                         <div className="text-right">
-                          <span className="text-[10px] uppercase font-bold text-[#756D64] block">Package Subtotal</span>
-                          <span className="text-xs font-bold text-[#29241F]">
+                          <span className="text-[10px] uppercase font-bold text-[#475569] block">Package Subtotal</span>
+                          <span className="text-xs font-bold text-[#0f172a]">
                             {formatINR(cateringSubtotal, currentDoc.currency)}
                           </span>
                         </div>
@@ -519,10 +519,10 @@ export default function ClientDocumentModal({
 
                     {/* Detailed Itemized Food Menu Table */}
                     {cateringItems.length > 0 ? (
-                      <div className="overflow-x-auto rounded-xl border border-[#E8E1D8]">
+                      <div className="overflow-x-auto rounded-xl border border-[#dbeafe]">
                         <table className="w-full text-left text-xs border-collapse">
                           <thead>
-                            <tr className="border-b border-[#E8E1D8] bg-[#FAF8F5] text-[10px] font-bold uppercase tracking-wider text-[#756D64]">
+                            <tr className="border-b border-[#dbeafe] bg-[#f8fbff] text-[10px] font-bold uppercase tracking-wider text-[#475569]">
                               <th className="py-2.5 px-3 w-10 text-center">No.</th>
                               <th className="py-2.5 px-3">Food Item</th>
                               <th className="py-2.5 px-3">Category</th>
@@ -532,7 +532,7 @@ export default function ClientDocumentModal({
                               <th className="py-2.5 px-3 text-right">Total Price</th>
                             </tr>
                           </thead>
-                          <tbody className="divide-y divide-[#E8E1D8]/60 bg-white">
+                          <tbody className="divide-y divide-[#dbeafe]/60 bg-white">
                             {cateringItems.map((item, fIdx) => {
                               const itemQty =
                                 item.quantity ??
@@ -558,11 +558,11 @@ export default function ClientDocumentModal({
                                 Number(rawTotal) > 0;
 
                               return (
-                                <tr key={fIdx} className="hover:bg-[#FAF8F5]/50 transition-colors">
+                                <tr key={fIdx} className="hover:bg-[#f8fbff]/50 transition-colors">
                                   <td className="py-2.5 px-3 text-center text-gray-500 font-medium">
                                     {fIdx + 1}
                                   </td>
-                                  <td className="py-2.5 px-3 font-semibold text-[#29241F]">
+                                  <td className="py-2.5 px-3 font-semibold text-[#0f172a]">
                                     <div className="flex items-center gap-1.5">
                                       <span className="text-[10px]">
                                         {item.dietary === "non-veg" ? "🍗" : item.dietary === "egg" ? "🟡" : "🥗"}
@@ -570,23 +570,23 @@ export default function ClientDocumentModal({
                                       <span>{item.name}</span>
                                     </div>
                                   </td>
-                                  <td className="py-2.5 px-3 text-[#756D64]">
+                                  <td className="py-2.5 px-3 text-[#475569]">
                                     {item.category || "General"}
                                   </td>
-                                  <td className="py-2.5 px-3 text-right font-medium text-[#29241F]">
+                                  <td className="py-2.5 px-3 text-right font-medium text-[#0f172a]">
                                     {itemQty ? Number(itemQty).toLocaleString("en-IN") : "—"}
                                   </td>
-                                  <td className="py-2.5 px-3 text-[#756D64]">
+                                  <td className="py-2.5 px-3 text-[#475569]">
                                     {itemUnit}
                                   </td>
-                                  <td className="py-2.5 px-3 text-right font-medium text-[#29241F]">
+                                  <td className="py-2.5 px-3 text-right font-medium text-[#0f172a]">
                                     {showItemizedPrices && hasUnitPrice
                                       ? formatINR(Number(rawRate), currentDoc.currency)
                                       : showItemizedPrices
                                       ? "—"
                                       : "Included"}
                                   </td>
-                                  <td className="py-2.5 px-3 text-right font-semibold text-[#29241F]">
+                                  <td className="py-2.5 px-3 text-right font-semibold text-[#0f172a]">
                                     {showItemizedPrices && (hasTotalPrice || hasUnitPrice)
                                       ? formatINR(
                                           Number(rawTotal ?? Number(rawRate) * Number(itemQty)),
@@ -603,43 +603,43 @@ export default function ClientDocumentModal({
                         </table>
                       </div>
                     ) : (
-                      <div className="rounded-xl bg-[#FAF8F5] p-4 border border-[#E8E1D8] text-xs text-gray-500 italic">
+                      <div className="rounded-xl bg-[#f8fbff] p-4 border border-[#dbeafe] text-xs text-gray-500 italic">
                         Catering package included ({cateringGuestCount.toLocaleString("en-IN")} Guests · {cateringData.servingType || "Buffet"}). Individual menu items not itemized in this record.
                       </div>
                     )}
 
                     {/* Catering Financial Summary Breakdown */}
-                    <div className="rounded-xl border border-[#E8E1D8] bg-[#FAF8F5] p-4 text-xs space-y-3">
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 border-b border-[#E8E1D8]/70 pb-3">
+                    <div className="rounded-xl border border-[#dbeafe] bg-[#f8fbff] p-4 text-xs space-y-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 border-b border-[#dbeafe]/70 pb-3">
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#756D64] block">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#475569] block">
                             Total Guests
                           </span>
-                          <span className="text-sm font-bold text-[#29241F]">
+                          <span className="text-sm font-bold text-[#0f172a]">
                             {cateringGuestCount.toLocaleString("en-IN")} Guests
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#756D64] block">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#475569] block">
                             Selected Menu Items
                           </span>
-                          <span className="text-sm font-bold text-[#29241F]">
+                          <span className="text-sm font-bold text-[#0f172a]">
                             {cateringItems.length} Dishes
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#756D64] block">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#475569] block">
                             Serving Style
                           </span>
-                          <span className="text-sm font-bold text-[#29241F]">
+                          <span className="text-sm font-bold text-[#0f172a]">
                             {cateringData.servingType || "Buffet"}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#756D64] block">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#475569] block">
                             Catering Subtotal
                           </span>
-                          <span className="text-sm font-bold text-[#29241F]">
+                          <span className="text-sm font-bold text-[#0f172a]">
                             {formatINR(cateringSubtotal, currentDoc.currency)}
                           </span>
                         </div>
@@ -648,14 +648,14 @@ export default function ClientDocumentModal({
                       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-1">
                         <div className="space-y-1">
                           {cateringDiscount > 0 ? (
-                            <div className="flex items-center gap-2 text-xs text-[#756D64]">
+                            <div className="flex items-center gap-2 text-xs text-[#475569]">
                               <span>Catering Discount (proportional):</span>
                               <span className="font-semibold text-rose-700">
                                 -{formatINR(cateringDiscount, currentDoc.currency)}
                               </span>
                             </div>
                           ) : null}
-                          <div className="flex items-center gap-2 text-xs text-[#756D64]">
+                          <div className="flex items-center gap-2 text-xs text-[#475569]">
                             <span>GST Status:</span>
                             <span className={`font-semibold ${isGstActive ? "text-emerald-700" : "text-amber-700"}`}>
                               {isGstActive
@@ -665,11 +665,11 @@ export default function ClientDocumentModal({
                           </div>
                         </div>
 
-                        <div className="text-left sm:text-right pt-2 sm:pt-0 border-t sm:border-t-0 border-[#E8E1D8]/60 w-full sm:w-auto">
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-[#9A6C37]">
+                        <div className="text-left sm:text-right pt-2 sm:pt-0 border-t sm:border-t-0 border-[#dbeafe]/60 w-full sm:w-auto">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-[#1d4ed8]">
                             Final Catering Package Amount
                           </div>
-                          <div className="text-base font-black text-[#29241F]">
+                          <div className="text-base font-black text-[#0f172a]">
                             {formatINR(finalCateringTotal, currentDoc.currency)}
                           </div>
                           <div className="text-[10px] text-gray-500 italic mt-0.5">
@@ -679,8 +679,8 @@ export default function ClientDocumentModal({
                       </div>
 
                       {cateringData.notes && (
-                        <div className="pt-2 border-t border-[#E8E1D8]/60 text-xs text-[#756D64]">
-                          <strong className="text-[#29241F]">Dietary & Service Notes:</strong> {cateringData.notes}
+                        <div className="pt-2 border-t border-[#dbeafe]/60 text-xs text-[#475569]">
+                          <strong className="text-[#0f172a]">Dietary & Service Notes:</strong> {cateringData.notes}
                         </div>
                       )}
                     </div>
@@ -689,19 +689,19 @@ export default function ClientDocumentModal({
               })()}
 
               {/* Financial Calculation Summary (Shows Final Estimate Amount) */}
-              <div className="print-avoid-break py-6 flex flex-col sm:flex-row justify-between items-start gap-6 border-b border-[#E8E1D8]">
+              <div className="print-avoid-break py-6 flex flex-col sm:flex-row justify-between items-start gap-6 border-b border-[#dbeafe]">
                 {/* Payment Instructions / Notes */}
-                <div className="max-w-sm text-xs text-[#756D64] space-y-2">
-                  <p className="font-bold uppercase tracking-wider text-[#9A6C37]">
+                <div className="max-w-sm text-xs text-[#475569] space-y-2">
+                  <p className="font-bold uppercase tracking-wider text-[#1d4ed8]">
                     Payment Instructions
                   </p>
                   {currentDoc.company.upiId && (
-                    <p className="font-mono text-[#29241F]">
+                    <p className="font-mono text-[#0f172a]">
                       UPI: <span className="font-bold">{currentDoc.company.upiId}</span>
                     </p>
                   )}
                   {currentDoc.company.bankDetails && (
-                    <div className="font-mono text-[11px] text-[#756D64] space-y-0.5">
+                    <div className="font-mono text-[11px] text-[#475569] space-y-0.5">
                       <p>Bank: {currentDoc.company.bankDetails.bankName}</p>
                       <p>Account: {currentDoc.company.bankDetails.accountNumber}</p>
                       <p>IFSC: {currentDoc.company.bankDetails.ifsc}</p>
@@ -716,9 +716,9 @@ export default function ClientDocumentModal({
 
                 {/* Final Estimate / Invoice Amount Totals */}
                 <div className="w-full sm:w-80 space-y-2 text-xs">
-                  <div className="flex justify-between text-[#756D64]">
+                  <div className="flex justify-between text-[#475569]">
                     <span>Event Subtotal</span>
-                    <span className="font-medium text-[#29241F]">
+                    <span className="font-medium text-[#0f172a]">
                       {formatINR(currentDoc.subtotal || currentDoc.total, currentDoc.currency)}
                     </span>
                   </div>
@@ -731,14 +731,14 @@ export default function ClientDocumentModal({
                   )}
 
                   {currentDoc.gstEnabled !== false && currentDoc.gstAmount > 0 ? (
-                    <div className="flex justify-between text-[#756D64]">
+                    <div className="flex justify-between text-[#475569]">
                       <span>GST ({currentDoc.gstRate || 18}%)</span>
-                      <span className="font-medium text-[#29241F]">
+                      <span className="font-medium text-[#0f172a]">
                         +{formatINR(currentDoc.gstAmount, currentDoc.currency)}
                       </span>
                     </div>
                   ) : (
-                    <div className="flex justify-between text-[#756D64]">
+                    <div className="flex justify-between text-[#475569]">
                       <span>GST</span>
                       <span className="font-medium text-gray-500 italic">
                         Not Applicable / Excluded (₹0)
@@ -747,21 +747,21 @@ export default function ClientDocumentModal({
                   )}
 
                   {currentDoc.additionalCharges > 0 && (
-                    <div className="flex justify-between text-[#756D64]">
+                    <div className="flex justify-between text-[#475569]">
                       <span>Additional Charges</span>
-                      <span className="font-medium text-[#29241F]">
+                      <span className="font-medium text-[#0f172a]">
                         +{formatINR(currentDoc.additionalCharges, currentDoc.currency)}
                       </span>
                     </div>
                   )}
 
                   {/* Primary Final Estimate / Total Box */}
-                  <div className="rounded-2xl border-2 border-[#29241F] bg-[#FAF8F5] p-3.5 space-y-2">
+                  <div className="rounded-2xl border-2 border-[#0f172a] bg-[#f8fbff] p-3.5 space-y-2">
                     <div className="flex justify-between items-baseline">
-                      <span className="text-xs font-black uppercase tracking-wider text-[#29241F]">
+                      <span className="text-xs font-black uppercase tracking-wider text-[#0f172a]">
                         {isInvoice ? "Grand Total Payable" : "Final Estimate Amount"}
                       </span>
-                      <span className="text-xl font-black text-[#29241F]">
+                      <span className="text-xl font-black text-[#0f172a]">
                         {formatINR(currentDoc.total, currentDoc.currency)}
                       </span>
                     </div>
@@ -771,12 +771,12 @@ export default function ClientDocumentModal({
 
                     {/* Payment & Balance Row */}
                     {(currentDoc.paidAmount !== undefined && currentDoc.paidAmount > 0) && (
-                      <div className="pt-2 border-t border-[#E8E1D8] space-y-1 text-[11px]">
+                      <div className="pt-2 border-t border-[#dbeafe] space-y-1 text-[11px]">
                         <div className="flex justify-between text-emerald-800 font-semibold">
                           <span>Advance Received:</span>
                           <span>{formatINR(currentDoc.paidAmount, currentDoc.currency)}</span>
                         </div>
-                        <div className="flex justify-between text-[#29241F] font-black">
+                        <div className="flex justify-between text-[#0f172a] font-black">
                           <span>Balance Due:</span>
                           <span>{formatINR(currentDoc.balanceDue ?? Math.max(0, currentDoc.total - currentDoc.paidAmount), currentDoc.currency)}</span>
                         </div>
@@ -785,7 +785,7 @@ export default function ClientDocumentModal({
                   </div>
 
                   <div className="pt-1 flex justify-between items-center text-[11px]">
-                    <span className="text-[#756D64]">Document Status:</span>
+                    <span className="text-[#475569]">Document Status:</span>
                     <span className="font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 uppercase tracking-wider text-[10px]">
                       {currentDoc.status || (isInvoice ? "PAID" : "PROPOSED")}
                     </span>
@@ -794,7 +794,7 @@ export default function ClientDocumentModal({
               </div>
 
               {/* Document Signoff Footer */}
-              <div className="print-avoid-break pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#756D64]">
+              <div className="print-avoid-break pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#475569]">
                 <p>Authorized Signature · {currentDoc.company.name}</p>
                 <p className="text-[11px] text-gray-400">
                   Generated automatically by EventOps Management System
@@ -856,24 +856,24 @@ export default function ClientDocumentModal({
               </div>
 
               {/* Message Live Preview Card */}
-              <div className="rounded-2xl border border-[#E8E1D8] bg-white p-5 shadow-sm">
-                <div className="flex items-center justify-between border-b border-[#E8E1D8] pb-3 mb-3">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#9A6C37]">
+              <div className="rounded-2xl border border-[#dbeafe] bg-white p-5 shadow-sm">
+                <div className="flex items-center justify-between border-b border-[#dbeafe] pb-3 mb-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">
                     WhatsApp Message Preview
                   </p>
-                  <span className="text-[11px] text-[#756D64]">
+                  <span className="text-[11px] text-[#475569]">
                     Markdown formatted · Ready to paste
                   </span>
                 </div>
 
-                <div className="rounded-xl bg-[#FAF8F5] p-4 font-mono text-xs text-[#29241F] whitespace-pre-wrap leading-relaxed border border-[#E8E1D8]">
+                <div className="rounded-xl bg-[#f8fbff] p-4 font-mono text-xs text-[#0f172a] whitespace-pre-wrap leading-relaxed border border-[#dbeafe]">
                   {whatsappMessage}
                 </div>
               </div>
 
               {/* Custom Additions / Instructions */}
-              <div className="rounded-2xl border border-[#E8E1D8] bg-white p-4">
-                <label className="block text-xs font-bold text-[#29241F] mb-1.5">
+              <div className="rounded-2xl border border-[#dbeafe] bg-white p-4">
+                <label className="block text-xs font-bold text-[#0f172a] mb-1.5">
                   Append Note to Client (Optional)
                 </label>
                 <input
@@ -881,7 +881,7 @@ export default function ClientDocumentModal({
                   value={customNote}
                   onChange={(e) => setCustomNote(e.target.value)}
                   placeholder="e.g. Please review the attached quote and let us know your confirmation by Friday."
-                  className="h-10 w-full rounded-xl border border-[#E8E1D8] bg-[#FAF8F5] px-3 text-xs outline-none focus:border-[#B8894B]"
+                  className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#f8fbff] px-3 text-xs outline-none focus:border-[#3b82f6]"
                 />
               </div>
             </div>

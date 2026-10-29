@@ -68,7 +68,7 @@ export default function ManagerNotificationDrawer({
   const getCategoryIcon = (category: NotificationCategory) => {
     switch (category) {
       case "TASK":
-        return <CheckSquare size={16} className="text-[#9A6C37]" />;
+        return <CheckSquare size={16} className="text-[#1d4ed8]" />;
       case "EQUIPMENT":
         return <Wrench size={16} className="text-amber-600" />;
       case "FINANCE":
@@ -76,7 +76,7 @@ export default function ManagerNotificationDrawer({
       case "STAFF":
         return <Users size={16} className="text-purple-600" />;
       case "EVENT":
-        return <Calendar size={16} className="text-[#9A6C37]" />;
+        return <Calendar size={16} className="text-[#1d4ed8]" />;
       case "ESTIMATE":
         return <FileText size={16} className="text-blue-600" />;
       default:
@@ -98,19 +98,19 @@ export default function ManagerNotificationDrawer({
           role="dialog"
           aria-modal="true"
           aria-labelledby="manager-notifications-title"
-          className="flex h-full w-full flex-col bg-[#FAF8F5] shadow-2xl animate-in slide-in-from-right duration-300 sm:max-w-md sm:border-l sm:border-[#E8E1D8]"
+          className="flex h-full w-full flex-col bg-[#f8fbff] shadow-2xl animate-in slide-in-from-right duration-300 sm:max-w-md sm:border-l sm:border-[#dbeafe]"
         >
           {/* Header */}
-          <div className="flex items-center justify-between gap-3 border-b border-[#E8E1D8] bg-white px-4 py-3.5 sm:px-5 sm:py-4">
+          <div className="flex items-center justify-between gap-3 border-b border-[#dbeafe] bg-white px-4 py-3.5 sm:px-5 sm:py-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F4EBDD] text-[#9A6C37]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
                 <Bell size={20} />
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <h2
                     id="manager-notifications-title"
-                    className="text-base font-bold text-[#29241F]"
+                    className="text-base font-bold text-[#0f172a]"
                   >
                     Notifications
                   </h2>
@@ -120,7 +120,7 @@ export default function ManagerNotificationDrawer({
                     </span>
                   )}
                 </div>
-                <p className="text-xs text-[#756D64]">
+                <p className="text-xs text-[#475569]">
                   Live operational updates & alerts
                 </p>
               </div>
@@ -131,16 +131,16 @@ export default function ManagerNotificationDrawer({
                 type="button"
                 onClick={onRefresh}
                 title="Refresh notifications"
-                className="flex h-9 w-9 items-center justify-center rounded-xl text-[#756D64] hover:bg-[#F0ECE4] transition"
+                className="flex h-9 w-9 items-center justify-center rounded-xl text-[#475569] hover:bg-[#eff6ff] transition"
               >
-                <RefreshCw size={16} className={loading ? "animate-spin text-[#9A6C37]" : ""} />
+                <RefreshCw size={16} className={loading ? "animate-spin text-[#1d4ed8]" : ""} />
               </button>
 
               <button
                 type="button"
                 onClick={onClose}
                 aria-label="Close notifications drawer"
-                className="flex h-9 w-9 items-center justify-center rounded-xl text-[#756D64] hover:bg-[#F0ECE4] transition"
+                className="flex h-9 w-9 items-center justify-center rounded-xl text-[#475569] hover:bg-[#eff6ff] transition"
               >
                 <X size={18} />
               </button>
@@ -148,9 +148,9 @@ export default function ManagerNotificationDrawer({
           </div>
 
           {/* Action Row & Filter Pills */}
-          <div className="border-b border-[#E8E1D8] bg-[#F7F4EE] px-5 py-3 space-y-2.5">
+          <div className="border-b border-[#dbeafe] bg-[#f8fbff] px-5 py-3 space-y-2.5">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-[#756D64]">
+              <span className="text-xs font-bold text-[#475569]">
                 Filter by Category
               </span>
 
@@ -158,7 +158,7 @@ export default function ManagerNotificationDrawer({
                 <button
                   type="button"
                   onClick={onMarkAllAsRead}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#9A6C37] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#1d4ed8] hover:underline"
                 >
                   <CheckCheck size={14} />
                   <span>Mark all read</span>
@@ -172,8 +172,8 @@ export default function ManagerNotificationDrawer({
                 onClick={() => setActiveFilter("ALL")}
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "ALL"
-                    ? "bg-[#29241F] text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    ? "bg-[#0f172a] text-white shadow-sm"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 All ({notifications.length})
@@ -185,7 +185,7 @@ export default function ManagerNotificationDrawer({
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "UNREAD"
                     ? "bg-rose-600 text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 Unread ({unreadCount})
@@ -196,8 +196,8 @@ export default function ManagerNotificationDrawer({
                 onClick={() => setActiveFilter("TASK")}
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "TASK"
-                    ? "bg-[#9A6C37] text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    ? "bg-[#1d4ed8] text-white shadow-sm"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 Tasks
@@ -209,7 +209,7 @@ export default function ManagerNotificationDrawer({
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "EQUIPMENT"
                     ? "bg-amber-600 text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 Equipment
@@ -221,7 +221,7 @@ export default function ManagerNotificationDrawer({
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "FINANCE"
                     ? "bg-emerald-700 text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 Expenses
@@ -233,7 +233,7 @@ export default function ManagerNotificationDrawer({
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "STAFF"
                     ? "bg-purple-600 text-white shadow-sm"
-                    : "bg-white text-[#756D64] border border-[#E8E1D8] hover:text-[#29241F]"
+                    : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >
                 Staff
@@ -245,13 +245,13 @@ export default function ManagerNotificationDrawer({
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
             {filtered.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-16 text-center px-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white border border-[#E8E1D8] text-[#9A6C37] shadow-sm mb-3">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white border border-[#dbeafe] text-[#1d4ed8] shadow-sm mb-3">
                   <Sparkles size={24} />
                 </div>
-                <h3 className="text-sm font-bold text-[#29241F]">
+                <h3 className="text-sm font-bold text-[#0f172a]">
                   You&apos;re All Caught Up!
                 </h3>
-                <p className="mt-1 text-xs text-[#756D64] max-w-xs leading-relaxed">
+                <p className="mt-1 text-xs text-[#475569] max-w-xs leading-relaxed">
                   No notifications match your filter. Live alerts for upcoming events and pending tasks will appear here.
                 </p>
               </div>
@@ -262,8 +262,8 @@ export default function ManagerNotificationDrawer({
                   onClick={() => handleItemClick(item)}
                   className={`group relative rounded-2xl border p-4 transition cursor-pointer shadow-sm ${
                     !item.read
-                      ? "bg-white border-[#B8894B]/40 hover:border-[#9A6C37] shadow-sm ring-1 ring-[#B8894B]/20"
-                      : "bg-[#FAF8F5] border-[#E8E1D8] hover:bg-white text-gray-600"
+                      ? "bg-white border-[#3b82f6]/40 hover:border-[#1d4ed8] shadow-sm ring-1 ring-[#3b82f6]/20"
+                      : "bg-[#f8fbff] border-[#dbeafe] hover:bg-white text-gray-600"
                   }`}
                 >
                   <div className="flex items-start gap-3">
@@ -271,7 +271,7 @@ export default function ManagerNotificationDrawer({
                     <div
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border ${
                         !item.read
-                          ? "bg-[#F4EBDD] border-[#E8E1D8]"
+                          ? "bg-[#eff6ff] border-[#dbeafe]"
                           : "bg-white border-gray-200 text-gray-400"
                       }`}
                     >
@@ -283,23 +283,23 @@ export default function ManagerNotificationDrawer({
                       <div className="flex items-center gap-2">
                         <p
                           className={`text-xs font-bold truncate ${
-                            !item.read ? "text-[#29241F]" : "text-gray-700"
+                            !item.read ? "text-[#0f172a]" : "text-gray-700"
                           }`}
                         >
                           {item.title}
                         </p>
                         {!item.read && (
-                          <span className="h-2 w-2 rounded-full bg-[#B8894B] shrink-0" />
+                          <span className="h-2 w-2 rounded-full bg-[#3b82f6] shrink-0" />
                         )}
                       </div>
 
-                      <p className="mt-1 text-xs text-[#756D64] line-clamp-2 leading-relaxed">
+                      <p className="mt-1 text-xs text-[#475569] line-clamp-2 leading-relaxed">
                         {item.message}
                       </p>
 
                       <div className="mt-2.5 flex items-center justify-between text-[11px] text-[#A8A196]">
                         <span>{item.timeAgo}</span>
-                        <span className="inline-flex items-center gap-1 font-semibold text-[#9A6C37] group-hover:underline">
+                        <span className="inline-flex items-center gap-1 font-semibold text-[#1d4ed8] group-hover:underline">
                           <span>View Details</span>
                           <ExternalLink size={11} />
                         </span>
@@ -325,12 +325,12 @@ export default function ManagerNotificationDrawer({
           </div>
 
           {/* Footer */}
-          <div className="border-t border-[#E8E1D8] bg-white px-5 py-3 flex items-center justify-between text-xs text-[#756D64]">
+          <div className="border-t border-[#dbeafe] bg-white px-5 py-3 flex items-center justify-between text-xs text-[#475569]">
             <span>Auto-synced with operations</span>
             <button
               type="button"
               onClick={onClose}
-              className="font-bold text-[#29241F] hover:underline"
+              className="font-bold text-[#0f172a] hover:underline"
             >
               Close
             </button>

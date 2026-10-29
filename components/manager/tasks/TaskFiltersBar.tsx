@@ -60,7 +60,7 @@ export default function TaskFiltersBar({
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search tasks by title, description, or location..."
-            className="w-full rounded-2xl border border-gray-200 bg-white pl-10 pr-9 py-2.5 text-xs text-gray-900 placeholder-gray-400 focus:border-[#9A7B4F] focus:ring-1 focus:ring-[#9A7B4F] outline-none shadow-2xs"
+            className="w-full rounded-2xl border border-gray-200 bg-white pl-10 pr-9 py-2.5 text-xs text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] outline-none shadow-2xs"
           />
           {search && (
             <button
@@ -79,7 +79,7 @@ export default function TaskFiltersBar({
           <select
             value={priorityFilter}
             onChange={(e) => onPriorityFilterChange(e.target.value)}
-            className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-2xs focus:border-[#9A7B4F] outline-none cursor-pointer"
+            className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-2xs focus:border-[#2563eb] outline-none cursor-pointer"
           >
             <option value="">All Priorities</option>
             <option value="LOW">Low</option>
@@ -92,9 +92,10 @@ export default function TaskFiltersBar({
           <select
             value={staffFilter}
             onChange={(e) => onStaffFilterChange(e.target.value)}
-            className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-2xs focus:border-[#9A7B4F] outline-none cursor-pointer max-w-[150px] truncate"
+            className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-2xs focus:border-[#2563eb] outline-none cursor-pointer max-w-[150px] truncate"
           >
             <option value="">All Staff</option>
+
             {staffList.map((st) => (
               <option key={st._id} value={st._id}>
                 {st.name}
@@ -106,7 +107,7 @@ export default function TaskFiltersBar({
           <button
             type="button"
             onClick={onCreateClick}
-            className="inline-flex items-center gap-2 rounded-2xl bg-[#29241f] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer shrink-0"
+            className="inline-flex items-center gap-2 rounded-2xl bg-[#0f172a] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer shrink-0"
           >
             <Plus size={16} />
             <span>Create Task</span>
@@ -123,19 +124,17 @@ export default function TaskFiltersBar({
               key={tab.key}
               type="button"
               onClick={() => onStatusFilterChange(tab.key)}
-              className={`inline-flex items-center gap-2 rounded-xl px-3 py-1.5 text-xs font-bold transition whitespace-nowrap cursor-pointer ${
-                isActive
-                  ? "bg-[#29241f] text-white shadow-xs"
-                  : "text-gray-600 hover:bg-gray-100"
-              }`}
+              className={`inline-flex items-center gap-2 rounded-xl px-3 py-1.5 text-xs font-bold transition whitespace-nowrap cursor-pointer ${isActive
+                ? "bg-[#0f172a] text-white shadow-xs"
+                : "text-gray-600 hover:bg-gray-100"
+                }`}
             >
               <span>{tab.label}</span>
               <span
-                className={`rounded-md px-1.5 py-0.2 text-[10px] font-extrabold ${
-                  isActive
-                    ? "bg-white/20 text-white"
-                    : "bg-gray-100 text-gray-600"
-                }`}
+                className={`rounded-md px-1.5 py-0.2 text-[10px] font-extrabold ${isActive
+                  ? "bg-white/20 text-white"
+                  : "bg-gray-100 text-gray-600"
+                  }`}
               >
                 {tab.count}
               </span>

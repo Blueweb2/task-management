@@ -46,13 +46,13 @@ export default function Badge({
       "bg-[#EAF3FB] text-[#24658F]",
 
     gold:
-      "bg-[#F3EBDD] text-[#80683D]",
+      "bg-[#eff6ff] text-[#1d4ed8]",
 
     purple:
       "bg-[#F0EBFA] text-[#6846A5]",
 
     dark:
-      "bg-[#1F2023] text-white",
+      "bg-[#0f172a] text-white",
   };
 
   const dots: Record<BadgeVariant, string> = {
@@ -61,7 +61,7 @@ export default function Badge({
     warning: "bg-[#C69222]",
     danger: "bg-[#D92D20]",
     info: "bg-[#3688BA]",
-    gold: "bg-[#B49A6A]",
+    gold: "bg-[#60a5fa]",
     purple: "bg-[#7956B5]",
     dark: "bg-white",
   };

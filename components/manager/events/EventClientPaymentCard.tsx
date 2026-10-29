@@ -152,7 +152,7 @@ export default function EventClientPaymentCard({
   };
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white shadow-sm">
+    <div className="overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-sm">
       {/* Toast Notification */}
       {successToast && (
         <div className="flex items-center justify-between bg-emerald-600 px-5 py-3 text-xs font-bold text-white transition animate-in fade-in slide-in-from-top-1">
@@ -171,10 +171,10 @@ export default function EventClientPaymentCard({
       )}
 
       {/* Header */}
-      <div className="flex flex-col gap-4 border-b border-[#f1ece5] bg-gradient-to-r from-[#faf8f5] to-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <div className="flex flex-col gap-4 border-b border-[#eff6ff] bg-gradient-to-r from-[#f8fbff] to-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <div>
        
-          <h2 className="mt-1 text-xl font-black tracking-tight text-[#29241f]">
+          <h2 className="mt-1 text-xl font-black tracking-tight text-[#0f172a]">
             Client Payment Overview
           </h2>
           <p className="mt-0.5 text-xs text-gray-500">
@@ -201,22 +201,22 @@ export default function EventClientPaymentCard({
           <button
             type="button"
             onClick={() => handleOpenModal()}
-            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#29241f] px-4 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95"
+            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#0f172a] px-4 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95"
           >
-            <Plus size={14} className="text-[#D4AF37]" />
+            <Plus size={14} className="text-[#3b82f6]" />
             <span>Add Payment</span>
           </button>
         </div>
       </div>
 
       {/* KPI Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#f1ece5] border-b border-[#f1ece5]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#eff6ff] border-b border-[#eff6ff]">
         {/* KPI 1: Total Contract Amount */}
         <div className="bg-white p-4 sm:p-5">
           <p className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-gray-400">
             Total Contracted
           </p>
-          <p className="mt-1.5 text-xl font-black text-[#29241f] sm:text-2xl">
+          <p className="mt-1.5 text-xl font-black text-[#0f172a] sm:text-2xl">
             ₹{eventTotal.toLocaleString("en-IN")}
           </p>
           <p className="mt-1 text-[11px] font-medium text-gray-500">
@@ -281,7 +281,7 @@ export default function EventClientPaymentCard({
             <button
               type="button"
               onClick={() => handleOpenModal("FINAL_BALANCE")}
-              className="text-xs font-bold text-[#8C7A55] hover:text-[#29241f] underline transition"
+              className="text-xs font-bold text-[#64748b] hover:text-[#0f172a] underline transition"
             >
               
             </button>
@@ -289,7 +289,7 @@ export default function EventClientPaymentCard({
         </div>
 
         {history.length === 0 ? (
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-[#faf8f5] py-8 text-center px-4">
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-[#f8fbff] py-8 text-center px-4">
             <CreditCard size={28} className="text-gray-300" />
             <p className="mt-2 text-xs font-bold text-gray-600">No payment records logged yet</p>
             <p className="mt-0.5 text-[11px] text-gray-400 max-w-sm">
@@ -300,7 +300,7 @@ export default function EventClientPaymentCard({
               onClick={() => handleOpenModal("ADVANCE")}
               className="mt-3 inline-flex items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold text-gray-700 shadow-2xs hover:bg-gray-50"
             >
-              <Plus size={12} className="text-[#9a6c37]" />
+              <Plus size={12} className="text-[#1d4ed8]" />
               <span>Record Initial Deposit</span>
             </button>
           </div>
@@ -319,13 +319,13 @@ export default function EventClientPaymentCard({
                 return (
                   <div
                     key={item._id || idx}
-                    className="rounded-2xl border border-gray-100 bg-[#faf8f5]/60 p-3.5 space-y-2"
+                    className="rounded-2xl border border-gray-100 bg-[#f8fbff]/60 p-3.5 space-y-2"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="inline-flex rounded-md bg-[#F4EFE4] px-2 py-0.5 text-[10px] font-extrabold text-[#8C7A55]">
+                      <span className="inline-flex rounded-md bg-[#eff6ff] px-2 py-0.5 text-[10px] font-extrabold text-[#64748b]">
                         {item.paymentType || "PAYMENT"}
                       </span>
-                      <span className="text-sm font-black text-[#29241f]">
+                      <span className="text-sm font-black text-[#0f172a]">
                         ₹{item.amount?.toLocaleString("en-IN")}
                       </span>
                     </div>
@@ -377,7 +377,7 @@ export default function EventClientPaymentCard({
                         : "Staff";
 
                     return (
-                      <tr key={item._id || idx} className="hover:bg-[#faf8f5] transition">
+                      <tr key={item._id || idx} className="hover:bg-[#f8fbff] transition">
                         <td className="py-3 font-semibold text-gray-700">
                           {item.paymentDate ? new Date(item.paymentDate).toLocaleDateString("en-IN", {
                             day: "numeric",
@@ -386,7 +386,7 @@ export default function EventClientPaymentCard({
                           }) : "—"}
                         </td>
                         <td className="py-3">
-                          <span className="inline-flex rounded-md bg-[#F4EFE4] px-2 py-0.5 text-[10px] font-extrabold text-[#8C7A55]">
+                          <span className="inline-flex rounded-md bg-[#eff6ff] px-2 py-0.5 text-[10px] font-extrabold text-[#64748b]">
                             {item.paymentType || "PAYMENT"}
                           </span>
                         </td>
@@ -404,7 +404,7 @@ export default function EventClientPaymentCard({
                         <td className="py-3 text-gray-500">
                           {recordedByName}
                         </td>
-                        <td className="py-3 text-right font-extrabold text-[#29241f]">
+                        <td className="py-3 text-right font-extrabold text-[#0f172a]">
                           ₹{item.amount?.toLocaleString("en-IN")}
                         </td>
                       </tr>
@@ -420,7 +420,7 @@ export default function EventClientPaymentCard({
       {/* Record Payment Modal */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-3 sm:p-4 backdrop-blur-xs animate-in fade-in overflow-y-auto">
-          <div className="relative w-full max-w-md max-h-[92dvh] overflow-y-auto rounded-3xl border border-[#e8e1d8] bg-white p-5 sm:p-6 shadow-2xl">
+          <div className="relative w-full max-w-md max-h-[92dvh] overflow-y-auto rounded-3xl border border-[#dbeafe] bg-white p-5 sm:p-6 shadow-2xl">
             <button
               type="button"
               onClick={() => setModalOpen(false)}
@@ -429,11 +429,11 @@ export default function EventClientPaymentCard({
               <X size={18} />
             </button>
 
-            <div className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-[#9a6c37]">
+            <div className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-[#1d4ed8]">
               <Receipt size={16} />
               <span>Financial Ledger</span>
             </div>
-            <h3 className="mt-1 text-lg font-black text-[#29241f]">
+            <h3 className="mt-1 text-lg font-black text-[#0f172a]">
               Record Client Payment
             </h3>
             <p className="mt-0.5 text-xs text-gray-500">
@@ -441,7 +441,7 @@ export default function EventClientPaymentCard({
             </p>
 
             {/* Quick Balance Reminder */}
-            <div className="mt-4 flex items-center justify-between rounded-2xl bg-[#faf8f5] border border-[#f1ece5] p-3 text-xs">
+            <div className="mt-4 flex items-center justify-between rounded-2xl bg-[#f8fbff] border border-[#eff6ff] p-3 text-xs">
               <span className="text-gray-500">Outstanding Balance:</span>
               <span className="font-extrabold text-red-600">
                 ₹{eventBalance.toLocaleString("en-IN")}
@@ -469,7 +469,7 @@ export default function EventClientPaymentCard({
                       setAmount(eventBalance);
                     }
                   }}
-                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                 >
                   <option value="ADVANCE">Advance Deposit (Initial Booking Token)</option>
                   <option value="INSTALLMENT">Milestone / Partial Installment</option>
@@ -487,7 +487,7 @@ export default function EventClientPaymentCard({
                     <button
                       type="button"
                       onClick={() => setAmount(eventBalance)}
-                      className="text-[10px] font-bold text-[#8C7A55] hover:underline"
+                      className="text-[10px] font-bold text-[#64748b] hover:underline"
                     >
                       Fill Remaining (₹{eventBalance.toLocaleString("en-IN")})
                     </button>
@@ -503,7 +503,7 @@ export default function EventClientPaymentCard({
                     value={amount}
                     onChange={(e) => setAmount(e.target.value === "" ? "" : Number(e.target.value))}
                     placeholder="Enter collected amount"
-                    className="w-full rounded-xl border border-gray-300 bg-white py-2 pl-7 pr-3 text-xs font-bold text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                    className="w-full rounded-xl border border-gray-300 bg-white py-2 pl-7 pr-3 text-xs font-bold text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                   />
                 </div>
 
@@ -516,7 +516,7 @@ export default function EventClientPaymentCard({
                       setPaymentType("ADVANCE");
                       setAmount(Math.round(eventTotal * 0.25));
                     }}
-                    className="rounded-lg bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-700 hover:bg-[#F4EFE4] hover:text-[#8C7A55] transition"
+                    className="rounded-lg bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-700 hover:bg-[#eff6ff] hover:text-[#64748b] transition"
                   >
                     25% Advance
                   </button>
@@ -525,7 +525,7 @@ export default function EventClientPaymentCard({
                     onClick={() => {
                       setAmount(Math.round(eventTotal * 0.5));
                     }}
-                    className="rounded-lg bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-700 hover:bg-[#F4EFE4] hover:text-[#8C7A55] transition"
+                    className="rounded-lg bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-700 hover:bg-[#eff6ff] hover:text-[#64748b] transition"
                   >
                     50%
                   </button>
@@ -553,7 +553,7 @@ export default function EventClientPaymentCard({
                   <select
                     value={paymentMethod}
                     onChange={(e) => setPaymentMethod(e.target.value)}
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                   >
                     <option value="UPI">UPI / GPay / PhonePe / Paytm</option>
                     <option value="Bank Transfer">Bank Transfer / NEFT / IMPS / RTGS</option>
@@ -572,7 +572,7 @@ export default function EventClientPaymentCard({
                     type="date"
                     value={paymentDate}
                     onChange={(e) => setPaymentDate(e.target.value)}
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs font-semibold text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -587,7 +587,7 @@ export default function EventClientPaymentCard({
                   value={transactionId}
                   onChange={(e) => setTransactionId(e.target.value)}
                   placeholder="e.g. UPI Ref # / Cheque # / NEFT UTR"
-                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                 />
               </div>
 
@@ -601,7 +601,7 @@ export default function EventClientPaymentCard({
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="e.g. Paid by client via UPI QR at office"
-                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs text-gray-800 shadow-2xs focus:border-[#29241f] focus:outline-hidden"
+                  className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-xs text-gray-800 shadow-2xs focus:border-[#0f172a] focus:outline-hidden"
                 />
               </div>
 
@@ -617,7 +617,7 @@ export default function EventClientPaymentCard({
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50"
                 >
                   {submitting ? "Recording..." : "Confirm & Save"}
                   <ArrowRight size={13} />

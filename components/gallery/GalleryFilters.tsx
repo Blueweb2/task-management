@@ -28,14 +28,14 @@ export default function GalleryFilters({
               className={[
                 "rounded-full px-5 py-2.5 text-sm font-medium",
                 "transition-all duration-200",
-                "focus:outline-none focus:ring-2 focus:ring-[#b8894b]/30",
+                "focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/30",
                 active
-                  ? "bg-[#b8894b] text-white shadow-sm"
+                  ? "bg-[#3b82f6] text-white shadow-sm"
                   : [
-                      "border border-[#ddd5cb]",
+                      "border border-[#dbeafe]",
                       "bg-white text-[#5f574f]",
                       "hover:border-[#c7b39a]",
-                      "hover:bg-[#fdfbf8]",
+                      "hover:bg-[#ffffff]",
                     ].join(" "),
               ].join(" ")}
             >

@@ -227,7 +227,7 @@ export default function StaffList({
           onChange={(event) => handleSearchChange(event.target.value)}
           placeholder={placeholderText}
           aria-label="Search staff"
-          className="h-12 w-full rounded-2xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#1F1F1F] outline-none transition placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/10 shadow-2xs"
+          className="h-12 w-full rounded-2xl border border-gray-200 bg-white pl-10 pr-4 text-sm text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/10 shadow-2xs"
         />
       </div>
 
@@ -249,7 +249,7 @@ export default function StaffList({
       <div className="flex items-center justify-between pt-1">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-sm font-bold text-[#1F1F1F] sm:text-base">
+            <h2 className="text-sm font-bold text-[#0f172a] sm:text-base">
               {headerTitle}
             </h2>
             <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-700">
@@ -262,7 +262,7 @@ export default function StaffList({
         <button
           type="button"
           onClick={onAddStaff}
-          className="inline-flex items-center gap-1.5 rounded-xl bg-[#29241f] px-3.5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 cursor-pointer"
+          className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 cursor-pointer"
           aria-label="Add staff member"
         >
           <Plus size={15} strokeWidth={2.5} />
@@ -306,7 +306,7 @@ export default function StaffList({
       {/* INITIAL LOADING */}
       {loading && staff.length === 0 && (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white px-5 py-12">
-          <Loader2 size={24} className="animate-spin text-[#9A7B4F]" />
+          <Loader2 size={24} className="animate-spin text-[#2563eb]" />
           <p className="mt-3 text-xs font-medium text-gray-500">
             Loading team members...
           </p>
@@ -316,15 +316,15 @@ export default function StaffList({
       {/* EMPTY STATE */}
       {!loading && staff.length === 0 && (
         <div className="rounded-2xl border border-gray-200 bg-white px-5 py-10 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F4EBDD]">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#eff6ff]">
             {isChefManager ? (
-              <ChefHat size={22} className="text-[#9A7B4F]" />
+              <ChefHat size={22} className="text-[#2563eb]" />
             ) : (
-              <Search size={20} className="text-[#9A7B4F]" />
+              <Search size={20} className="text-[#2563eb]" />
             )}
           </div>
 
-          <h3 className="mt-3 text-sm font-bold text-[#1F1F1F]">
+          <h3 className="mt-3 text-sm font-bold text-[#0f172a]">
             {isChefManager
               ? "No Kitchen Staff Found"
               : isDepartmentManager
@@ -354,7 +354,7 @@ export default function StaffList({
             <button
               type="button"
               onClick={handleClearFilters}
-              className="mt-4 rounded-xl border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-[#9A7B4F] hover:bg-gray-100 transition"
+              className="mt-4 rounded-xl border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-[#2563eb] hover:bg-gray-100 transition"
             >
               Clear all filters
             </button>
@@ -367,7 +367,7 @@ export default function StaffList({
         <div className="relative space-y-3">
           {loading && (
             <div className="absolute right-2 top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm">
-              <Loader2 size={16} className="animate-spin text-[#9A7B4F]" />
+              <Loader2 size={16} className="animate-spin text-[#2563eb]" />
             </div>
           )}
 

@@ -319,18 +319,18 @@ export default function StickyAiAssistant({
           aria-label="AI Voice Helper"
           className={`group relative flex items-center gap-2.5 rounded-full p-2.5 sm:px-4 sm:py-3 text-white transition-all duration-300 active:scale-95 cursor-pointer select-none ${
             isPanelOpen
-              ? "bg-[#29241f] border-2 border-[#D4AF37] shadow-xl shadow-black/40 ring-4 ring-[#D4AF37]/20"
-              : "bg-[#1E1B18] border border-[#D4AF37]/40 shadow-xl shadow-black/35 hover:shadow-2xl hover:border-[#D4AF37] hover:scale-105"
+              ? "bg-[#0f172a] border-2 border-[#3b82f6] shadow-xl shadow-black/40 ring-4 ring-[#3b82f6]/20"
+              : "bg-[#0f172a] border border-[#3b82f6]/40 shadow-xl shadow-black/35 hover:shadow-2xl hover:border-[#3b82f6] hover:scale-105"
           }`}
           title="AI Voice Booking Helper (Auto Dictate)"
         >
           {/* Subtle Ambient Pulse Aura */}
           {!isPanelOpen && (
-            <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#D4AF37]/20 via-amber-500/10 to-[#D4AF37]/20 blur-xs animate-pulse opacity-75 group-hover:opacity-100" />
+            <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#3b82f6]/20 via-amber-500/10 to-[#3b82f6]/20 blur-xs animate-pulse opacity-75 group-hover:opacity-100" />
           )}
 
           {/* Microphone Icon */}
-          <div className="relative flex h-8 w-8 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#D4AF37] to-[#9A6C37] text-white shadow-xs">
+          <div className="relative flex h-8 w-8 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] text-white shadow-xs">
             <Mic size={16} className={isPanelOpen || isListening ? "scale-110 transition-transform text-[#FFE58F]" : "animate-pulse"} />
           </div>
 
@@ -380,7 +380,7 @@ export default function StickyAiAssistant({
 
           <div
             ref={panelRef}
-            className="fixed z-50 flex flex-col rounded-3xl border border-[#E8E1D8] bg-white/98 shadow-2xl backdrop-blur-md transition-all animate-in fade-in zoom-in-95 overflow-hidden
+            className="fixed z-50 flex flex-col rounded-3xl border border-[#dbeafe] bg-white/98 shadow-2xl backdrop-blur-md transition-all animate-in fade-in zoom-in-95 overflow-hidden
               inset-x-3 bottom-24 max-h-[82vh]
               sm:inset-x-auto sm:bottom-auto sm:right-6 sm:top-1/2 sm:-translate-y-1/2 sm:w-[420px] sm:max-h-[88vh]"
             style={{
@@ -388,14 +388,14 @@ export default function StickyAiAssistant({
             }}
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-[#F0EAE1] bg-gradient-to-r from-[#FAF8F5] via-white to-[#FAF8F5] px-4 sm:px-5 py-3.5 shrink-0">
+            <div className="flex items-center justify-between border-b border-[#eff6ff] bg-gradient-to-r from-[#f8fbff] via-white to-[#f8fbff] px-4 sm:px-5 py-3.5 shrink-0">
               <div className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#D4AF37]/20 to-[#9A6C37]/20 text-[#9A6C37] border border-[#D4AF37]/40">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#3b82f6]/20 to-[#1d4ed8]/20 text-[#1d4ed8] border border-[#3b82f6]/40">
                   <Mic size={16} className={isListening ? "text-rose-600 animate-pulse" : ""} />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <h3 className="text-xs sm:text-sm font-black text-[#29241F]">
+                    <h3 className="text-xs sm:text-sm font-black text-[#0f172a]">
                       AI Booking Helper
                     </h3>
                     {isListening && (
@@ -460,7 +460,7 @@ export default function StickyAiAssistant({
 
 
               {/* Multiline Textarea with embedded Voice Dictation toggle */}
-              <div className="relative rounded-2xl border border-gray-200 bg-white transition-all focus-within:border-[#9A6C37] focus-within:ring-2 focus-within:ring-[#9A6C37]/20 shadow-2xs">
+              <div className="relative rounded-2xl border border-gray-200 bg-white transition-all focus-within:border-[#1d4ed8] focus-within:ring-2 focus-within:ring-[#1d4ed8]/20 shadow-2xs">
                 <textarea
                   ref={textareaRef}
                   value={inputText}
@@ -471,11 +471,11 @@ export default function StickyAiAssistant({
                   }}
                   rows={4}
                   placeholder={`Speak or type your event details here...\n\nManglish Example:\n"500 perkk kalyanam Nov 15-nu vaikittu 6 manikku Nilamburil vechu, biriyani catering venam"\n\nEnglish Example:\n"Wedding for 500 guests on 15 November at 6 PM in Calicut"\n\n(Auto voice works - speak naturally in any language)`}
-                  className="w-full resize-none rounded-2xl p-3 sm:p-3.5 text-xs sm:text-sm text-[#29241F] placeholder:text-gray-400 placeholder:text-xs leading-relaxed outline-none border-0 focus:ring-0"
+                  className="w-full resize-none rounded-2xl p-3 sm:p-3.5 text-xs sm:text-sm text-[#0f172a] placeholder:text-gray-400 placeholder:text-xs leading-relaxed outline-none border-0 focus:ring-0"
                 />
 
                 {/* Bottom Bar inside Textarea: Auto Dictation status + Voice controls */}
-                <div className="flex items-center justify-between border-t border-gray-100 bg-[#FAF8F5]/60 px-3 py-2 rounded-b-2xl">
+                <div className="flex items-center justify-between border-t border-gray-100 bg-[#f8fbff]/60 px-3 py-2 rounded-b-2xl">
                   {/* Auto Voice indicator */}
                   <div className="flex items-center gap-1.5">
                     {isListening ? (
@@ -511,7 +511,7 @@ export default function StickyAiAssistant({
                           </>
                         ) : (
                           <>
-                            <Mic size={13} className="text-[#9A6C37]" />
+                            <Mic size={13} className="text-[#1d4ed8]" />
                             <span className="text-[11px]">Speak</span>
                           </>
                         )}
@@ -552,8 +552,8 @@ export default function StickyAiAssistant({
               )}
 
               {/* Helper tip */}
-              <div className="flex items-start gap-2 rounded-xl bg-[#FAF8F5] p-2.5 text-[11px] text-gray-500 border border-[#EFE8DE]">
-                <Info size={14} className="text-[#9A6C37] shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2 rounded-xl bg-[#f8fbff] p-2.5 text-[11px] text-gray-500 border border-[#EFE8DE]">
+                <Info size={14} className="text-[#1d4ed8] shrink-0 mt-0.5" />
                 <span>
                   <strong>Tip:</strong> You can dictate in Manglish, English, or Malayalam. Mention the date, place, number of guests, and food or services you need.
                 </span>
@@ -587,23 +587,23 @@ export default function StickyAiAssistant({
             </div>
 
             {/* Bottom Action Footer */}
-            <div className="border-t border-[#F0EAE1] bg-[#FAF8F5] p-3.5 sm:p-4 shrink-0">
+            <div className="border-t border-[#eff6ff] bg-[#f8fbff] p-3.5 sm:p-4 shrink-0">
               <button
                 type="button"
                 disabled={isProcessing || !inputText.trim()}
                 onClick={handleParseAndApply}
-                className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#29241F] hover:bg-black px-4 py-3 text-xs sm:text-sm font-black text-white shadow-md hover:shadow-lg transition active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#0f172a] hover:bg-black px-4 py-3 text-xs sm:text-sm font-black text-white shadow-md hover:shadow-lg transition active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isProcessing ? (
                   <>
-                    <RefreshCw size={15} className="animate-spin text-[#D4AF37]" />
+                    <RefreshCw size={15} className="animate-spin text-[#3b82f6]" />
                     <span className="text-[#FFE58F]">
                       {PROCESSING_STEPS[processingStepIndex] || "Reading your message..."}
                     </span>
                   </>
                 ) : (
                   <>
-                    <Sparkles size={15} className="text-[#D4AF37]" />
+                    <Sparkles size={15} className="text-[#3b82f6]" />
                     <span> Fill Form Details</span>
                     <ArrowRight size={14} className="text-gray-400" />
                   </>

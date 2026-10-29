@@ -229,22 +229,22 @@ export default function AddExpenseModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-[#29241f]/45 p-0 sm:items-center sm:p-5 backdrop-blur-2xs animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[#0f172a]/45 p-0 sm:items-center sm:p-5 backdrop-blur-2xs animate-in fade-in duration-150"
       role="dialog"
       aria-modal="true"
     >
-      <div className="max-h-[92vh] w-full overflow-y-auto rounded-t-3xl bg-white shadow-2xl sm:max-w-xl sm:rounded-3xl border border-[#e8e1d8]">
+      <div className="max-h-[92vh] w-full overflow-y-auto rounded-t-3xl bg-white shadow-2xl sm:max-w-xl sm:rounded-3xl border border-[#dbeafe]">
         {/* Modal Header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#eee8e1] bg-white px-5 py-4 sm:px-6">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#eff6ff] bg-white px-5 py-4 sm:px-6">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
               <Receipt size={18} />
             </div>
             <div>
-              <h2 className="text-base font-bold text-[#29241f]">
+              <h2 className="text-base font-bold text-[#0f172a]">
                 {editingExpense ? "Edit Expense Record" : "Add Operational Expense"}
               </h2>
-              <p className="text-xs text-[#9b938a]">
+              <p className="text-xs text-[#64748b]">
                 Department-wise expense tracking with receipt upload.
               </p>
             </div>
@@ -254,7 +254,7 @@ export default function AddExpenseModal({
             type="button"
             onClick={() => !saving && onClose()}
             aria-label="Close modal"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-[#756d64] hover:bg-[#f7f2ec] transition"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-[#475569] hover:bg-[#eff6ff] transition"
           >
             <X size={18} />
           </button>
@@ -274,7 +274,7 @@ export default function AddExpenseModal({
           {/* Title & Vendor Name */}
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Expense Title / Purpose *
               </label>
               <input
@@ -282,13 +282,13 @@ export default function AddExpenseModal({
                 value={form.title}
                 onChange={(event) => updateField("title", event.target.value)}
                 placeholder="e.g. Stage Sound & Mic Rental"
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none transition focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none transition focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
                 required
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Vendor / Supplier Name
               </label>
               <input
@@ -298,7 +298,7 @@ export default function AddExpenseModal({
                   updateField("vendorName", event.target.value)
                 }
                 placeholder="e.g. Prime Audio Rentals"
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none transition focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none transition focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
               />
             </div>
           </div>
@@ -306,7 +306,7 @@ export default function AddExpenseModal({
           {/* Department / Category & Amount */}
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Department / Category *
               </label>
               <select
@@ -314,7 +314,7 @@ export default function AddExpenseModal({
                 onChange={(event) =>
                   updateField("category", event.target.value as ExpenseCategory)
                 }
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-medium text-[#403a34] outline-none focus:border-[#b8894b]"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs font-medium text-[#1e293b] outline-none focus:border-[#3b82f6]"
               >
                 {expenseCategories.map((category) => (
                   <option key={category} value={category}>
@@ -328,7 +328,7 @@ export default function AddExpenseModal({
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Amount (₹) *
               </label>
               <input
@@ -339,7 +339,7 @@ export default function AddExpenseModal({
                   updateField("amount", Number(event.target.value))
                 }
                 placeholder="₹ 0"
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-bold text-[#29241f] outline-none focus:border-[#b8894b]"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs font-bold text-[#0f172a] outline-none focus:border-[#3b82f6]"
                 required
               />
             </div>
@@ -348,23 +348,23 @@ export default function AddExpenseModal({
           {/* Added By (Read-only Authenticated User) & Associated Event */}
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Added By (Authenticated User)
               </label>
-              <div className="flex h-10 w-full items-center gap-2 rounded-xl border border-[#ded5cb] bg-[#f7f4ee]/70 px-3 text-xs font-medium text-[#29241f]">
-                <User size={14} className="text-[#a7773f] shrink-0" />
+              <div className="flex h-10 w-full items-center gap-2 rounded-xl border border-[#dbeafe] bg-[#f8fbff]/70 px-3 text-xs font-medium text-[#0f172a]">
+                <User size={14} className="text-[#1d4ed8] shrink-0" />
                 <span className="truncate">{addedByDisplay}</span>
               </div>
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Associated Task / Reference (Optional)
               </label>
               {fixedEvent ? (
-                <div className="flex h-10 w-full items-center justify-between rounded-xl border border-[#ded5cb] bg-[#f7f4ee]/70 px-3 text-xs font-semibold text-[#29241f]">
+                <div className="flex h-10 w-full items-center justify-between rounded-xl border border-[#dbeafe] bg-[#f8fbff]/70 px-3 text-xs font-semibold text-[#0f172a]">
                   <span className="truncate">{fixedEvent.name}</span>
-                  <span className="flex items-center gap-1 text-[11px] font-bold text-[#a7773f] shrink-0">
+                  <span className="flex items-center gap-1 text-[11px] font-bold text-[#1d4ed8] shrink-0">
                     <Lock size={12} />
                     <span>Locked</span>
                   </span>
@@ -396,7 +396,7 @@ export default function AddExpenseModal({
                         }
                       }
                     }}
-                    className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-medium text-[#403a34] outline-none focus:border-[#b8894b]"
+                    className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs font-medium text-[#1e293b] outline-none focus:border-[#3b82f6]"
                   >
                     <option value="">General (No Task / Event)</option>
                     {events.map((evt) => (
@@ -415,7 +415,7 @@ export default function AddExpenseModal({
                         updateField("event", event.target.value)
                       }
                       placeholder="e.g. General Operations, Task, or Project"
-                      className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs outline-none focus:border-[#b8894b]"
+                      className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs outline-none focus:border-[#3b82f6]"
                     />
                   )}
                 </div>
@@ -425,7 +425,7 @@ export default function AddExpenseModal({
                   value={form.event}
                   onChange={(event) => updateField("event", event.target.value)}
                   placeholder="e.g. General Operations or Task Title"
-                  className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs outline-none focus:border-[#b8894b]"
+                  className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs outline-none focus:border-[#3b82f6]"
                 />
               )}
             </div>
@@ -434,20 +434,20 @@ export default function AddExpenseModal({
           {/* Date, Payment Method & Status */}
           <div className="grid gap-3 sm:grid-cols-3">
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Expense Date *
               </label>
               <input
                 type="date"
                 value={form.date}
                 onChange={(event) => updateField("date", event.target.value)}
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs text-[#29241f] outline-none focus:border-[#b8894b]"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs text-[#0f172a] outline-none focus:border-[#3b82f6]"
                 required
               />
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Payment Method
               </label>
               <select
@@ -458,7 +458,7 @@ export default function AddExpenseModal({
                     event.target.value as PaymentMethod
                   )
                 }
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-medium text-[#403a34] outline-none focus:border-[#b8894b]"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs font-medium text-[#1e293b] outline-none focus:border-[#3b82f6]"
               >
                 {paymentMethods.map((method) => (
                   <option key={method} value={method}>
@@ -469,7 +469,7 @@ export default function AddExpenseModal({
             </div>
 
             <div>
-              <label className="mb-1 block text-xs font-bold text-[#403a34]">
+              <label className="mb-1 block text-xs font-bold text-[#1e293b]">
                 Status
               </label>
               <select
@@ -477,7 +477,7 @@ export default function AddExpenseModal({
                 onChange={(event) =>
                   updateField("status", event.target.value as ExpenseStatus)
                 }
-                className="h-10 w-full rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-xs font-medium text-[#403a34] outline-none focus:border-[#b8894b]"
+                className="h-10 w-full rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-xs font-medium text-[#1e293b] outline-none focus:border-[#3b82f6]"
               >
                 <option value="Paid">Paid</option>
                 <option value="Pending">Pending</option>
@@ -487,7 +487,7 @@ export default function AddExpenseModal({
 
           {/* Description */}
           <div>
-            <label className="mb-1 block text-xs font-bold text-[#403a34]">
+            <label className="mb-1 block text-xs font-bold text-[#1e293b]">
               Expense Description
             </label>
             <textarea
@@ -497,18 +497,18 @@ export default function AddExpenseModal({
               }
               placeholder="Short explanation of the expense, items, or department details..."
               rows={2}
-              className="w-full resize-none rounded-xl border border-[#ded5cb] bg-[#fdfbf8] p-3 text-xs text-[#29241f] outline-none transition focus:border-[#b8894b] focus:ring-2 focus:ring-[#b8894b]/10"
+              className="w-full resize-none rounded-xl border border-[#dbeafe] bg-[#ffffff] p-3 text-xs text-[#0f172a] outline-none transition focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/10"
             />
           </div>
 
           {/* Receipt Attachment Section */}
-          <div className="rounded-2xl border border-dashed border-[#d9d0c7] bg-[#faf8f5] p-3.5">
+          <div className="rounded-2xl border border-dashed border-[#dbeafe] bg-[#f8fbff] p-3.5">
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-bold text-[#403a34] flex items-center gap-1.5">
-                <FileText size={14} className="text-[#a7773f]" />
+              <label className="text-xs font-bold text-[#1e293b] flex items-center gap-1.5">
+                <FileText size={14} className="text-[#1d4ed8]" />
                 <span>Receipt Attachment (Optional)</span>
               </label>
-              <span className="text-[10px] text-[#9b938a]">
+              <span className="text-[10px] text-[#64748b]">
                 JPG, PNG, PDF up to 10MB
               </span>
             </div>
@@ -523,14 +523,14 @@ export default function AddExpenseModal({
 
             {/* If there is a freshly selected file */}
             {receiptFile ? (
-              <div className="flex items-center justify-between rounded-xl border border-[#ded5cb] bg-white p-2.5">
+              <div className="flex items-center justify-between rounded-xl border border-[#dbeafe] bg-white p-2.5">
                 <div className="flex items-center gap-2.5 min-w-0">
                   {receiptPreview ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={receiptPreview}
                       alt="Receipt preview"
-                      className="h-10 w-10 shrink-0 rounded-lg object-cover border border-[#eee8e1]"
+                      className="h-10 w-10 shrink-0 rounded-lg object-cover border border-[#eff6ff]"
                     />
                   ) : (
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-600 border border-red-200">
@@ -538,10 +538,10 @@ export default function AddExpenseModal({
                     </div>
                   )}
                   <div className="min-w-0">
-                    <p className="text-xs font-bold text-[#29241f] truncate">
+                    <p className="text-xs font-bold text-[#0f172a] truncate">
                       {receiptFile.name}
                     </p>
-                    <p className="text-[10px] text-[#9b938a]">
+                    <p className="text-[10px] text-[#64748b]">
                       {(receiptFile.size / 1024).toFixed(0)} KB • Ready to upload
                     </p>
                   </div>
@@ -551,7 +551,7 @@ export default function AddExpenseModal({
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="rounded-lg px-2 py-1 text-[11px] font-semibold text-[#a7773f] hover:bg-[#f7efe4]"
+                    className="rounded-lg px-2 py-1 text-[11px] font-semibold text-[#1d4ed8] hover:bg-[#eff6ff]"
                   >
                     Replace
                   </button>
@@ -602,21 +602,21 @@ export default function AddExpenseModal({
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#ded5cb] bg-white py-3 text-xs font-medium text-[#756d64] hover:bg-[#f7f2ec] hover:text-[#29241f] transition"
+                className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#dbeafe] bg-white py-3 text-xs font-medium text-[#475569] hover:bg-[#eff6ff] hover:text-[#0f172a] transition"
               >
-                <Upload size={14} className="text-[#a7773f]" />
+                <Upload size={14} className="text-[#1d4ed8]" />
                 <span>Upload bill, receipt image, or PDF invoice</span>
               </button>
             )}
           </div>
 
           {/* Modal Actions */}
-          <div className="flex flex-col-reverse gap-2.5 border-t border-[#eee8e1] pt-4 sm:flex-row sm:justify-end">
+          <div className="flex flex-col-reverse gap-2.5 border-t border-[#eff6ff] pt-4 sm:flex-row sm:justify-end">
             <button
               type="button"
               onClick={() => !saving && onClose()}
               disabled={saving}
-              className="h-10 rounded-xl border border-[#ded5cb] px-5 text-xs font-semibold text-[#403a34] hover:bg-[#f8f4ee] transition"
+              className="h-10 rounded-xl border border-[#dbeafe] px-5 text-xs font-semibold text-[#1e293b] hover:bg-[#eff6ff] transition"
             >
               Cancel
             </button>
@@ -624,7 +624,7 @@ export default function AddExpenseModal({
             <button
               type="submit"
               disabled={saving}
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#b8894b] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#a7773f] transition disabled:opacity-50"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#3b82f6] px-5 text-xs font-semibold text-white shadow-xs hover:bg-[#1d4ed8] transition disabled:opacity-50"
             >
               {saving && <Loader2 size={14} className="animate-spin" />}
               <span>

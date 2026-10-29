@@ -165,10 +165,10 @@ export default function StaffScheduleSection({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-xs">
           <div className="flex items-center gap-2 text-gray-500">
-            <CalendarDays size={16} className="text-[#9A7B4F]" />
+            <CalendarDays size={16} className="text-[#2563eb]" />
             <span className="text-[11px] font-semibold uppercase tracking-wider">Total Shifts</span>
           </div>
-          <p className="mt-2 text-2xl font-bold text-[#1F1F1F]">{metrics.totalDuties}</p>
+          <p className="mt-2 text-2xl font-bold text-[#0f172a]">{metrics.totalDuties}</p>
           <p className="text-[11px] text-gray-400 mt-0.5">Assigned to {staff.name}</p>
         </div>
 
@@ -233,7 +233,7 @@ export default function StaffScheduleSection({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search events, duties, venues, or dates..."
-            className="w-full rounded-xl border border-gray-200 bg-gray-50/70 py-2 pl-10 pr-4 text-xs text-gray-900 placeholder-gray-400 focus:border-[#9A7B4F] focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#9A7B4F]"
+            className="w-full rounded-xl border border-gray-200 bg-gray-50/70 py-2 pl-10 pr-4 text-xs text-gray-900 placeholder-gray-400 focus:border-[#2563eb] focus:bg-white focus:outline-hidden focus:ring-1 focus:ring-[#2563eb]"
           />
         </div>
 
@@ -244,7 +244,7 @@ export default function StaffScheduleSection({
             onClick={() => setStatusFilter("ALL")}
             className={`rounded-xl px-3 py-1.5 text-xs font-bold transition-all ${
               statusFilter === "ALL"
-                ? "bg-[#29241f] text-white shadow-xs"
+                ? "bg-[#0f172a] text-white shadow-xs"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -294,12 +294,12 @@ export default function StaffScheduleSection({
       ======================================================== */}
       {loading ? (
         <div className="flex min-h-64 flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8">
-          <Clock3 className="h-7 w-7 animate-spin text-[#9A7B4F]" />
+          <Clock3 className="h-7 w-7 animate-spin text-[#2563eb]" />
           <p className="mt-3 text-xs font-medium text-gray-500">Loading schedule and assigned duties for {staff.name}...</p>
         </div>
       ) : filteredDuties.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-12 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F4EBDD] text-[#9A7B4F]">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eff6ff] text-[#2563eb]">
             <CalendarDays size={24} />
           </div>
           <h3 className="mt-4 text-sm font-bold text-gray-900">No shifts match criteria</h3>
@@ -348,8 +348,8 @@ export default function StaffScheduleSection({
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 pb-3.5">
                   <div className="flex flex-wrap items-center gap-2">
                     {/* Date Tag */}
-                    <div className="inline-flex items-center gap-1.5 rounded-xl bg-[#faf7f2] border border-[#e8e1d8] px-3 py-1 text-xs font-bold text-[#29241f]">
-                      <Calendar size={13} className="text-[#9A7B4F]" />
+                    <div className="inline-flex items-center gap-1.5 rounded-xl bg-[#eff6ff] border border-[#dbeafe] px-3 py-1 text-xs font-bold text-[#0f172a]">
+                      <Calendar size={13} className="text-[#2563eb]" />
                       <span>{weekday ? `${weekday}, ` : ""}{formattedDate}</span>
                     </div>
 
@@ -421,7 +421,7 @@ export default function StaffScheduleSection({
                         {eventType}
                       </span>
                       {duty.department && (
-                        <span className="inline-flex items-center gap-1 rounded-lg bg-[#faf7f2] px-2 py-0.5 text-[10px] font-bold text-[#9A7B4F] border border-[#e8e1d8]">
+                        <span className="inline-flex items-center gap-1 rounded-lg bg-[#eff6ff] px-2 py-0.5 text-[10px] font-bold text-[#2563eb] border border-[#dbeafe]">
                           <Building2 size={11} />
                           {duty.department}
                         </span>
@@ -438,8 +438,8 @@ export default function StaffScheduleSection({
                     </div>
 
                     <div className="pt-2">
-                      <p className="text-xs font-bold text-[#29241f] flex items-center gap-1.5">
-                        <Sparkles size={13} className="text-[#9A7B4F]" />
+                      <p className="text-xs font-bold text-[#0f172a] flex items-center gap-1.5">
+                        <Sparkles size={13} className="text-[#2563eb]" />
                         <span>Duty Assigned:</span>
                         <span className="text-gray-700 font-semibold">{duty.dutyTitle}</span>
                       </p>
@@ -452,7 +452,7 @@ export default function StaffScheduleSection({
                   </div>
 
                   {/* Financial & Compensation (Col 3) */}
-                  <div className="rounded-xl border border-gray-100 bg-[#fbf9f6] p-3.5 flex flex-col justify-between">
+                  <div className="rounded-xl border border-gray-100 bg-[#ffffff] p-3.5 flex flex-col justify-between">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Shift Compensation</p>
                       <div className="mt-1 flex items-baseline gap-1">
@@ -494,7 +494,7 @@ export default function StaffScheduleSection({
                 {duty.checklist && duty.checklist.length > 0 && (
                   <div className="mt-4 border-t border-gray-100 pt-3">
                     <div className="flex items-center gap-1.5 text-xs font-bold text-gray-700">
-                      <CheckSquare size={14} className="text-[#9A7B4F]" />
+                      <CheckSquare size={14} className="text-[#2563eb]" />
                       <span>Shift Checklist ({duty.checklist.filter((c) => c.completed).length} / {duty.checklist.length} done):</span>
                     </div>
 

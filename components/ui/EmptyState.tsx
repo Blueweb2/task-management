@@ -40,21 +40,21 @@ export default function EmptyState({
           items-center
           justify-center
           rounded-2xl
-          bg-[#F3EBDD]
-          text-[#80683D]
+          bg-[#eff6ff]
+          text-[#1d4ed8]
         "
       >
         {icon || <DefaultEmptyIcon />}
       </div>
 
       {/* Title */}
-      <h3 className="text-base font-semibold text-[#1F2023]">
+      <h3 className="text-base font-semibold text-[#0f172a]">
         {title}
       </h3>
 
       {/* Description */}
       {description && (
-        <p className="mt-1.5 max-w-sm text-sm leading-5 text-[#77746D]">
+        <p className="mt-1.5 max-w-sm text-sm leading-5 text-[#64748b]">
           {description}
         </p>
       )}

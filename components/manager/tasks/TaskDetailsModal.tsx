@@ -125,7 +125,7 @@ export default function TaskDetailsModal({
                 Due Date
               </span>
               <p className="mt-0.5 font-bold text-gray-900 flex items-center gap-1">
-                <Calendar size={13} className="text-[#9A7B4F]" />
+                <Calendar size={13} className="text-[#2563eb]" />
                 <span>{formattedDueDate}</span>
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function TaskDetailsModal({
                 Due Time
               </span>
               <p className="mt-0.5 font-bold text-gray-900 flex items-center gap-1">
-                <Clock size={13} className="text-[#9A7B4F]" />
+                <Clock size={13} className="text-[#2563eb]" />
                 <span>{task.dueTime || "Anytime"}</span>
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function TaskDetailsModal({
                 Location
               </span>
               <p className="mt-0.5 font-medium text-gray-900 flex items-center gap-1 truncate">
-                <MapPin size={13} className="text-[#9A7B4F] shrink-0" />
+                <MapPin size={13} className="text-[#2563eb] shrink-0" />
                 <span className="truncate">{task.location || "On-site"}</span>
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function TaskDetailsModal({
                 <button
                   type="button"
                   onClick={() => onRequestEquipment(task)}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#9A7B4F] hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#2563eb] hover:underline"
                 >
                   <Package size={13} />
                   <span>Request More Equipment</span>
@@ -291,9 +291,9 @@ export default function TaskDetailsModal({
                     href={att.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:border-[#9A7B4F] transition"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:border-[#2563eb] transition"
                   >
-                    <Paperclip size={13} className="text-[#9A7B4F]" />
+                    <Paperclip size={13} className="text-[#2563eb]" />
                     <span className="truncate max-w-[180px]">{att.name}</span>
                   </a>
                 ))}

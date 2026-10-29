@@ -73,7 +73,7 @@ export default function Avatar({
             rounded-full
             object-cover
             ring-1
-            ring-[#E5E1D8]
+            ring-[#dbeafe]
           `}
           {...props}
         />
@@ -86,9 +86,9 @@ export default function Avatar({
             rounded-full
             bg-[#EDE5D6]
             font-semibold
-            text-[#80683D]
+            text-[#1d4ed8]
             ring-1
-            ring-[#E5E1D8]
+            ring-[#dbeafe]
             ${sizes[size]}
           `}
           aria-label={alt || name}

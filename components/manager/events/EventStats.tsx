@@ -77,7 +77,7 @@ function StatCard({
     <div
       className={`rounded-2xl p-4 shadow-sm transition ${
         active
-          ? "bg-[#252525] text-white ring-2 ring-amber-400"
+          ? "bg-[#1e3a8a] text-white ring-2 ring-amber-400"
           : highlight
           ? "bg-amber-50/80 border border-amber-200 hover:border-amber-400"
           : "bg-white border border-gray-100"
@@ -91,7 +91,7 @@ function StatCard({
               ? "text-white"
               : highlight
               ? "text-amber-900"
-              : "text-[#252525]"
+              : "text-[#1e3a8a]"
           }`}
         >
           {value}

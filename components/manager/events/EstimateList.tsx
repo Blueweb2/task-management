@@ -47,7 +47,7 @@ export default function EstimateList({
     return (
       <div className="flex min-h-[260px] items-center justify-center rounded-3xl border border-gray-200 bg-white">
         <div className="flex items-center gap-3 text-sm font-semibold text-gray-500">
-          <Loader2 size={20} className="animate-spin text-[#9a6c37]" />
+          <Loader2 size={20} className="animate-spin text-[#1d4ed8]" />
           <span>Loading bookings & quotes...</span>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function EstimateList({
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-800 border border-amber-200">
           <FileText size={26} />
         </div>
-        <h3 className="mt-4 text-base font-black text-[#252525]">
+        <h3 className="mt-4 text-base font-black text-[#1e3a8a]">
           No Pending Bookings or Quotes
         </h3>
         <p className="mx-auto mt-1 max-w-md text-xs text-gray-500">
@@ -69,9 +69,9 @@ export default function EstimateList({
         <div className="mt-5">
           <Link
             href="/manager/booking"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#252525] px-4 py-2.5 text-xs font-bold text-white hover:bg-black transition active:scale-95"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#1e3a8a] px-4 py-2.5 text-xs font-bold text-white hover:bg-black transition active:scale-95"
           >
-            <Sparkles size={14} className="text-[#D4AF37]" />
+            <Sparkles size={14} className="text-[#3b82f6]" />
             <span>Create New Booking</span>
           </Link>
         </div>
@@ -108,7 +108,7 @@ export default function EstimateList({
                 ? "border-emerald-200 bg-emerald-50/20"
                 : isDateOver
                 ? "border-gray-200 bg-gray-50/40 opacity-75"
-                : "border-[#e8e1d8] hover:border-[#9a6c37]"
+                : "border-[#dbeafe] hover:border-[#1d4ed8]"
             }`}
           >
             {/* Header: Estimate Number, Status, Created Date */}
@@ -156,7 +156,7 @@ export default function EstimateList({
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
                   Total Price
                 </p>
-                <p className="text-lg sm:text-xl font-black text-[#29241f]">
+                <p className="text-lg sm:text-xl font-black text-[#0f172a]">
                   ₹{Number(est.total || 0).toLocaleString("en-IN")}
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function EstimateList({
               {/* Event Info (Span 2) */}
               <div className="md:col-span-2 space-y-2">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-base sm:text-lg font-black text-[#29241f]">
+                  <h3 className="text-base sm:text-lg font-black text-[#0f172a]">
                     {est.eventName}
                   </h3>
                   <span className="rounded-lg bg-stone-100 px-2 py-0.5 text-xs font-bold text-stone-700">
@@ -176,7 +176,7 @@ export default function EstimateList({
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 text-xs text-gray-600">
-                  <span className="flex items-center gap-1 font-semibold text-[#9a6c37]">
+                  <span className="flex items-center gap-1 font-semibold text-[#1d4ed8]">
                     <Calendar size={14} />
                     {est.eventDate
                       ? new Date(est.eventDate).toLocaleDateString("en-US", {
@@ -228,7 +228,7 @@ export default function EstimateList({
 
                   {foodItemsCount > 0 && (
                     <span className="inline-flex items-center gap-1 rounded-lg bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-900 border border-amber-200">
-                      <Utensils size={12} className="text-[#9a6c37]" />
+                      <Utensils size={12} className="text-[#1d4ed8]" />
                       <span>Food ({foodItemsCount} Dishes)</span>
                     </span>
                   )}
@@ -250,7 +250,7 @@ export default function EstimateList({
               </div>
 
               {/* Client Info (Span 1) */}
-              <div className="rounded-2xl bg-[#faf8f5] p-3.5 border border-stone-200 space-y-1.5 text-xs">
+              <div className="rounded-2xl bg-[#f8fbff] p-3.5 border border-stone-200 space-y-1.5 text-xs">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400">
                   Client Details
                 </p>
@@ -291,7 +291,7 @@ export default function EstimateList({
                   onClick={() => onExport(est)}
                   className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-white px-3.5 py-2 text-xs font-bold text-gray-700 hover:bg-gray-50 transition active:scale-95 cursor-pointer shadow-2xs"
                 >
-                  <FileText size={14} className="text-[#9a6c37]" />
+                  <FileText size={14} className="text-[#1d4ed8]" />
                   <span>View & Print Bill</span>
                 </button>
 
@@ -350,7 +350,7 @@ export default function EstimateList({
                     type="button"
                     disabled={isAccepting}
                     onClick={() => onAccept(est)}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#29241f] hover:bg-black px-5 py-2.5 text-xs font-black text-white transition active:scale-95 disabled:opacity-50 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2.5 text-xs font-black text-white transition active:scale-95 disabled:opacity-50 cursor-pointer shadow-sm"
                   >
                     {isAccepting ? (
                       <>

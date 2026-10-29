@@ -131,14 +131,14 @@ export default function EventTypeSelect({
       <div className="mb-1.5 flex items-center justify-between gap-2">
         <label
           htmlFor={selectId}
-          className="flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#29241f]"
+          className="flex items-center gap-1 text-xs sm:text-sm font-semibold text-[#0f172a]"
         >
           Event Type
-          {required && <span className="text-[#b8894b]">*</span>}
+          {required && <span className="text-[#3b82f6]">*</span>}
         </label>
 
         {canonicalValue && (
-          <span className="flex items-center gap-1 rounded-full bg-[#B8894B]/15 px-2.5 py-0.5 text-[11px] font-bold text-[#9A6C37] animate-in fade-in">
+          <span className="flex items-center gap-1 rounded-full bg-[#3b82f6]/15 px-2.5 py-0.5 text-[11px] font-bold text-[#1d4ed8] animate-in fade-in">
             <SelectedIcon size={11} />
             {canonicalValue}
           </span>
@@ -166,21 +166,21 @@ export default function EventTypeSelect({
             error
               ? "border-rose-400 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/15"
               : isOpen
-                ? "border-[#b8894b] ring-2 ring-[#b8894b]/20 shadow-xs"
-                : "border-[#d8cfc4] hover:border-[#b49a6a] shadow-2xs"
+                ? "border-[#3b82f6] ring-2 ring-[#3b82f6]/20 shadow-xs"
+                : "border-[#dbeafe] hover:border-[#60a5fa] shadow-2xs"
           }
           ${className}
         `}
       >
         {/* Left Icon + Text */}
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="flex shrink-0 items-center justify-center text-[#8d847b] transition-colors group-hover:text-[#b8894b]">
+          <div className="flex shrink-0 items-center justify-center text-[#64748b] transition-colors group-hover:text-[#3b82f6]">
             <SelectedIcon size={18} />
           </div>
 
           <div className="min-w-0 flex-1 truncate">
             {canonicalValue ? (
-              <span className="block truncate font-semibold text-[#29241f]">
+              <span className="block truncate font-semibold text-[#0f172a]">
                 {canonicalValue}
               </span>
             ) : (
@@ -206,8 +206,8 @@ export default function EventTypeSelect({
           )}
 
           <div
-            className={`flex items-center text-[#8d847b] transition-transform duration-200 ${
-              isOpen ? "rotate-180 text-[#b8894b]" : ""
+            className={`flex items-center text-[#64748b] transition-transform duration-200 ${
+              isOpen ? "rotate-180 text-[#3b82f6]" : ""
             }`}
           >
             <ChevronDown size={16} />
@@ -228,7 +228,7 @@ export default function EventTypeSelect({
         <div
           role="listbox"
           aria-label="Event Type Options"
-          className="absolute left-0 top-[calc(100%+6px)] z-50 w-full min-w-[280px] rounded-2xl border border-[#e8e1d8] bg-white p-2 shadow-xl animate-in fade-in zoom-in-95 duration-150 max-h-72 overflow-y-auto"
+          className="absolute left-0 top-[calc(100%+6px)] z-50 w-full min-w-[280px] rounded-2xl border border-[#dbeafe] bg-white p-2 shadow-xl animate-in fade-in zoom-in-95 duration-150 max-h-72 overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="space-y-1">
@@ -246,8 +246,8 @@ export default function EventTypeSelect({
                     flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition cursor-pointer select-none
                     ${
                       isSelected
-                        ? "bg-[#B8894B]/15 text-[#9A6C37] font-bold"
-                        : "text-[#29241f] hover:bg-[#fcfaf7] hover:text-[#9A6C37]"
+                        ? "bg-[#3b82f6]/15 text-[#1d4ed8] font-bold"
+                        : "text-[#0f172a] hover:bg-[#ffffff] hover:text-[#1d4ed8]"
                     }
                   `}
                 >
@@ -255,8 +255,8 @@ export default function EventTypeSelect({
                     <span
                       className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg transition ${
                         isSelected
-                          ? "bg-[#b8894b] text-white shadow-2xs"
-                          : "bg-[#f5efe6] text-[#756d64]"
+                          ? "bg-[#3b82f6] text-white shadow-2xs"
+                          : "bg-[#eff6ff] text-[#475569]"
                       }`}
                     >
                       <OptionIcon size={14} />
@@ -265,7 +265,7 @@ export default function EventTypeSelect({
                   </div>
 
                   {isSelected && (
-                    <Check size={16} className="text-[#b8894b] shrink-0" />
+                    <Check size={16} className="text-[#3b82f6] shrink-0" />
                   )}
                 </div>
               );
@@ -276,7 +276,7 @@ export default function EventTypeSelect({
 
       {/* Quick-Pick Chips Row for 1-Tap Selection on Mobile & Desktop */}
       <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
-        <span className="text-[11px] font-semibold text-[#8d847b] mr-1 select-none">
+        <span className="text-[11px] font-semibold text-[#64748b] mr-1 select-none">
           Popular:
         </span>
         {POPULAR_QUICK_CHIPS.map((chip) => {
@@ -292,12 +292,12 @@ export default function EventTypeSelect({
                 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold transition cursor-pointer select-none active:scale-95
                 ${
                   isSelected
-                    ? "bg-[#b8894b] text-white shadow-2xs border border-[#b8894b]"
-                    : "bg-[#fcfaf7] text-[#756d64] border border-[#e8e1d8] hover:border-[#b8894b] hover:text-[#29241f]"
+                    ? "bg-[#3b82f6] text-white shadow-2xs border border-[#3b82f6]"
+                    : "bg-[#ffffff] text-[#475569] border border-[#dbeafe] hover:border-[#3b82f6] hover:text-[#0f172a]"
                 }
               `}
             >
-              <ChipIcon size={11} className={isSelected ? "text-white" : "text-[#9A6C37]"} />
+              <ChipIcon size={11} className={isSelected ? "text-white" : "text-[#1d4ed8]"} />
               <span>{chip}</span>
             </button>
           );
@@ -308,7 +308,7 @@ export default function EventTypeSelect({
       {error ? (
         <p className="mt-1.5 text-xs text-rose-600">{error}</p>
       ) : helperText ? (
-        <p className="mt-1.5 text-xs text-[#756d64]">{helperText}</p>
+        <p className="mt-1.5 text-xs text-[#475569]">{helperText}</p>
       ) : null}
     </div>
   );

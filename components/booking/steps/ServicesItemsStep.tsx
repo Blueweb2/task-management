@@ -336,9 +336,9 @@ export default function ServicesItemsStep({
 
       {/* Loading Skeleton */}
       {loading ? (
-        <div className="flex min-h-[360px] flex-col items-center justify-center gap-3 rounded-3xl border border-[#eee7dc] bg-white p-12 text-center">
-          <Loader2 size={32} className="animate-spin text-[#9A7B4F]" />
-          <p className="text-sm font-bold text-[#29241f]">
+        <div className="flex min-h-[360px] flex-col items-center justify-center gap-3 rounded-3xl border border-[#eff6ff] bg-white p-12 text-center">
+          <Loader2 size={32} className="animate-spin text-[#2563eb]" />
+          <p className="text-sm font-bold text-[#0f172a]">
             Loading services catalog...
           </p>
           <p className="text-xs text-gray-400">
@@ -346,9 +346,9 @@ export default function ServicesItemsStep({
           </p>
         </div>
       ) : services.length === 0 ? (
-        <div className="rounded-3xl border border-dashed border-[#d8cfc4] bg-white p-12 text-center">
+        <div className="rounded-3xl border border-dashed border-[#dbeafe] bg-white p-12 text-center">
           <Layers size={36} className="mx-auto text-gray-300" />
-          <p className="mt-3 text-base font-bold text-[#29241f]">
+          <p className="mt-3 text-base font-bold text-[#0f172a]">
             No services currently available
           </p>
           <p className="mt-1 text-xs text-gray-400">
@@ -370,7 +370,7 @@ export default function ServicesItemsStep({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search services, floral stage, buffet dining, lighting packages, drone cameras..."
-                className="h-12 w-full rounded-2xl border border-[#d8cfc4] bg-white pl-11 pr-10 text-xs sm:text-sm text-[#29241f] outline-none transition placeholder:text-gray-400 focus:border-[#9A7B4F] focus:ring-2 focus:ring-[#9A7B4F]/15 shadow-xs"
+                className="h-12 w-full rounded-2xl border border-[#dbeafe] bg-white pl-11 pr-10 text-xs sm:text-sm text-[#0f172a] outline-none transition placeholder:text-gray-400 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/15 shadow-xs"
               />
               {searchQuery && (
                 <button
@@ -399,7 +399,7 @@ export default function ServicesItemsStep({
               {/* Category Active Header */}
               <div className="flex items-center justify-between px-1">
                 <div>
-                  <h3 className="text-base font-black text-[#29241f] flex items-center gap-2">
+                  <h3 className="text-base font-black text-[#0f172a] flex items-center gap-2">
                     <span>
                       {(() => {
                         const activeCat = categories.find(
@@ -413,7 +413,7 @@ export default function ServicesItemsStep({
                           : "SERVICES COLLECTION";
                       })()}
                     </span>
-                    <span className="rounded-full bg-[#9A7B4F]/15 px-2.5 py-0.5 text-[10px] font-extrabold text-[#9A7B4F]">
+                    <span className="rounded-full bg-[#2563eb]/15 px-2.5 py-0.5 text-[10px] font-extrabold text-[#2563eb]">
                       {filteredItems.length} {filteredItems.length === 1 ? "Option" : "Options"}
                     </span>
                   </h3>
@@ -428,7 +428,7 @@ export default function ServicesItemsStep({
 
               {/* Visual Cards Grid */}
               {filteredItems.length === 0 ? (
-                <div className="flex min-h-[300px] flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-[#d8cfc4] bg-white p-8 text-center">
+                <div className="flex min-h-[300px] flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-[#dbeafe] bg-white p-8 text-center">
                   <SlidersHorizontal size={32} className="text-gray-300" />
                   <p className="text-sm font-bold text-gray-800">
                     No matching services found
@@ -444,7 +444,7 @@ export default function ServicesItemsStep({
                         setSelectedCategory(categories[0].id);
                       }
                     }}
-                    className="mt-2 rounded-xl bg-[#29241f] px-4 py-2 text-xs font-bold text-white hover:bg-black transition"
+                    className="mt-2 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black transition"
                   >
                     Reset Filters
                   </button>

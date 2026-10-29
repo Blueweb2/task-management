@@ -56,14 +56,14 @@ export default function DutiesStats({ duties }: DutiesStatsProps) {
             className={`rounded-2xl border p-3.5 sm:p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
               stat.isAlert
                 ? "border-rose-200 bg-rose-50/50"
-                : "border-[#e8e1d8] bg-white"
+                : "border-[#dbeafe] bg-white"
             }`}
           >
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
                 <p
                   className={`truncate text-xs font-medium sm:text-sm ${
-                    stat.isAlert ? "text-rose-700 font-bold" : "text-[#8d847b]"
+                    stat.isAlert ? "text-rose-700 font-bold" : "text-[#64748b]"
                   }`}
                 >
                   {stat.label}
@@ -71,7 +71,7 @@ export default function DutiesStats({ duties }: DutiesStatsProps) {
 
                 <p
                   className={`mt-1.5 text-xl font-bold sm:text-3xl ${
-                    stat.isAlert ? "text-rose-700" : "text-[#29241f]"
+                    stat.isAlert ? "text-rose-700" : "text-[#0f172a]"
                   }`}
                 >
                   {stat.value}
@@ -82,7 +82,7 @@ export default function DutiesStats({ duties }: DutiesStatsProps) {
                 className={`flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl ${
                   stat.isAlert
                     ? "bg-rose-100 text-rose-700"
-                    : "bg-[#f7efe4] text-[#a7773f]"
+                    : "bg-[#eff6ff] text-[#1d4ed8]"
                 }`}
               >
                 <Icon size={16} className="sm:hidden" />
@@ -90,7 +90,7 @@ export default function DutiesStats({ duties }: DutiesStatsProps) {
               </span>
             </div>
 
-            <p className="mt-2.5 truncate text-[11px] sm:text-xs text-[#9b938a]">
+            <p className="mt-2.5 truncate text-[11px] sm:text-xs text-[#64748b]">
               {stat.description}
             </p>
           </div>

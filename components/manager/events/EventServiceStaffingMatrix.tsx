@@ -244,9 +244,9 @@ export default function EventServiceStaffingMatrix({
 
   if (loading) {
     return (
-      <div className="flex min-h-[300px] flex-col items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-[#9a6c37]" />
-        <p className="mt-3 text-xs font-bold text-[#756d64]">
+      <div className="flex min-h-[300px] flex-col items-center justify-center rounded-3xl border border-[#dbeafe] bg-white p-8">
+        <Loader2 className="h-8 w-8 animate-spin text-[#1d4ed8]" />
+        <p className="mt-3 text-xs font-bold text-[#475569]">
           Analyzing customer booked services and staff availability...
         </p>
       </div>
@@ -290,13 +290,13 @@ export default function EventServiceStaffingMatrix({
       )}
 
       {/* Main Section Card Container (Matching other sections on Event Details page) */}
-      <section className="overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white shadow-sm w-full max-w-full min-w-0">
+      <section className="overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-sm w-full max-w-full min-w-0">
         {/* Header */}
-        <div className="border-b border-[#f1ece5] bg-gradient-to-r from-[#faf8f5] to-white p-4 sm:p-6 w-full max-w-full min-w-0">
+        <div className="border-b border-[#eff6ff] bg-gradient-to-r from-[#f8fbff] to-white p-4 sm:p-6 w-full max-w-full min-w-0">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full max-w-full min-w-0">
             <div className="min-w-0">
-              <h2 className="text-base sm:text-xl font-black tracking-tight text-[#29241f] flex items-center gap-2">
-                <Layers size={18} className="text-[#9a6c37] shrink-0" />
+              <h2 className="text-base sm:text-xl font-black tracking-tight text-[#0f172a] flex items-center gap-2">
+                <Layers size={18} className="text-[#1d4ed8] shrink-0" />
                 <span className="truncate">Event Services &amp; Staff</span>
               </h2>
               <p className="mt-0.5 text-xs text-gray-500">
@@ -305,9 +305,9 @@ export default function EventServiceStaffingMatrix({
             </div>
 
             <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-between sm:justify-end shrink-0">
-              <div className="flex items-center gap-2 bg-[#faf8f5] px-3 py-1.5 rounded-xl border border-[#eee7dc] text-xs">
-                <Users size={13} className="text-[#9a6c37] shrink-0" />
-                <span className="font-bold text-[#29241f] whitespace-nowrap">
+              <div className="flex items-center gap-2 bg-[#f8fbff] px-3 py-1.5 rounded-xl border border-[#eff6ff] text-xs">
+                <Users size={13} className="text-[#1d4ed8] shrink-0" />
+                <span className="font-bold text-[#0f172a] whitespace-nowrap">
                   {totalAllocated} / {totalRecommended} Staff Assigned
                 </span>
                 <span className="text-gray-300">|</span>
@@ -322,7 +322,7 @@ export default function EventServiceStaffingMatrix({
                 disabled={loading}
                 title="Refresh services and staffing"
                 aria-label="Refresh services and staffing"
-                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#ded5cb] bg-white text-[#756d64] hover:bg-[#f7f2ec] transition disabled:opacity-50"
+                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#dbeafe] bg-white text-[#475569] hover:bg-[#eff6ff] transition disabled:opacity-50"
               >
                 <Loader2 size={14} className={loading ? "animate-spin" : ""} />
               </button>
@@ -361,18 +361,18 @@ export default function EventServiceStaffingMatrix({
           return (
             <div
               key={stream.streamId}
-              className="flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[#e8e1d8] bg-[#fcfbfa] hover:bg-white p-3.5 sm:p-5 shadow-2xs transition hover:shadow-sm w-full max-w-full min-w-0 overflow-hidden"
+              className="flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[#dbeafe] bg-[#fcfbfa] hover:bg-white p-3.5 sm:p-5 shadow-2xs transition hover:shadow-sm w-full max-w-full min-w-0 overflow-hidden"
             >
               <div className="w-full max-w-full min-w-0">
                 {/* Clean, Compact Service Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-[#f1ece5] pb-3.5 w-full max-w-full min-w-0">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-[#eff6ff] pb-3.5 w-full max-w-full min-w-0">
                   <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#faf6f0] text-[#9a6c37] border border-[#ede5d8]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f8fbff] text-[#1d4ed8] border border-[#eff6ff]">
                       <StreamIcon size={18} />
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1.5 flex-wrap min-w-0">
-                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#9a6c37]">
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#1d4ed8]">
                           {stream.department}
                         </span>
                         {stream.streamType === "CATERING" && (
@@ -381,7 +381,7 @@ export default function EventServiceStaffingMatrix({
                           </span>
                         )}
                       </div>
-                      <h3 className="text-sm font-extrabold text-[#29241f] truncate max-w-full" title={stream.title}>
+                      <h3 className="text-sm font-extrabold text-[#0f172a] truncate max-w-full" title={stream.title}>
                         {stream.title}
                       </h3>
                     </div>
@@ -416,7 +416,7 @@ export default function EventServiceStaffingMatrix({
                       No staff assigned to this service yet.
                     </div>
                   ) : (
-                    <div className="divide-y divide-gray-100 rounded-xl border border-gray-100 bg-[#faf8f5]/40 overflow-hidden w-full max-w-full min-w-0">
+                    <div className="divide-y divide-gray-100 rounded-xl border border-gray-100 bg-[#f8fbff]/40 overflow-hidden w-full max-w-full min-w-0">
                       {stream.assignedDuties.map((duty) => {
                         const statusUpper = (duty.status || "").toUpperCase();
                         const isAccepted = ["ACCEPTED", "IN_PROGRESS", "COMPLETED"].includes(statusUpper);
@@ -433,7 +433,7 @@ export default function EventServiceStaffingMatrix({
                           >
                             {/* Staff Info: Name · Shift Time · Status */}
                             <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 text-xs min-w-0 flex-1">
-                              <span className="font-bold text-[#29241f] truncate max-w-[120px] sm:max-w-[180px]" title={staffName}>
+                              <span className="font-bold text-[#0f172a] truncate max-w-[120px] sm:max-w-[180px]" title={staffName}>
                                 {staffName}
                               </span>
                               <span className="text-gray-300">·</span>
@@ -494,8 +494,8 @@ export default function EventServiceStaffingMatrix({
                 </div>
 
                 {/* Available Department Staff Pool (Clean, compact rows) */}
-                <div className="mt-4 border-t border-[#f1ece5] pt-3 w-full max-w-full min-w-0">
-                  <div className="flex items-center justify-between text-xs font-bold text-[#29241f]">
+                <div className="mt-4 border-t border-[#eff6ff] pt-3 w-full max-w-full min-w-0">
+                  <div className="flex items-center justify-between text-xs font-bold text-[#0f172a]">
                     <span className="truncate">
                       {stream.department} Team (
                       {stream.departmentStaff.filter((s) => s.isAvailable).length} available):
@@ -536,12 +536,12 @@ export default function EventServiceStaffingMatrix({
                                 ? "border-emerald-200 bg-emerald-50/40"
                                 : isAssigned
                                 ? "border-purple-100 bg-purple-50/30"
-                                : "border-gray-100 bg-[#faf8f5]"
+                                : "border-gray-100 bg-[#f8fbff]"
                             }`}
                           >
                             <div className="min-w-0 flex-1 pr-1">
                               <div className="flex items-center gap-1.5 min-w-0">
-                                <span className="font-bold text-[#29241f] truncate max-w-[110px] sm:max-w-[160px]" title={staffMember.name}>
+                                <span className="font-bold text-[#0f172a] truncate max-w-[110px] sm:max-w-[160px]" title={staffMember.name}>
                                   {staffMember.name}
                                 </span>
                                 <span className="text-[10px] text-gray-400 shrink-0">
@@ -586,7 +586,7 @@ export default function EventServiceStaffingMatrix({
                               <button
                                 type="button"
                                 onClick={() => openAllocateModal(stream, staffMember)}
-                                className="shrink-0 rounded-lg bg-[#9a6c37] px-2.5 py-1 text-[11px] font-bold text-white hover:bg-[#83592a] transition active:scale-95"
+                                className="shrink-0 rounded-lg bg-[#1d4ed8] px-2.5 py-1 text-[11px] font-bold text-white hover:bg-[#83592a] transition active:scale-95"
                               >
                                 Assign
                               </button>
@@ -607,11 +607,11 @@ export default function EventServiceStaffingMatrix({
               </div>
 
               {/* Bottom Quick Button */}
-              <div className="mt-3.5 border-t border-[#f1ece5] pt-2.5">
+              <div className="mt-3.5 border-t border-[#eff6ff] pt-2.5">
                 {/* <button
                   type="button"
                   onClick={() => openAllocateModal(stream)}
-                  className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-[#9a6c37]/50 bg-white py-1.5 text-xs font-bold text-[#9a6c37] transition hover:bg-[#faf6f0]"
+                  className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-[#1d4ed8]/50 bg-white py-1.5 text-xs font-bold text-[#1d4ed8] transition hover:bg-[#f8fbff]"
                 >
                   <Plus size={13} />
                   <span>Assign Duty for {stream.title}</span>
@@ -631,14 +631,14 @@ export default function EventServiceStaffingMatrix({
           role="dialog"
           aria-modal="true"
         >
-          <div className="relative my-auto flex max-h-[92dvh] w-full max-w-lg flex-col rounded-3xl border border-[#e8e1d8] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
+          <div className="relative my-auto flex max-h-[92dvh] w-full max-w-lg flex-col rounded-3xl border border-[#dbeafe] bg-white shadow-2xl overflow-hidden animate-in zoom-in-95">
             {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-gray-100 bg-[#faf8f5] px-5 py-4 shrink-0">
+            <div className="flex items-center justify-between border-b border-gray-100 bg-[#f8fbff] px-5 py-4 shrink-0">
               <div>
-                <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#9a6c37]">
+                <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#1d4ed8]">
                   Assign to {allocatingStream.department}
                 </p>
-                <h3 className="text-base sm:text-lg font-black text-[#29241f]">
+                <h3 className="text-base sm:text-lg font-black text-[#0f172a]">
                   {allocatingStaff
                     ? `Assign ${allocatingStaff.name}`
                     : `New Task: ${allocatingStream.title}`}
@@ -677,7 +677,7 @@ export default function EventServiceStaffingMatrix({
                         );
                         setAllocatingStaff(found || null);
                       }}
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 bg-white px-3 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 bg-white px-3 text-sm outline-none focus:border-[#1d4ed8]"
                     >
                       <option value="">-- Choose Staff Member --</option>
                       {allocatingStream.departmentStaff.map((staff) => (
@@ -692,12 +692,12 @@ export default function EventServiceStaffingMatrix({
                     </select>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-3 rounded-2xl bg-[#faf8f5] border border-[#eee7dc] p-3 text-xs">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#b8894b] font-bold text-white">
+                  <div className="flex items-center gap-3 rounded-2xl bg-[#f8fbff] border border-[#eff6ff] p-3 text-xs">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3b82f6] font-bold text-white">
                       {allocatingStaff.name[0]}
                     </div>
                     <div>
-                      <p className="font-extrabold text-[#29241f]">
+                      <p className="font-extrabold text-[#0f172a]">
                         {allocatingStaff.name}
                       </p>
                       <p className="text-[11px] text-gray-500">
@@ -718,7 +718,7 @@ export default function EventServiceStaffingMatrix({
                     placeholder="e.g. Head Decorator / Buffet Steward"
                     value={dutyTitle}
                     onChange={(e) => setDutyTitle(e.target.value)}
-                    className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                    className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
 
@@ -731,7 +731,7 @@ export default function EventServiceStaffingMatrix({
                       type="text"
                       value={role}
                       onChange={(e) => setRole(e.target.value)}
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -744,7 +744,7 @@ export default function EventServiceStaffingMatrix({
                       required
                       value={dutyDate}
                       onChange={(e) => setDutyDate(e.target.value)}
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -752,7 +752,7 @@ export default function EventServiceStaffingMatrix({
                     <label className="block text-xs font-bold text-gray-700">
                       Start Time *
                       {startTime && (
-                        <span className="ml-2 font-normal text-[#9a6c37]">
+                        <span className="ml-2 font-normal text-[#1d4ed8]">
                           ({formatTime24to12(startTime)})
                         </span>
                       )}
@@ -762,7 +762,7 @@ export default function EventServiceStaffingMatrix({
                       required
                       value={startTime}
                       onChange={(e) => setStartTime(e.target.value)}
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -770,7 +770,7 @@ export default function EventServiceStaffingMatrix({
                     <label className="block text-xs font-bold text-gray-700">
                       End Time *
                       {endTime && (
-                        <span className="ml-2 font-normal text-[#9a6c37]">
+                        <span className="ml-2 font-normal text-[#1d4ed8]">
                           ({formatTime24to12(endTime)})
                         </span>
                       )}
@@ -780,7 +780,7 @@ export default function EventServiceStaffingMatrix({
                       required
                       value={endTime}
                       onChange={(e) => setEndTime(e.target.value)}
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
                 </div>
@@ -798,14 +798,14 @@ export default function EventServiceStaffingMatrix({
                       value={hourlyRate}
                       onChange={(e) => setHourlyRate(Number(e.target.value) || 0)}
                       placeholder="e.g. 500.00"
-                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-12 w-full rounded-2xl border border-gray-200 px-3.5 text-sm outline-none focus:border-[#1d4ed8]"
                     />
                     <p className="mt-1 text-[10px] text-gray-400">
                       Auto-filled from staff member&apos;s pay rate.
                     </p>
                   </div>
 
-                  <div className="flex flex-col justify-center rounded-2xl border border-[#eee8e1] bg-[#faf8f5] p-3 text-xs">
+                  <div className="flex flex-col justify-center rounded-2xl border border-[#eff6ff] bg-[#f8fbff] p-3 text-xs">
                     <p className="font-semibold text-gray-700">Estimated Total Pay</p>
                     <div className="mt-1 flex items-center justify-between text-[11px] text-gray-600">
                       <span>Duration: <strong>{(() => {
@@ -817,7 +817,7 @@ export default function EventServiceStaffingMatrix({
                         if (endMin < startMin) endMin += 24 * 60;
                         return (Math.max(0, endMin - startMin) / 60).toFixed(1);
                       })()} hrs</strong></span>
-                      <span className="font-bold text-[#b8894b]">Est. Pay: ₹{(() => {
+                      <span className="font-bold text-[#3b82f6]">Est. Pay: ₹{(() => {
                         if (!startTime || !endTime) return "0.00";
                         const [sH, sM] = startTime.split(":").map(Number);
                         const [eH, eM] = endTime.split(":").map(Number);
@@ -840,13 +840,13 @@ export default function EventServiceStaffingMatrix({
                     placeholder="Special instructions, dress code, checklist items..."
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    className="mt-1.5 w-full rounded-2xl border border-gray-200 p-3 text-sm outline-none focus:border-[#9a6c37]"
+                    className="mt-1.5 w-full rounded-2xl border border-gray-200 p-3 text-sm outline-none focus:border-[#1d4ed8]"
                   />
                 </div>
               </div>
 
               {/* Sticky Modal Action Buttons at Bottom */}
-              <div className="flex items-center gap-3 border-t border-gray-100 bg-[#faf8f5] px-5 py-3.5 shrink-0">
+              <div className="flex items-center gap-3 border-t border-gray-100 bg-[#f8fbff] px-5 py-3.5 shrink-0">
                 <button
                   type="button"
                   onClick={closeAllocateModal}
@@ -858,7 +858,7 @@ export default function EventServiceStaffingMatrix({
                 <button
                   type="submit"
                   disabled={submitting || !allocatingStaff}
-                  className="flex h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#29241f] font-bold text-xs text-white hover:bg-black active:scale-95 transition disabled:opacity-50 shadow-sm cursor-pointer"
+                  className="flex h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#0f172a] font-bold text-xs text-white hover:bg-black active:scale-95 transition disabled:opacity-50 shadow-sm cursor-pointer"
                 >
                   {submitting ? (
                     <Loader2 size={16} className="animate-spin" />

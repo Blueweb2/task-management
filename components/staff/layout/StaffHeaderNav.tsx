@@ -48,7 +48,7 @@ export default function StaffHeaderNav({
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[#e8e1d8] bg-white">
+    <header className="sticky top-0 z-30 border-b border-[#dbeafe] bg-white">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
         {/* ======================================================= */}
         {/* Left: Hamburger Button & Brand Logo (Mobile only)       */}
@@ -59,7 +59,7 @@ export default function StaffHeaderNav({
             onClick={onMenuClick}
             aria-label="Open menu"
             title="Open menu"
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-gray-700 transition hover:bg-[#fbf6ef] hover:text-[#9a6c37] active:scale-95 cursor-pointer"
+            className="flex h-10 w-10 items-center justify-center rounded-xl text-gray-700 transition hover:bg-[#eff6ff] hover:text-[#1d4ed8] active:scale-95 cursor-pointer"
           >
             <Menu size={22} strokeWidth={2} />
           </button>
@@ -79,9 +79,9 @@ export default function StaffHeaderNav({
         <div className="flex items-center gap-2 sm:gap-3 ml-auto">
           {/* Live Clock (Time) */}
           {currentTime && (
-            <div className="flex items-center gap-2 rounded-xl border border-[#ede5d8] bg-[#fbf8f4] px-2.5 sm:px-3 py-1.5 text-xs">
-              <Clock size={13} className="text-[#9a6c37]" />
-              <span className="font-extrabold text-[#29241f]">{currentTime}</span>
+            <div className="flex items-center gap-2 rounded-xl border border-[#eff6ff] bg-[#ffffff] px-2.5 sm:px-3 py-1.5 text-xs">
+              <Clock size={13} className="text-[#1d4ed8]" />
+              <span className="font-extrabold text-[#0f172a]">{currentTime}</span>
               <span className="hidden sm:inline text-gray-400">·</span>
               <span className="hidden sm:inline text-gray-500 font-medium">{currentDate}</span>
             </div>
@@ -93,7 +93,7 @@ export default function StaffHeaderNav({
             onClick={onNotificationClick}
             aria-label={`Notifications (${unreadCount} unread)`}
             title={unreadCount > 0 ? `${unreadCount} unread notifications` : "Notifications"}
-            className="relative flex h-10 w-10 items-center justify-center rounded-full text-gray-700 transition hover:bg-[#fbf6ef] hover:text-[#9a6c37] active:scale-95 cursor-pointer"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full text-gray-700 transition hover:bg-[#eff6ff] hover:text-[#1d4ed8] active:scale-95 cursor-pointer"
           >
             <Bell size={21} strokeWidth={2} />
             {unreadCount > 0 && (

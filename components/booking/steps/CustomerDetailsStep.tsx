@@ -19,7 +19,7 @@ export default function CustomerDetailsStep({
     <Card
       title="Your Details"
       description="We'll use these details to contact you about your event."
-      className="border-[#e8e1d8] shadow-sm"
+      className="border-[#dbeafe] shadow-sm"
     >
       <div className="space-y-6">
         <Input

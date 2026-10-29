@@ -222,14 +222,14 @@ export default function StaffProfilePage() {
       )}
 
       {/* Header */}
-      <header className="border-b border-[#e8e1d8] pb-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a6c37]">
+      <header className="border-b border-[#dbeafe] pb-6">
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#1d4ed8]">
           Staff Portal
         </p>
-        <h1 className="mt-1 text-2xl font-bold text-[#29241f] sm:text-3xl">
+        <h1 className="mt-1 text-2xl font-bold text-[#0f172a] sm:text-3xl">
           My Account & Credentials
         </h1>
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#756d64]">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-[#475569]">
           View employment credentials, update personal details, and manage login security.
         </p>
       </header>
@@ -255,10 +255,10 @@ export default function StaffProfilePage() {
       )}
 
       {loading ? (
-        <div className="flex min-h-[300px] items-center justify-center rounded-3xl border border-[#e8e1d8] bg-white">
+        <div className="flex min-h-[300px] items-center justify-center rounded-3xl border border-[#dbeafe] bg-white">
           <div className="text-center">
-            <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-[#e8e1d8] border-t-[#a7773f]" />
-            <p className="mt-3 text-xs font-semibold text-[#756d64]">
+            <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-[#dbeafe] border-t-[#1d4ed8]" />
+            <p className="mt-3 text-xs font-semibold text-[#475569]">
               Loading profile details...
             </p>
           </div>
@@ -270,7 +270,7 @@ export default function StaffProfilePage() {
       ) : (
         <>
           {/* Main Hero Profile Banner */}
-          <section className="overflow-hidden rounded-3xl border border-[#e8e1d8] bg-white shadow-sm">
+          <section className="overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-sm">
 
             {/* Hidden Photo Input */}
             <input
@@ -282,16 +282,16 @@ export default function StaffProfilePage() {
             />
 
             {/* Profile Header */}
-            <div className="relative overflow-hidden border-b border-[#eee8e1] bg-[#f7f2eb] px-5 py-6 sm:px-8 sm:py-7">
+            <div className="relative overflow-hidden border-b border-[#eff6ff] bg-[#eff6ff] px-5 py-6 sm:px-8 sm:py-7">
               {/* Decorative background */}
-              <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#b8894b]/10" />
-              <div className="absolute -bottom-16 right-20 h-28 w-28 rounded-full bg-[#9a6c37]/5" />
+              <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#3b82f6]/10" />
+              <div className="absolute -bottom-16 right-20 h-28 w-28 rounded-full bg-[#1d4ed8]/5" />
 
               <div className="relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
 
                 {/* Avatar with Interactive Upload Trigger */}
                 <div className="relative group shrink-0">
-                  <div className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center overflow-hidden rounded-3xl border-4 border-white bg-gradient-to-br from-[#9a6c37] to-[#c3975d] text-white shadow-md">
+                  <div className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center overflow-hidden rounded-3xl border-4 border-white bg-gradient-to-br from-[#1d4ed8] to-[#c3975d] text-white shadow-md">
                     {profile.avatar ? (
                       <img
                         src={getStaffAvatarUrl(profile.avatar)}
@@ -318,7 +318,7 @@ export default function StaffProfilePage() {
                     disabled={avatarUploading}
                     title="Upload profile photo"
                     aria-label="Upload profile photo"
-                    className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#29241f] text-white shadow-md border-2 border-white transition hover:bg-[#b8894b] active:scale-90"
+                    className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#0f172a] text-white shadow-md border-2 border-white transition hover:bg-[#3b82f6] active:scale-90"
                   >
                     <Camera size={14} />
                   </button>
@@ -327,7 +327,7 @@ export default function StaffProfilePage() {
                 {/* Main Info */}
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h2 className="truncate text-xl font-extrabold tracking-tight text-[#29241f] sm:text-2xl">
+                    <h2 className="truncate text-xl font-extrabold tracking-tight text-[#0f172a] sm:text-2xl">
                       {profile.name}
                     </h2>
 
@@ -337,26 +337,26 @@ export default function StaffProfilePage() {
                     </span>
                   </div>
 
-                  <p className="mt-1 text-xs font-semibold capitalize text-[#9a6c37]">
+                  <p className="mt-1 text-xs font-semibold capitalize text-[#1d4ed8]">
                     {profile.role} · {profile.department || "Event Operations"}
                   </p>
 
                   {/* Meta information */}
-                  <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-[#756d64]">
+                  <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-[#475569]">
                     <span className="inline-flex items-center gap-1">
-                      <Hash size={12} className="text-[#a7773f]" />
+                      <Hash size={12} className="text-[#1d4ed8]" />
                       {profile.employeeId || "EMP-" + profile.id.slice(-6).toUpperCase()}
                     </span>
 
                     <span className="inline-flex items-center gap-1">
-                      <BadgeCheck size={12} className="text-[#a7773f]" />
+                      <BadgeCheck size={12} className="text-[#1d4ed8]" />
                       {profile.employmentType || "Full-Time"}
                     </span>
 
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="inline-flex items-center gap-1 font-bold text-[#b8894b] hover:underline"
+                      className="inline-flex items-center gap-1 font-bold text-[#3b82f6] hover:underline"
                     >
                       <Upload size={12} />
                       <span>{profile.avatar ? "Change Photo" : "Upload Photo"}</span>
@@ -367,15 +367,15 @@ export default function StaffProfilePage() {
             </div>
 
             {/* Navigation Tabs */}
-            <div className="border-b border-[#eee8e1] bg-[#faf8f5] p-2 sm:px-6 sm:pt-0 sm:pb-0">
-              <div className="grid grid-cols-3 gap-1 rounded-xl bg-[#eee8e1] p-1 sm:flex sm:gap-0 sm:rounded-none sm:bg-transparent sm:p-0">
+            <div className="border-b border-[#eff6ff] bg-[#f8fbff] p-2 sm:px-6 sm:pt-0 sm:pb-0">
+              <div className="grid grid-cols-3 gap-1 rounded-xl bg-[#eff6ff] p-1 sm:flex sm:gap-0 sm:rounded-none sm:bg-transparent sm:p-0">
 
                 <button
                   type="button"
                   onClick={() => setActiveTab("details")}
                   className={`flex items-center justify-center gap-1.5 rounded-lg px-2 py-2.5 text-[11px] font-bold transition sm:rounded-none sm:border-b-2 sm:px-3 sm:py-3.5 sm:text-xs ${
                     activeTab === "details"
-                      ? "bg-white text-[#9a6c37] shadow-sm sm:border-[#9a6c37] sm:bg-transparent sm:shadow-none"
+                      ? "bg-white text-[#1d4ed8] shadow-sm sm:border-[#1d4ed8] sm:bg-transparent sm:shadow-none"
                       : "border-transparent text-gray-500 hover:text-gray-900"
                   }`}
                 >
@@ -389,7 +389,7 @@ export default function StaffProfilePage() {
                   onClick={() => setActiveTab("edit")}
                   className={`flex items-center justify-center gap-1.5 rounded-lg px-2 py-2.5 text-[11px] font-bold transition sm:rounded-none sm:border-b-2 sm:px-3 sm:py-3.5 sm:text-xs ${
                     activeTab === "edit"
-                      ? "bg-white text-[#9a6c37] shadow-sm sm:border-[#9a6c37] sm:bg-transparent sm:shadow-none"
+                      ? "bg-white text-[#1d4ed8] shadow-sm sm:border-[#1d4ed8] sm:bg-transparent sm:shadow-none"
                       : "border-transparent text-gray-500 hover:text-gray-900"
                   }`}
                 >
@@ -403,7 +403,7 @@ export default function StaffProfilePage() {
                   onClick={() => setActiveTab("security")}
                   className={`flex items-center justify-center gap-1.5 rounded-lg px-2 py-2.5 text-[11px] font-bold transition sm:rounded-none sm:border-b-2 sm:px-3 sm:py-3.5 sm:text-xs ${
                     activeTab === "security"
-                      ? "bg-white text-[#9a6c37] shadow-sm sm:border-[#9a6c37] sm:bg-transparent sm:shadow-none"
+                      ? "bg-white text-[#1d4ed8] shadow-sm sm:border-[#1d4ed8] sm:bg-transparent sm:shadow-none"
                       : "border-transparent text-gray-500 hover:text-gray-900"
                   }`}
                 >
@@ -497,7 +497,7 @@ export default function StaffProfilePage() {
                       required
                       value={editName}
                       onChange={(e) => setEditName(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -510,7 +510,7 @@ export default function StaffProfilePage() {
                       placeholder="+91 98765 43210"
                       value={editPhone}
                       onChange={(e) => setEditPhone(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -523,7 +523,7 @@ export default function StaffProfilePage() {
                       placeholder="e.g. Mumbai / Delhi NCR"
                       value={editLocation}
                       onChange={(e) => setEditLocation(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -531,7 +531,7 @@ export default function StaffProfilePage() {
                     <button
                       type="submit"
                       disabled={saveLoading}
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#b8894b] px-6 text-xs font-bold text-white shadow-sm transition hover:bg-[#a7773f] disabled:opacity-50"
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#3b82f6] px-6 text-xs font-bold text-white shadow-sm transition hover:bg-[#1d4ed8] disabled:opacity-50"
                     >
                       <Save size={16} />
                       {saveLoading ? "Saving Changes..." : "Save Profile Details"}
@@ -569,7 +569,7 @@ export default function StaffProfilePage() {
                       placeholder="••••••••"
                       value={currentPassword}
                       onChange={(e) => setCurrentPassword(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -583,7 +583,7 @@ export default function StaffProfilePage() {
                       placeholder="At least 6 characters"
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -597,7 +597,7 @@ export default function StaffProfilePage() {
                       placeholder="Repeat new password"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#9a6c37]"
+                      className="mt-1.5 h-11 w-full rounded-xl border border-gray-200 px-3.5 text-xs outline-none focus:border-[#1d4ed8]"
                     />
                   </div>
 
@@ -605,7 +605,7 @@ export default function StaffProfilePage() {
                     <button
                       type="submit"
                       disabled={passLoading}
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#29241f] px-6 text-xs font-bold text-white shadow-sm transition hover:bg-black disabled:opacity-50"
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-6 text-xs font-bold text-white shadow-sm transition hover:bg-black disabled:opacity-50"
                     >
                       <Lock size={16} />
                       {passLoading ? "Updating Password..." : "Update Security Password"}
@@ -640,14 +640,14 @@ function Info({
   value: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#eee8e1] bg-[#fbf8f4] p-4">
-      <div className="flex items-center gap-2 text-[#a7773f]">
+    <div className="rounded-2xl border border-[#eff6ff] bg-[#ffffff] p-4">
+      <div className="flex items-center gap-2 text-[#1d4ed8]">
         {icon}
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#9b938a]">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#64748b]">
           {label}
         </span>
       </div>
-      <p className="mt-2 text-sm font-bold text-[#403a34]">{value}</p>
+      <p className="mt-2 text-sm font-bold text-[#1e293b]">{value}</p>
     </div>
   );
 }

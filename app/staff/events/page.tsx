@@ -13,7 +13,7 @@ export default function StaffEventsRedirect() {
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3">
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#9a6c37]/10 text-[#9a6c37]">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1d4ed8]/10 text-[#1d4ed8]">
         <Loader2 className="h-6 w-6 animate-spin" />
       </div>
       <p className="text-xs font-medium text-gray-500">Redirecting to My Shifts...</p>

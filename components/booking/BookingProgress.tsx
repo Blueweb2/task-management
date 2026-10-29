@@ -57,29 +57,29 @@ export default function BookingProgress({
   const progressPercent = ((currentStep - 1) / (steps.length - 1)) * 100;
 
   return (
-    <div className="rounded-2xl border border-[#e8e1d8] bg-white shadow-xs overflow-hidden">
+    <div className="rounded-2xl border border-[#dbeafe] bg-white shadow-xs overflow-hidden">
       {/* ==========================================
           MOBILE VIEW (< 640px)
       ========================================== */}
-      <div className="sm:hidden px-4 py-3.5 bg-gradient-to-b from-white to-[#faf8f5]">
+      <div className="sm:hidden px-4 py-3.5 bg-gradient-to-b from-white to-[#f8fbff]">
         {/* Step Counter & Active Name */}
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#29241f] text-[#d8a86c] shadow-xs">
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#0f172a] text-[#60a5fa] shadow-xs">
               <ActiveIcon size={16} />
             </span>
             <div>
-              <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#9A7B4F]">
+              <p className="text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb]">
                 Step {currentStep} of {steps.length}
               </p>
-              <h2 className="text-sm font-black text-[#29241f] leading-tight">
+              <h2 className="text-sm font-black text-[#0f172a] leading-tight">
                 {activeStepObj.fullTitle}
               </h2>
             </div>
           </div>
 
           <div className="text-right">
-            <span className="rounded-full bg-[#29241f]/5 px-2.5 py-1 text-[10px] font-bold text-[#29241f]">
+            <span className="rounded-full bg-[#0f172a]/5 px-2.5 py-1 text-[10px] font-bold text-[#0f172a]">
               {Math.round((currentStep / steps.length) * 100)}% Complete
             </span>
           </div>
@@ -108,13 +108,13 @@ export default function BookingProgress({
                   className={`h-1.5 w-full rounded-full transition-all duration-300 ${isCompleted
                       ? "bg-emerald-600"
                       : isCurrent
-                        ? "bg-[#29241f]"
+                        ? "bg-[#0f172a]"
                         : "bg-gray-200"
                     }`}
                 />
                 <span
                   className={`text-[9px] font-bold transition ${isCurrent
-                      ? "text-[#29241f]"
+                      ? "text-[#0f172a]"
                       : isCompleted
                         ? "text-emerald-700"
                         : "text-gray-400"
@@ -148,7 +148,7 @@ export default function BookingProgress({
                   <div className="absolute left-1/2 top-5 w-full -translate-y-1/2 px-2">
                     <div
                       className={`h-0.5 w-full transition-all duration-300 ${currentStep > step.number
-                          ? "bg-[#29241f]"
+                          ? "bg-[#0f172a]"
                           : "bg-gray-200"
                         }`}
                     />
@@ -167,7 +167,7 @@ export default function BookingProgress({
                   className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-2 transition-all duration-200 shadow-2xs ${isCompleted
                       ? "border-emerald-600 bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700"
                       : isCurrent
-                        ? "border-[#29241f] bg-[#29241f] text-white shadow-md scale-105"
+                        ? "border-[#0f172a] bg-[#0f172a] text-white shadow-md scale-105"
                         : "border-gray-200 bg-white text-gray-400 cursor-default"
                     }`}
                 >
@@ -182,7 +182,7 @@ export default function BookingProgress({
                 <div className="mt-2 text-center">
                   <p
                     className={`text-xs font-bold transition ${isCurrent
-                        ? "text-[#29241f]"
+                        ? "text-[#0f172a]"
                         : isCompleted
                           ? "text-emerald-800"
                           : "text-gray-400"

@@ -31,13 +31,13 @@ export function getCategoryTheme(category = "") {
       defaultDesc: "View dishes, quantities, and food ingredients",
       badgeLabel: "dishes",
       containerClass:
-        "border-amber-200/90 bg-gradient-to-r from-[#fdfbf7] via-[#faf5ec] to-[#f6ede0] hover:border-amber-300 hover:bg-[#f5ede0]",
+        "border-amber-200/90 bg-gradient-to-r from-[#ffffff] via-[#eff6ff] to-[#eff6ff] hover:border-amber-300 hover:bg-[#eff6ff]",
       iconBoxClass: "bg-amber-500/15 text-amber-900 border-amber-300/50",
-      iconClass: "text-[#87551e]",
+      iconClass: "text-[#1d4ed8]",
       badgeClass: "bg-amber-200/80 text-amber-900 border-amber-300/60",
       actionBtnClass:
         "border-amber-200 text-amber-800 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",
-      textClass: "text-[#785122]/85",
+      textClass: "text-[#1d4ed8]/85",
       headingHoverClass: "group-hover:text-amber-950",
     };
   }
@@ -94,7 +94,7 @@ export function getCategoryTheme(category = "") {
       defaultDesc: "View sound systems, lights, and setup details",
       badgeLabel: "setup",
       containerClass:
-        "border-purple-200/90 bg-gradient-to-r from-[#fbf8fe] via-[#f5eefb] to-[#ece0f6] hover:border-purple-300 hover:bg-[#ece0f6]",
+        "border-purple-200/90 bg-gradient-to-r from-[#fbf8fe] via-[#f5eefb] to-[#eff6ff] hover:border-purple-300 hover:bg-[#eff6ff]",
       iconBoxClass: "bg-purple-500/15 text-purple-900 border-purple-300/50",
       iconClass: "text-purple-700",
       badgeClass: "bg-purple-200/80 text-purple-900 border-purple-300/60",
@@ -151,9 +151,9 @@ export function getCategoryTheme(category = "") {
     defaultDesc: "View selected options, details, and quantities",
     badgeLabel: "booked",
     containerClass:
-      "border-[#e8dfd3] bg-gradient-to-r from-[#fdfbf7] via-[#faf6f0] to-[#f4ebe0] hover:border-[#d9cbba] hover:bg-[#f2e7db]",
-    iconBoxClass: "bg-[#9a6c37]/15 text-[#9a6c37] border-[#9a6c37]/30",
-    iconClass: "text-[#87551e]",
+      "border-[#dbeafe] bg-gradient-to-r from-[#ffffff] via-[#f8fbff] to-[#eff6ff] hover:border-[#dbeafe] hover:bg-[#eff6ff]",
+    iconBoxClass: "bg-[#1d4ed8]/15 text-[#1d4ed8] border-[#1d4ed8]/30",
+    iconClass: "text-[#1d4ed8]",
     badgeClass: "bg-stone-200/80 text-stone-900 border-stone-300/60",
     actionBtnClass:
       "border-stone-200 text-stone-800 group-hover:bg-stone-800 group-hover:text-white group-hover:border-stone-800",
@@ -200,7 +200,7 @@ export default function EventServiceSelectionSummary({
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-1.5 min-w-0">
               <span
-                className={`text-xs font-bold text-[#29241f] transition-colors truncate max-w-full ${theme.headingHoverClass}`}
+                className={`text-xs font-bold text-[#0f172a] transition-colors truncate max-w-full ${theme.headingHoverClass}`}
               >
                 Catering Menu & Ingredients
               </span>
@@ -280,7 +280,7 @@ export default function EventServiceSelectionSummary({
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap sm:flex-nowrap items-center gap-1.5 min-w-0">
             <span
-              className={`text-xs font-bold text-[#29241f] transition-colors truncate max-w-full ${theme.headingHoverClass}`}
+              className={`text-xs font-bold text-[#0f172a] transition-colors truncate max-w-full ${theme.headingHoverClass}`}
             >
               {theme.title}
             </span>

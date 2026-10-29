@@ -54,7 +54,7 @@ export default function DeleteAssignmentModal({
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <h2
             id="delete-assignment-title"
-            className="text-base font-semibold text-[#1F1F1F]"
+            className="text-base font-semibold text-[#0f172a]"
           >
             Delete Assignment
           </h2>
@@ -80,7 +80,7 @@ export default function DeleteAssignmentModal({
             />
           </div>
 
-          <h3 className="mt-4 text-center text-sm font-semibold text-[#1F1F1F]">
+          <h3 className="mt-4 text-center text-sm font-semibold text-[#0f172a]">
             Are you sure?
           </h3>
 
@@ -91,13 +91,13 @@ export default function DeleteAssignmentModal({
           </p>
 
           {/* Assignment Summary */}
-          <div className="mt-5 rounded-2xl border border-gray-100 bg-[#F8F7F3] p-4">
+          <div className="mt-5 rounded-2xl border border-gray-100 bg-[#f8fbff] p-4">
             <div>
               <p className="text-[10px] font-medium uppercase tracking-wide text-gray-400">
                 Duty
               </p>
 
-              <p className="mt-1 text-sm font-semibold text-[#1F1F1F]">
+              <p className="mt-1 text-sm font-semibold text-[#0f172a]">
                 {assignment.dutyTitle}
               </p>
             </div>

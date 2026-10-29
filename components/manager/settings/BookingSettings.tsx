@@ -68,37 +68,37 @@ export default function BookingSettings() {
   ];
 
   return (
-    <section className="rounded-2xl border border-[#e8e1d8] bg-white shadow-sm">
-      <div className="border-b border-[#eee8e1] p-5 sm:p-6">
+    <section className="rounded-2xl border border-[#dbeafe] bg-white shadow-sm">
+      <div className="border-b border-[#eff6ff] p-5 sm:p-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7efe4] text-[#a7773f]">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d4ed8]">
             <CalendarCheck size={19} />
           </div>
 
           <div>
-            <h2 className="font-semibold text-[#29241f]">
+            <h2 className="font-semibold text-[#0f172a]">
               Booking Settings
             </h2>
 
-            <p className="text-sm text-[#9b938a]">
+            <p className="text-sm text-[#64748b]">
               Configure how customer and staff bookings should be validated.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="divide-y divide-[#eee8e1]">
+      <div className="divide-y divide-[#eff6ff]">
         {options.map((option) => (
           <div
             key={option.label}
             className="flex items-center justify-between gap-4 p-5 sm:p-6"
           >
             <div>
-              <p className="text-sm font-semibold text-[#403a34]">
+              <p className="text-sm font-semibold text-[#1e293b]">
                 {option.label}
               </p>
 
-              <p className="mt-1 max-w-xl text-xs leading-5 text-[#9b938a]">
+              <p className="mt-1 max-w-xl text-xs leading-5 text-[#64748b]">
                 {option.description}
               </p>
             </div>
@@ -112,8 +112,8 @@ export default function BookingSettings() {
               }
               className={`relative h-6 w-11 shrink-0 rounded-full transition ${
                 option.value
-                  ? "bg-[#b8894b]"
-                  : "bg-[#d9d0c7]"
+                  ? "bg-[#3b82f6]"
+                  : "bg-[#dbeafe]"
               }`}
             >
               <span
@@ -129,11 +129,11 @@ export default function BookingSettings() {
 
         <div className="space-y-4 p-5 sm:p-6">
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-[#403a34]">
+            <label className="mb-1.5 block text-sm font-medium text-[#1e293b]">
               Minimum Guests Per Booking
             </label>
 
-            <p className="mb-3 text-xs text-[#9b938a]">
+            <p className="mb-3 text-xs text-[#64748b]">
               Set the minimum number of guests required to submit a booking proposal.
             </p>
 
@@ -144,7 +144,7 @@ export default function BookingSettings() {
               onChange={(e) =>
                 setMinimumGuests(e.target.value)
               }
-              className="h-11 w-full max-w-xs rounded-xl border border-[#ded5cb] bg-[#fdfbf8] px-3 text-sm outline-none focus:border-[#b8894b]"
+              className="h-11 w-full max-w-xs rounded-xl border border-[#dbeafe] bg-[#ffffff] px-3 text-sm outline-none focus:border-[#3b82f6]"
             />
           </div>
 
@@ -152,7 +152,7 @@ export default function BookingSettings() {
             <button
               type="button"
               onClick={handleSave}
-              className="rounded-xl bg-[#b8894b] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#a7773f] transition"
+              className="rounded-xl bg-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#1d4ed8] transition"
             >
               Save Booking Settings
             </button>

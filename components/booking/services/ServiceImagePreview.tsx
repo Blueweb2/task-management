@@ -70,7 +70,7 @@ export default function ServiceImagePreview({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-[#d8cfc4] bg-white shadow-2xl animate-in zoom-in-95 duration-200"
+        className="relative flex max-h-[92vh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-[#dbeafe] bg-white shadow-2xl animate-in zoom-in-95 duration-200"
       >
         {/* Close Button */}
         <button
@@ -83,7 +83,7 @@ export default function ServiceImagePreview({
         </button>
 
         {/* Large Media Header */}
-        <div className="relative aspect-16/10 w-full overflow-hidden bg-[#29241f]">
+        <div className="relative aspect-16/10 w-full overflow-hidden bg-[#0f172a]">
           {item.imageUrl ? (
             <img
               src={item.imageUrl}
@@ -102,13 +102,13 @@ export default function ServiceImagePreview({
           {/* Category Tag */}
           <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-xl bg-black/70 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
-              <IconComponent size={14} className="text-[#d8a86c]" />
+              <IconComponent size={14} className="text-[#60a5fa]" />
               <span>{item.category}</span>
             </span>
 
             {item.optionId && (
-              <span className="inline-flex items-center gap-1 rounded-xl bg-white/90 px-3 py-1.5 text-xs font-bold text-[#29241f] backdrop-blur-md shadow-xs">
-                <Sparkles size={12} className="text-[#9A7B4F]" />
+              <span className="inline-flex items-center gap-1 rounded-xl bg-white/90 px-3 py-1.5 text-xs font-bold text-[#0f172a] backdrop-blur-md shadow-xs">
+                <Sparkles size={12} className="text-[#2563eb]" />
                 <span>Option Variation</span>
               </span>
             )}
@@ -122,11 +122,11 @@ export default function ServiceImagePreview({
           <div className="space-y-4">
             <div>
               {item.optionId && item.parentServiceName !== item.title && (
-                <p className="text-xs font-bold uppercase tracking-wider text-[#9A7B4F]">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#2563eb]">
                   {item.parentServiceName}
                 </p>
               )}
-              <h2 className="text-xl font-black text-[#29241f] sm:text-2xl">
+              <h2 className="text-xl font-black text-[#0f172a] sm:text-2xl">
                 {item.title}
               </h2>
             </div>
@@ -142,10 +142,10 @@ export default function ServiceImagePreview({
             )}
 
             {/* Pricing Details Breakdown Card */}
-            <div className="rounded-2xl border border-[#eee7dc] bg-[#faf8f5] p-4.5">
+            <div className="rounded-2xl border border-[#eff6ff] bg-[#f8fbff] p-4.5">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#8d847b]">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#64748b]">
                     Pricing Breakdown
                   </span>
                   <div className="mt-1">
@@ -160,15 +160,15 @@ export default function ServiceImagePreview({
 
                 {/* Calculation Details */}
                 <div className="text-left sm:text-right">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#8d847b]">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#64748b]">
                     Estimated Line Total
                   </span>
-                  <p className="mt-1 text-lg font-black text-[#29241f]">
+                  <p className="mt-1 text-lg font-black text-[#0f172a]">
                     {formatCurrency(estimatedTotal)}
                   </p>
                   {item.pricingType === "PER_GUEST" && (
                     <p className="text-[11px] text-gray-500 flex items-center sm:justify-end gap-1">
-                      <Users size={12} className="text-[#9A7B4F]" />
+                      <Users size={12} className="text-[#2563eb]" />
                       <span>{item.guestCount || 1} guest count from event details</span>
                     </p>
                   )}
@@ -177,7 +177,7 @@ export default function ServiceImagePreview({
 
               {/* Quantity Selector inside Modal if non-fixed and not per guest */}
               {item.pricingType !== "FIXED" && item.pricingType !== "PER_GUEST" && (
-                <div className="mt-4 flex items-center justify-between border-t border-[#e8dfd2] pt-3.5">
+                <div className="mt-4 flex items-center justify-between border-t border-[#dbeafe] pt-3.5">
                   <span className="text-xs font-bold text-gray-700">
                     Adjust {item.unitLabel || "Quantity"}:
                   </span>
@@ -193,7 +193,7 @@ export default function ServiceImagePreview({
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-6 flex items-center justify-end gap-3 border-t border-[#eee7dc] pt-5">
+          <div className="mt-6 flex items-center justify-end gap-3 border-t border-[#eff6ff] pt-5">
             <button
               type="button"
               onClick={onClose}
@@ -210,7 +210,7 @@ export default function ServiceImagePreview({
               className={`inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-xs font-black transition-all duration-200 cursor-pointer shadow-md ${
                 item.isSelected
                   ? "bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-600/20"
-                  : "bg-[#29241f] text-white hover:bg-black shadow-[#29241f]/20 hover:scale-[1.02]"
+                  : "bg-[#0f172a] text-white hover:bg-black shadow-[#0f172a]/20 hover:scale-[1.02]"
               }`}
             >
               {item.isSelected ? (
@@ -220,7 +220,7 @@ export default function ServiceImagePreview({
                 </>
               ) : (
                 <>
-                  <Check size={16} className="text-[#d8a86c]" />
+                  <Check size={16} className="text-[#60a5fa]" />
                   <span>Select This Option</span>
                 </>
               )}

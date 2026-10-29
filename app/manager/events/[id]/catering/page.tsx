@@ -422,7 +422,7 @@ export default function EventCateringPage() {
     return (
       <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3">
         <div className="h-10 w-10 animate-spin rounded-full border-4 border-amber-600 border-t-transparent" />
-        <p className="text-sm font-semibold text-[#785122]">
+        <p className="text-sm font-semibold text-[#1d4ed8]">
           Loading Catering Menus & Kitchen Recipe Details...
         </p>
       </div>
@@ -466,7 +466,7 @@ export default function EventCateringPage() {
           <Link
             href={`/manager/events/${eventId}`}
             id="back-to-event-details-btn"
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[#ede5d8] bg-white text-[#785122] shadow-2xs transition hover:bg-[#faf6f0] hover:scale-105 active:scale-95"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[#eff6ff] bg-white text-[#1d4ed8] shadow-2xs transition hover:bg-[#f8fbff] hover:scale-105 active:scale-95"
             title="Back to Event Details"
           >
             <ArrowLeft size={18} />
@@ -478,7 +478,7 @@ export default function EventCateringPage() {
               </span>
               <span className="text-xs font-mono text-gray-400">ID: {eventId.slice(-8)}</span>
             </div>
-            <h1 className="mt-0.5 text-xl sm:text-2xl font-black text-[#29241f] tracking-tight">
+            <h1 className="mt-0.5 text-xl sm:text-2xl font-black text-[#0f172a] tracking-tight">
               {event.eventName}
             </h1>
           </div>
@@ -486,17 +486,17 @@ export default function EventCateringPage() {
 
         {/* Quick Meta Badges */}
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <div className="flex items-center gap-1.5 rounded-xl border border-[#ede5d8] bg-white px-3 py-1.5 font-bold text-[#29241f] shadow-2xs">
-            <Calendar size={14} className="text-[#9a6c37]" />
+          <div className="flex items-center gap-1.5 rounded-xl border border-[#eff6ff] bg-white px-3 py-1.5 font-bold text-[#0f172a] shadow-2xs">
+            <Calendar size={14} className="text-[#1d4ed8]" />
             <span>{event.eventDate}</span>
           </div>
-          <div className="flex items-center gap-1.5 rounded-xl border border-[#ede5d8] bg-white px-3 py-1.5 font-bold text-[#29241f] shadow-2xs">
-            <Users size={14} className="text-[#9a6c37]" />
+          <div className="flex items-center gap-1.5 rounded-xl border border-[#eff6ff] bg-white px-3 py-1.5 font-bold text-[#0f172a] shadow-2xs">
+            <Users size={14} className="text-[#1d4ed8]" />
             <span>{menuData.guestCount} Guests</span>
           </div>
           {event.location && (
-            <div className="flex items-center gap-1.5 rounded-xl border border-[#ede5d8] bg-white px-3 py-1.5 text-gray-600 shadow-2xs max-w-[200px] truncate">
-              <MapPin size={14} className="text-[#9a6c37] shrink-0" />
+            <div className="flex items-center gap-1.5 rounded-xl border border-[#eff6ff] bg-white px-3 py-1.5 text-gray-600 shadow-2xs max-w-[200px] truncate">
+              <MapPin size={14} className="text-[#1d4ed8] shrink-0" />
               <span className="truncate">{event.location}</span>
             </div>
           )}
@@ -507,7 +507,7 @@ export default function EventCateringPage() {
   
 
       {/* 3. Section Tabs & Wastage Controls */}
-      <div className="flex flex-col gap-3 rounded-2xl border border-[#ede5d8] bg-white p-3 shadow-2xs sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 rounded-2xl border border-[#eff6ff] bg-white p-3 shadow-2xs sm:flex-row sm:items-center sm:justify-between">
         {/* Navigation Tabs */}
         <div className="flex flex-wrap items-center gap-1.5">
           <button
@@ -515,8 +515,8 @@ export default function EventCateringPage() {
             onClick={() => setActiveTab("all")}
             className={`rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${
               activeTab === "all"
-                ? "bg-[#785122] text-white shadow-xs"
-                : "bg-[#faf8f5] text-gray-700 hover:bg-[#f3ede4]"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
+                : "bg-[#f8fbff] text-gray-700 hover:bg-[#eff6ff]"
             }`}
           >
             All Sections
@@ -526,8 +526,8 @@ export default function EventCateringPage() {
             onClick={() => setActiveTab("menu")}
             className={`rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer flex items-center gap-1.5 ${
               activeTab === "menu"
-                ? "bg-[#785122] text-white shadow-xs"
-                : "bg-[#faf8f5] text-gray-700 hover:bg-[#f3ede4]"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
+                : "bg-[#f8fbff] text-gray-700 hover:bg-[#eff6ff]"
             }`}
           >
             <Utensils size={13} />
@@ -538,8 +538,8 @@ export default function EventCateringPage() {
             onClick={() => setActiveTab("recipe_calc")}
             className={`rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer flex items-center gap-1.5 ${
               activeTab === "recipe_calc"
-                ? "bg-[#785122] text-white shadow-xs"
-                : "bg-[#faf8f5] text-gray-700 hover:bg-[#f3ede4]"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
+                : "bg-[#f8fbff] text-gray-700 hover:bg-[#eff6ff]"
             }`}
           >
             <ChefHat size={13} />
@@ -550,8 +550,8 @@ export default function EventCateringPage() {
             onClick={() => setActiveTab("groceries")}
             className={`rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer flex items-center gap-1.5 ${
               activeTab === "groceries"
-                ? "bg-[#785122] text-white shadow-xs"
-                : "bg-[#faf8f5] text-gray-700 hover:bg-[#f3ede4]"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
+                : "bg-[#f8fbff] text-gray-700 hover:bg-[#eff6ff]"
             }`}
           >
             <ShoppingCart size={13} />
@@ -565,7 +565,7 @@ export default function EventCateringPage() {
             <SlidersHorizontal size={12} />
             Kitchen Wastage:
           </span>
-          <div className="flex items-center gap-1 rounded-xl bg-[#faf8f5] p-1 border border-[#ede5d8]">
+          <div className="flex items-center gap-1 rounded-xl bg-[#f8fbff] p-1 border border-[#eff6ff]">
             {[0, 5, 10].map((pct) => (
               <button
                 key={pct}
@@ -574,7 +574,7 @@ export default function EventCateringPage() {
                 disabled={calcLoading}
                 className={`rounded-lg px-2.5 py-1 text-[11px] font-bold transition cursor-pointer ${
                   wastagePercent === pct
-                    ? "bg-[#785122] text-white"
+                    ? "bg-[#1d4ed8] text-white"
                     : "text-gray-600 hover:bg-gray-100"
                 }`}
               >
@@ -582,7 +582,7 @@ export default function EventCateringPage() {
               </button>
             ))}
           </div>
-          {calcLoading && <Loader2 size={13} className="animate-spin text-[#9a6c37]" />}
+          {calcLoading && <Loader2 size={13} className="animate-spin text-[#1d4ed8]" />}
         </div>
       </div>
 
@@ -590,15 +590,15 @@ export default function EventCateringPage() {
       {/* SECTION A: CLIENT-SELECTED CATERING MENU */}
       {/* ========================================================================= */}
       {(activeTab === "all" || activeTab === "menu") && (
-        <section className="rounded-3xl border border-[#ede5d8] bg-white p-5 sm:p-6 shadow-sm">
+        <section className="rounded-3xl border border-[#eff6ff] bg-white p-5 sm:p-6 shadow-sm">
           {/* Header & Filters */}
-          <div className="flex flex-col gap-4 border-b border-[#f1ece5] pb-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 border-b border-[#eff6ff] pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-50 text-amber-800 border border-amber-200">
                   <Utensils size={15} />
                 </div>
-                <h2 className="text-base font-extrabold text-[#29241f]">
+                <h2 className="text-base font-extrabold text-[#0f172a]">
                   Client-Selected Food & Beverage Menu
                 </h2>
               </div>
@@ -616,7 +616,7 @@ export default function EventCateringPage() {
                   placeholder="Filter dishes..."
                   value={menuSearch}
                   onChange={(e) => setMenuSearch(e.target.value)}
-                  className="w-full rounded-xl border border-gray-200 bg-[#faf8f5] pl-8 pr-3 py-1.5 text-xs text-gray-800 placeholder-gray-400 focus:border-[#9a6c37] focus:outline-none focus:bg-white"
+                  className="w-full rounded-xl border border-gray-200 bg-[#f8fbff] pl-8 pr-3 py-1.5 text-xs text-gray-800 placeholder-gray-400 focus:border-[#1d4ed8] focus:outline-none focus:bg-white"
                 />
               </div>
 
@@ -624,7 +624,7 @@ export default function EventCateringPage() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="rounded-xl border border-gray-200 bg-[#faf8f5] px-3 py-1.5 text-xs text-gray-700 font-medium focus:border-[#9a6c37] focus:outline-none"
+                  className="rounded-xl border border-gray-200 bg-[#f8fbff] px-3 py-1.5 text-xs text-gray-700 font-medium focus:border-[#1d4ed8] focus:outline-none"
                 >
                   <option value="ALL">All Categories ({menuData.items.length})</option>
                   {categories.map((cat) => (
@@ -663,7 +663,7 @@ export default function EventCateringPage() {
             <div className="mt-4 overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead>
-                  <tr className="border-b border-[#f1ece5] bg-[#faf8f5]/60 text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
+                  <tr className="border-b border-[#eff6ff] bg-[#f8fbff]/60 text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
                     <th className="py-3 px-3">No.</th>
                     <th className="py-3 px-3">Dish / Beverage Item</th>
                     <th className="py-3 px-3">Category</th>
@@ -673,7 +673,7 @@ export default function EventCateringPage() {
                     <th className="py-3 px-3 text-right">Total Price</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#f1ece5]">
+                <tbody className="divide-y divide-[#eff6ff]">
                   {filteredMenuItems.map((item, idx) => {
                     // Check pricing strictly - do NOT fabricate prices
                     const unitPrice =
@@ -690,12 +690,12 @@ export default function EventCateringPage() {
                     const effectiveQuantity = item.quantity || menuData.guestCount;
 
                     return (
-                      <tr key={item.name + idx} className="hover:bg-[#faf8f5]/50 transition">
+                      <tr key={item.name + idx} className="hover:bg-[#f8fbff]/50 transition">
                         <td className="py-3 px-3 text-gray-400 font-mono text-[11px]">
                           {idx + 1}
                         </td>
                         <td className="py-3 px-3">
-                          <div className="font-extrabold text-[#29241f] text-sm">{item.name}</div>
+                          <div className="font-extrabold text-[#0f172a] text-sm">{item.name}</div>
                           {item.notes && (
                             <p className="mt-0.5 text-[11px] text-gray-500 italic">
                               Note: {item.notes}
@@ -712,7 +712,7 @@ export default function EventCateringPage() {
                         <td className="py-3 px-3 text-right font-semibold text-gray-700">
                           {unitPrice !== null ? formatINR(unitPrice) : "—"}
                         </td>
-                        <td className="py-3 px-3 text-right font-bold text-[#785122]">
+                        <td className="py-3 px-3 text-right font-bold text-[#1d4ed8]">
                           {totalPrice !== null ? formatINR(totalPrice) : "—"}
                         </td>
                       </tr>
@@ -724,21 +724,21 @@ export default function EventCateringPage() {
           )}
 
           {/* Catering Financial & Serving Scope Footer */}
-          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-2xl bg-[#faf8f5] border border-[#ede5d8] p-4 text-xs gap-3">
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-2xl bg-[#f8fbff] border border-[#eff6ff] p-4 text-xs gap-3">
             <div className="flex flex-wrap items-center gap-4 text-gray-600">
               <div>
                 <span className="font-semibold text-gray-500">Serving Type: </span>
-                <span className="font-bold text-[#29241f] capitalize">
+                <span className="font-bold text-[#0f172a] capitalize">
                   {menuData.servingType.replace(/_/g, " ")}
                 </span>
               </div>
               <div>
                 <span className="font-semibold text-gray-500">Total Items: </span>
-                <span className="font-bold text-[#29241f]">{menuData.items.length} items</span>
+                <span className="font-bold text-[#0f172a]">{menuData.items.length} items</span>
               </div>
               <div>
                 <span className="font-semibold text-gray-500">Guest Count: </span>
-                <span className="font-bold text-[#29241f]">{menuData.guestCount} guests</span>
+                <span className="font-bold text-[#0f172a]">{menuData.guestCount} guests</span>
               </div>
             </div>
 
@@ -747,7 +747,7 @@ export default function EventCateringPage() {
                 <span className="text-[11px] uppercase tracking-wider text-gray-500 font-bold block">
                   Catering Subtotal
                 </span>
-                <span className="text-base font-black text-[#785122]">
+                <span className="text-base font-black text-[#1d4ed8]">
                   {formatINR(menuData.totalFoodAmount)}
                 </span>
               </div>
@@ -760,16 +760,16 @@ export default function EventCateringPage() {
       {/* SECTION B: CALCULATED RECIPE REQUIREMENTS (THEORETICAL) */}
       {/* ========================================================================= */}
       {(activeTab === "all" || activeTab === "recipe_calc") && (
-        <section className="rounded-3xl border border-[#ede5d8] bg-white p-5 sm:p-6 shadow-sm">
+        <section className="rounded-3xl border border-[#eff6ff] bg-white p-5 sm:p-6 shadow-sm">
           {/* Section Header with Distinction Note */}
-          <div className="border-b border-[#f1ece5] pb-4">
+          <div className="border-b border-[#eff6ff] pb-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2">
                   <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-purple-50 text-purple-800 border border-purple-200">
                     <ChefHat size={15} />
                   </div>
-                  <h2 className="text-base font-extrabold text-[#29241f]">
+                  <h2 className="text-base font-extrabold text-[#0f172a]">
                     Calculated Recipe Ingredient Requirements
                   </h2>
                 </div>
@@ -841,10 +841,10 @@ export default function EventCateringPage() {
                 <h3 className="text-xs font-extrabold uppercase tracking-wider text-gray-500 mb-2.5">
                   Consolidated Kitchen Requirements
                 </h3>
-                <div className="overflow-x-auto rounded-2xl border border-[#ede5d8]">
+                <div className="overflow-x-auto rounded-2xl border border-[#eff6ff]">
                   <table className="w-full text-left text-xs">
                     <thead>
-                      <tr className="border-b border-[#ede5d8] bg-[#faf8f5] text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
+                      <tr className="border-b border-[#eff6ff] bg-[#f8fbff] text-[11px] font-extrabold uppercase tracking-wider text-gray-500">
                         <th className="py-2.5 px-3">Ingredient Name</th>
                         <th className="py-2.5 px-3 text-right">Required Quantity</th>
                         <th className="py-2.5 px-3 text-right">Stock In Kitchen</th>
@@ -853,13 +853,13 @@ export default function EventCateringPage() {
                         <th className="py-2.5 px-3 text-center">Stock Status</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#f1ece5]">
+                    <tbody className="divide-y divide-[#eff6ff]">
                       {calcResult.aggregatedIngredients.map((ing, idx) => (
-                        <tr key={ing.name + idx} className="hover:bg-[#faf8f5]/40 transition">
-                          <td className="py-2.5 px-3 font-bold text-[#29241f]">
+                        <tr key={ing.name + idx} className="hover:bg-[#f8fbff]/40 transition">
+                          <td className="py-2.5 px-3 font-bold text-[#0f172a]">
                             {ing.name}
                           </td>
-                          <td className="py-2.5 px-3 text-right font-black text-[#785122]">
+                          <td className="py-2.5 px-3 text-right font-black text-[#1d4ed8]">
                             {ing.requiredQuantity} {ing.unit}
                           </td>
                           <td className="py-2.5 px-3 text-right font-medium text-gray-600">
@@ -913,12 +913,12 @@ export default function EventCateringPage() {
                       .map((dish, dIdx) => (
                         <div
                           key={dish.name + dIdx}
-                          className="rounded-2xl border border-[#ede5d8] bg-white p-3.5 shadow-2xs flex flex-col justify-between"
+                          className="rounded-2xl border border-[#eff6ff] bg-white p-3.5 shadow-2xs flex flex-col justify-between"
                         >
                           <div>
                             <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2">
-                              <span className="font-extrabold text-xs text-[#29241f] flex items-center gap-1.5">
-                                <span className="h-2 w-2 rounded-full bg-[#9a6c37]" />
+                              <span className="font-extrabold text-xs text-[#0f172a] flex items-center gap-1.5">
+                                <span className="h-2 w-2 rounded-full bg-[#1d4ed8]" />
                                 {dish.name}
                               </span>
                               {dish.category && (
@@ -931,12 +931,12 @@ export default function EventCateringPage() {
                               {dish.ingredients.map((ing, iIdx) => (
                                 <div
                                   key={ing.name + iIdx}
-                                  className="flex items-center justify-between rounded-lg bg-[#faf8f5] px-2 py-1 text-[11px]"
+                                  className="flex items-center justify-between rounded-lg bg-[#f8fbff] px-2 py-1 text-[11px]"
                                 >
                                   <span className="text-gray-800 font-medium truncate pr-2">
                                     {ing.name}
                                   </span>
-                                  <span className="shrink-0 font-bold text-[#785122]">
+                                  <span className="shrink-0 font-bold text-[#1d4ed8]">
                                     {ing.requiredQuantity} {ing.unit}
                                   </span>
                                 </div>
@@ -961,16 +961,16 @@ export default function EventCateringPage() {
       {/* SECTION C: CHEF GROCERY & PURCHASE REQUESTS */}
       {/* ========================================================================= */}
       {(activeTab === "all" || activeTab === "groceries") && (
-        <section className="rounded-3xl border border-[#ede5d8] bg-white p-5 sm:p-6 shadow-sm">
+        <section className="rounded-3xl border border-[#eff6ff] bg-white p-5 sm:p-6 shadow-sm">
           {/* Section Header with Distinction Note */}
-          <div className="border-b border-[#f1ece5] pb-4">
+          <div className="border-b border-[#eff6ff] pb-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2">
                   <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200">
                     <ShoppingCart size={15} />
                   </div>
-                  <h2 className="text-base font-extrabold text-[#29241f]">
+                  <h2 className="text-base font-extrabold text-[#0f172a]">
                     Chef Grocery & Purchase Requests
                   </h2>
                 </div>
@@ -1029,12 +1029,12 @@ export default function EventCateringPage() {
                 return (
                   <div
                     key={pr._id || pIdx}
-                    className="rounded-2xl border border-amber-200/90 bg-[#faf8f5]/60 p-4 shadow-2xs space-y-3"
+                    className="rounded-2xl border border-amber-200/90 bg-[#f8fbff]/60 p-4 shadow-2xs space-y-3"
                   >
                     {/* PR Header */}
-                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#ede5d8] pb-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#eff6ff] pb-3">
                       <div className="flex items-center gap-2">
-                        <span className="font-extrabold text-xs text-[#29241f]">
+                        <span className="font-extrabold text-xs text-[#0f172a]">
                           Request #{String(pr._id).slice(-6).toUpperCase()}
                         </span>
                         {renderPurchaseStatusBadge(pr.status)}
@@ -1071,7 +1071,7 @@ export default function EventCateringPage() {
                           <button
                             type="button"
                             onClick={() => openReceiveModal(pr)}
-                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-800 hover:bg-[#29241f] text-white text-xs font-bold shadow-2xs transition cursor-pointer"
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-800 hover:bg-[#0f172a] text-white text-xs font-bold shadow-2xs transition cursor-pointer"
                           >
                             <Truck size={14} />
                             <span>Receive Goods / Restock Store</span>
@@ -1178,8 +1178,8 @@ export default function EventCateringPage() {
 
                     {/* Receipt History Log */}
                     {pr.receipts && pr.receipts.length > 0 && (
-                      <div className="pt-2 border-t border-[#ede5d8] text-[11px] text-gray-500">
-                        <span className="font-bold text-[#29241f] block mb-1">
+                      <div className="pt-2 border-t border-[#eff6ff] text-[11px] text-gray-500">
+                        <span className="font-bold text-[#0f172a] block mb-1">
                           Delivery Receipts ({pr.receipts.length}):
                         </span>
                         <div className="space-y-1">
@@ -1293,7 +1293,7 @@ export default function EventCateringPage() {
                   <Truck size={18} />
                 </div>
                 <div>
-                  <h3 className="text-base font-black text-[#29241f]">
+                  <h3 className="text-base font-black text-[#0f172a]">
                     Receive Goods & Restock Store
                   </h3>
                   <p className="text-xs text-gray-500">
@@ -1332,7 +1332,7 @@ export default function EventCateringPage() {
                 return (
                   <div
                     key={it._id}
-                    className="p-3 rounded-2xl border border-stone-200 bg-[#faf8f5] flex items-center justify-between gap-3 text-xs"
+                    className="p-3 rounded-2xl border border-stone-200 bg-[#f8fbff] flex items-center justify-between gap-3 text-xs"
                   >
                     <div className="min-w-0 flex-1">
                       <p className="font-bold text-gray-900 truncate">{it.itemName}</p>
@@ -1395,7 +1395,7 @@ export default function EventCateringPage() {
               <button
                 type="submit"
                 disabled={receiveSubmitting}
-                className="px-5 py-2 rounded-xl bg-amber-800 hover:bg-[#29241f] text-white text-xs font-bold shadow-sm transition disabled:opacity-50 flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2 rounded-xl bg-amber-800 hover:bg-[#0f172a] text-white text-xs font-bold shadow-sm transition disabled:opacity-50 flex items-center gap-2 cursor-pointer"
               >
                 {receiveSubmitting ? (
                   <Loader2 size={14} className="animate-spin" />

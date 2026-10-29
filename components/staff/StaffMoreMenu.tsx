@@ -41,9 +41,9 @@ export default function StaffMoreMenu({ open, onClose }: StaffMoreMenuProps) {
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-black/40">
       <div className="flex h-full w-[80%] max-w-xs flex-col bg-white p-5 shadow-2xl">
-        <div className="flex items-center justify-between border-b border-[#e8e1d8] pb-4">
+        <div className="flex items-center justify-between border-b border-[#dbeafe] pb-4">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#9a6c37] font-bold text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1d4ed8] font-bold text-white">
               {user?.name ? user.name.charAt(0).toUpperCase() : "S"}
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function StaffMoreMenu({ open, onClose }: StaffMoreMenuProps) {
                 key={item.href}
                 href={item.href}
                 onClick={onClose}
-                className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-[#fbf6ef] hover:text-[#9a6c37]"
+                className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-[#eff6ff] hover:text-[#1d4ed8]"
               >
                 <div className="flex items-center gap-3">
                   <Icon size={18} />
@@ -80,7 +80,7 @@ export default function StaffMoreMenu({ open, onClose }: StaffMoreMenuProps) {
           })}
         </nav>
 
-        <div className="border-t border-[#e8e1d8] pt-4">
+        <div className="border-t border-[#dbeafe] pt-4">
           <button
             type="button"
             onClick={handleLogout}

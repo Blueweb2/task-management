@@ -98,17 +98,17 @@ export default function DeclineShiftModal({
           )}
 
           {/* Shift Details Preview */}
-          <div className="rounded-2xl border border-gray-100 bg-[#fbf9f6] p-4 text-xs space-y-1.5">
+          <div className="rounded-2xl border border-gray-100 bg-[#ffffff] p-4 text-xs space-y-1.5">
             <div className="font-bold text-gray-900 text-sm">{duty.dutyTitle}</div>
             <div className="text-gray-600">{eventName}</div>
             <div className="flex items-center gap-3 text-gray-500 pt-1">
               <span className="inline-flex items-center gap-1">
-                <Calendar size={13} className="text-[#9a6c37]" />
+                <Calendar size={13} className="text-[#1d4ed8]" />
                 {dateFormatted}
               </span>
               <span>•</span>
               <span className="inline-flex items-center gap-1">
-                <Clock size={13} className="text-[#9a6c37]" />
+                <Clock size={13} className="text-[#1d4ed8]" />
                 {formatTime24to12(duty.startTime)} - {formatTime24to12(duty.endTime)}
               </span>
             </div>
