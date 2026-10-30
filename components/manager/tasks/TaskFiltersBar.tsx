@@ -19,7 +19,7 @@ interface TaskFiltersBarProps {
   onPriorityFilterChange: (priority: string) => void;
   staffFilter: string;
   onStaffFilterChange: (staffId: string) => void;
-  staffList: Array<{ _id: string; name: string }>;
+  staffList: Array<{ id: string; name: string }>;
   onCreateClick: () => void;
   statusCounts: Record<string, number>;
   totalTasks: number;
@@ -97,7 +97,7 @@ export default function TaskFiltersBar({
             <option value="">All Staff</option>
 
             {staffList.map((st) => (
-              <option key={st._id} value={st._id}>
+              <option key={st.id} value={st.id}>
                 {st.name}
               </option>
             ))}
