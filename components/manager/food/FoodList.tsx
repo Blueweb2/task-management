@@ -159,7 +159,7 @@ export default function FoodList({
             onClick={() => setSelectedDietary("all")}
             className={`rounded-xl px-3 py-1.5 text-xs font-semibold transition ${
               selectedDietary === "all"
-                ? "bg-gray-900 text-white"
+                ? "bg-[#1d4ed8] text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -240,7 +240,7 @@ export default function FoodList({
           <button
             type="button"
             onClick={onAddNew}
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-gray-800"
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#1e40af]"
           >
             <Plus size={15} />
             Add First Dish

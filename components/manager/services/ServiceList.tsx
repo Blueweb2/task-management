@@ -276,7 +276,7 @@ export default function ServiceList({
               <button
                 type="button"
                 onClick={handleAdd}
-                className="inline-flex items-center gap-2 rounded-lg bg-[#475569] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#454649] active:bg-[#3F4042]"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#1D4ED8] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#454649] active:bg-[#3F4042]"
               >
                 <Plus size={17} strokeWidth={2.5} />
                 Add Service

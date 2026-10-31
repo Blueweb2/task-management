@@ -367,7 +367,7 @@ export default function EditEventModal({
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#0f172a] px-6 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-60"
+              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#1d4ed8] px-6 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#1e40af] active:scale-95 disabled:opacity-60"
             >
               {loading && <Loader2 size={14} className="animate-spin" />}
               <span>{loading ? "Saving..." : "Save Changes"}</span>

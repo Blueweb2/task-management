@@ -464,7 +464,7 @@ const UnifiedExpensesSection = forwardRef<
             <button
               type="button"
               onClick={handleAddExpense}
-              className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-black"
+              className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-3.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#1e40af]"
             >
               <Plus size={14} />
               <span>Add Expense</span>

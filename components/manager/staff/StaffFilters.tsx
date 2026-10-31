@@ -67,7 +67,7 @@ export default function StaffFilters({
                 aria-pressed={isActive}
                 className={`min-h-9 shrink-0 rounded-xl px-3.5 text-xs font-semibold transition active:scale-95 ${
                   isActive
-                    ? "bg-[#0f172a] text-white shadow-xs"
+                    ? "bg-[#1d4ed8] text-white shadow-xs"
                     : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
                 }`}
               >

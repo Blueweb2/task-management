@@ -582,7 +582,7 @@ export default function DepartmentManagersTab() {
                 setModalError(null);
                 setIsModalOpen(true);
               }}
-              className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-4 text-xs font-bold text-white shadow-xs transition active:scale-95 cursor-pointer"
+              className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] px-4 text-xs font-bold text-white shadow-xs transition active:scale-95 cursor-pointer"
             >
               <UserPlus size={15} className="text-amber-300" />
               <span>Create Department Manager</span>
@@ -719,7 +719,7 @@ export default function DepartmentManagersTab() {
               onClick={() => setStatusFilter(filter)}
               className={`h-10 rounded-xl px-3.5 text-xs font-bold transition cursor-pointer ${
                 statusFilter === filter
-                  ? "bg-[#0f172a] text-white shadow-2xs"
+                  ? "bg-[#1d4ed8] text-white shadow-2xs"
                   : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
               }`}
             >
@@ -1081,7 +1081,7 @@ export default function DepartmentManagersTab() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting && <Loader2 size={14} className="animate-spin" />}
                   <span>{isSubmitting ? "Creating..." : "Provision Manager Account"}</span>
@@ -1249,7 +1249,7 @@ export default function DepartmentManagersTab() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] px-5 py-2 text-xs font-bold text-white shadow-md shadow-gray-900/10 transition hover:scale-[1.02] active:scale-95 disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting && <Loader2 size={14} className="animate-spin" />}
                   <span>{isSubmitting ? "Saving..." : "Save Changes"}</span>

@@ -130,7 +130,7 @@ export default function DepartmentCapacityGrid({
           <button
             type="button"
             onClick={() => setTargetDate(new Date().toISOString().slice(0, 10))}
-            className="w-full sm:w-auto rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white hover:bg-black text-center"
+            className="w-full sm:w-auto rounded-xl bg-[#1d4ed8] px-3.5 py-2 text-xs font-bold text-white hover:bg-[#1e40af] text-center"
           >
             Today
           </button>
@@ -351,7 +351,7 @@ export default function DepartmentCapacityGrid({
                               onClick={() =>
                                 onSelectStaffForDuty(staff, targetDate)
                               }
-                              className="flex shrink-0 items-center gap-1 rounded-xl bg-[#0f172a] px-2.5 py-1 text-[10px] font-bold text-white hover:bg-black"
+                              className="flex shrink-0 items-center gap-1 rounded-xl bg-[#1d4ed8] px-2.5 py-1 text-[10px] font-bold text-white hover:bg-[#1e40af]"
                             >
                               <UserPlus size={12} />
                               Assign

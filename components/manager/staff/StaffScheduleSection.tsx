@@ -244,7 +244,7 @@ export default function StaffScheduleSection({
             onClick={() => setStatusFilter("ALL")}
             className={`rounded-xl px-3 py-1.5 text-xs font-bold transition-all ${
               statusFilter === "ALL"
-                ? "bg-[#0f172a] text-white shadow-xs"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >

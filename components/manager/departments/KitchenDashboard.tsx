@@ -648,7 +648,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
           <button
             type="submit"
             disabled={!newNoteText.trim()}
-            className="inline-flex h-9 items-center justify-center gap-1 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+            className="inline-flex h-9 items-center justify-center gap-1 rounded-xl bg-[#1d4ed8] px-3.5 text-xs font-bold text-white hover:bg-[#1e40af] transition active:scale-95 disabled:opacity-50 cursor-pointer"
           >
             <Plus size={14} />
             <span>Add Note</span>
@@ -753,7 +753,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 onClick={() => setTimeFilter("TOMORROW")}
                 className={`rounded-lg px-2.5 py-1 transition cursor-pointer ${
                   timeFilter === "TOMORROW"
-                    ? "bg-[#0f172a] text-white shadow-2xs"
+                    ? "bg-[#1d4ed8] text-white shadow-2xs"
                     : "text-stone-500 hover:text-stone-900"
                 }`}
               >
@@ -916,7 +916,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                         <button
                           type="button"
                           onClick={() => setKitchenSlipEvent(ev)}
-                          className="inline-flex items-center gap-1 rounded-lg bg-stone-100 hover:bg-[#0f172a] hover:text-white px-2.5 py-1 text-xs font-bold text-stone-800 transition cursor-pointer"
+                          className="inline-flex items-center gap-1 rounded-lg bg-stone-100 hover:bg-[#1d4ed8] hover:text-white px-2.5 py-1 text-xs font-bold text-stone-800 transition cursor-pointer"
                         >
                           <FileText size={13} />
                           <span>Kitchen Prep Slip</span>
@@ -974,7 +974,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <button
                     type="submit"
                     disabled={taskCreating || !newTaskTitle.trim()}
-                    className="inline-flex h-9 items-center justify-center rounded-xl bg-[#0f172a] px-3 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-9 items-center justify-center rounded-xl bg-[#1d4ed8] px-3 text-xs font-bold text-white hover:bg-[#1e40af] transition active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <Plus size={14} />
                     <span>Add</span>
@@ -1153,7 +1153,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                 <button
                   type="button"
                   onClick={() => window.print()}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-black transition cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#1e40af] transition cursor-pointer"
                 >
                   <Printer size={13} />
                   <span>Print Slip</span>
@@ -1448,7 +1448,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   <button
                     type="submit"
                     disabled={grocerySubmitting || !groceryItemName.trim() || !groceryQuantity}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black transition active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white hover:bg-[#1e40af] transition active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     {grocerySubmitting && <Loader2 size={13} className="animate-spin" />}
                     <span>Submit Request</span>
@@ -1577,7 +1577,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
               <button
                 type="button"
                 onClick={() => setPortionModalOpen(false)}
-                className="rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
+                className="rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white hover:bg-[#1e40af] cursor-pointer"
               >
                 Close Helper
               </button>
@@ -1704,7 +1704,7 @@ export default function KitchenDashboard({ token }: KitchenDashboardProps) {
                   setCalcModalEvent(null);
                   setCalcResult(null);
                 }}
-                className="rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white hover:bg-black cursor-pointer"
+                className="rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white hover:bg-[#1e40af] cursor-pointer"
               >
                 Close
               </button>

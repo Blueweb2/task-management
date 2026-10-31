@@ -143,7 +143,7 @@ export default function ManagerMenu({
                     "flex min-h-12 items-center gap-3 rounded-xl px-3",
                     "text-sm font-medium transition",
                     isActive
-                      ? "bg-gray-900 text-white shadow-xs"
+                      ? "bg-[#1d4ed8] text-white shadow-xs"
                       : "text-gray-700 hover:bg-gray-100",
                   ].join(" ")}
                 >

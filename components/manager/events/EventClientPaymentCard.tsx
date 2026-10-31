@@ -201,7 +201,7 @@ export default function EventClientPaymentCard({
           <button
             type="button"
             onClick={() => handleOpenModal()}
-            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#0f172a] px-4 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95"
+            className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#1d4ed8] px-4 text-xs font-bold text-white shadow-xs transition hover:bg-[#1e40af] active:scale-95"
           >
             <Plus size={14} className="text-[#3b82f6]" />
             <span>Add Payment</span>
@@ -617,7 +617,7 @@ export default function EventClientPaymentCard({
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-5 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-[#1e40af] active:scale-95 disabled:opacity-50"
                 >
                   {submitting ? "Recording..." : "Confirm & Save"}
                   <ArrowRight size={13} />

@@ -217,7 +217,7 @@ export default function StaffProfile({
               disabled={uploadingAvatar}
               title="Upload / change staff photo"
               aria-label="Upload staff photo"
-              className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#0f172a] text-white shadow-md border-2 border-white transition hover:bg-[#3b82f6] active:scale-90"
+              className="absolute -bottom-1.5 -right-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#1d4ed8] text-white shadow-md border-2 border-white transition hover:bg-[#3b82f6] active:scale-90"
             >
               <Camera size={14} />
             </button>
@@ -355,7 +355,7 @@ export default function StaffProfile({
           onClick={() => setActiveTab("schedule")}
           className={`flex-1 min-w-[170px] rounded-xl py-2.5 px-3 text-xs font-bold transition flex items-center justify-center gap-1.5 ${
             activeTab === "schedule"
-              ? "bg-[#0f172a] text-white shadow-xs"
+              ? "bg-[#1d4ed8] text-white shadow-xs"
               : "text-gray-600 hover:text-gray-900"
           }`}
         >

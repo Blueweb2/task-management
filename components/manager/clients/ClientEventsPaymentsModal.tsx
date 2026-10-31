@@ -679,7 +679,7 @@ export default function ClientEventsPaymentsModal({
                   <button
                     type="submit"
                     disabled={submittingPayment}
-                    className="flex h-10 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-5 text-xs font-bold text-white hover:bg-black disabled:opacity-50"
+                    className="flex h-10 items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-5 text-xs font-bold text-white hover:bg-[#1e40af] disabled:opacity-50"
                   >
                     {submittingPayment ? (
                       <Loader2 size={14} className="animate-spin" />

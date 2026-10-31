@@ -107,7 +107,7 @@ export default function TaskFiltersBar({
           <button
             type="button"
             onClick={onCreateClick}
-            className="inline-flex items-center gap-2 rounded-2xl bg-[#0f172a] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer shrink-0"
+            className="inline-flex items-center gap-2 rounded-2xl bg-[#1d4ed8] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#1e40af] transition active:scale-95 cursor-pointer shrink-0"
           >
             <Plus size={16} />
             <span>Create Task</span>
@@ -125,7 +125,7 @@ export default function TaskFiltersBar({
               type="button"
               onClick={() => onStatusFilterChange(tab.key)}
               className={`inline-flex items-center gap-2 rounded-xl px-3 py-1.5 text-xs font-bold transition whitespace-nowrap cursor-pointer ${isActive
-                ? "bg-[#0f172a] text-white shadow-xs"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
                 : "text-gray-600 hover:bg-gray-100"
                 }`}
             >

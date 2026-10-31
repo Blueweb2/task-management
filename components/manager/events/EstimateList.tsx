@@ -69,7 +69,7 @@ export default function EstimateList({
         <div className="mt-5">
           <Link
             href="/manager/booking"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#1e3a8a] px-4 py-2.5 text-xs font-bold text-white hover:bg-black transition active:scale-95"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#1e3a8a] px-4 py-2.5 text-xs font-bold text-white hover:bg-[#1e40af] transition active:scale-95"
           >
             <Sparkles size={14} className="text-[#3b82f6]" />
             <span>Create New Booking</span>
@@ -350,7 +350,7 @@ export default function EstimateList({
                     type="button"
                     disabled={isAccepting}
                     onClick={() => onAccept(est)}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black px-5 py-2.5 text-xs font-black text-white transition active:scale-95 disabled:opacity-50 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] px-5 py-2.5 text-xs font-black text-white transition active:scale-95 disabled:opacity-50 cursor-pointer shadow-sm"
                   >
                     {isAccepting ? (
                       <>

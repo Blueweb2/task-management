@@ -222,7 +222,7 @@ export default function ReceiptViewerModal({
             <button
               type="button"
               onClick={onClose}
-              className="h-8 rounded-lg bg-[#0f172a] px-4 text-xs font-semibold text-white hover:bg-black transition"
+              className="h-8 rounded-lg bg-[#1d4ed8] px-4 text-xs font-semibold text-white hover:bg-[#1e40af] transition"
             >
               Close
             </button>

@@ -611,7 +611,7 @@ export default function AddStaffModal({
             <button
               type="submit"
               disabled={isSaving}
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-5 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-5 text-xs font-bold text-white shadow-xs transition hover:bg-[#1e40af] active:scale-95 disabled:opacity-50 cursor-pointer"
             >
               {isSaving && <Loader2 size={13} className="animate-spin" />}
               <span>{isSaving ? "Creating Staff..." : "Create Staff Member"}</span>

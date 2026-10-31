@@ -571,7 +571,7 @@ export default function EditStaffModal({
             <button
               type="submit"
               disabled={isSaving}
-              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-sm font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-4 text-sm font-semibold text-white transition hover:bg-[#1e40af] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSaving ? (
                 <>

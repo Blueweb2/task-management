@@ -345,7 +345,7 @@ function ManagerEventsContent() {
             <button
               type="button"
               onClick={() => setStatus("Estimates")}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#0f172a] hover:bg-black text-white px-4 py-2 text-xs font-bold transition active:scale-95 cursor-pointer shadow-xs shrink-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1e40af] text-white px-4 py-2 text-xs font-bold transition active:scale-95 cursor-pointer shadow-xs shrink-0"
             >
               <span>Review & Accept Bookings</span>
               <ArrowRight size={13} className="shrink-0" />

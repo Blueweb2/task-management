@@ -158,7 +158,7 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1 rounded-lg bg-[#1d4ed8] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-[#1e40af] transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
                   <Sparkles size={11} className="text-[#3b82f6]" />
@@ -347,7 +347,7 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="inline-flex items-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1 rounded-lg bg-[#1d4ed8] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-[#1e40af] transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
                   <Sparkles size={11} className="text-[#3b82f6]" />
@@ -361,7 +361,7 @@ export default function EventCard({
                   e.stopPropagation();
                   router.push(`/manager/events/${event._id}#payments`);
                 }}
-                className="inline-flex items-center gap-1 rounded-lg bg-white border border-[#dbeafe] px-2.5 py-1 text-[11px] font-bold text-[#0f172a] shadow-2xs hover:bg-[#0f172a] hover:text-white transition active:scale-95 shrink-0"
+                className="inline-flex items-center gap-1 rounded-lg bg-white border border-[#dbeafe] px-2.5 py-1 text-[11px] font-bold text-[#0f172a] shadow-2xs hover:bg-[#1d4ed8] hover:text-white transition active:scale-95 shrink-0"
                 title="Add payment for this event"
               >
                 <Plus size={11} className="text-[#1d4ed8]" />
@@ -412,7 +412,7 @@ export default function EventCard({
                     e.stopPropagation();
                     onExport(event);
                   }}
-                  className="inline-flex items-center gap-1 rounded-lg bg-[#0f172a] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-black transition active:scale-95 shrink-0"
+                  className="inline-flex items-center gap-1 rounded-lg bg-[#1d4ed8] px-2.5 py-1 text-[11px] font-bold text-white shadow-2xs hover:bg-[#1e40af] transition active:scale-95 shrink-0"
                   title="View or share bill / quotation"
                 >
                   <Sparkles size={11} className="text-[#3b82f6]" />

@@ -241,7 +241,7 @@ export default function ScheduleCalendar({
           <button
             type="button"
             onClick={onAddShift}
-            className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-sm font-semibold text-white shadow-lg transition active:scale-[0.98]"
+            className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-4 text-sm font-semibold text-white shadow-lg transition active:scale-[0.98]"
           >
             <span className="text-lg leading-none">
               +

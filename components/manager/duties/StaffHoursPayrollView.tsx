@@ -342,7 +342,7 @@ export default function StaffHoursPayrollView({
           type="button"
           disabled={isUpdating}
           onClick={() => handleTogglePayment(duty)}
-          className="inline-flex items-center justify-center gap-1.5 rounded-xl px-3.5 py-1.5 text-xs font-bold transition active:scale-95 bg-[#0f172a] text-white hover:bg-black shadow-sm"
+          className="inline-flex items-center justify-center gap-1.5 rounded-xl px-3.5 py-1.5 text-xs font-bold transition active:scale-95 bg-[#1d4ed8] text-white hover:bg-[#1e40af] shadow-sm"
         >
           {isUpdating ? (
             <Loader2 size={12} className="animate-spin" />

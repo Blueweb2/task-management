@@ -39,7 +39,7 @@ export default function EventsHeader({
           onClick={() => {
             router.push("/manager/booking");
           }}
-          className="inline-flex min-h-10 sm:min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#1e3a8a] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-black active:scale-95 cursor-pointer"
+          className="inline-flex min-h-10 sm:min-h-11 items-center justify-center gap-2 rounded-2xl bg-[#1e3a8a] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs transition hover:bg-[#1e40af] active:scale-95 cursor-pointer"
         >
           <Plus size={15} className="text-[#3b82f6]" />
           <span>New Booking</span>

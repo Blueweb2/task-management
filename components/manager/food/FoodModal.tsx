@@ -390,7 +390,7 @@ export default function FoodModal({
             type="submit"
             form="food-item-form"
             disabled={loading}
-            className="inline-flex min-h-[42px] items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 text-xs font-bold text-white shadow-sm transition hover:bg-black active:scale-[0.98] disabled:opacity-50"
+            className="inline-flex min-h-[42px] items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-5 text-xs font-bold text-white shadow-sm transition hover:bg-[#1e40af] active:scale-[0.98] disabled:opacity-50"
           >
             {loading ? (
               <>

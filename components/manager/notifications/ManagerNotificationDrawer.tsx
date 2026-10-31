@@ -172,7 +172,7 @@ export default function ManagerNotificationDrawer({
                 onClick={() => setActiveFilter("ALL")}
                 className={`rounded-xl px-3 py-1 text-xs font-semibold transition ${
                   activeFilter === "ALL"
-                    ? "bg-[#0f172a] text-white shadow-sm"
+                    ? "bg-[#1d4ed8] text-white shadow-sm"
                     : "bg-white text-[#475569] border border-[#dbeafe] hover:text-[#0f172a]"
                 }`}
               >

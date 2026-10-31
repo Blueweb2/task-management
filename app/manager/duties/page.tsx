@@ -338,7 +338,7 @@ function OperationsHubContent() {
               onClick={() => switchTab("list")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "list"
-                  ? "bg-[#0f172a] text-white shadow-sm"
+                  ? "bg-[#1d4ed8] text-white shadow-sm"
                   : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >
@@ -351,7 +351,7 @@ function OperationsHubContent() {
               onClick={() => switchTab("calendar")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "calendar"
-                  ? "bg-[#0f172a] text-white shadow-sm"
+                  ? "bg-[#1d4ed8] text-white shadow-sm"
                   : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >
@@ -364,7 +364,7 @@ function OperationsHubContent() {
               onClick={() => switchTab("departments")}
               className={`inline-flex items-center gap-1.5 shrink-0 rounded-xl px-3 sm:px-3.5 py-2 text-xs font-bold transition-all ${
                 activeTab === "departments"
-                  ? "bg-[#0f172a] text-white shadow-sm"
+                  ? "bg-[#1d4ed8] text-white shadow-sm"
                   : "text-gray-600 hover:bg-[#eff6ff] hover:text-gray-900"
               }`}
             >

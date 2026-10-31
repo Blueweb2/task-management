@@ -351,7 +351,7 @@ export default function ManageChecklistModal({
                     type="button"
                     onClick={() => handleAddTask()}
                     disabled={!newTaskText.trim()}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-black disabled:opacity-40"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2.5 text-xs font-extrabold text-white transition hover:bg-[#1e40af] disabled:opacity-40"
                   >
                     <Plus size={15} />
                     <span>Add Task</span>
@@ -375,7 +375,7 @@ export default function ManageChecklistModal({
                       onClick={() => setActiveTemplateTab(category)}
                       className={`rounded-lg px-2.5 py-1 text-[11px] font-bold capitalize transition ${
                         activeTemplateTab === category
-                          ? "bg-[#0f172a] text-white shadow-xs"
+                          ? "bg-[#1d4ed8] text-white shadow-xs"
                           : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-100"
                       }`}
                     >
@@ -568,7 +568,7 @@ export default function ManageChecklistModal({
               type="button"
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#0f172a] px-5 sm:px-6 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-black active:scale-95 disabled:opacity-50"
+              className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#1d4ed8] px-5 sm:px-6 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-[#1e40af] active:scale-95 disabled:opacity-50"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin" />

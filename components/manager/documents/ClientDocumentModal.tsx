@@ -283,7 +283,7 @@ export default function ClientDocumentModal({
               <button
                 type="button"
                 onClick={handlePrint}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-black transition active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-[#1e40af] transition active:scale-95 cursor-pointer"
               >
                 <Printer size={14} />
                 <span>Save as PDF / Print</span>

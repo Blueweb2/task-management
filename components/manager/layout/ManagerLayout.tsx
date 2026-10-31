@@ -154,7 +154,7 @@ export default function ManagerLayout({
                 <div className="mt-6">
                   <Link
                     href="/manager/tasks"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#1e3a8a] px-4 py-2.5 text-xs font-semibold text-white shadow-xs transition hover:bg-[#0f172a] active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#1e3a8a] px-4 py-2.5 text-xs font-semibold text-white shadow-xs transition hover:bg-[#1d4ed8] active:scale-95"
                   >
                     <LayoutDashboard size={14} />
                     <span>Return to To Do</span>

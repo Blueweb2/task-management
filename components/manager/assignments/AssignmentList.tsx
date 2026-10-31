@@ -193,7 +193,7 @@ export default function AssignmentList({
           type="button"
           onClick={onAddAssignment}
           aria-label="Add assignment"
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0f172a] text-white shadow-sm transition active:scale-95"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#1d4ed8] text-white shadow-sm transition active:scale-95"
         >
           <Plus
             size={20}
@@ -256,7 +256,7 @@ export default function AssignmentList({
             <button
               type="button"
               onClick={onAddAssignment}
-              className="mt-3 min-h-11 w-full rounded-xl bg-[#0f172a] px-4 text-sm font-medium text-white transition active:scale-[0.99]"
+              className="mt-3 min-h-11 w-full rounded-xl bg-[#1d4ed8] px-4 text-sm font-medium text-white transition active:scale-[0.99]"
             >
               Add Assignment
             </button>

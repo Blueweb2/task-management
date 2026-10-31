@@ -306,7 +306,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
         </p>
         <Link
           href="/manager/stock"
-          className="inline-flex items-center gap-2 rounded-xl bg-gray-900 px-4 py-2.5 text-xs font-bold text-white transition hover:bg-black"
+          className="inline-flex items-center gap-2 rounded-xl bg-[#1d4ed8] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#1e40af]"
         >
           <ArrowLeft size={14} />
           <span>Back to Stock & Equipment</span>
@@ -861,7 +861,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 onClick={() => setHistoryFilter("ALL")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer whitespace-nowrap ${
                   historyFilter === "ALL"
-                    ? "bg-[#0f172a] text-white shadow-2xs"
+                    ? "bg-[#1d4ed8] text-white shadow-2xs"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -1337,7 +1337,7 @@ export default function StockItemDetailPage({ params }: PageProps) {
                 <button
                   type="submit"
                   disabled={editSubmitting}
-                  className="rounded-xl bg-[#0f172a] px-5 py-2 text-xs font-extrabold text-white hover:bg-black cursor-pointer flex items-center gap-2"
+                  className="rounded-xl bg-[#1d4ed8] px-5 py-2 text-xs font-extrabold text-white hover:bg-[#1e40af] cursor-pointer flex items-center gap-2"
                 >
                   {editSubmitting ? (
                     <>

@@ -177,7 +177,7 @@ export default function ServiceMediaLibraryModal({
                   type="button"
                   disabled={isUploading}
                   onClick={() => fileInputRef.current?.click()}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white transition hover:bg-black disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1d4ed8] px-3.5 py-2 text-xs font-bold text-white transition hover:bg-[#1e40af] disabled:opacity-50"
                 >
                   {isUploading ? (
                     <Loader2 size={14} className="animate-spin" />
@@ -289,7 +289,7 @@ export default function ServiceMediaLibraryModal({
               onClick={() => setSelectedCategory(cat.id)}
               className={`shrink-0 rounded-lg px-3 py-1 text-xs font-bold transition ${
                 selectedCategory === cat.id
-                  ? "bg-[#0f172a] text-white shadow-xs"
+                  ? "bg-[#1d4ed8] text-white shadow-xs"
                   : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-100"
               }`}
             >

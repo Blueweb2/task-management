@@ -858,7 +858,7 @@ export default function EventServiceStaffingMatrix({
                 <button
                   type="submit"
                   disabled={submitting || !allocatingStaff}
-                  className="flex h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#0f172a] font-bold text-xs text-white hover:bg-black active:scale-95 transition disabled:opacity-50 shadow-sm cursor-pointer"
+                  className="flex h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#1d4ed8] font-bold text-xs text-white hover:bg-[#1e40af] active:scale-95 transition disabled:opacity-50 shadow-sm cursor-pointer"
                 >
                   {submitting ? (
                     <Loader2 size={16} className="animate-spin" />

@@ -206,7 +206,7 @@ export default function StaffActions({
             type="button"
             onClick={handleEdit}
             disabled={isStatusUpdating}
-            className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#0f172a] px-4 text-xs font-semibold text-white transition hover:bg-black active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-4 text-xs font-semibold text-white transition hover:bg-[#1e40af] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
           >
             <Edit3
               size={16}

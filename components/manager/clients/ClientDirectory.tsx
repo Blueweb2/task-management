@@ -75,7 +75,7 @@ export default function ClientDirectory({
         </div>
         <div className="flex items-center gap-2">
           {(["", "Active", "Inactive"] as const).map((value) => (
-            <button key={value || "all"} type="button" onClick={() => handleStatusChange(value)} className={`rounded-xl px-3 py-2 text-xs font-semibold transition ${status === value ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}>
+            <button key={value || "all"} type="button" onClick={() => handleStatusChange(value)} className={`rounded-xl px-3 py-2 text-xs font-semibold transition ${status === value ? "bg-[#1d4ed8] text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}>
               {value || "All clients"}
             </button>
           ))}

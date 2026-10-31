@@ -174,7 +174,7 @@ export default function ManagerTasksPage() {
             type="button"
             onClick={() => setActiveTab("tasks")}
             className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${activeTab === "tasks"
-                ? "bg-[#0f172a] text-white shadow-xs"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
                 : "text-gray-600 hover:text-gray-900"
               }`}
           >
@@ -186,7 +186,7 @@ export default function ManagerTasksPage() {
             type="button"
             onClick={() => setActiveTab("equipment")}
             className={`inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-bold transition cursor-pointer ${activeTab === "equipment"
-                ? "bg-[#0f172a] text-white shadow-xs"
+                ? "bg-[#1d4ed8] text-white shadow-xs"
                 : "text-gray-600 hover:text-gray-900"
               }`}
           >
@@ -227,7 +227,7 @@ export default function ManagerTasksPage() {
                     type="button"
                     onClick={() => setViewMode("grid")}
                     className={`rounded-lg p-1.5 transition ${viewMode === "grid"
-                        ? "bg-[#0f172a] text-white shadow-2xs"
+                        ? "bg-[#1d4ed8] text-white shadow-2xs"
                         : "text-gray-400 hover:text-gray-700"
                       }`}
                     title="Grid View"
@@ -238,7 +238,7 @@ export default function ManagerTasksPage() {
                     type="button"
                     onClick={() => setViewMode("list")}
                     className={`rounded-lg p-1.5 transition ${viewMode === "list"
-                        ? "bg-[#0f172a] text-white shadow-2xs"
+                        ? "bg-[#1d4ed8] text-white shadow-2xs"
                         : "text-gray-400 hover:text-gray-700"
                       }`}
                     title="List View"
@@ -286,7 +286,7 @@ export default function ManagerTasksPage() {
               <button
                 type="button"
                 onClick={() => setIsCreateOpen(true)}
-                className="mt-4 inline-flex items-center gap-1.5 rounded-2xl bg-[#0f172a] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 cursor-pointer"
+                className="mt-4 inline-flex items-center gap-1.5 rounded-2xl bg-[#1d4ed8] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#1e40af] transition active:scale-95 cursor-pointer"
               >
                 <Plus size={15} />
                 <span>Create New Task</span>

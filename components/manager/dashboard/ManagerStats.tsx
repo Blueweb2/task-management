@@ -192,7 +192,7 @@ export default function ManagerStats() {
 
         <Link
           href="/manager/booking"
-          className="inline-flex h-9 shrink-0 ml-auto items-center justify-center gap-1.5 rounded-xl bg-[#0f172a] px-3.5 text-xs font-bold text-white shadow-2xs transition hover:bg-black active:scale-[0.98] cursor-pointer"
+          className="inline-flex h-9 shrink-0 ml-auto items-center justify-center gap-1.5 rounded-xl bg-[#1d4ed8] px-3.5 text-xs font-bold text-white shadow-2xs transition hover:bg-[#1e40af] active:scale-[0.98] cursor-pointer"
         >
           <Plus size={15} />
           <span>New Booking</span>

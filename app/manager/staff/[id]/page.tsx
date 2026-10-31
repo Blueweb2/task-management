@@ -107,7 +107,7 @@ export default function StaffProfilePage() {
             onClick={() =>
               router.push("/manager/staff")
             }
-            className="mt-4 min-h-11 rounded-xl bg-[#0f172a] px-5 text-sm font-medium text-white"
+            className="mt-4 min-h-11 rounded-xl bg-[#1d4ed8] px-5 text-sm font-medium text-white"
           >
             Back to Staff
           </button>

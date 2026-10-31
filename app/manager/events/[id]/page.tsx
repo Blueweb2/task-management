@@ -586,7 +586,7 @@ export default function ManagerEventDetailsPage() {
                 type="button"
                 disabled={actionLoading}
                 onClick={() => handleUpdateStatus("Settled")}
-                className="inline-flex min-h-10 sm:min-h-11 items-center gap-1.5 rounded-2xl bg-[#0f172a] px-3.5 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95 disabled:opacity-50"
+                className="inline-flex min-h-10 sm:min-h-11 items-center gap-1.5 rounded-2xl bg-[#1d4ed8] px-3.5 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#1e40af] transition active:scale-95 disabled:opacity-50"
                 title="Mark financial settlement as closed"
               >
                 {actionLoading ? (
@@ -603,7 +603,7 @@ export default function ManagerEventDetailsPage() {
               <button
                 type="button"
                 onClick={() => setExportModalOpen(true)}
-                className="inline-flex min-h-10 sm:min-h-11 items-center gap-2 rounded-2xl bg-[#0f172a] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-black transition active:scale-95"
+                className="inline-flex min-h-10 sm:min-h-11 items-center gap-2 rounded-2xl bg-[#1d4ed8] px-3.5 sm:px-4 py-2 text-xs font-bold text-white shadow-xs hover:bg-[#1e40af] transition active:scale-95"
               >
                 <Sparkles size={14} className="text-[#3b82f6]" />
                 <span className="hidden sm:inline">Export Invoice & Quotation</span>

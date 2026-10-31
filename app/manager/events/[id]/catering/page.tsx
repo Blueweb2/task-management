@@ -447,7 +447,7 @@ export default function EventCateringPage() {
             <button
               type="button"
               onClick={() => fetchEventData()}
-              className="inline-flex items-center gap-2 rounded-xl bg-amber-700 px-4 py-2 text-xs font-bold text-white hover:bg-amber-800"
+              className="inline-flex items-center gap-2 rounded-xl bg-amber-700 px-4 py-2 text-xs font-bold text-white hover:bg-[#1d4ed8]"
             >
               <RefreshCw size={14} />
               Retry
@@ -1071,7 +1071,7 @@ export default function EventCateringPage() {
                           <button
                             type="button"
                             onClick={() => openReceiveModal(pr)}
-                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-800 hover:bg-[#0f172a] text-white text-xs font-bold shadow-2xs transition cursor-pointer"
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white text-xs font-bold shadow-2xs transition cursor-pointer"
                           >
                             <Truck size={14} />
                             <span>Receive Goods / Restock Store</span>
@@ -1395,7 +1395,7 @@ export default function EventCateringPage() {
               <button
                 type="submit"
                 disabled={receiveSubmitting}
-                className="px-5 py-2 rounded-xl bg-amber-800 hover:bg-[#0f172a] text-white text-xs font-bold shadow-sm transition disabled:opacity-50 flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2 rounded-xl bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white text-xs font-bold shadow-sm transition disabled:opacity-50 flex items-center gap-2 cursor-pointer"
               >
                 {receiveSubmitting ? (
                   <Loader2 size={14} className="animate-spin" />

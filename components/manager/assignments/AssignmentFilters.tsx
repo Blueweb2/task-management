@@ -76,7 +76,7 @@ export default function AssignmentFilters({
             aria-pressed={isActive}
             className={`min-h-9 shrink-0 rounded-full px-4 text-xs font-medium transition active:scale-95 ${
               isActive
-                ? "bg-[#0f172a] text-white"
+                ? "bg-[#1d4ed8] text-white"
                 : "border border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
             }`}
           >
